@@ -1,0 +1,4845 @@
+@font-face {
+    font-family: "Acrom";
+    src: url("../font/Acrom-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../font/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url("../font/Rubik-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../font/Inter-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal";
+    src: url("../font/ZabalDEMO-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal Bold";
+    src: url("../font/ZabalDEMO-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../font/Oswald-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Light";
+    src: url("../font/Oswald-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Bold";
+    src: url("../font/Oswald-Bold.ttf") format("opentype");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    /* z-index: 999; */
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.generalSection {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("/html/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.generalRightArea {
+    /* background-color: rgba(0, 110, 255, 0.05); */
+    height: 83%;
+    width: 66%;
+    margin-top: 5%;
+    margin-left: 29.5%;
+}
+
+.rightTopSection {
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(44.32deg, rgba(255, 138, 138, 0.086) -1.19%, rgba(0, 0, 0, 0) 68.55%),
+        linear-gradient(219.77deg, rgba(255, 138, 138, 0.102) 12.71%, rgba(0, 0, 0, 0) 125.01%), rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 138, 138, 0.09);
+    height: 11.5%;
+}
+
+.topLeftArea {
+    display: flex;
+    /* background-color: rgba(255, 0, 0, 0.061); */
+    width: 27%;
+}
+
+.profileImageSection {
+    overflow: hidden;
+    /* background-color: red; */
+    /* border: 1px solid rgba(91, 14, 14, 0.19); */
+    margin-left: 6%;
+    margin-top: 5.5%;
+    width: 19%;
+    height: 65%;
+    border-radius: 50px;
+}
+
+.profileImageSection img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.charInfoSection {
+    margin-top: 8%;
+    width: 65%;
+    margin-left: 5.5%;
+    font-family: "Oswald";
+    line-height: 25px;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 0.53);
+}
+
+.taskMiddleArea {
+    /* background-color: rgba(0, 0, 255, 0.119); */
+    width: 46%;
+}
+
+.levelTextArea {
+    /* background-color: red; */
+    /* width: 100%; */
+    display: flex;
+    height: 25%;
+    margin-top: 3.6%;
+}
+
+.currentLevel {
+    background: rgba(217, 217, 217, 0.08);
+    border-radius: 4px;
+    border: 1px solid #ffc500;
+    width: 17%;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 13px;
+    line-height: 25px;
+    color: #ffc500;
+}
+
+.currentXPArea {
+    font-size: 16px;
+    display: flex;
+    font-family: "Oswald";
+    color: #ffffff;
+    /* background-color: red; */
+    height: 100%;
+    width: 17%;
+    margin-left: 3%;
+}
+
+.neededXP {
+    color: #ffffff77;
+    margin-left: 4%;
+    margin-top: 3.5%;
+    font-size: 16px;
+}
+
+.middleRectangle {
+    background: rgba(255, 255, 255, 0.07);
+    height: 1px;
+    margin-top: 2%;
+    margin-left: 3%;
+    width: 60%;
+}
+
+.levelGraphArea {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(91, 14, 14, 0.09);
+    border-radius: 5px;
+    height: 22%;
+    margin-top: 1.5%;
+}
+
+.levelFill {
+    background: linear-gradient(90deg, rgba(255, 199, 0, 0.69) 0%, rgba(255, 199, 0, 0.25) 100%);
+    border-radius: 7px;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    max-width: 98%;
+    /* width: 56%; */
+    transition-duration: 0.4s;
+    /* margin-top: 3%; */
+    margin-left: 1%;
+    /* position: relative; */
+    /* padding-top: 2%; */
+}
+
+.tasksButton {
+    background: #ffc304;
+    box-shadow: 0px 0px 36px rgba(255, 195, 4, 0.31);
+    border-radius: 53px;
+    width: 35%;
+    height: 29%;
+    font-size: 15px;
+    text-align: center;
+    font-family: Oswald;
+    padding: 1%;
+    line-height: 23px;
+    cursor: pointer;
+    margin-left: 12%;
+    margin-top: 11%;
+    transition-duration: 0.3s;
+}
+
+.tasksButton:hover {
+    color: white;
+    background: #ffc40400;
+    border: 1px solid #ffc304;
+}
+
+.moneySection {
+    /* background-color: rgba(255, 0, 0, 0.1); */
+    height: 100%;
+    width: 50%;
+    margin-left: 10%;
+}
+
+.moneyListItem {
+    display: flex;
+    /* background-color: rgba(0, 0, 255, 0.108); */
+    height: 40%;
+    margin-top: 1%;
+}
+
+.moneyListItem:not(:last-child) {
+    margin-top: 8%;
+    /* margin-bottom: 4%; */
+}
+
+#walletIcon {
+    color: #a2ffb7;
+    font-size: 20px;
+    margin-top: 4%;
+}
+
+.moneyTextArea {
+    font-family: "Oswald Light";
+    /* margin-top: 2%; */
+    margin-left: 10%;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 9px;
+}
+
+#bankIcon {
+    color: #a2ffb7;
+    font-size: 20px;
+    margin-top: 4%;
+}
+
+.cashMoneyValue {
+    font-family: Oswald;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.bankMoneyValue {
+    font-family: Oswald;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.charNameSection {
+    display: flex;
+}
+
+.lastname {
+    margin-left: 3.5%;
+    font-family: "Oswald Light";
+}
+
+.charSex {
+    font-size: 15px;
+    font-family: "Oswald Light";
+}
+
+.taskRightArea {
+    display: flex;
+    /* background-color: rgba(128, 0, 128, 0.094); */
+    width: 27%;
+}
+
+.rightBottomSection {
+    background: linear-gradient(145.61deg, rgba(255, 138, 138, 0.092) 9.85%, rgba(0, 0, 0, 0) 79.69%), rgba(0, 0, 0, 0.54);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 138, 138, 0.09);
+    height: 84%;
+    margin-top: 2.5%;
+}
+
+.categorySection {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    height: 10%;
+    margin-top: 2.5%;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.categoryItem {
+    cursor: pointer;
+    font-size: 15px;
+    min-width: 15%;
+    text-align: center;
+    line-height: 46px;
+    /* width: 80%; */
+    height: 60%;
+    letter-spacing: 0.05em;
+    margin-top: 1.25%;
+    font-family: "Oswald";
+    color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-left: 1.5%;
+    transition-duration: 0.3s;
+}
+
+.categoryItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.categoryItem.selected {
+    color: rgba(255, 255, 255, 0.81);
+    background: #70474a;
+    border: 1px solid rgba(0, 0, 0, 0.33);
+}
+
+/* .categoryItem:not(:last-child) {
+} */
+
+.rightItemMainSection {
+    /* background-color: blue; */
+    /* width: 200px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* overflow: hidden; */
+}
+
+.itemListArea {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* background-color: red; */
+    height: 78%;
+    padding-right: 1%;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    width: 65.4%;
+}
+
+.cartArea {
+    overflow: hidden;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    height: 10%;
+    /* width: 10%; */
+    height: 77.8%;
+    width: 27%;
+    background: radial-gradient(58.27% 35% at 50% 50%, rgba(255, 255, 255, 0.008) 0.01%, rgba(255, 255, 255, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(130.88% 136.76% at 28.43% -57.65%, rgba(255, 138, 138, 0) 0%, rgba(0, 0, 0, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(108.33% 108.33% at 50.2% 100%, rgba(255, 138, 138, 0) 0%, rgba(0, 0, 0, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.15);
+    /* background-blend-mode: normal, lighten, lighten, normal; */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    /* background-color: blue; */
+    border-radius: 6px;
+}
+
+.itemListArea::-webkit-scrollbar {
+    /* padding-left: 75px; */
+    width: 12px;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.itemListArea::-webkit-scrollbar-track {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.itemListArea::-webkit-scrollbar-thumb {
+    height: 6px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.9);
+    background: #8a5c5c;
+}
+
+.listItem {
+    overflow: hidden;
+    height: 31.5%;
+    width: 31.5%;
+    background: linear-gradient(0deg, rgba(15, 9, 9, 0.8), rgba(19, 10, 10, 0.69)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 138, 138, 0)) border-box;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 23px rgba(255, 138, 138, 0.02), 0px 0px 43px rgba(255, 124, 124, 0.01);
+    border-radius: 6px;
+}
+
+.listItemName {
+    text-align: center;
+    font-family: "Oswald";
+    letter-spacing: 0.03em;
+    margin-top: 5%;
+    font-size: 16px;
+    margin-bottom: 0.5%;
+    color: rgba(255, 255, 255, 0.77);
+}
+
+.listItemType {
+    text-transform: uppercase;
+    justify-content: center;
+    min-width: 22%;
+    width: fit-content;
+    color: black;
+    font-family: "Oswald Bold";
+    font-size: 11px;
+    /* margin-top: 10%; */
+
+    letter-spacing: 0.03em;
+    margin: auto;
+    text-align: center;
+    background: rgba(255, 138, 138, 0.29);
+    border-radius: 2px;
+}
+
+.listItemImageArea {
+    /* background-color: red; */
+    height: 40%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.listItemImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.listItemBottomSection {
+    background: linear-gradient(0deg, rgba(38, 21, 21, 0.9), rgba(40, 24, 24, 0.89)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 138, 138, 0)) border-box;
+    /* background: rgba(255, 157, 157, 0.12); */
+    border-radius: 0px 0px 6px 6px;
+    margin-top: 5%;
+    height: 20%;
+    display: flex;
+    font-family: Oswald;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.listItemCost {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.listItemLevel {
+    position: relative;
+    margin-top: 2.5%;
+    width: 25%;
+    margin-left: 50%;
+    color: rgba(255, 195, 4, 0.52);
+    font-family: "Oswald Light";
+    text-align: center;
+    line-height: 17px;
+    font-size: 10px;
+    height: 50%;
+    /* text-align: end; */
+    margin-right: 5%;
+    border: 1px solid rgba(255, 195, 4, 0.52);
+    border-radius: 34px;
+    /* float: right; */
+    /* justify-content: flex-end; */
+    /* margin-left: 35%; */
+}
+
+.listItemClickableArea {
+    opacity: 0;
+    position: relative;
+    top: -102%;
+    z-index: 987;
+    background: rgba(0, 0, 0, 0.46);
+    height: 100%;
+    width: 100%;
+    transition-duration: 0.3s;
+}
+
+.listItemRequiredLevelArea {
+    /* opacity: 0; */
+    /* filter: blur(100px); */
+    backdrop-filter: blur(2px);
+    position: relative;
+    /* display: flex; */
+    top: -102%;
+    letter-spacing: 0.03em;
+    font-family: Oswald;
+    z-index: 987;
+    background: rgba(0, 0, 0, 0.36);
+    height: 100%;
+    width: 100%;
+    transition-duration: 0.3s;
+}
+
+#lockIcon {
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    margin-top: 12%;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.listItemClickableArea:hover {
+    opacity: 1;
+}
+.listRequiredItemText {
+    font-size: 18px;
+    margin-top: 3%;
+    text-align: center;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.563);
+}
+
+.listRequiredLevel {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+
+.listItemBuyButton {
+    position: relative;
+    border: 1px solid rgba(255, 138, 138, 0.28);
+    width: 50%;
+    border-radius: 2.5px;
+    transition-duration: 0.3s;
+    text-align: center;
+    height: 20%;
+    line-height: 35px;
+    font-size: 15px;
+    font-family: Oswald;
+    top: 40%;
+    color: rgba(255, 255, 255, 0.6);
+    margin: auto;
+    cursor: pointer;
+}
+
+.listItemBuyButton:hover {
+    background: #ff8a8a;
+
+    color: black;
+}
+
+.shoppingTitle {
+    text-align: center;
+    height: 10%;
+    line-height: 60px;
+    font-size: 25px;
+    font-family: "Oswald Light";
+    letter-spacing: 0.04em;
+    background: rgba(161, 92, 92, 0.1);
+    /* border-radius: 6px 6px 0px 0px; */
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cartItemList {
+    /* display: flex; */
+    /* background-color: rgba(255, 0, 0, 0.131); */
+    overflow: scroll;
+    height: 74%;
+    width: 100%;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* flex-direction: ; */
+    /* flex-wrap: nowrap; */
+    margin-top: 7%;
+    /* gap: 15px; */
+}
+
+.cartItem {
+    background: rgba(255, 69, 69, 0.031);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    height: 15%;
+    width: 100%;
+    display: flex;
+    font-family: Oswald;
+    /* margin-bottom: 10px; */
+}
+
+.cartItemList::-webkit-scrollbar {
+    width: 0px;
+}
+
+.cartItem:not(:last-child) {
+    /* margin-left: 0px; */
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+
+.cartItemLeftArea {
+    /* background-color: red; */
+    width: 40%;
+    display: flex;
+}
+
+.cartItemMiddleArea {
+    /* background-color: blue; */
+    width: 30%;
+}
+
+.cartItemRightArea {
+    display: flex;
+    /* background-color: peru; */
+    width: 30%;
+}
+
+.cartItemName {
+    font-size: 15px;
+    margin-top: 15%;
+    margin-left: 9%;
+    /* text-align: center; */
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.cartItemCount {
+    font-family: "Oswald Light";
+    margin-left: 4%;
+    color: rgba(255, 255, 255, 0.62);
+    margin-top: 17%;
+    font-size: 10px;
+}
+
+.cartItemMoney {
+    margin-top: 20%;
+    font-size: 16px;
+    /* text-align: center; */
+    margin-left: 8%;
+    color: #a3ffb7;
+}
+
+.cartCountButton {
+    font-size: 17px;
+    margin-left: 5%;
+    font-family: Oswald Bold;
+    color: rgba(255, 255, 255, 0.786);
+    margin-top: 18%;
+    background: rgba(0, 0, 0, 0.53);
+    border-radius: 3px;
+    height: fit-content;
+    padding-left: 8%;
+    padding-right: 8%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.cartCountButton:hover {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, 0.83);
+}
+
+.cartItemCountInput {
+    max-width: 24%;
+    width: fit-content;
+    height: 40%;
+    color: white;
+    margin-left: 5%;
+    margin-top: 17.5%;
+    outline: none;
+    border: hidden;
+    text-align: center;
+    font-size: 11px;
+    background: rgba(140, 140, 140, 0.256);
+    border-radius: 2px;
+    /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+.cartBottomSection {
+    font-family: Oswald;
+    height: 12%;
+    background: rgba(52, 28, 28, 0.4);
+    /* border-radius: 6px 6px 0px 0px; */
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+}
+
+.cartBottomLeft {
+    /* background-color: red; */
+    width: 40%;
+    height: 100%;
+    margin-left: 4%;
+}
+
+.totalPriceText {
+    margin-top: 7%;
+    font-family: "Oswald Light";
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.36);
+}
+
+.totalPrice {
+    font-size: 20px;
+    /* margin-left: 15%; */
+    color: rgba(162, 255, 183, 0.63);
+}
+
+.cartBottomRight {
+    margin-top: 6%;
+    /* background-color: red; */
+    width: 56%;
+    display: flex;
+}
+
+.cartBottomPaymentButton {
+    font-family: Zabal Bold;
+    background: #94dcb9;
+    border-radius: 2px;
+    font-size: 11px;
+    text-align: center;
+    line-height: 30px;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 60%;
+    width: 45%;
+    /* width: fit-content; */
+    color: rgba(0, 0, 0, 0.66);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.cartBottomPaymentButton:not(:last-child) {
+    margin-right: 5%;
+}
+
+#cashPay {
+    background: #7cae74;
+}
+
+#cashPay:hover {
+    background: #9ee094;
+    box-shadow: 0px 0px 17px rgba(158, 224, 148, 0.22);
+}
+
+#bankPay:hover {
+    background: #abffd7;
+    box-shadow: 0px 0px 17px rgba(171, 255, 215, 0.26);
+}
+
+.cartListEmptyText {
+    color: rgba(255, 255, 255, 0.01);
+    /* text-shadow: 0px 0px 19px rgba(255, 255, 255, 0.084); */
+    font-family: Zabal Bold;
+    font-size: 45px;
+    margin: auto;
+    text-align: center;
+    line-height: 26rem;
+    transition-duration: 0.4s;
+    /* vertical-align: center; */
+    /* text-align: center; */
+}
+
+.generalBuySection {
+    display: none;
+    position: absolute;
+    z-index: 9876;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.046);
+}
+
+.buyMenuMain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15%;
+    margin-top: -10%;
+    height: 30%;
+    /* height: min-content; */
+    width: 30%;
+    /* background: radial-gradient(134.32% 134.33% at 50.2% 100%, rgba(255, 138, 138, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(66, 40, 41, 0.71);
+    background-blend-mode: lighten, normal; */
+    background: linear-gradient(0deg, rgba(62, 29, 29, 0.8), rgba(94, 39, 39, 0.17)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(125, 36, 36, 0.145)) border-box;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    backdrop-filter: blur(17.5px);
+    box-shadow: 0px 0px 128px rgba(255, 139, 139, 0.16);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+}
+
+.buyMenuTop {
+    display: flex;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    /* line-height: 40px; */
+    margin-top: 4.5%;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    /* background-color: red; */
+}
+
+.topSecondText {
+    font-family: "Oswald Light";
+    margin-left: 1%;
+}
+
+.buyMenuButtonAbove {
+    display: flex;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    vertical-align: center;
+    /* line-height: 70px; */
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.aboveSecondText {
+    margin-left: 1%;
+    color: #9ee094;
+}
+
+.topRectangle {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(254, 134, 134, 0.1288) 0%, rgba(254, 134, 134, 0) 100%);
+    height: 2px;
+    /* margin-bottom: 2; */
+    margin-top: 3%;
+}
+
+.buyMenuItemList {
+    overflow: auto;
+    /* background-color: red; */
+    height: 20%;
+    /* height: ; */
+    /* height: fit-content; */
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
+.buyItem {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    font-family: "Oswald";
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 15px;
+    /* line-height: 37px; */
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.47);
+    display: flex;
+}
+
+.buyItemName {
+    /* background-color: blue; */
+    width: 80%;
+}
+
+.buyItemCount {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 10px;
+    line-height: 20px;
+    justify-content: flex-end;
+}
+
+.buyMenuItemList::-webkit-scrollbar {
+    /* padding-left: 75px; */
+    width: 2px;
+    /* height: 5pius: 10px; */
+}
+
+.buyMenuItemList::-webkit-scrollbar-track {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    /* border: 2px solid rgba(255, 255, 255, 0.05); */
+}
+
+.buyMenuItemList::-webkit-scrollbar-thumb {
+    height: 6px;
+    border-radius: 10px;
+    /* border: 3px solid rgba(0, 0, 0, 0.9); */
+    background: #8a5c5ca7;
+}
+
+.buyMenuButtonSection {
+    display: flex;
+    /* background-color: red; */
+    height: 17%;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.buyMenuButton {
+    font-family: "Oswald";
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+    min-width: 50%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    /* line-height: 55px; */
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #000000;
+    text-align: center;
+    /* background-color: green; */
+    line-height: 56px;
+    background: #fa7b7b;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+}
+
+.buyMenuButton:not(:last-child) {
+    margin-right: 2%;
+}
+
+#cancelButtonMenu:hover {
+    background: #fa7b7b;
+    box-shadow: 0px 0px 30px rgba(250, 123, 123, 0.23);
+}
+
+#buyButtonMenu:hover {
+    background: #aaff9c;
+    box-shadow: 0px 0px 30px rgba(170, 255, 156, 0.23);
+}
+
+#buyButtonMenu {
+    background: #aaff9c;
+}
+
+.generalTaskSection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 98765;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.taskMain {
+    margin-top: 6.2%;
+    height: 80%;
+    width: 85%;
+    margin-left: 7.5%;
+    /* background: linear-gradient(145.61deg, rgba(255, 138, 138, 0.092) 9.85%, rgba(0, 0, 0, 0) 79.69%), rgba(13, 13, 13, 0.9); */
+    background: linear-gradient(0deg, rgba(13, 6, 6, 0.804), rgba(9, 5, 5, 0.87)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.4), rgba(123, 14, 14, 0.344)) border-box;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+}
+
+.taskTopArea {
+    /* display: flex; */
+    width: 100%;
+    height: 20%;
+    /* background-color: rgba(255, 0, 0, 0.075); */
+}
+
+.topInfoGeneral {
+    display: flex;
+    /* background-color: red; */
+    height: 80%;
+}
+
+.taskCharInfoArea {
+    display: flex;
+    background: radial-gradient(134.32% 134.33% at 50.2% 100%, rgba(255, 138, 138, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 181, 181, 0.12);
+    /* background-blend-mode: lighten, normal; */
+    background: linear-gradient(0deg, rgba(29, 15, 15, 0.804), rgba(43, 23, 23, 0.87)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.352), rgba(32, 7, 7, 0.344)) border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    height: 65%;
+    margin-top: 1%;
+    width: 28%;
+    margin-left: 3%;
+}
+
+.exitText {
+    color: white;
+    font-size: 25px;
+    font-family: Oswald;
+}
+
+#exitButtonIcon {
+    font-size: 25px;
+    margin-top: 0.2%;
+    margin-left: 0.5%;
+    color: rgba(0, 0, 0, 0.544);
+    background: #9d5858;
+    border-radius: 4px;
+    /* height: 11%; */
+    height: fit-content;
+    padding-left: 0.4%;
+    cursor: pointer;
+    padding-right: 0.4%;
+    /* padding-bottom: 0.1%; */
+    transition-duration: 0.2s;
+}
+
+#exitButtonIcon:hover {
+    background: #a14a4a;
+}
+
+.taskAreaExitSection {
+    /* background-color: black; */
+    height: fit-content;
+    /* width: 50%; */
+    margin-top: 1.5%;
+    justify-content: flex-end;
+    /* margin-right: 5%; */
+    display: flex;
+    width: 97%;
+}
+
+.taskProfileSection {
+    overflow: hidden;
+    margin-left: 4%;
+    margin-top: 4%;
+    border: 1px solid rgba(101, 13, 13, 0.123);
+    /* background-color: red; */
+    height: 60%;
+    width: 12%;
+    border-radius: 43.1538px;
+}
+
+.taskProfileSection img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.taskNameSection {
+    margin-top: 4.5%;
+    margin-left: 5%;
+    width: 45%;
+}
+
+.taskCharInfoName {
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    height: fit-content;
+    font-family: "Oswald";
+    /* font-style: normal; */
+    /* font-weight: 500; */
+    font-size: 21.5608px;
+    /* line-height: 32px; */
+    /* identical to box height */
+    color: white;
+    letter-spacing: 0.03em;
+}
+
+.taskLastName {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Oswald Light";
+    margin-left: 2%;
+}
+
+.taskCharSex {
+    font-family: "Oswald Light";
+    color: rgba(255, 255, 255, 0.43);
+}
+
+.taskMoneySection {
+    /* background-color: rgba(255, 0, 0, 0.1); */
+    height: 100%;
+    width: 35%;
+    margin-top: -10%;
+    margin-left: 10%;
+}
+
+.taskMoneyListItem {
+    display: flex;
+    /* background-color: rgba(0, 0, 255, 0.108); */
+    height: 40%;
+    margin-left: 22%;
+    margin-top: 1%;
+}
+
+.taskMoneyListItem:not(:last-child) {
+    margin-top: 5%;
+    /* margin-bottom: 4%; */
+}
+
+/* 
+.taskMoneySection {
+    background-color: red;
+    width: 35%;
+} */
+
+.taskCharLevelArea {
+    display: flex;
+    height: 65%;
+    /* width: 80%; */
+    background: linear-gradient(0deg, rgba(81, 65, 25, 0.704), rgba(44, 38, 10, 0.67)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.379), rgba(255, 255, 255, 0)) border-box;
+    border-radius: 6px;
+    overflow: hidden;
+    /* backdrop-filter: blur(10px); */
+    border: 1px solid transparent;
+    margin-top: 1%;
+    width: 64.5%;
+    margin-left: 1.5%;
+}
+
+.taskCurrentLevel {
+    background: #f8ca48;
+    border-radius: 6px;
+    font-family: "Oswald Bold";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27px;
+    /* identical to box height */
+    padding-right: 2.1%;
+    padding-left: 2.1%;
+    height: fit-content;
+    padding-bottom: 0.2%;
+    padding-top: 0.2%;
+    margin-left: 3%;
+    margin-top: 2.7%;
+    color: rgba(0, 0, 0, 0.78);
+}
+.taskCurrentLevelGraph {
+    width: 76.5%;
+    height: 20%;
+    margin-top: 3.3%;
+    margin-left: 2.5%;
+    background: rgba(0, 0, 0, 0.59);
+    border-radius: 33px;
+}
+
+.taskCurrentFill {
+    background: linear-gradient(90deg, rgba(255, 199, 0, 0.69) 0%, rgba(255, 199, 0, 0.25) 100%);
+    border-radius: 33px;
+    max-width: 99%;
+    /* width: 65%; */
+    height: 55%;
+    margin-top: 0.47%;
+    margin-left: 0.46%;
+    transition-duration: 0.4s;
+}
+
+.taskXPSection {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 1.1%;
+    margin-top: 2.1%;
+    /* line-height: 30px; */
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.taskNeededXP {
+    font-family: "Oswald Light";
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.notifySection {
+    display: none;
+    z-index: 987;
+    position: absolute;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+}
+
+.notifyMain {
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 25px;
+    background-color: rgba(43, 255, 0, 0.67);
+    padding: 0.5rem;
+}
+
+.taskList {
+    /* background-color: rgba(255, 0, 0, 0.131); */
+    height: 72%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 94%;
+    padding-right: 0.3%;
+    overflow-y: auto;
+    margin-left: 3%;
+    gap: 15px;
+}
+
+.taskList::-webkit-scrollbar {
+    /* padding-left: 75px; */
+    width: 12px;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.taskList::-webkit-scrollbar-track {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.taskList::-webkit-scrollbar-thumb {
+    height: 6px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.9);
+    background: #8a5c5c;
+}
+
+.taskItem {
+    /* background: radial-gradient(134.32% 134.33% at 50.2% 100%, rgba(255, 138, 138, 0.2) 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 157, 157, 0.12);
+    background-blend-mode: lighten, normal; */
+    background: linear-gradient(0deg, rgba(17, 5, 5, 0.7), rgba(59, 40, 40, 0.9)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.309), rgba(59, 40, 40, 1)) border-box;
+    border-radius: 6px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px rgba(255, 138, 138, 0.02), 0px 0px 10px rgba(255, 124, 124, 0.02);
+    border-radius: 6px;
+    width: 49%;
+    height: 25%;
+}
+
+.taskItemTopSection {
+    height: 25%;
+    width: 95%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    /* background-color: red; */
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 18px;
+    display: flex;
+    font-family: "Oswald";
+}
+
+.taskItemTitle {
+    background: #623839;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 0.3%;
+    padding-top: 0.3%;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.taskItemRewardXP {
+    font-family: "Oswald Light";
+    margin-top: 0.3%;
+    margin-left: 1%;
+    font-size: 13px;
+    /* background-color: #f8ca48; */
+    border: 1px solid #f8c948a5;
+    /* color: black; */
+    width: fit-content;
+    height: fit-content;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 0.3%;
+    padding-top: 0.6%;
+    border-radius: 5px;
+}
+
+.taskItemMiddleSection {
+    /* background-color: red; */
+    height: 51%;
+    margin-top: 0.5%;
+    display: flex;
+    width: 95%;
+    margin-left: 3%;
+}
+
+.taskItemDescArea {
+    overflow: auto;
+    /* background-color: blue; */
+    width: 78%;
+    /* text-transform: uppercase; */
+    font-size: 15px;
+    font-family: "Oswald Light";
+    color: #ffffff58;
+}
+
+.taskItemRadialArea {
+    /* background-color: blue; */
+    height: 140%;
+    width: 17%;
+    margin-left: 3%;
+    margin-top: -5%;
+}
+
+.progressBar {
+    /* height: 10%; */
+    width: 85%;
+    margin-left: 10%;
+}
+
+.radialText {
+    font-family: "Oswald Light";
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+        line-height: 25px;
+        font-size: 23px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+        font-size: 13px;
+        line-height: 23px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+
+        font-size: 9px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 11px;
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+        line-height: 17px;
+        font-size: 9px;
+        height: 50%;
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+
+        font-size: 21.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .taskCurrentLevel {
+        font-size: 15px;
+        line-height: 27px;
+
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 25px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 25px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+
+        font-size: 18px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 13px;
+
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+
+        max-width: 78%;
+
+        font-size: 15px;
+    }
+    .buyMenuTop {
+        font-size: 26px;
+        margin-top: 7%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        font-size: 17px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 25px;
+        line-height: 52px;
+        line-height: 51px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 17px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        color: black;
+
+        font-size: 11px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 24px;
+    }
+    .buyItemCount {
+        font-size: 12px;
+        line-height: 27px;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 1200px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+        line-height: 25px;
+        font-size: 21px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+
+        font-size: 9px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 9px;
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+        font-size: 18px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 32%;
+        margin-left: 31%;
+        line-height: 17px;
+        font-size: 14px;
+        height: 50%;
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+        line-height: 54px;
+        height: 60%;
+        margin-top: 1.25%;
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+
+        font-size: 21.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .taskCurrentLevel {
+        font-size: 15px;
+        line-height: 27px;
+
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 25px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 25px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+
+        font-size: 18px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 13px;
+
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+
+        max-width: 78%;
+
+        font-size: 15px;
+    }
+    .buyMenuTop {
+        font-size: 24px;
+        margin-top: 11%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        font-size: 17px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 25px;
+        line-height: 65px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 23px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+        color: black;
+        font-size: 17px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 22px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 26px;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 1024px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+
+        line-height: 25px;
+        font-size: 27px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+
+        font-size: 9px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 16px;
+
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+
+        line-height: 17px;
+        font-size: 10px;
+        height: 50%;
+
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+
+        font-size: 21.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .taskCurrentLevel {
+        font-size: 15px;
+        line-height: 27px;
+
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 25px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 25px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+
+        font-size: 18px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 13px;
+
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+
+        max-width: 78%;
+
+        font-size: 15px;
+    }
+    .buyMenuTop {
+        font-size: 26px;
+        margin-top: 7%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        font-size: 18px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+
+        font-size: 25px;
+
+        line-height: 50px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 16px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        color: black;
+
+        font-size: 11px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 24px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 26px;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 900px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+        line-height: 25px;
+        font-size: 19px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 13px;
+        padding: 1%;
+        line-height: 20px;
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+
+        font-size: 9px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 53px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 9px;
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 33%;
+        margin-left: 38%;
+        line-height: 14px;
+        font-size: 11px;
+        height: 50%;
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+
+        font-size: 21.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .taskCurrentLevel {
+        font-size: 15px;
+        line-height: 27px;
+
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 25px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 25px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+
+        font-size: 18px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 13px;
+
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+
+        max-width: 78%;
+
+        font-size: 15px;
+    }
+    .buyMenuTop {
+        font-size: 25px;
+        margin-top: 5%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        font-size: 16px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 19px;
+        line-height: 47px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 14px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+        color: black;
+        font-size: 9px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+        height: 20%;
+        line-height: 30px;
+        font-size: 15px;
+        top: 40%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 22px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 22px;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+        line-height: 25px;
+        font-size: 19px;
+    }
+    .taskItem {
+        background: linear-gradient(0deg, rgba(17, 5, 5, 0.7), rgba(59, 40, 40, 0.9)) padding-box,
+            linear-gradient(to top, rgba(255, 255, 255, 0.309), rgba(59, 40, 40, 1)) border-box;
+        border-radius: 6px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        border: 1px solid transparent;
+        box-shadow: 0px 0px 10px rgb(255 138 138 / 2%), 0px 0px 10px rgb(255 124 124 / 2%);
+        border-radius: 6px;
+        width: 49%;
+        height: 25%;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+        padding: 1%;
+        line-height: 19px;
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+        font-size: 8px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 6px;
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 38%;
+        line-height: 14px;
+        font-size: 10px;
+        height: 50%;
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+        line-height: 34px;
+        height: 60%;
+        margin-top: 1.25%;
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 15.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 13px;
+    }
+    .bankMoneyValue {
+        font-size: 13px;
+    }
+    .taskCurrentLevel {
+        font-size: 15px;
+        line-height: 27px;
+
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 25px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 22px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        font-size: 17px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 12px;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+        max-width: 78%;
+        font-size: 12px;
+    }
+    .buyMenuTop {
+        font-size: 23px;
+        margin-top: 7%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+
+        font-size: 15px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 18px;
+        line-height: 47px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 16px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        color: black;
+
+        font-size: 11px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 20px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+}
+
+@media screen and (max-width: 1400px) and (max-height: 1050px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+        line-height: 25px;
+        font-size: 20px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+
+        font-size: 9px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 4px;
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 34%;
+        line-height: 19px;
+        font-size: 10px;
+        height: 50%;
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 16.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 14px;
+    }
+    .bankMoneyValue {
+        font-size: 14px;
+    }
+    .taskCurrentLevel {
+        font-size: 15px;
+        line-height: 27px;
+
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 25px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 22px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+
+        font-size: 18px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 13px;
+
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+
+        max-width: 78%;
+
+        font-size: 15px;
+    }
+    .buyMenuTop {
+        font-size: 23px;
+        margin-top: 11%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+
+        font-size: 15px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 22px;
+        line-height: 55px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 19px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+        font-size: 15px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 20px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .charInfoSection {
+        margin-top: 6%;
+        width: 65%;
+        margin-left: 5.5%;
+        line-height: 25px;
+        font-size: 19px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+        padding: 1%;
+        line-height: 19px;
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+        font-size: 8px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 45px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 16px;
+
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 11px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+        height: 40%;
+        margin-left: 5%;
+        margin-top: 17.5%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 12px;
+        margin-left: 5%;
+        margin-top: 18%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 13px;
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 16px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 10px;
+        line-height: 22px;
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 34%;
+        line-height: 12px;
+        font-size: 10px;
+        height: 50%;
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+        line-height: 32px;
+        height: 60%;
+        margin-top: 1.25%;
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 14.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 11px;
+    }
+    .bankMoneyValue {
+        font-size: 11px;
+    }
+    .taskCurrentLevel {
+        font-size: 12px;
+        line-height: 27px;
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 14px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 10px;
+    }
+    #exitButtonIcon {
+        font-size: 22px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 18px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        font-size: 15px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 10px;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+        max-width: 78%;
+        font-size: 12px;
+    }
+    .buyMenuTop {
+        font-size: 24px;
+        margin-top: 3%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+
+        font-size: 15px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 13px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+        font-size: 8px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    #lockIcon {
+        font-size: 40px;
+        width: 100%;
+        margin-top: 12%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+        width: 100%;
+        font-size: 16px;
+    }
+    .listRequiredLevel {
+        font-size: 16px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 19px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+
+        line-height: 25px;
+        font-size: 27px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+
+        font-size: 9px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 16px;
+
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+
+        line-height: 17px;
+        font-size: 10px;
+        height: 50%;
+
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+
+        font-size: 21.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .taskCurrentLevel {
+        font-size: 15px;
+        line-height: 27px;
+
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 25px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 25px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+
+        font-size: 18px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 13px;
+
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+
+        max-width: 78%;
+
+        font-size: 15px;
+    }
+    .buyMenuTop {
+        font-size: 23px;
+        margin-top: 12%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+
+        font-size: 15px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 20px;
+        line-height: 54px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 16px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        font-size: 11px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 17px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 960px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+
+        line-height: 25px;
+        font-size: 27px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+        font-size: 7px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 16px;
+
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+
+        line-height: 17px;
+        font-size: 10px;
+        height: 50%;
+
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 16.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 11px;
+    }
+    .bankMoneyValue {
+        font-size: 11px;
+    }
+    .taskCurrentLevel {
+        font-size: 11px;
+        line-height: 27px;
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 24px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 20px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        font-size: 17px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 13px;
+
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+        max-width: 78%;
+        font-size: 13px;
+    }
+    .buyMenuTop {
+        font-size: 23px;
+        margin-top: 10%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+
+        font-size: 15px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 16px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        font-size: 11px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 18px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (width: 2560px) and (height: 1440px) {
+    .charInfoSection {
+        margin-top: 10%;
+        width: 65%;
+        margin-left: 5.5%;
+
+        line-height: 25px;
+        font-size: 30px;
+    }
+    .charSex {
+        font-size: 20px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 17px;
+        line-height: 32px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 20px;
+
+        padding: 1%;
+        line-height: 30px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 5%;
+        font-size: 14px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 80px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 20px;
+
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 19px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17.5%;
+        font-size: 15px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 14px;
+    }
+    .cartCountButton {
+        font-size: 21px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 20px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 17px;
+    }
+    .totalPrice {
+        font-size: 26px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 15px;
+
+        line-height: 40px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 20px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+
+        line-height: 22px;
+        font-size: 14px;
+        height: 50%;
+
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -100%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 22px;
+
+        line-height: 57px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 30.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 20px;
+    }
+    .bankMoneyValue {
+        font-size: 20px;
+    }
+    .taskCurrentLevel {
+        font-size: 20px;
+        line-height: 27px;
+        margin-left: 3%;
+        margin-top: 2.9%;
+    }
+    .taskXPSection {
+        font-size: 22px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 19px;
+    }
+    #exitButtonIcon {
+        font-size: 30px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 28px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        font-size: 26px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 19px;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+        max-width: 78%;
+        font-size: 20px;
+    }
+    .buyMenuTop {
+        font-size: 42px;
+        margin-top: 5%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        font-size: 26px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 31px;
+        line-height: 73px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 21px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        font-size: 14px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 46px;
+        font-size: 22px;
+
+        top: 40%;
+    }
+}
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+    .charInfoSection {
+        margin-top: 10%;
+        width: 65%;
+        margin-left: 5.5%;
+        line-height: 25px;
+        font-size: 46px;
+    }
+    .charSex {
+        font-size: 37px;
+        margin-top: 5%;
+    }
+    .currentLevel {
+        width: 17%;
+        font-size: 30px;
+        line-height: 48px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 37px;
+        padding: 1%;
+        line-height: 46px;
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+        font-size: 20px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 114px;
+        font-size: 43px;
+    }
+    .currentXPArea {
+        font-size: 30px;
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 29px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+        margin-top: 17%;
+        font-size: 22px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+        height: 40%;
+        margin-left: 5%;
+        margin-top: 17.5%;
+        font-size: 30px;
+    }
+    .cartCountButton {
+        font-size: 40px;
+        margin-left: 5%;
+        margin-top: 18%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 32px;
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+        font-size: 31px;
+    }
+    .totalPrice {
+        font-size: 43px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 26px;
+        line-height: 62px;
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+        font-size: 31px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+        line-height: 34px;
+        font-size: 20px;
+        height: 50%;
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 39px;
+        line-height: 86px;
+        height: 60%;
+        margin-top: 1.25%;
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 42.5608px;
+    }
+    #walletIcon {
+        font-size: 21px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 34px;
+    }
+    .bankMoneyValue {
+        font-size: 34px;
+    }
+    .taskCurrentLevel {
+        font-size: 29px;
+        line-height: 27px;
+        margin-left: 3%;
+        margin-top: 3.4%;
+    }
+    .taskXPSection {
+        font-size: 35px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 23px;
+    }
+    #exitButtonIcon {
+        font-size: 46px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 45px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        font-size: 38px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 28px;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        max-width: 78%;
+        font-size: 31px;
+    }
+    .buyMenuTop {
+        font-size: 59px;
+        margin-top: 5%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+        font-size: 36px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 45px;
+        line-height: 114px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 33px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+        font-size: 23px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+        height: 20%;
+        line-height: 68px;
+        font-size: 40px;
+        top: 40%;
+    }
+    #lockIcon {
+        font-size: 84px;
+        width: 100%;
+        margin-top: 12%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+        width: 100%;
+        font-size: 35px;
+    }
+    .listRequiredLevel {
+        font-size: 36px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 55px;
+    }
+    .buyItemCount {
+        font-size: 27px;
+        line-height: 34px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+
+        line-height: 25px;
+        font-size: 27px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+        font-size: 8px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 16px;
+
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+
+        line-height: 17px;
+        font-size: 10px;
+        height: 50%;
+
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 15.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 10px;
+    }
+    .bankMoneyValue {
+        font-size: 10px;
+    }
+    .taskCurrentLevel {
+        font-size: 11px;
+        line-height: 27px;
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 22px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 18px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        font-size: 15px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 10px;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+        max-width: 78%;
+        font-size: 11px;
+    }
+    .buyMenuTop {
+        font-size: 22px;
+        margin-top: 5%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+
+        font-size: 15px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 17px;
+        line-height: 41px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 16px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        font-size: 11px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 18px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+    .charInfoSection {
+        margin-top: 8%;
+        width: 65%;
+        margin-left: 5.5%;
+
+        line-height: 25px;
+        font-size: 27px;
+    }
+    .charSex {
+        font-size: 15px;
+    }
+    .currentLevel {
+        width: 17%;
+
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .tasksButton {
+        width: 35%;
+        height: 29%;
+        font-size: 15px;
+
+        padding: 1%;
+        line-height: 23px;
+
+        margin-left: 12%;
+        margin-top: 11%;
+    }
+    .moneyTextArea {
+        margin-left: 10%;
+        font-size: 6px;
+    }
+    .cashMoneyValue {
+        font-size: 15px;
+    }
+    .bankMoneyValue {
+        font-size: 15px;
+    }
+    .shoppingTitle {
+        height: 10%;
+        line-height: 60px;
+        font-size: 25px;
+    }
+    .currentXPArea {
+        font-size: 16px;
+
+        height: 100%;
+        width: 17%;
+        margin-left: 3%;
+    }
+    .cartItemName {
+        font-size: 15px;
+        margin-top: 15%;
+        margin-left: 9%;
+    }
+    .cartItemCount {
+        margin-left: 4%;
+
+        margin-top: 17%;
+        font-size: 10px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemCountInput {
+        max-width: 24%;
+
+        height: 40%;
+
+        margin-left: 5%;
+        margin-top: 17.5%;
+
+        font-size: 11px;
+    }
+    .cartCountButton {
+        font-size: 17px;
+        margin-left: 5%;
+
+        margin-top: 18%;
+
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .cartItemMoney {
+        margin-top: 20%;
+        font-size: 16px;
+
+        margin-left: 8%;
+    }
+    .totalPriceText {
+        margin-top: 7%;
+
+        font-size: 14px;
+    }
+    .totalPrice {
+        font-size: 20px;
+    }
+    .cartBottomPaymentButton {
+        font-size: 11px;
+
+        line-height: 30px;
+
+        height: 60%;
+        width: 45%;
+    }
+    .listItemBottomSection {
+        margin-top: 5%;
+        height: 20%;
+
+        font-size: 15px;
+    }
+    .listItemLevel {
+        margin-top: 2.5%;
+        width: 25%;
+        margin-left: 50%;
+
+        line-height: 17px;
+        font-size: 10px;
+        height: 50%;
+
+        margin-right: 5%;
+    }
+    .listItemClickableArea {
+        opacity: 0;
+
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .categoryItem {
+        min-width: 15%;
+        font-size: 15px;
+
+        line-height: 46px;
+
+        height: 60%;
+
+        margin-top: 1.25%;
+
+        margin-left: 1.5%;
+    }
+    .listItemRequiredLevelArea {
+        top: -102%;
+
+        height: 100%;
+        width: 100%;
+    }
+    .taskCharInfoName {
+        width: 100%;
+        font-size: 11.5608px;
+    }
+    #walletIcon {
+        font-size: 20px;
+        margin-top: 4%;
+    }
+    .cashMoneyValue {
+        font-size: 11px;
+    }
+    .bankMoneyValue {
+        font-size: 11px;
+    }
+    .taskCurrentLevel {
+        font-size: 12px;
+        line-height: 27px;
+        margin-left: 3%;
+        margin-top: 2.7%;
+    }
+    .taskXPSection {
+        font-size: 15px;
+        margin-left: 1.1%;
+        margin-top: 2.1%;
+    }
+    .taskNeededXP {
+        font-size: 11px;
+    }
+    #exitButtonIcon {
+        font-size: 22px;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+    }
+    .exitText {
+        font-size: 18px;
+    }
+    .taskItemTopSection {
+        height: 25%;
+        width: 95%;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        font-size: 15px;
+    }
+    .taskItemRewardXP {
+        margin-top: 0.3%;
+        margin-left: 1%;
+        font-size: 10px;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 0.3%;
+        padding-top: 0.6%;
+    }
+    .taskItemDescArea {
+        overflow: auto;
+        max-width: 78%;
+        font-size: 11px;
+    }
+    .buyMenuTop {
+        font-size: 22px;
+        margin-top: 4%;
+    }
+    .buyItem {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+
+        font-size: 15px;
+    }
+    .buyMenuButton {
+        height: 100%;
+        min-width: 50%;
+        font-size: 16px;
+        line-height: 42px;
+    }
+    .listItemName {
+        margin-top: 5%;
+        font-size: 16px;
+        margin-bottom: 0.5%;
+    }
+    .listItemType {
+        min-width: 22%;
+
+        font-size: 11px;
+    }
+    .listItemBuyButton {
+        width: 50%;
+
+        height: 20%;
+        line-height: 35px;
+        font-size: 15px;
+
+        top: 40%;
+    }
+    #lockIcon {
+        font-size: 50px;
+
+        width: 100%;
+        margin-top: 12%;
+    }
+    .listRequiredItemText {
+        margin-top: 3%;
+
+        width: 100%;
+
+        font-size: 18px;
+    }
+    .listRequiredLevel {
+        font-size: 18px;
+    }
+    .buyMenuButtonAbove {
+        font-size: 16px;
+    }
+    .buyItemCount {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,612 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive2.css" /> -->
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="notifySection">
+            <div class="notifyMain">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, beatae?</div>
+        </div>
+        <div class="generalTaskSection">
+            <div class="taskMain">
+                <div class="taskTopArea">
+                    <div class="taskAreaExitSection">
+                        <div class="exitText">EXIT</div>
+                        <i class="fa-solid fa-xmark" id="exitButtonIcon"></i>
+                    </div>
+
+                    <div class="topInfoGeneral">
+                        <div class="taskCharInfoArea">
+                            <div class="taskProfileSection">
+                                <img class="profilePhotoAK4Y" src="./images/profilePhoto.png" alt="" />
+                            </div>
+                            <div class="taskNameSection">
+                                <div class="taskCharInfoName">
+                                    <div class="taskFirstName">BRENDEN</div>
+                                    <div class="taskLastName">RANDALL</div>
+                                </div>
+                                <div class="taskCharSex">MEN</div>
+                            </div>
+                            <div class="moneySection">
+                                <div class="taskMoneyListItem">
+                                    <i id="walletIcon" class="fa-solid fa-wallet"></i>
+                                    <div class="moneyTextArea">
+                                        <div class="cashMoneyText">CASH MONEY</div>
+                                        <div class="cashMoneyValue">$250.000</div>
+                                    </div>
+                                </div>
+                                <div class="taskMoneyListItem">
+                                    <i id="bankIcon" class="fa-solid fa-building-columns"></i>
+                                    <div class="moneyTextArea">
+                                        <div class="bankMoneyText">BANK MONEY</div>
+                                        <div class="bankMoneyValue">$1.250.000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="taskCharLevelArea">
+                            <div class="taskCurrentLevel" id="taskLevelText">LEVEL 0</div>
+                            <div class="taskCurrentLevelGraph">
+                                <div class="taskCurrentFill"></div>
+                            </div>
+                            <div class="taskXPSection">
+                                <div class="taskCurrentXP">500XP</div>
+                                <div class="taskNeededXP">/ 1000XP</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="taskList">
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar5"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar6"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar7"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskItem">
+                        <div class="taskItemTopSection">
+                            <div class="taskItemTitle">MAKE A BANK ROBBERY</div>
+                            <div class="taskItemRewardXP">+ 1000XP</div>
+                        </div>
+                        <div class="taskItemMiddleSection">
+                            <div class="taskItemDescArea">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quibusdam accusamus tempora officia perspiciatis.
+                                Veritatis dolorum dolore, amet corporis maiores tempore quaerat similique possimus, ipsam modi id labore sed sequi cum
+                                error recusandae? Ipsum, fugiat.
+                            </div>
+                            <div class="taskItemRadialArea">
+                                <div id="progressBar8"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="generalBuySection">
+            <div class="buyMenuMain">
+                <div class="buyMenuTop">
+                    <div class="topFirstText">DO YOU</div>
+                    <div class="topSecondText">ACCEPT TO PAY FOR</div>
+                </div>
+                <div class="buyMenuButtonAbove">
+                    <div class="aboveFirstText">THE ITEMS IN YOUR CART WITH</div>
+                    <div class="aboveSecondText">CASH MONEY?</div>
+                </div>
+                <div class="topRectangle"></div>
+                <div class="buyMenuItemList">
+                    <div class="buyItem">
+                        <div class="buyItemName">CARBINE RIFLE</div>
+                        <div class="buyItemCount">X1</div>
+                    </div>
+
+                    <div class="buyItem">
+                        <div class="buyItemName">CARBINE RIFLE</div>
+                        <div class="buyItemCount">X1</div>
+                    </div>
+                </div>
+                <div class="topRectangle"></div>
+                <div class="buyMenuButtonSection">
+                    <div class="buyMenuButton" id="cancelButtonMenu">CANCEL</div>
+                    <div class="buyMenuButton" id="buyButtonMenu">BUY</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="generalSection">
+            <div class="generalRightArea">
+                <div class="rightTopSection">
+                    <div class="topLeftArea">
+                        <div class="profileImageSection">
+                            <img class="profilePhotoAK4Y" src="./images/profilePhoto.png" alt="" />
+                        </div>
+                        <div class="charInfoSection">
+                            <div class="charNameSection">
+                                <div class="firstName">BRENDEN</div>
+                                <div class="lastname">RANDALL</div>
+                            </div>
+                            <div class="charSex">MEN</div>
+                        </div>
+                    </div>
+
+                    <div class="taskMiddleArea">
+                        <div class="levelTextArea">
+                            <div class="currentLevel" id="currentLVL">0 LVL</div>
+                            <div class="middleRectangle"></div>
+                            <div class="currentXPArea">
+                                <div class="currentXP">520XP</div>
+                                <div class="neededXP">/ 1000XP</div>
+                            </div>
+                        </div>
+
+                        <div class="levelGraphArea">
+                            <div class="levelFill"></div>
+                        </div>
+                    </div>
+                    <div class="taskRightArea">
+                        <div class="tasksButton">TASKS</div>
+                        <div class="moneySection">
+                            <div class="moneyListItem">
+                                <i id="walletIcon" class="fa-solid fa-wallet"></i>
+                                <div class="moneyTextArea">
+                                    <div class="cashMoneyText">CASH MONEY</div>
+                                    <div class="cashMoneyValue">$250.000</div>
+                                </div>
+                            </div>
+                            <div class="moneyListItem">
+                                <i id="bankIcon" class="fa-solid fa-building-columns"></i>
+                                <div class="moneyTextArea">
+                                    <div class="bankMoneyText">BANK MONEY</div>
+                                    <div class="bankMoneyValue">$1.250.000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rightBottomSection">
+                    <div class="categorySection">
+                        <div class="categoryItem selected">GUN</div>
+                        <div class="categoryItem">ITEM</div>
+                        <div class="categoryItem">KNIFE</div>
+                        <div class="categoryItem">RIG</div>
+                    </div>
+                    <div class="rightItemMainSection">
+                        <div class="itemListArea">
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 1</div>
+                                </div>
+                                <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 2</div>
+                                </div>
+                                <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 3</div>
+                                </div>
+                                <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 4</div>
+                                </div>
+                                <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 5</div>
+                                </div>
+                                <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 6</div>
+                                </div>
+                                <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 7</div>
+                                </div>
+                                <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 8</div>
+                                </div>
+                                <div class="listItemRequiredLevelArea">
+                                    <i id="lockIcon" class="fa-solid fa-lock"></i>
+                                    <div class="listRequiredItemText">REQUIRED</div>
+                                    <div class="listRequiredLevel">LEVEL 8</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 9</div>
+                                </div>
+                                <div class="listItemRequiredLevelArea">
+                                    <i id="lockIcon" class="fa-solid fa-lock"></i>
+                                    <div class="listRequiredItemText">REQUIRED</div>
+                                    <div class="listRequiredLevel">LEVEL 9</div>
+                                </div>
+                                <!-- <div class="listItemClickableArea">
+                                    <div class="listItemBuyButton">BUY</div>
+                                </div> -->
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 10</div>
+                                </div>
+                                <div class="listItemRequiredLevelArea">
+                                    <i id="lockIcon" class="fa-solid fa-lock"></i>
+                                    <div class="listRequiredItemText">REQUIRED</div>
+                                    <div class="listRequiredLevel">LEVEL 10</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 11</div>
+                                </div>
+                                <div class="listItemRequiredLevelArea">
+                                    <i id="lockIcon" class="fa-solid fa-lock"></i>
+                                    <div class="listRequiredItemText">REQUIRED</div>
+                                    <div class="listRequiredLevel">LEVEL 11</div>
+                                </div>
+                            </div>
+                            <div class="listItem">
+                                <div class="listItemName">CARBINE RIFLE</div>
+                                <div class="listItemType">GUN</div>
+                                <div class="listItemImageArea">
+                                    <img src="./images/carbinerifle.png" alt="" />
+                                </div>
+                                <div class="listItemBottomSection">
+                                    <div class="listItemCost">$500.000</div>
+                                    <div class="listItemLevel">LEVEL 12</div>
+                                </div>
+                                <div class="listItemRequiredLevelArea">
+                                    <i id="lockIcon" class="fa-solid fa-lock"></i>
+                                    <div class="listRequiredItemText">REQUIRED</div>
+                                    <div class="listRequiredLevel">LEVEL 12</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cartArea">
+                            <div class="shoppingTitle">SHOPPING CART</div>
+                            <div class="cartItemList">
+                                <div class="cartListEmptyText">EMPTY</div>
+                                <!-- <div class="cartItem">
+                                    <div class="cartItemLeftArea">
+                                        <div class="cartItemName">CARBINE RIFLE</div>
+                                        <div class="cartItemCount">X1</div>
+                                    </div>
+                                    <div class="cartItemMiddleArea">
+                                        <div class="cartItemMoney">$500.000</div>
+                                    </div>
+                                    <div class="cartItemRightArea">
+                                        <div class="cartCountButton">-</div>
+                                        <input type="text" class="cartItemCountInput" value="15" />
+                                        <div class="cartCountButton">+</div>
+                                    </div>
+                                </div>
+
+                                <div class="cartItem">
+                                    <div class="cartItemLeftArea">
+                                        <div class="cartItemName">CARBINE RIFLE</div>
+                                        <div class="cartItemCount">X1</div>
+                                    </div>
+                                    <div class="cartItemMiddleArea">
+                                        <div class="cartItemMoney">$500.000</div>
+                                    </div>
+                                    <div class="cartItemRightArea">
+                                        <div class="cartCountButton">-</div>
+                                        <input type="text" class="cartItemCountInput" value="1" />
+                                        <div class="cartCountButton">+</div>
+                                    </div>
+                                </div>
+                                <div class="cartItem">
+                                    <div class="cartItemLeftArea">
+                                        <div class="cartItemName">CARBINE RIFLE</div>
+                                        <div class="cartItemCount">X1</div>
+                                    </div>
+                                    <div class="cartItemMiddleArea">
+                                        <div class="cartItemMoney">$500.000</div>
+                                    </div>
+                                    <div class="cartItemRightArea">
+                                        <div class="cartCountButton">-</div>
+                                        <input type="text" class="cartItemCountInput" value="1" />
+                                        <div class="cartCountButton">+</div>
+                                    </div>
+                                </div>
+                                <div class="cartItem">
+                                    <div class="cartItemLeftArea">
+                                        <div class="cartItemName">CARBINE RIFLE</div>
+                                        <div class="cartItemCount">X1</div>
+                                    </div>
+                                    <div class="cartItemMiddleArea">
+                                        <div class="cartItemMoney">$500.000</div>
+                                    </div>
+                                    <div class="cartItemRightArea">
+                                        <div class="cartCountButton">-</div>
+                                        <input type="text" class="cartItemCountInput" value="1" />
+                                        <div class="cartCountButton">+</div>
+                                    </div>
+                                </div>
+                                <div class="cartItem">
+                                    <div class="cartItemLeftArea">
+                                        <div class="cartItemName">CARBINE RIFLE</div>
+                                        <div class="cartItemCount">X1</div>
+                                    </div>
+                                    <div class="cartItemMiddleArea">
+                                        <div class="cartItemMoney">$500.000</div>
+                                    </div>
+                                    <div class="cartItemRightArea">
+                                        <div class="cartCountButton">-</div>
+                                        <input type="text" class="cartItemCountInput" value="1" />
+                                        <div class="cartCountButton">+</div>
+                                    </div>
+                                </div>
+                                <div class="cartItem">
+                                    <div class="cartItemLeftArea">
+                                        <div class="cartItemName">CARBINE RIFLE</div>
+                                        <div class="cartItemCount">X1</div>
+                                    </div>
+                                    <div class="cartItemMiddleArea">
+                                        <div class="cartItemMoney">$500.000</div>
+                                    </div>
+                                    <div class="cartItemRightArea">
+                                        <div class="cartCountButton">-</div>
+                                        <input type="text" class="cartItemCountInput" value="1" />
+                                        <div class="cartCountButton">+</div>
+                                    </div>
+                                </div>
+                                <div class="cartItem">
+                                    <div class="cartItemLeftArea">
+                                        <div class="cartItemName">CARBINE RIFLE</div>
+                                        <div class="cartItemCount">X1</div>
+                                    </div>
+                                    <div class="cartItemMiddleArea">
+                                        <div class="cartItemMoney">$500.000</div>
+                                    </div>
+                                    <div class="cartItemRightArea">
+                                        <div class="cartCountButton">-</div>
+                                        <input type="text" class="cartItemCountInput" value="1" />
+                                        <div class="cartCountButton">+</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="cartBottomSection">
+                                <div class="cartBottomLeft">
+                                    <div class="totalPriceText">TOTAL PRICE</div>
+                                    <div class="totalPrice">$0</div>
+                                </div>
+                                <div class="cartBottomRight">
+                                    <div class="cartBottomPaymentButton" id="cashPay">CASH</div>
+                                    <div class="cartBottomPaymentButton" id="bankPay">BANK</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/fontawesome.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="js/progressbar.js"></script>
+        <script src="js/app.js?v=1"></script>
+    </body>
+</html>
