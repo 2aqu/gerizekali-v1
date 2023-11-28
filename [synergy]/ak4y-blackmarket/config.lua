@@ -27,8 +27,8 @@ AK4Y.Blackmarkets = {
     {
         pedName = "AK4Y", 
         pedHash = 0x855E36A3, -- https://wiki.rage.mp/index.php?title=Peds
-        pedCoord = vector3(-168.95, 6144.61, 41.64), -- ped coord vector4(-168.95, 6144.61, 42.64, 89.0)
-        h = 89.0, -- ped heading
+        pedCoord = vector3(-1001.35, 4847.36, 274.01), -- ped coord vector4(-168.95, 6144.61, 42.64, 89.0)
+        h = 16.75, -- ped heading
         drawText = "Black Market",
         authorizedJobs = {"all"}, -- if you type all then all players will have access
         -- authorizedJobs = {"gang1", "gang2"}, -- If you want to integrate the job, this is the example.

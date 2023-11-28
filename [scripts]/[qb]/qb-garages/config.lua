@@ -100,6 +100,75 @@ Garages = {
         debug = false,
     },
 
+    ['wutanggarag'] = {
+        ['Zone'] = {
+            ['Shape'] = {
+                vector2(13.875377655029, -1835.7635498047),
+                vector2(7.8818602561951, -1842.7453613281),
+                vector2(2.852534532547, -1838.3762207031),
+                vector2(8.7904090881348, -1831.3481445312)
+            },
+            ['minZ'] = 22.2,  -- min height of the parking zone
+            ['maxZ'] = 27.30,  -- max height of the parking zone
+        },
+        label = 'Wutang Garaj',
+        showBlip = false,
+        blipcoords = vector3(852.51, -2101.76, 30.5),
+        blipName = 'Garaj',
+        blipNumber = 357,
+        type = 'public',
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
+        drawText = '[F3] Garaj',
+        debug = false,
+    },
+
+
+    ['wutangimpodun'] = {
+        ['Zone'] = {
+            ['Shape'] = { --polygon that surrounds the parking area
+                vector2(13.956372261047, -1814.3887939453),
+                vector2(20.398448944092, -1820.80859375),
+                vector2(16.192142486572, -1825.4455566406),
+                vector2(9.0277538299561, -1819.7592773438)
+            },
+            ['minZ'] = 22.00,  -- min height of the parking zone
+            ['maxZ'] = 27.00,  -- max height of the parking zone
+            debug = false,
+        },
+        label = "Wutang Çekilmiş",
+        showBlip = false,
+        blipcoords = vector3(1705.43, 3749.38, 34.0),
+        blipName = "Çekilmiş Araçlar",
+        blipNumber = 68,
+        blipColor = 1, 
+        type = 'depot',                --public, job, gang, depot
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
+        drawText = '[F3] Çekilmiş Araçlar',                 --car, air, sea
+        debug = false,
+    },
+
+    ['cortezgarage'] = {
+        ['Zone'] = {
+            ['Shape'] = {
+                vector2(-580.67199707031, -1771.7603759766),
+                vector2(-585.32562255859, -1778.2373046875),
+                vector2(-573.62603759766, -1789.1240234375),
+                vector2(-568.46185302734, -1780.2752685547)
+            },
+            ['minZ'] = 20.2,  -- min height of the parking zone
+            ['maxZ'] = 26.30,  -- max height of the parking zone
+        },
+        label = 'Cortez Garaj',
+        showBlip = false,
+        blipcoords = vector3(852.51, -2101.76, 30.5),
+        blipName = 'Garaj',
+        blipNumber = 357,
+        type = 'public',
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
+        drawText = '[F3] Garaj',
+        debug = false,
+    },
+
 
     ['customcafegarag'] = {
         ['Zone'] = {

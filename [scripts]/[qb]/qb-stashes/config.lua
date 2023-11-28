@@ -395,5 +395,18 @@ Config.Stashes = {
         stashSize = 1250000,
         stashSlots = 125, 
     },
+    ["mechanic15"] = {
+        canAnyoneOpen = false,
+        stashName = "mechanic15",
+        coords = vector3(-599.12, -1756.3, 27.35), 
+        requirecid = false,
+        jobrequired = true,
+        gangrequired = false,
+        gang = "",
+        job = "mechanic15",
+        cid = {""},  
+        stashSize = 1250000,
+        stashSlots = 125, 
+    },
     
 }

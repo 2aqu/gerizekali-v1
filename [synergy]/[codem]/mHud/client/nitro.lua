@@ -249,7 +249,12 @@
 --    end
 --end)
 
-
+--Model Name:	Unknown
+--Model Hash:	1007739037
+--
+--Heading:	271.69
+--Coords:		vector3(-597.94, -1755.86, 22.19)
+--Rotation:	vector3(0.0, 0.0, -88.31)
 
 VehicleNitrous = {}
 local NitrousActivated = false
@@ -678,32 +683,37 @@ function doNosFill(nostank)
     )
 end
 
+
+--Model Name:	Unknown
+--Model Hash:	1007739037
+--
+--Heading:	271.69
+--Coords:		vector3(-597.94, -1755.86, 22.19)
+--Rotation:	vector3(0.0, 0.0, -88.31)
+
+
 local playerPed = PlayerPedId()
-local coords = GetEntityCoords(playerPed)
-model = "prop_gascyl_03a"
-RequestModel(model)
-while not HasModelLoaded(model) do
-    Wait(0)
-end
-local tankx, tanky, tankz = table.unpack(vector3(893.7, -2122.3, 29.46))
-local gascyl = CreateObject(model, tankx, tanky, tankz, true, true)
-Wait(50)
-PlaceObjectOnGroundProperly(plant)
-SetEntityInvincible(gascyl, true)
-FreezeEntityPosition(gascyl, true)
-NetworkUnregisterNetworkedEntity(gascyl)
-exports["qb-target"]:AddEntityZone(
-    "oxy-1",
-    gascyl,
-    { name = "oxy-1", heading = GetEntityHeading(gascyl), debugPoly = false },
-    {
+--local coords = GetEntityCoords(playerPed)
+--model = "prop_gascyl_03a"
+--RequestModel(model)
+--while not HasModelLoaded(model) do
+--    Wait(0)
+--end
+--local tankx, tanky, tankz = table.unpack(vector3(893.7, -2122.3, 29.46))
+--local gascyl = CreateObject(model, tankx, tanky, tankz, true, true)
+--Wait(50)
+--PlaceObjectOnGroundProperly(plant)
+--SetEntityInvincible(gascyl, true)
+--FreezeEntityPosition(gascyl, true)
+--NetworkUnregisterNetworkedEntity(gascyl)
+--
+exports['qb-target']:AddTargetModel(1007739037, {
         options = {
             {
                 type = "client",
                 icon = "fa-solid fa-rocket",
                 label = "NOS Doldur",
                 jobType = "underground",
-                gascyl = gascyl,
                 --job = "farmer",
                 canInteract = function(entity)
                     return not nozzleInHand

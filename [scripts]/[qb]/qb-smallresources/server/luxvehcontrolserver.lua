@@ -33,5 +33,5 @@ end)
 
 RegisterServerEvent("lvc_TogIndicState_s")
 AddEventHandler("lvc_TogIndicState_s", function(newstate)
-	TriggerClientEvent("lvc_TogIndicState_c", -1, source, newstate)
+	--TriggerClientEvent("lvc_TogIndicState_c", -1, source, newstate)
 end)
