@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas Neue');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+html {
+    overflow: hidden;
+    font-family: 'Bebas Neue';
+}
+
+body {
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.progress-container {
+    display: none;
+    z-index: 5;
+    color: #fff;
+    border: 1px solid #7e7e7eb2;    
+    border-radius: 5px;
+    font-family: 'Bebas Neue';
+    width: 23%;
+    position: fixed;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-labels {
+    width: 100%;
+    height: 2vh;
+    line-height: 4vh;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.progress-labels div {
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 4vh;
+    position: relative;
+    top: -45px;
+    color: #ffffff;
+    z-index: 10;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    animation: flicker 0.11s ease-in-out infinite alternate;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 0.6vh;
+    background: #474747fb;            
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow:
+    0 0 10px 6px rgba(161, 161, 161, 0.877);
+}
+
+
+
+
+.progress-bar {
+    background: #ffffff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 0%;
+    height: 0.6vh;
+    transition: width 0.1s;
+    transition-timing-function: ease-out;
+    
+    
+}
+
+
+/* KeyFrames */
+
+@keyframes flicker {
+    
+    100% {
+  
+        text-shadow:
+        0 0 4px rgb(65, 65, 65),
+        0 0 8px rgb(56, 56, 56),
+        0 0 12px rgb(19, 19, 19),
+        0 0 16px #111111,
+        0 0 20px #494949,
+        0 0 24px #020202,
+        0 0 28px #3a3a3a,
+        0 0 32px #1f1f1f;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 4px rgb(65, 65, 65),
+      0 0 8px rgb(56, 56, 56),
+      0 0 12px rgb(19, 19, 19),
+      0 0 16px #111111,
+      0 0 20px #494949,
+      0 0 24px #020202,
+      0 0 28px #3a3a3a,
+      0 0 32px #1f1f1f;
+    }
+}

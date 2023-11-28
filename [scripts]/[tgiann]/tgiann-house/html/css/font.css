@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Aeonik-Bold;
+    src: url("../font/Aeonik-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Aeonik-Black;
+    src: url("../font/Aeonik-Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Aeonik-Medium;
+    src: url("../font/Aeonik-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: DharmaGothicE-Bold;
+    src: url("../font/DharmaGothicE-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: DharmaGothicE-BoldItalic;
+    src: url("../font/DharmaGothicE-BoldItalic.ttf") format("truetype");
+}

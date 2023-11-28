@@ -1,0 +1,90 @@
+local Translations = {
+    error = {
+        already_paid = 'Bu fatura zaten ödendi!',
+        getting_amount = 'Fatura tutarı alınırken hata oluştu',
+        getting_id = 'Alıcı IDsini alırken hata oluştu',
+        getting_player = 'Verilen IDden oyuncu alınırken hata oluştu',
+        must_be_on_duty = 'Görevde olmalı ve mesleğiniz adına fatura kesme yetkiniz olmalı!',
+        no_nearby = 'Yakınlarda oyuncu yok veya daha yaklaşmaları gerekiyor!',
+        not_enough_money = 'Banka hesabınızda yeterli miktarda para yok!',
+        not_permitted = 'Bu hesap adına fatura kesme yetkiniz bulunmuyor!',
+        retrieving_bills = '',
+        sending_bill = 'Fatura gönderilirken hata oluştu'
+    },
+    success = {
+        bill_canceled_sender = 'Fatura iptal edildi - #%{billId} - Tutar: $ %{amount} - Alıcı: %{recipient}',
+        bill_canceled_sender_text = 'Fatura iptal edildi<br>#%{billId}<br>Tutar: $ %{amount} <br>Alıcı: %{recipient}<br><br>/billing üzerinden faturaya erişin',
+        bill_paid_recipient = 'Fatura ödendi - #%{billId} - Tutar: $ %{amount} - Ödenen kişi: %{senderName} "%{account}"',
+        bill_paid_recipient_text = 'Fatura ödendi<br>#%{billId}<br>Tutar: $ %{amount} <br>Ödenen kişi: %{senderName} "%{account}"<br><br>/billing üzerinden faturaya erişin',
+        bill_sent = 'Fatura gönderildi - Tutar: $ %{amount}  - Alıcı: %{recipient}',
+        bill_sent_text = 'Fatura gönderildi<br>Tutar: $ %{amount} <br>Alıcı: %{recipient}<br><br>/billing üzerinden faturaya erişin'
+    },
+    info = {
+        bill_canceled_recipient = 'Fatura iptal edildi - #%{billId} - Tutar: $%{amount} - Nedeni: %{senderName} "%{account}"',
+        bill_canceled_recipient_text = 'Fatura iptal edildi<br>#%{billId}<br>Tutar: $%{amount}<br>Nedeni: %{senderName} "%{account}"<br><br>/billing üzerinden faturaya erişebilirsiniz',
+        bill_paid_sender = 'Fatura ödendi - #%{billId} - Tutar: $%{amount} - Ödeyen: %{recipient}',
+        bill_paid_sender_text = 'Fatura ödendi<br>#%{billId}<br>Tutar: $%{amount}<br>Ödeyen: %{recipient}<br><br>/billing üzerinden faturaya erişebilirsiniz',
+        bill_received = 'Fatura alındı - Tutar: $%{amount} - Gönderen: %{sender} "%{account}"',
+        bill_received_text = 'Fatura alındı<br>Tutar: $%{amount}<br>Gönderen: %{sender} "%{account}"<br><br>/billing üzerinden faturaya erişebilirsiniz'
+    },
+    menu = {
+        account_name = 'Hesap: %{account}',
+        amount = 'Tutar ($)',
+        amount_billed_to = 'Tutar: $%{amount}<br>Faturalandırılan: %{firstName} %{lastName}',
+        ask_send = 'Fatura göndermek istiyor musunuz?',
+        billing_options = 'Fatura Seçenekleri',
+        bills_owed = 'Ödenmesi Gereken Faturalar',
+        bills_paid = 'Ödenen Faturalar',
+        cancel_bill_info = 'Tarih: %{date}<br>Nedeni: %{account}<br>Alıcı: %{recipientName} (%{recipientCid})',
+        cancel_bullet = '✖ İptal Et',
+        confirm = 'Onayla',
+        confirm_bill_info = 'Fatura #%{billId}<br>Tarih: %{date}<br>Nedeni: %{senderName} "%{account}"',
+        confirm_cancel = 'Bu faturayı iptal etmek istediğinize emin misiniz? Tutar: $%{amount}',
+        confirm_pay = 'Bu faturayı ödemek istediğinize emin misiniz? Tutar: $%{amount}',
+        confirm_send = 'Bu faturayı göndermek istediğinize emin misiniz?',
+        id_amount = '#%{id} - $%{amount}',
+        new_bill = 'Yeni Fatura',
+        no_back = 'Hayır, geri dön!',
+        no_changed_mind = 'Hayır, fikrimi değiştirdim!',
+        owed_bills = 'Ödenmemiş Faturalar',
+        paid_billed_info = 'Tarih: %{date}<br>Nedeni: %{account}<br>Alıcı: %{recipientName} (%{recipientCid})<br>Ödenme Tarihi: %{datePaid}',
+        paid_bills = 'Ödenen Faturalar',
+        paid_bills_info = 'Tarih: %{date}<br>Nedeni: %{senderName} "%{account}"<br>Ödenme Tarihi: %{datePaid}',
+        recipient_id = 'Recipient Server ID (#)',
+        return_bullet = '← Geri Dön',
+        send_a_bill_closest_bullet = '• Fatura Gönder (En Yakın Oyuncu)',
+        send_a_bill_id_bullet = '• Fatura Gönder (Sunucu IDsi ile)',
+        send_bill_for_account = 'Evet, bu hesap adına bu faturayı gönderin: %{account}',
+        sent_bills = 'Gönderilen Faturalar',
+        send_new_bill_bullet = '• Yeni Fatura Gönder',
+        total_due = 'Toplam Tutar: $%{amount}',
+        total_owed = 'Toplam Borçlu Tutar: $%{amount}',
+        total_paid = 'Toplam Ödenen Tutar: $%{amount}',
+        unpaid_bill_info = 'Tarih: %{date}<br>Nedeni: %{senderName} "%{account}"',
+        view_current_due_bullet = '• Geçerli Tutarı Görüntüle',
+        view_paid_bullet = '• Ödenenleri Görüntüle',
+        view_past_paid_bullet = '• Geçmiş Ödemeleri Görüntüle',
+        view_pending_bullet = '• Bekleyenleri Görüntüle',
+        view_sent_bills_bullet = '• Gönderilen Faturaları Görüntüle',
+        view_your_bills_bullet = '• Faturalarınızı Görüntüle',
+        yes_cancel = 'Evet, bu faturayı iptal et!',
+        yes_pay = 'Evet, ödemek istiyorum!',
+        your_bills = 'Faturalarınız'
+    },
+    other = {
+        bill_pay_desc = 'Fatura ödeme',
+        bill_received_text_subject = 'Fatura Alındı',
+        bill_sent_text_subject = 'Fatura Gönderildi',
+        bill_text_sender = 'Fatura Departmanı',
+        chat_desc = 'Fatura menüsünü aç',
+        received_bill_canceled_text_subject = 'Alınan Fatura İptal Edildi',
+        received_bill_paid_text_subject = 'Alınan Fatura Ödendi',
+        sent_bill_canceled_text_subject = 'Gönderilen Fatura İptal Edildi',
+        sent_bill_paid_text_subject = 'Gönderilen Fatura Ödendi'
+    }
+}
+
+Lang = Locale:new({
+    phrases = Translations,
+    warnOnMissing = true
+})

@@ -1,0 +1,65 @@
+@media screen and (min-width: 800px) {
+  html {
+      font-size: 6px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+      font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  html {
+      font-size: 10px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  html {
+      font-size: 11px;
+  }
+}
+
+
+@media screen and (width: 1280px) and (height:720px) {
+  html {
+      font-size: 10.6px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  html {
+      font-size: 11px;
+  }
+}
+
+
+
+
+@media screen and (min-width: 1600px) {
+  html {
+      font-size: 13.75px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  html {
+      font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  html {
+      font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 2300px) {
+  html {
+      font-size: 21.2px;
+  }
+}
+

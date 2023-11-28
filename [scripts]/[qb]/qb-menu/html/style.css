@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+#container {
+    position: absolute;
+    height: auto;
+    top: 19.25%;
+    left: 45%;
+    border-radius: 5px;
+    background: transparent !important;
+}
+
+.button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row !important;
+}
+
+.title {
+    cursor: default;
+    display: flex;
+    flex-direction: row !important;
+}
+
+#buttons {
+    max-height: 500vh;
+    overflow-x: none;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+html, body {
+    background: transparent !important;
+}
+
+#buttons::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.button {
+    width: auto;
+    min-height: 1.75rem;
+    height: auto;
+    background: #212832;
+    color: white;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    margin-top: 0.4rem;
+    padding: 0.45rem;
+    border-radius: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 0.5rem 0.05rem #000000;
+    cursor: pointer;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+	padding-left: 5px;
+	padding-right: 7.5px;
+    font-size: 17px;
+    line-height: 1.75rem;
+}
+
+.icon > img {
+    visibility: hidden;
+    margin-left: -5rem;
+    height: 10vh;
+    width: 10.5vh;
+    position: absolute;
+    z-index: 999999;
+}
+
+.subicon {
+    position: absolute;
+    text-align: center;
+    right: 5%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.button:hover {
+    background-color: #364353;
+}
+
+.button:hover img {
+    animation: fadeIn 2.5s;
+    visibility: visible;
+}
+
+.title {
+    width: auto;
+    max-width: 40%;
+    min-height: 1.75rem;
+    height: auto;
+    background: #364353;
+    color: white;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.0rem;
+    padding: 0.45rem;
+    padding-bottom: 0.45rem;
+    border-radius: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 0.5rem 0.05rem #000000;
+}
+
+.title:hover img {
+    animation: fadeIn 2.5s;
+    visibility: visible;
+}
+
+.disabled {
+    background: rgba(54, 67, 83, 0.85) !important;
+    cursor: default;
+}
+
+div > .text {
+    flex-direction: column;
+    font-size: 0.75rem;
+    overflow: hidden;
+    font-weight: 200;
+    padding-bottom: 0.5rem;
+    max-width: 90%;
+}
+
+div > .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    overflow: wrap;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: 1.75rem;
+}
+
+.column {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+
+    line-height: 1.75rem;
+}
+
+.column {
+    width: 100%;

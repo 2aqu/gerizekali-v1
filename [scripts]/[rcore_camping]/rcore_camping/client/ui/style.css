@@ -1,0 +1,36 @@
+* {
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+.menu-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-container .menu {
+  position: relative;
+}
+.menu-container .menu .menu-item {
+  background: #333333;
+  border-radius: 4px;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  background: #0a2832;
+  cursor: pointer;
+}
+.menu-container .menu .menu-item:hover {
+  background: #207c9c;
+  transform: translate(-10%, 0);
+}
+
+.progbar {
+  width: 500px;
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/*# sourceMappingURL=style.css.map */

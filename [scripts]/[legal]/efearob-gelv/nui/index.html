@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgnPoliceMdt</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="main-page" v-show="show" @mouseenter="mouseEnter" @mouseleave= "mouseLeave" v-bind:style=" isTransparent == true ? {'opacity': 0.5, 'filter': blur,'transition':'1s all'} : {'transition':'1s all', 'filter': blur}">
+           
+            <!-- LEFT MENU -->
+
+            <div class="left-menus-side">
+
+                <div class="left-welcome">
+                    <img :src="avatar" alt="" id="avatarBlur">
+                    <img :src="avatar" alt="">
+                    <span>
+                        <h2>{{playerData.name}}</h2>
+                        <h2 style="font-family: 'Gotham'; font-weight: 1;">{{playerData.job}} {{playerData.gradeName}}</h2>
+                    </span>
+                </div>
+
+                <div v-show="displayPage['DASHBOARD']" v-if="access['DASHBOARD'] == undefined || access['DASHBOARD'] != undefined && playerData.grade >= access['DASHBOARD']"  class="left-menu" v-bind:style=" currentPage == 'dashboard' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('dashboard')"><img src="./assets/Dashboard.png" alt="" id="left-menu-icon"> {{locales['LEFT_DASHBOARD']}}</p></div>
+                <div v-show="displayPage['PROFILES']" v-if="access['PROFILES'] == undefined || access['PROFILES'] != undefined && playerData.grade >= access['PROFILES']"  class="left-menu" v-bind:style=" currentPage == 'profiles' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('profiles')"><img src="./assets/Profiles.png" alt="" id="left-menu-icon"> {{locales['LEFT_PROFILES']}}</p></div>
+                <div v-show="displayPage['INCIDENTS']" v-if="access['INCIDENTS'] == undefined || access['INCIDENTS'] != undefined && playerData.grade >= access['INCIDENTS']"  class="left-menu" v-bind:style=" currentPage == 'incidents' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('incidents')"><img src="./assets/Incidents.png"id="left-menu-icon"  alt=""> {{locales['LEFT_INCIDENTS']}}</p></div>
+                <div v-show="displayPage['WARRANTS']" v-if="access['WARRANTS'] == undefined || access['WARRANTS'] != undefined && playerData.grade >= access['WARRANTS']"  class="left-menu" v-bind:style=" currentPage == 'warrants' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('warrants')"><img src="./assets/Warrants.png" alt="" id="left-menu-icon"> {{locales['LEFT_WARRANTS']}}</p></div>
+                <div v-show="displayPage['VEHICLES']" v-if="access['VEHICLES'] == undefined || access['VEHICLES'] != undefined && playerData.grade >= access['VEHICLES']"  class="left-menu" v-bind:style=" currentPage == 'vehicles' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('vehicles')"><img src="./assets/Vehicles.png" alt="" id="left-menu-icon"> {{locales['LEFT_VEHICLES']}}</p></div>
+                <div v-show="displayPage['CAMS']" v-if="access['CAMS'] == undefined || access['CAMS'] != undefined && playerData.grade >= access['CAMS']"  class="left-menu" v-bind:style=" currentPage == 'cams' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('cams')"><img src="./assets/Cams.png" alt="" id="left-menu-icon"> {{locales['LEFT_CAMS']}}</p></div>
+                <div v-show="displayPage['CALLS']" v-if="access['CALLS'] == undefined || access['CALLS'] != undefined && playerData.grade >= access['CALLS']"  class="left-menu" v-bind:style=" currentPage == 'calls' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('calls')"><img src="./assets/Calls.png" alt="" id="left-menu-icon"> {{locales['LEFT_CALLS']}}</p></div>
+                <div v-show="displayPage['EVIDENCE']" v-if="access['EVIDENCE'] == undefined || access['EVIDENCE'] != undefined && playerData.grade >= access['EVIDENCE']"  class="left-menu" v-bind:style=" currentPage == 'evidence' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('evidence')"><img src="./assets/Evidences.png" alt="" id="left-menu-icon"> {{locales['LEFT_EVIDENCE']}}</p></div>
+                <div v-show="displayPage['CHARGES']" v-if="access['CHARGES'] == undefined || access['CHARGES'] != undefined && playerData.grade >= access['CHARGES']"  class="left-menu" v-bind:style=" currentPage == 'charges' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('charges')"><img src="./assets/Charges.png" alt="" id="left-menu-icon"> {{locales['LEFT_CHARGES']}}</p></div>
+                <div v-show="displayPage['HOUSES']" v-if="access['HOUSES'] == undefined || access['HOUSES'] != undefined && playerData.grade >= access['HOUSES']"  class="left-menu" v-bind:style=" currentPage == 'houses' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('houses')"><img src="./assets/Houses.png" alt="" id="left-menu-icon"> {{locales['LEFT_HOUSES']}}</p></div>
+                <div v-show="displayPage['LIVEMAP']" v-if="access['LIVEMAP'] == undefined || access['LIVEMAP'] != undefined && playerData.grade >= access['LIVEMAP']"  class="left-menu" v-bind:style=" currentPage == 'livemap' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('livemap')"><img src="./assets/livemapicon.png" alt="" id="left-menu-icon"> {{locales['LEFT_LIVE_MAP']}}</p></div>
+                <div v-show="displayPage['SETTINGS']" v-if="access['SETTINGS'] == undefined || access['SETTINGS'] != undefined && playerData.grade >= access['SETTINGS']"  class="left-menu" id="left-menu-settings" v-bind:style=" currentPage == 'settings' ? {'border-left': '3px solid #0029FF','color': 'var(--colorFirst)','background': 'rgb(0,31,255)','background': 'linear-gradient(90deg, rgba(0,31,255,0.23573179271708689) 0%, rgba(0,255,136,0) 100%, rgba(0,31,255,0) 100%)'} : {'transition':'1s all'}"><p @click="SetCurrentPage('settings')"><img src="./assets/Settings.png" alt="" id="left-menu-icon"> {{locales['LEFT_SETTINGS']}}</p></div>
+         
+            </div>
+
+            <!-- HEADER -->
+
+            <div class="top-header">
+                <div class="first">
+                    <h1>{{headers}}</h1>
+                    <h2>{{location}}</h2>
+                </div>
+
+                <div class="second" @click="Close()">
+                    <div class="second-text" >
+                        <h1>{{locales['HEADER_EXITFROM']}}</h1>
+                        <h2>{{locales['HEADER_POLICEMDT']}}</h2>
+                    </div>
+                    <span>
+                        <img src="./assets/close.png" v-if="theme == 'dark'">
+                        <img src="./assets/closelight.png" v-else>
+                    </span>
+                </div>
+            </div>
+
+            <!-- DASHBOARD -->
+
+            <div class="dashboard" v-if="currentPage == 'dashboard'">
+
+                <div class="dashboard-info">
+                    
+                    <!-- <div class="dashboard-cops">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['DASHBOARD_COPS']}}</p>
+                        </div>
+                        <p id="calls-number" v-html="GetTotalPolice"></p>
+                    </div> -->
+
+                    <div class="dashboard-calls">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['DASHBOARD_CALLS']}}</p>
+                        </div>
+                        <p id="calls-number" v-html="GetTotalCals"></p>
+                    </div>
+
+                    <div class="live-map">
+                        <div class="image" @click="SetCurrentPage('livemap')" style="transition: all 0.3s ease;">
+                            <p>{{locales['DASHBOARD_LIVEMAP']}}</p>
+                            <img :src="imageSrc" alt="">
+                        </div>
+                    </div>
+
+                    <div class="dashborad-online-cops">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['DASHBOARD_ONLINECOPS']}}</p>
+                        </div>
+
+                        <div class="cops-list">
+                            <div class="online-cops" v-for="item in polices">
+                                <img src="./assets/police-icon.png" alt="">
+                                <h1>{{ item.name }}</h1>
+                                <h2 style="text-transform: capitalize;">{{item.job}} - {{ item.gradelabel }}</h2>
+                                <i id="online-cops-status" class="ri-checkbox-blank-circle-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-warrants">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['DASHBOARD_WARRANT']}}</p>
+                        </div>
+                        <div v-if="allwarrants.length > 0" class="warrant-div">
+                            <div class="warrant-dashboard" v-for="(item, index) in allwarrants" @click="openWarrant(index,item.reason,item.adress,item.time,item.involved_people,item.type,item.name,item.involved_vehicles,item.involved_cops,item.id)">
+                                <img src="./assets/warrant-icon.png" alt="">
+                                <h1 v-html="CapitalizeCarNumbers(index + 1,item.name)"></h1>
+                                <h2>{{locales['DASHBOARD_ACTIVE']}}</h2>
+                                <i id="warrant-status" style="color: rgb(0, 173, 0);" class="ri-checkbox-blank-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div v-else class="clear-warrant">
+                            <img src="./assets/warrant-empty.png" alt="">
+                            <p style="margin-top: .3rem;">{{locales['WARRANT_EMPTY']}}</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-chat">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['DASHBOARD_CHAT']}}</p>
+                        </div>
+                        <div class="dashboard-message" v-if="chatMessages.length > 0">
+                            <div class="messages" v-for="chatMessage in chatMessages" :style="{'justify-content' : chatMessage.playerName == playerData.name ? 'flex-end': 'flex-start' }">
+                                <template v-if="chatMessage.playerName == playerData.name">
+                                    <div class="wrap">
+                                        <h1 style="text-align: right;">{{chatMessage.playerName}}</h1>
+                                        <p style="text-align: right;">{{chatMessage.message}}</p>
+                                    </div>
+                                    <img :src="chatMessage.discordimg" alt="">
+                                </template>
+                                <template v-else>
+                                    <img :src="chatMessage.discordimg" alt="">
+                                    <div class="wrap">
+                                        <h1 style="text-align: left;">{{chatMessage.playerName}}</h1>
+                                        <p style="text-align: left;">{{chatMessage.message}}</p>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                        <div v-else class="clear-chat">
+                            <img src="./assets/empty-chat.png" alt="">
+                            <p>{{locales['CHAT_EMPTY']}}</p>
+                        </div>
+                        <div class="chat-write">
+                            <input type="text" v-model="chatMessage" class="nav_chat_input" :placeholder="locales['DASHBOARD_SENDMESSAGE']" v-on:keyup.enter="SendChatMessage">
+                            <img src="./assets/send.png" alt="" @click="SendChatMessage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFILES -->
+
+            <div class="profiles" v-if="currentPage == 'profiles'">
+                <div class="show-profile" v-if="!reviewPlayerOpened">
+                    <div class="dashboard-column-info" style="width: 82.3125rem;">
+                        <p>{{locales['PROFILES_HEADER']}}</p>
+                    </div>
+                    <div class="search">
+                        <input type="text" :placeholder="locales['PROFILES_SEARCH']" v-model="searchuser">
+                    </div>
+                    <div class="search-result">
+                        <div v-if="filterByUsers.length >0">
+                            <div class="search-result-result" v-for="data in filterByUsers">
+                                <h1>{{data.name}} {{data.surname}}</h1>
+                                <span>
+                                    <p>{{data.birthdate}}</p>
+                                    <button @click="reviewPlayer(data.name,data.surname,data.birthdate,data.grade,data.identifier,data.phone)">{{locales['INSPECT']}}</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div v-else class="empty-div">
+                            <img src="./assets/notexist.png" alt="">
+                            <p>{{locales['PRFILES_EXIST']}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-person-info" v-if="reviewPlayerOpened">
+                    <div class="person-information" > 
+                        <div class="photo" @click="inputShow('photo')"  @mouseover="changePlayerImage" @mouseleave="resetPlayerImage" >
+                            <p v-show="isPlayerHovered">{{locales['PROFILES_CHANGEPHOTO_1']}}<br>{{locales['PROFILES_CHANGEPHOTO_2']}}</p>
+                            <img :src="profile.playerImage" alt="" v-if="profile.playerImage" >
+                            <img src="./assets/preview-photo.png" alt=""  v-else >
+                            <div id="blackHover" v-show="isPlayerHovered" v-bind:style="isPlayerHovered ? { 'backdrop-filter': 'blur(7px)', 'transition': '1s all' } : { 'transition': '1s all', 'backdrop-filter': 'none' }"></div>
+                        </div>
+    
+                        <div class="persons-info">
+
+                            <div class="persons">
+                                <h1>{{locales['PROFILES_NAME']}}: <span>{{name}}</span></h1>
+                            </div>
+        
+                            <div class="persons">
+                                <h1>{{locales['PROFILES_LASTNAME']}}: <span>{{surname}}</span></h1>
+                            </div>
+        
+                            <div class="persons">
+                                <h1>{{locales['PROFILES_BIRTHDATE']}}: <span>{{birthdate}}</span></h1>
+                            </div>
+        
+                            <div class="persons">
+                                <h1>{{locales['PROFILES_PROFESSION']}}: <span>{{profession}}</span></h1>
+                            </div>
+        
+                            <div class="persons">
+                                <h1>{{locales['PROFILES_CITZENID']}}: <span>{{identifier}}</span></h1>
+                            </div>
+
+                            <div class="persons">
+                                <h1>{{locales['PROFILES_NUMBER']}}: <span>{{phoneNumber}}</span></h1>
+                            </div>
+                        </div>
+           
+                    </div>
+                    
+                    
+                    <div class="person-incidents">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['PROFILES_INCIDENTS']}}</p>
+                        </div>
+    
+                        <div class="known">
+                            <div v-if="filterPlayerIncidents.length > 0">
+                                <div class="involed-people2" v-for="(data, index) in filterPlayerIncidents">
+                                    <div class="involved-first">
+                                        <img src="./assets/incident-icon.png" alt="">
+                                            <div class="involved-first-texts">
+                                            <p v-html="CapitalizeCarNumbers(index + 1,data.name)"></p>
+                                            <p id="timeCss">{{data.time}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="involved-second" @click="ManageIncidents(index,data.name,data.description,data.involved,data.cops,data.vehicles,data.evidences,data.fines,data.time,data.id)">
+                                        <button>{{locales['INSPECT']}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else class="empty-div">
+                                <img src="./assets/incidenicon2.png" alt="">
+                                <p>{{locales['INCIDENTS_EMPTY']}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="person-incidents">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['PROFILES_WARRANTS']}}</p>
+                        </div>
+    
+                        <div class="known">
+                            <div v-if="filterPlayerWarrants.length > 0">
+                                <div class="involed-people2" v-for="(data, index) in filterPlayerWarrants">
+                                    <div class="involved-first">
+                                        <img src="./assets/warrant-icon2.png" alt="">
+                                        <div class="involved-first-texts">
+                                            <p v-html="CapitalizeCarNumbers(index + 1,data.name)"></p>
+                                            <p id="timeCss">{{data.time}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="involved-second" @click="openWarrant(index,data.reason,data.adress,data.time,data.involved_people,data.type,data.name,data.involved_vehicles,data.involved_cops)">
+                                        <button>{{locales['INSPECT']}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else class="empty-div">
+                                <img src="./assets/warrant-empty.png" alt="">
+                                <p>{{locales['WARRANT_EMPTY']}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="second-person-info" v-if="reviewPlayerOpened">
+                    
+                    <div class="person-information-person">
+                        <textarea v-bind:readonly="isReadOnly" v-model="profile.information" :placeholder="locales['PROFILES_INFORMATION']"></textarea>
+                        <span>
+                          <button @click="enableEdit()">{{locales['EDIT']}}</button>
+                          <button @click="saveEdit()">{{locales['SAVE']}}</button>
+                        </span>
+                    </div>
+                    
+                    
+                    <div class="person-incidents">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['PROFILES_LICENSES']}}</p>
+                        </div>
+    
+                        <div class="known2">
+                            <div v-if="profile.licenses.length > 0">
+                                <div class="involed-people2" v-for="(item, index) in profile.licenses">
+                                    <div class="involved-first">
+                                        <img src="./assets/licensesEmpty.png" alt="">
+                                        <div class="involved-first-texts">
+                                            <p style="margin-left: .2rem;">{{getAvailableLicensesFromType(item)}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else class="empty-div">
+                                <img src="./assets/licensesEmpty.png" alt="">
+                                <p>{{locales['LICENSES_EMPTY']}}</p>
+                            </div>
+                        </div>
+
+                        <button class="addLicense" @click="addLicense">{{locales['ADDLICENSE']}}</button>
+                    </div>
+    
+                    <div class="person-incidents">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['PROFILES_VEHICLES']}}</p>
+                        </div>
+    
+                        <div class="known">
+                            <div v-if="filterPlayerVehicle.length > 0">
+                                <div class="involed-people2" v-for="(data, index) in filterPlayerVehicle">
+                                    <div class="involved-first">
+                                        <img src="./assets/car-icon.png" alt="">
+                                        <div class="involved-first-texts">
+                                            <p v-html="CapitalizeCarNumbers(index + 1,locales['PROFILES_VEHICLE'])"></p>
+                                            <p id="timeCss">{{data.carname}} - {{data.plate}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="involved-second" @click="reviewVehicle(data.plate,data.carname,data.identifier,data.category,data.color,data.gallery)">
+                                        <button>{{locales['INSPECT']}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else class="empty-div">
+                                <img src="./assets/vehiclesEmpty.png" alt="">
+                                <p>{{locales['VEHICLES_EMPTY']}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="third-person-info" v-if="reviewPlayerOpened">
+                    <div class="person-information-gallery">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['PROFILES_GALLERY']}}</p>
+                        </div>
+
+                        <div class="profile-gallery">
+                            <template v-if="profile.gallery.length > 0" >
+                                <div class="gallery-photos" v-for="(item, index) in profile.gallery" @mouseover="hoverGalleryImage(index)" @mouseleave="resetGalleryImage()" @click="showPhoto(index)">
+                                    <div style="z-index: 205;" class="gallery-inspect">
+                                        <img src="./assets/inspect-icon.png" alt="" v-if="galleryHovered === index">
+                                        <p v-if="galleryHovered === index" style="text-transform: capitalize;">{{locales['INSPECT']}}</p>
+                                    </div>
+                                    <div :style="{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: galleryHovered === index ? 'rgba(0, 0, 0, 0.70)' : 'transparent', pointerEvents: 'none' , 'backdrop-filter': galleryHovered === index ? 'blur(7px)' : 'blur(0)', 'z-index': 200, 'border-radius' : '12px' }"></div>
+                                    <img :src="item">
+                                </div>          
+                            </template>
+                            <div v-else class="empty-div">
+                                <img src="./assets/galleryEmpty.png" alt="">
+                                <p>{{locales['GALLERY_EMPTY']}}</p>
+                            </div>
+                        </div>
+
+                        <button @click="inputShow('gallery')">{{locales['PROFILES_ADDPHOTO']}}</button>
+                    </div>
+
+                    <div class="person-incidents">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['PROFILES_HOUSES']}}</p>
+                        </div>
+    
+                        <div class="known">
+                            <div v-if="filterPlayerHouses.length > 0">
+                                <div class="involed-people2" v-for="(data, index) in filterPlayerHouses">
+                                    <div class="involved-first">
+                                        <img src="./assets/house-icon.png" alt="">
+                                        <div class="involved-first-texts">
+                                            <p v-html="CapitalizeCarNumbers(index + 1,locales['PROFILES_HOUSE'])"></p>
+                                            <p id="timeCss">{{data.house}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="involved-second">
+                                        <button>{{locales['INSPECT']}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else class="empty-div">
+                                <img src="./assets/housesEmpty.png" alt="">
+                                <p>{{locales['HOUSES_EMPTY']}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Incidents -->
+
+            <div class="evidence" v-if="currentPage == 'incidents'">
+                <div class="evidences" v-show="!incident.desc">
+                    <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                        <p>{{locales['INCIDENTS_HEADER']}}</p>
+                    </div>
+                
+                    <div class="search-evidence">
+                        <input type="text" :placeholder="locales['INCIDENTS_SEARCH']" v-model="searchincident"> 
+                    </div>
+                    
+       
+                    <div class="evidences-lists">
+                        <div class="evidence-list" v-for="(item, index) in filterIncidents">
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="./assets/incident-icon.png" alt=""> 
+                                <p v-html="CapitalizeCarNumbers(index + 1,item.name)"></p>
+                            </div>
+                            <p id="evidence-list-date">{{item.time}}</p>
+                            <button @click="ManageIncidents(index,item.name,item.description,item.involved,item.cops,item.vehicles,item.evidences,item.fines,item.time,item.id)">{{locales['INSPECT']}}</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="incident-create" v-if="access['CREATE_INCIDENTS'] == undefined || access['CREATE_INCIDENTS'] != undefined && playerData.grade >= access['CREATE_INCIDENTS']" v-show="!incident.desc">
+                    <div class="dashboard-column-info" style="width: 81.6rem; height: 2.125rem;">
+                        <p>{{locales['INCIDENTS_CREATE']}}</p>
+                    </div>
+                    
+                    <div class="create">
+
+                        <div class="first-part">
+                            <input type="text" :placeholder="locales['INCIDENTS_NAME']" v-model="incidentname" name="" id="">
+                            <textarea name="" id="" :placeholder="locales['INCIDENTS_DESCRIPTION']" v-model="incidentdescription"></textarea>
+                            <button @click="CreateIncidents()">{{locales['INCIDENTS_CREATE']}}</button>
+                        </div>
+
+                        <div class="second-part">
+                            <div class="car-owner" v-bind:style="incidentinvolved.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/owner-icon.png" alt="">
+                                        <p> {{locales['PEOPLE_INVOLVED']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['ADD_PEOPLE'],'incident-involved' ,'people')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3rem;">
+                                    <div class="column" v-for="(data, index) in incidentinvolved" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident-involved',index)" >
+                                        <p>{{data.name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car-owner"  v-bind:style="incidentcops.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/police-icon.png" alt="">
+                                        <p> {{locales['COPS_INVOLVED']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['ADD_COPS'],'incident-cops' ,'cops')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3rem;">
+                                    <div class="column" v-for="(data, index) in incidentcops" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident-cops',index)">
+                                        <p>{{data}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car-owner "v-bind:style="incidentvehicles.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/Vehicles.png" alt="">
+                                        <p> {{locales['VEHICLE_INVOLVED']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['ADD_VEHICLES'],'incident-vehicles' ,'vehicles')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3.5rem;">
+                                    <div class="column" v-for="(data, index) in incidentvehicles" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident-vehicles',index)">
+                                        <p>{{data}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="third-part">
+                            <div class="car-owner" v-bind:style="incidentevidences.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/evidence-icon.png" alt="">
+                                        <p> {{locales['INCIDENTS_EVIDENCES']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['INCIDENTS_ADD_EVIDENCES'],'incident-evidences' ,'evidences')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3rem;">
+                                    <div class="column" v-for="(data, index) in incidentevidences" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident-evidences',index)" >
+                                        <p>{{data}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car-owner" v-bind:style="incidentfines.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '7rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/fines-icon.png" alt="">
+                                        <p> {{locales['INCIDENTS_FINES']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['INCIDENTS_ADD_FINES'],'incident-fines' ,'fines')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 5.8rem;">
+                                    <div class="column" v-for="(data, index) in incidentfines" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident-fines',index)">
+                                        <p>{{data.name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="totalFines" v-if="incidentfines.length > 0">
+                            <p v-html="calculateFines"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-data" v-if="incident.desc">
+                    <div class="view-data-first">
+                        <div class="data-name">
+                            <img src="./assets/incidenicon2.png" alt="">
+                            <div>
+                                <h1>{{incident.name}}</h1>
+                                <h2>{{incident.time}}</h2>
+                            </div>
+                        </div>
+                        <textarea name="" id="" v-bind:readonly="isReadOnlyIncident" v-model="incident.desc"></textarea>
+                        <span>
+                            <button @click="enableEdit('incident')">{{locales['EDIT']}}</button>
+                            <button @click="saveEdit('incident')">{{locales['SAVE']}}</button>
+                        </span>
+                        <button @click="DeleteIncidents">{{locales['DELETE']}}</button>
+                    </div>
+    
+                    <div class="view-data-seconds">
+                        <div class="car-owner" v-bind:style="incident.involved.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/owner-icon.png" alt="">
+                                    <p> {{locales['PEOPLE_INVOLVED']}}</p>
+                                </span>
+                                <button @click="showInput(locales['ADD_PEOPLE'],'incident-involved' ,'people')">{{locales['ADD']}}</button>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3rem;">
+                                <div class="column" v-for="(data, index) in incident.involved" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident.involved',index)">
+                                    <p>{{data.name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner" v-bind:style="incident.cops.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/police-icon.png" alt="">
+                                    <p> {{locales['COPS_INVOLVED']}}</p>
+                                </span>
+                                <button @click="showInput(locales['ADD_COPS'],'incident-cops' ,'cops')">{{locales['ADD']}}</button>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3rem;">
+                                <div class="column" v-for="(data, index) in incident.cops" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident.cops',index)">
+                                    <p>{{data}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner" v-bind:style="incident.vehicles.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/Vehicles.png" alt="">
+                                    <p> {{locales['VEHICLE_INVOLVED']}}</p>
+                                </span>
+                                <button @click="showInput(locales['ADD_VEHICLES'],'incident-vehicles' ,'vehicles')">{{locales['ADD']}}</button>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3.5rem;">
+                                <div class="column" v-for="(data, index) in incident.vehicles" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident.vehicles',index)">
+                                    <p>{{data}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner" v-bind:style="incident.evidences.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/evidence-icon.png" alt="">
+                                    <p> {{locales['INCIDENTS_EVIDENCES']}}</p>
+                                </span>
+                                <button @click="showInput(locales['INCIDENTS_ADD_FINES'],'incident-evidences' ,'evidences')">{{locales['ADD']}}</button>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3rem;">
+                                <div class="column" v-for="(data, index) in incident.evidences" :key="index" @contextmenu.prevent="showContextMenu($event, 'incident.evidences',index)">
+                                    <p>{{data}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner" v-bind:style="incident.fines.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/fines-icon.png" alt="">
+                                    <p> {{locales['INCIDENTS_FINES']}}</p>
+                                </span>
+                            </div>
+                            <div class="col" style="width: 100%; height: 7rem;">
+                                <div class="column" v-for="(data, index) in incident.fines">
+                                    <p>{{data.name}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="totalFines2" v-if="incident.fines.length > 0">
+                            <p v-html="calculateFines2"></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- WARRANTS -->
+
+            <div class="evidence" v-if="currentPage == 'warrants'">
+                <div class="evidences" v-show="!warrant.reason">
+                    <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                        <p>{{locales['WARRANTS_HEADER']}}</p>
+                    </div>
+                
+                    <div class="search-evidence">
+                        <input type="text" :placeholder="locales['WARRANTS_SEARCH']" v-model="searchwarrant"> 
+                    </div>
+                    
+       
+                    <div class="evidences-lists">
+                        <div class="evidence-list" v-for="(item, index) in filterWarrants">
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="./assets/warrant-icon.png" alt=""> 
+                                <p v-html="CapitalizeCarNumbers(index + 1,item.name)"></p>
+                            </div>
+                            <p id="evidence-list-date">{{item.time}}</p>
+                            <button @click="warrantManage(index,item.reason,item.adress,item.time,item.involved_people,item.type,item.name,item.involved_vehicles,item.involved_cops)">{{locales['INSPECT']}}</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="incident-create" v-if="access['CREATE_WARRANT'] == undefined || access['CREATE_WARRANT'] != undefined && playerData.grade >= access['CREATE_WARRANT']" v-show="!warrant.reason">
+                    <div class="dashboard-column-info" style="width: 81.6rem; height: 2.125rem;">
+                        <p>{{locales['WARRANTS_CREATE']}}</p>
+                    </div>
+
+                    <div class="create">
+
+                        <div class="first-part">
+                            <input type="text" :placeholder="locales['WARRANTS_NAME']" v-model="warrantname" name="" id="">
+                            <textarea name="" id="" :placeholder="locales['WARRANTS_REASON']" v-model="warrantreason"></textarea>
+                            <button @click="CreateWarrant()">{{locales['WARRANTS_CREATE']}}</button>
+                        </div>
+
+                        <div class="second-part">
+                            <div class="car-owner" v-bind:style="warrantinvolved.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/owner-icon.png" alt="">
+                                        <p> {{locales['PEOPLE_INVOLVED']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['ADD_PEOPLE'],'warrant-involved' ,'people')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3rem;">
+                                    <div class="column" v-for="(data, index) in warrantinvolved" :key="index" @contextmenu.prevent="showContextMenu($event, 'warrant-involved',index)">
+                                        <p>{{data}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car-owner" v-bind:style="warrantcopsinvolved.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/police-icon.png" alt="">
+                                        <p> {{locales['COPS_INVOLVED']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['ADD_COPS'],'warrant-cops-involved' ,'cops')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3rem;">
+                                    <div class="column" v-for="(data, index) in warrantcopsinvolved" @contextmenu.prevent="showContextMenu($event, 'warrant-cops-involved',index)">
+                                        <p>{{data}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car-owner" v-bind:style="warrantvehiclesinvolved.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/Vehicles.png" alt="">
+                                        <p> {{locales['VEHICLE_INVOLVED']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['ADD_VEHICLES'],'warrant-vehicles-involved' ,'vehicles')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3.5rem;">
+                                    <div class="column" v-for="(data, index) in warrantvehiclesinvolved" :key="index" @contextmenu.prevent="showContextMenu($event, 'warrant-vehicles-involved',index)">
+                                        <p>{{data}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="third-part">
+                            <div class="car-owner">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/owner-icon.png" alt="">
+                                        <p> {{locales['WARRANTS_TYPE']}}</p>
+                                    </span>
+                                </div>
+                                <div class="col" style="width: 100%; height: 3rem;">
+                                    <div class="search-warrant">
+                                        <button @click="selectWarrantType('search')" v-bind:style=" warrantype == 'search' ? {'background': '#0029FF'} : {'transition':'1s all'}"></button>
+                                        <p>{{locales['WARRANTS_TYPE_SEARCH']}}</p>
+                                    </div>
+                                    <div class="arrest-warrant">
+                                        <button @click="selectWarrantType('arrest')" v-bind:style=" warrantype == 'arrest' ? {'background': '#0029FF'} : {'transition':'1s all'}"></button>
+                                        <p>{{locales['WARRANTS_TYPE_ARREST']}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car-owner">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/adressline.png" alt="">
+                                        <p> {{locales['WARRANTS_ADRESS']}} </p>
+                                    </span>
+                                </div>
+                                <div class="col" style="width: 100%; height: 7rem;">
+                                    <div class="column">
+                                        <p>{{location}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="view-data" v-if="warrant.reason">
+                    <div class="view-data-first">
+                        <div class="data-name">
+                            <img src="./assets/warrant.png" alt="">
+                            <div>
+                                <h1>{{warrant.name}}</h1>
+                                <h2>{{warrant.created}}</h2>
+                            </div>
+                        </div>
+                        <textarea name="" id="" v-bind:readonly="isReadOnlyIncident" v-model="warrant.reason"></textarea>
+                        <button @click="DeleteWarrant(warrant.created)">{{locales['DELETE']}}</button>
+                    </div>
+    
+                    <div class="view-data-seconds">
+                        <div class="car-owner" v-bind:style="warrant.involved.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/owner-icon.png" alt="">
+                                    <p> {{locales['PEOPLE_INVOLVED']}}</p>
+                                </span>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3rem;">
+                                <div class="column" v-for="(data, index) in warrant.involved">
+                                    <p>{{data}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner" v-bind:style="warrant.cops.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/police-icon.png" alt="">
+                                    <p> {{locales['COPS_INVOLVED']}}</p>
+                                </span>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3rem;">
+                                <div class="column" v-for="(data, index) in warrant.cops">
+                                    <p>{{data}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner" v-bind:style="warrant.vehicles.length > 0 ? { 'height': '5.5rem', 'transition': '1s all' } : { 'transition': '1s all', 'height': '3rem' }">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/Vehicles.png" alt="">
+                                    <p> {{locales['VEHICLE_INVOLVED']}}</p>
+                                </span>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3.5rem;">
+                                <div class="column" v-for="(data, index) in warrant.vehicles">
+                                    <p>{{data}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/adressline.png" alt="">
+                                    <p> {{locales['WARRANTS_ADRESS']}}</p>
+                                </span>
+                            </div>
+                            <div class="col" style="width: 100%; height: 7rem;">
+                                <div class="column">
+                                    <p>{{warrant.adress}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <!-- VEHICLES -->
+
+            <div class="vehicles" v-if="currentPage == 'vehicles'">
+                <div class="search-vehicles">
+                    <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                        <p>{{locales['VEHICLES_HEADER']}}</p>
+                    </div>
+                    <div class="search-vehicle-bar">
+                        <input type="text" name="" id="" :placeholder="locales['VEHICLES_SEARCH']" v-model="searchvehicle">
+                        
+                    </div>
+                    <div class="vehicles-result-result">
+                        <div class="vehicles-result" v-for="data in filterByVehicle">
+                            <div class="car-photo-names">
+                                <img src="./assets/car-icon.png" alt=""> 
+                                <p>{{data.carname}}</p>
+                            </div>
+                            <div class="vehicle-result-plate">
+                                <p>{{data.plate}}</p>
+                                <button @click="reviewVehicle(data.plate,data.carname,data.identifier,data.category,data.color,data.gallery)">{{locales['INSPECT']}}</button>
+                            </div>
+                        </div>
+                    </div>
+  
+                </div>
+                
+                <div class="car-info-part"  >
+                    <div class="review-vehicle" v-if="reviewplate">
+                        <div class="dashboard-column-info" style="width: 53.25rem;height: 2.125rem;">
+                            <p>{{locales['VEHICLES_INFO']}}</p>
+                        </div>
+                        <div class="car-infos">
+
+                            <div class="car-info" >
+
+                                <div class="person-information" > 
+                                    <div class="photo" >
+                                        <img :src="reviewcarlogo" alt="">
+                                    </div>
+                
+                                    <div class="persons-info">
+                    
+                                        <div class="persons">
+                                            <h1>{{locales['VEHICLES_MODEL']}}: <span>{{reviewcarname}}</span></h1>
+                                        </div>
+                    
+                                        <div class="persons">
+                                            <h1>{{locales['VEHICLES_CATEGORY']}}: <span>{{reviewcategory}}</span></h1>
+                                        </div>
+                    
+                                        <div class="persons">
+                                            <h1>{{locales['VEHICLES_COLOR']}}: <span v-if="reviewcolor">{{reviewcolor}}</span><span v-else>{{locales['UNKOWN']}}</span></h1>
+                                        </div>
+
+                                        <div class="persons">
+                                            <h1>{{locales['VEHICLES_PLATE']}}: <span>{{reviewplate}}</span></h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="car-owner" style="width: 31.25rem;height: 2.5rem;" >
+                                <div class="column-info2">
+                                    <img src="./assets/owner-icon.png" alt="">
+                                    <p> {{locales['VEHICLES_OWNER']}}</p>
+                                </div>
+                                <div class="column" v-if="vehicleownername">{{vehicleownername}}</div>
+                                <div class="column" v-else>{{locales['UNKOWN']}}</div>
+                            </div>
+
+                            <div class="second-part-vehicles">
+                                <div class="column-info3" style="width: 21.7rem;">
+                                    <img src="./assets/incident-icon.png" alt="">
+                                    <p> {{locales['VEHICLES_INCIDENTS']}}</p>
+                                </div>
+                                <div class="people-involeds">
+                                    <div v-for="(data,index) in incidents">
+                                        <div class="people"  v-for="(data2,index2) in JSON.parse(data.vehicles)" v-if="data2 == reviewcarname + ' - ' + reviewplate" @click="ManageIncidents(index,data.name,data.description,data.involved,data.cops,data.vehicles,data.evidences,data.fines,data.time,data.id)">
+                                            <p>{{data.name}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column-info3" style="width: 21.7rem;">
+                                    <img src="./assets/warrant-icon.png" alt="">
+                                    <p> {{locales['VEHICLES_WARRANTS']}}</p>
+                                </div>
+                                <div class="people-involeds">
+                                    <div v-for="(data,index) in allwarrants">
+                                        <div class="people"  v-for="(data2,index2) in JSON.parse(data.involved_vehicles)" v-if="data2 == reviewcarname + ' - ' + reviewplate" @click="openWarrant(index,data.reason,data.adress,data.time,data.involved_people,data.type,data.name,data.involved_vehicles,data.involved_cops)">
+                                            <p>{{data.name}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-vehicle2" v-if="!reviewplate">
+                        <div class="dashboard-column-info" style="width: 53.25rem;height: 2.125rem;">
+                            <p>{{locales['VEHICLES_INFO']}}</p>
+                        </div>
+                        <div class="empty-div" style="height: 90%;">
+                            <img src="./assets/vehiclesEmpty.png" alt="">
+                            <p style="text-transform: uppercase;">{{locales['SELECT']}} {{locales['PROFILES_VEHICLE']}}</p>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-gallery">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['VEHICLES_GALLERY']}}</p>
+                        </div>
+
+                        <div class="gallery-vehicles">
+                            <template v-if="reviewCarGallery.length > 0">
+                                <div class="vehicle-photos" v-for="(data,index) in reviewCarGallery" @mouseover="hoverVehicleGalleryImage(index)" @mouseleave="resetVehicleGalleryImage()" @click="showPhotoVehicleGallery(index)">
+
+                                    <div style="z-index: 205;" class="gallery-inspect">
+                                        <img src="./assets/inspect-icon.png" alt="" v-if="galleryVehicleHovered === index" style="width: 1rem; height: 1rem;">
+                                        <p v-if="galleryVehicleHovered === index" style="text-transform: capitalize;">{{locales['INSPECT']}}</p>
+                                    </div>
+
+                                    <div :style="{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: galleryVehicleHovered === index ? 'rgba(0, 0, 0, 0.70)' : 'transparent', pointerEvents: 'none' , 'backdrop-filter': galleryVehicleHovered === index ? 'blur(5px)' : 'blur(0)', 'z-index': 200, 'border-radius' : '12px' }"></div>
+                                    <img :src="data">
+                                </div>
+                            </template>
+                            <div v-else class="empty-div">
+                                <img src="./assets/galleryEmpty.png" alt="">
+                                <p>{{locales['GALLERY_EMPTY']}}</p>
+                            </div>
+                        </div>
+                        
+                        <button @click="inputShow('gallery2')" v-show="reviewplate">{{locales['VEHICLES_ADDPHOTO']}}</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CAMS -->
+
+            <div class="cams" v-if="currentPage == 'cams'">
+                <div class="dashboard-column-info" style="width: 81.5rem;height: 2.125rem;">
+                    <p>{{locales['CAMS_HEADER']}}</p>
+                </div>
+                <div class="cams-div">
+                    <div class="cam" v-for="(item, index) in cams" @click="openCam(index)" @mouseover="hoverCamsImage(index)" @mouseleave="resetCamsImage()">
+                        <div class="cam-photo" v-if="item.enable == true" style="z-index: 200;">
+                            <p v-if="camsHovered === index">{{item.name}}</p>
+                            <img :src="item.img"> 
+                            <div id="camsHover" v-show="camsHovered === index" v-bind:style="camsHovered === index ? { 'backdrop-filter': 'blur(7px)', 'transition': '1s all' } : { 'transition': '1s all', 'backdrop-filter': 'none' }"></div>
+                        </div>
+
+                        <div class="cam-photo" v-if="item.enable == false">
+                            <img src="./assets/cams/nosignal.png" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- CALLS -->
+
+            <div class="calls" v-if="currentPage == 'calls'">
+                <div class="dashboard-column-info" style="width: 81.5rem;height: 2.125rem;">
+                    <p>{{locales['CALLS_HEADER']}}</p>
+                </div>
+                <div class="calls-div">
+                    <div class="call" v-for="(item, index) in calls">
+                        <div class="callnumber">
+                            <img src="./assets/call-icon.png" alt="">
+                            <div>
+                                <p v-html="CapitalizeCarNumbers(index + 1,'Call')"></p>
+                                <p id="type" v-if="item.type">{{item.type}}</p>
+                                <p id="type" v-else>{{locales['UNKOWN']}}</p>
+                            </div>
+                        </div>
+                        <span class="call2">
+                            <p class="calloaciton" style="font-weight: 1;"><img src="./assets/point.png" id="circle1" alt=""> {{item.street}}</p>
+                            <span>
+                                <p class="callsetwaypoint" @click="SetWayponit(item.location)">{{locales['CALLS_SETWAYPOINT']}}</p>
+                                <p class="callsetwaypoint2" @click="() => goOnMap(item.location.x, item.location.y)" v-show="displayPage['LIVEMAP']">{{locales['CALLS_VIEW']}}</p>
+                                <p class="callremovecall" @click="RemoveCall(index)">{{locales['CALLS_REMOVECALL']}}</p>
+                            </span>
+                        </span>
+                        <h1>{{CalculateTime(item.time)}}</h1>
+                        <img :src="'./assets/'+item.type2+'.png'" alt="" id="typeimage" v-if="item.type2 != 'default'">
+                        <img src="./assets/houserobbery.png" alt="" v-if="item.type2 == 'default'" id="typeimage">
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCES -->
+
+            <div class="evidence" v-if="currentPage == 'evidence'">
+
+                <div class="evidences" v-show="!evidence.name">
+                    <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                        <p>{{locales['EVIDENCES_HEADER']}}</p>
+                    </div>
+                
+                    <div class="search-evidence">
+                        <input type="text" :placeholder="locales['EVIDENCES_SEARCH']" v-model="searchevidence"> 
+                    </div>
+                    
+                    <div class="evidences-lists">
+                        <div class="evidence-list" v-for="(item, index) in filterEvidences">
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="./assets/Evidences.png" alt=""> 
+                                <p v-html="CapitalizeCarNumbers(index + 1, item.name)"></p>
+                            </div>
+                            <p id="evidence-list-date">{{item.time}}</p>
+                            <button @click="evidenceManage(index,item.time,item.involved_people,item.images,item.name,item.desc,item.id)">{{locales['INSPECT']}}</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="incident-create" v-if="access['CREATE_EVIDENCE'] == undefined || access['CREATE_EVIDENCE'] != undefined && playerData.grade >= access['CREATE_EVIDENCE']" v-show="!evidence.name">
+                    <div class="dashboard-column-info" style="width: 81.6rem; height: 2.125rem;">
+                        <p>{{locales['EVIDENCES_CREATE']}}</p>
+                    </div>
+                    
+                    <div class="create">
+
+                        <div class="first-part">
+
+                            <input type="text" :placeholder="locales['EVIDENCES_NAME']" v-model="evidencename" name="" id="">
+                            <textarea name="" id="" :placeholder="locales['EVIDENCES_DESCRIPTION']" v-model="evidencedesc"></textarea>
+                            <button @click="CreateEvidence">{{locales['EVIDENCES_CREATE']}}</button>
+                        </div>
+
+                        <div class="second-part">
+                            <div class="car-owner">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/owner-icon.png" alt="">
+                                        <p>{{locales['PEOPLE_INVOLVED']}}</p>
+                                    </span>
+                                    <button @click="showInput(locales['ADD_PEOPLE'],'involved', 'people')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="col" style="width: 100%; height: 15rem;">
+                                    <div class="column" v-for="(data, index) in evidenceinvolved" :key="index" @contextmenu.prevent="showContextMenu($event, 'evidence',index)">
+                                        <p>{{data}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="third-part">
+                            <div class="car-owner">
+                                <div class="column-info2">
+                                    <span>
+                                        <img src="./assets/imagesicon.png" alt="">
+                                        <p>{{locales['IMAGES']}}</p>
+                                    </span>
+                                    <button @click="inputShow('images')">{{locales['ADD']}}</button>
+                                </div>
+                                <div class="colphoto">
+                                    <div class="columnphoto" v-for="(data, index) in images" :key="index" @contextmenu.prevent="showContextMenu($event, 'evidence-images',index)">
+                                        <img :src="data" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="view-data" v-if="evidence.name">
+                    <div class="view-data-first">
+                        <div class="data-name">
+                            <img src="./assets/evidenceicon2.png" alt="">
+                            <div>
+                                <h1>{{evidence.name}}</h1>
+                                <h2>{{evidence.time}}</h2>
+                            </div>
+                        </div>
+                        <textarea name="" id="" v-bind:readonly="isReadOnlyIncident" v-model="evidence.desc"></textarea>
+                        <span>
+                            <button @click="enableEdit('incident')">{{locales['EDIT']}}</button>
+                            <button @click="saveEdit('evidence')">{{locales['SAVE']}}</button>
+                        </span>
+                        <button @click="DeleteEvidence">{{locales['DELETE']}}</button>
+                    </div>
+    
+                    <div class="view-data-seconds">
+                        <div class="car-owner">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/owner-icon.png" alt="">
+                                    <p> {{locales['PEOPLE_INVOLVED']}}</p>
+                                </span>
+                                <button @click="showInput(locales['ADD_PEOPLE'],'evidence-involved' ,'people')">{{locales['ADD']}}</button>
+                            </div>
+                            <div class="col" style="width: 100%; height: 3rem;">
+                                <div class="column" v-for="(data, index) in evidence.involved" @contextmenu.prevent="showContextMenu($event, 'evidence-involved',index)">
+                                    <p>{{data}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="car-owner">
+                            <div class="column-info2">
+                                <span>
+                                    <img src="./assets/imagesicon.png" alt="">
+                                    <p> {{locales['IMAGES']}}</p>
+                                </span>
+                                <button @click="inputShow('evidence-images')">{{locales['ADD']}}</button>
+                            </div>
+                            <div class="colviewphoto">
+                                <div class="colmnviewphoto" v-for="(data, index) in evidence.images" @mouseover="hoverIncidentVehicleGalleryImage(index)" @mouseleave="resetIncidentVehicleGalleryImage()" @click="showIncidentPhotoVehicleGallery(index)">
+                                    <div style="z-index: 205;" class="gallery-inspect">
+                                        <img src="./assets/inspect-icon.png" alt="" v-if="galleryIncidentVehicleHovered === index" style="width: 1.5rem; height: 1.5rem;">
+                                        <p v-if="galleryIncidentVehicleHovered === index" style="text-transform: capitalize;">{{locales['INSPECT']}}</p>
+                                    </div>
+
+                                    <div :style="{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: galleryIncidentVehicleHovered === index ? 'rgba(0, 0, 0, 0.70)' : 'transparent', pointerEvents: 'none' , 'backdrop-filter': galleryIncidentVehicleHovered === index ? 'blur(5px)' : 'blur(0)', 'z-index': 200, 'border-radius' : '.950rem' }"></div>
+                                    <img :src="data">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHARGES -->
+
+            <div class="charges" v-show="currentPage == 'charges'">
+                <div class="fines">
+                    <div class="column-info4">
+                        <span></span>
+                        <span>
+                            <p> {{locales['CHARGES_HEADER']}}</p>
+                        </span>
+                        <span></span>
+                    </div>
+                    <div class="category-list">
+                        <div class="category" v-for="data in charges" @click="selectCategory(data.id)">
+                            <p :style="{ color: selectedCategoryId === data.id ? 'var(--colorFirst)' : 'grey' }">{{data.category}}</p>
+                        </div>
+                    </div>
+                    <div class="search" style="top: 0;  width: 82.3125rem; border-radius: 8px;">
+                        <input type="text" :placeholder="locales['CHARGES_SERACH']" v-model="searchcharges2" style="width: 82.3125rem; border-radius: 8px;">
+                        
+                    </div>
+                    <div class="vehicles-result-result" style="top: 0;  width: 82.3125rem; height: 35rem;">
+                        <div class="charges-result" v-for="(data, index) in filterCharges2" style="width: 100%;" v-bind:style=" selectedChagresIndex == index ? {'height': '5rem'} : {'transition':'1s all'}">
+                            <div class="car-photo-names" style="margin-top: .5rem;">
+                              <img src="./assets/chargessmall.png" alt=""> 
+                              <p>{{ data.reason }}</p>
+                            </div>
+                            <div class="vehicle-result-plate2" style="margin-top: .3rem;">
+                                <button id="button1" @click="viewCharges(index)">
+                                    <img src="./assets/uparrow.png" alt="" v-if="selectedChagresIndex == index">
+                                    <img src="./assets/downarrow.png" alt="" v-else>
+                                </button>
+                                <div class="delete-charges" v-if="selectedChagresIndex == index" @click="DeleteCharges(index)">
+                                    <img src="./assets/chargesdelete.png" alt="">
+                                </div>
+                            </div>
+                            <div class="category-info" v-if="selectedChagresIndex == index">
+                              <p style="color: #0F0;" v-if="data.money">{{ data.money }}{{locales['CURRENCY']}}</p>
+                              <p style="color: #FFA500;" v-if="data.communityservice">{{ data.communityservice }} {{locales['CHARGES_SERVICE']}}</p>
+                              <p style="color: #F00;" v-if="data.jailtime">{{ data.jailtime }} {{locales['CHARGES_TIME']}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOUSES -->
+
+            <div class="vehicles" v-if="currentPage == 'houses'">
+                <div class="search-vehicles">
+                    <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                        <p>{{locales['HOUSES_HEADER']}}</p>
+                    </div>
+                    <div class="search-vehicle-bar">
+                        <input type="text" name="" id="" :placeholder="locales['HOUSES_SEARCH']" v-model="searchHouse">
+                        
+                    </div>
+                    <div class="vehicles-result-result">
+                        <div class="vehicles-result" v-for="data in filterByHouses">
+                            <div class="car-photo-names">
+                                <img src="./assets/house-icon.png" alt=""> 
+                                <p>{{data.house}}</p>
+                            </div>
+                            <div class="vehicle-result-plate">
+                                <button @click="reviewHouse(data.house,data.keyholders)">{{locales['INSPECT']}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="car-info-part"  v-show="reviewHouses.name">
+                    <div class="review-vehicle" style="width: 83.9375rem;">
+                        
+                        <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                            <p>{{locales['HOUSES_INFO']}}</p>
+                        </div>
+
+                        <div class="car-infos">
+                            <div class="car-info">
+                                <div class="person-information" > 
+                                    <div class="photo" >
+                                        <img src="./assets/houseview.png" alt="">
+                                    </div>
+                                    <div class="persons-info">
+                                        <div class="persons">
+                                            <h1>{{locales['HOUSES_ADRESS']}}: <span>{{reviewHouses.name}}</span></h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="car-owner">
+                                <div class="column-info2">
+                                    <img src="./assets/owner-icon.png" alt="">
+                                    <p> {{locales['HOUSES_OWNER']}}</p>
+                                </div>
+                                <div class="column" v-if="reviewHouses.playerName">{{reviewHouses.playerName}}</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="review-vehicle2" v-if="!reviewHouses.name" style="width: 83.9375rem;">
+                    <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                        <p>{{locales['HOUSES_INFO']}}</p>
+                    </div>
+                    <div class="empty-div" style="height: 90%;">
+                        <img src="./assets/housesEmpty.png" alt="" style="width: 4.125rem;height: 4.125rem;">
+                        <p style="font-size: 0.75rem; text-transform: uppercase;">{{locales['LMAP_DBLCLICK']}} {{locales['PROFILES_HOUSE']}}</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LIVE MAP -->
+
+            <div class="live-map-page" v-show="currentPage == 'livemap'">
+                <div class="live-maps">
+                    <div class="dashboard-column-info" style="justify-content: space-between; width: 82.3125rem;">
+                        <p id="setWayPointText">{{locales['LMAP_DBLCLICK']}}</p>
+                        <p id="liveMapHeader">{{locales['LMAP_HEADER']}}</p>
+                        <div class="restart-customization">
+                            <button @click="restartLiveMap">{{locales['LMAP_RESET']}}</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mapContainer">
+                        <div id="map"></div>
+                    </div>
+                </div>
+
+                <div class="live-map-info">
+                    <div class="info">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['LMAP_CALLS']}}</p>
+                            <input type="checkbox" id="hide-calls" v-model="liveMap.hidestatus.calls" @click="setLiveMapHideStatus('calls')" /><label
+                            for="hide-calls"></label>
+                        </div>
+                        <div class="info-div">
+                            <div class="columns" v-for="(data,index) in calls">
+                                <span>
+                                    <img :src="'./assets/'+data.type2+'.png'" alt="" v-if="data.type2 != 'default'">
+                                    <img src="./assets/houserobbery.png" alt="" v-if="data.type2 == 'default'">
+                                    <div>
+                                        <p style="font-size: 0.75rem; color: var(--colorFirst);">{{data.type}}</p>
+                                        <p style="color: var(--colorFourth);font-size: 0.5rem;">{{CalculateTime(data.time)}}</p>
+                                    </div>
+                                </span>
+                                <button @click="() => goOnMap(data.location.x, data.location.y)">{{locales['LMAP_ONMAP']}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['LMAP_COPS']}}</p>
+                            <input type="checkbox" id="hide-cops" v-model="liveMap.hidestatus.polices" @click="setLiveMapHideStatus('polices')" /><label
+                            for="hide-cops"></label>
+                        </div>
+                        <div class="info-div">
+                            <div class="columns" v-for="(data, index) in liveMapPolices">
+                                <span>
+                                    <img src="./assets/livemappolice.png" alt="">
+                                    <div>
+                                        <p style="font-size: 0.75rem; color: var(--colorFirst);">{{data.name}}</p>
+                                        <p style="color: var(--colorFourth);font-size: 0.5rem;">{{data.job}} - {{data.grade}}</p>
+                                    </div>
+                                </span>
+                                <button @click="() => goOnMap(data.location.x, data.location.y)">{{locales['LMAP_ONMAP']}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="dashboard-column-info">
+                            <p>{{locales['LMAP_HOUSES']}}</p>
+                            <input type="checkbox" id="hide-houses" v-model="liveMap.hidestatus.houses" @click="setLiveMapHideStatus('houses')" /><label
+                            for="hide-houses"></label>
+                        </div>
+                        <div class="info-div">
+                            <div class="columns" v-for="(data,index) in Houses">
+                                <span>
+                                    <img src="./assets/house-icon.png" alt="">
+                                    <div>
+                                        <p v-html="CapitalizeCarNumbers(index + 1,locales['HOUSE'])" style="font-size: 0.75rem; color: var(--colorFirst);"></p>
+                                        <p style="color: var(--colorFourth);font-size: 0.5rem;">{{data.house}}</p>
+                                    </div>
+                                </span>
+                                <button @click="goOnMap(data.location.x, data.location.y)">{{locales['LMAP_ONMAP']}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SETTINGS -->
+
+            <div class="settings" v-if="currentPage == 'settings'">
+                <div class="dashboard-column-info" style="width: 82.3125rem; height: 2.125rem;">
+                    <p>{{locales['SETTINGS_HEADER']}}</p>
+                </div>
+                <div class="settings-modes">
+                    <div class="dark-modes" @click="ChangeTheme('dark')">
+                        <img src="./assets/Moon.png" alt="" v-if="theme == 'dark'">
+                        <img src="./assets/Moon2.png" alt="" v-else>
+                        <p v-bind:style=" theme == 'dark' ? {'color': 'var(--colorFirst)'} : {'color':'var(--colorFifth)'}">{{locales['DARKTHEME']}}</p>
+                    </div>
+                    <div class="light-modes" @click="ChangeTheme('light')">
+                        <img src="./assets/Sun.png" alt="" v-if="theme == 'dark'">
+                        <img src="./assets/Sun2.png" alt="" v-else>
+                        <p v-bind:style=" theme == 'light' ? {'color': 'var(--colorFirst)'} : {'color':'var(--colorFifth)'}">{{locales['LIGHTTHEME']}}</p>
+                    </div>
+                </div>
+                <div class="profileName-Gps">
+                    <div class="profileName">
+                        <img :src="avatar" alt="">
+                        <span>
+                            <h1>{{playerData.name}}</h1>
+                            <h2>{{playerData.job}} / {{playerData.gradeName}}</h2>
+                        </span>
+                    </div>
+                    <div class="Gps">
+                        <img src="./assets/setGps.png" alt="">
+                        <span>
+                            <p>{{locales['SETTINGS_GPSCODE']}}</p>
+                            <input type="text" :placeholder="locales['TYPE_CODE']" name="" id="" v-on:keyup.enter="ChangeGpsCode" v-model="gpscode">
+                            <button @click="ChangeGpsCode">{{locales['SAVE']}}</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTEXT MENU -->
+
+        <div v-show="contextMenuVisible" class="context-menu" :style="{ top: contextMenuTop + 'px', left: contextMenuLeft + 'px' }">
+            <ul>
+              <li @click="deleteItem()">{{locales['DELETE']}}</li>
+            </ul>
+        </div>
+
+        <!-- ADD LICENSE -->
+
+        <div class="addLicensePage" v-if="input2" :style="{ filter: null }">
+            <div class="dashboard-column-info">
+                <p>{{locales['ADDLICENSE']}}</p>
+            </div>
+            <div class="license">
+                <div class="player-licenses" v-for="(item, index) in availableLicenses">
+                    <p>{{ item.label }}</p>
+                    <button v-if="profile.licenses.includes(item.type)" @click="deleteLicense(item.type)">{{locales['DELETE']}}</button>
+                    <button v-else @click="addLicenses(item.type)">{{locales['ADD']}}</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CREATE CHARGES -->
+
+        <div class="inputCharges" v-if="inputCharges" :style="{ filter: null }">
+            <div class="dashboard-column-info" style="width: 96.5%;">
+                <p>{{locales['INPUTS_CREATEFINE']}}</p>
+            </div>
+            <span>
+                <div class="chargesCategory">
+                    <p v-for="(data, index) in charges" @click="selectCreateCategory(data.id)"  v-bind:style=" data.id == selectedCrateCategoryId ? {'color': 'var(--colorFirst)', 'background': 'var(--selectedInput)'} : {'transition':'1s all'}">{{data.category}}</p>
+                    <button @click="createChargesCategory">{{locales['CREATE']}}</button>
+                </div>
+    
+                <div class="chargesInputs">
+                    <input type="text" :placeholder="locales['INPUTS_REASON']" v-model="createCahgres.reason" style="color: var(--colorFirst);">
+                    <input type="text" :placeholder="locales['INPUTS_MONEY']" v-model="createCahgres.money" style="color: #0F0;">
+                    <input type="text" :placeholder="locales['INPUTS_SERVICE']" v-model="createCahgres.communityservice" style="color: #FFA500;">
+                    <input type="text" :placeholder="locales['INPUTS_JAIL']" v-model="createCahgres.jailtime" style="color: #F00;">
+                    <button @click="ChargesCreate">{{locales['CREATE']}}</button>
+                </div>
+            </span>
+        </div>
+
+        <!-- CREATE CHARGES CATEGORY -->
+
+        <div class="inputCategory" v-show="createCategory">
+            <div class="dashboard-column-info" style="width: 96.5%;">
+                <p>{{locales['INPUTS_CREATECATEGORY']}}</p>
+            </div>
+            <input type="text" :placeholder="locales['INPUTS_CATEGORYNAME']" v-model="categoryname" v-on:keyup.enter="addChargesCategory()">
+        </div>
+
+        <!-- INPUTS -->
+
+        <div class="addInvolved" v-if="input4" :style="{ filter: null }">
+            <div class="dashboard-column-info" style="width: 96.5%;">
+                <p>{{headerLoc}}</p>
+            </div>
+
+            <input type="text" :placeholder="locales['INPUTS_SEARCHPERSON']" v-model="searchuser" v-if="search == 'people'" v-on:keyup.enter="SendInput(searchuser)">
+            <input type="text" :placeholder="locales['INPUTS_SEARCHCOP']" v-model="searchuser" v-if="search == 'cops'" v-on:keyup.enter="SendInput(searchuser)">
+            <input type="text" :placeholder="locales['INPUTS_SEARCHVEHICLE']" v-model="searchuser" v-if="search == 'vehicles'" v-on:keyup.enter="SendInput(searchuser)">
+            <input type="text" :placeholder="locales['INPUTS_SEARCHEVIDENCES']" v-model="searchuser" v-if="search == 'evidences'" v-on:keyup.enter="SendInput(searchuser)">
+            <input type="text" :placeholder="locales['INPUTS_SEARCHFINES']" v-model="searchcharges" v-if="search == 'fines'" v-on:keyup.enter="SendInput(searchuser)">
+            
+            <div class="license">
+                <div class="player-licenses" v-for="data in filterByUsers" v-if="search == 'people'">
+                    <p>{{data.name}} {{data.surname}}</p>
+                    <span>
+                        <p>{{data.birthdate}}</p>
+                        <button @click="SendInput(data.name +' '+ data.surname,data.identifier)">{{locales['ADD']}}</button>
+                    </span>
+                </div>
+                <div class="player-licenses" v-for="data in filterByJobs" v-if="search == 'cops'">
+                    <p>{{data.name}}</p>
+                    <span>
+                        <p>{{data.job}}</p>
+                        <button @click="SendInput(data.name)">{{locales['ADD']}}</button>
+                    </span>
+                </div>
+                <div class="player-licenses" v-for="data in filterByVehiclePolice" v-if="search == 'vehicles'">
+                    <p>{{data.carname}} </p>
+                    <span>
+                        <p>{{data.plate}}</p>
+                        <button @click="SendInput(data.carname + ' - ' + data.plate)">{{locales['ADD']}}</button>
+                    </span>
+                </div>
+                <div class="player-licenses" v-for="(item, index) in filterEvidencesIncident" v-if="search == 'evidences'">
+                    <p v-html="CapitalizeCarNumbers(index + 1, item.name)"></p>
+                    <span>
+                        <p>{{item.time}}</p>
+                        <button @click="SendInput(item.name)">{{locales['ADD']}}</button>
+                    </span>
+                </div>
+                
+                <div class="player-licenses2" v-for="(item, index) in filterChargesCategory" v-if="search == 'fines'">
+                    <p class="category-name">
+                        {{item.category}}
+                        <button id="button1" @click="viewChargesAdd(index)" >
+                            <img src="./assets/uparrow.png" alt="" v-if="selectedChagresIndexAdd == index">
+                            <img src="./assets/downarrow.png" alt="" v-else>
+                        </button>
+                    </p>
+                    <div v-if="selectedChagresIndexAdd == index">
+                        <div class="charges-result" v-for="(data, index2) in selectedChargedAddData" style="width: 100%;" v-bind:style=" selectedChagresIndex == index2 ? {'height': '5rem'} : {'transition':'1s all'}">
+                            <div class="car-photo-names" style="margin-top: .5rem;">
+                              <img src="./assets/chargessmall.png" alt=""> 
+                              <p>{{ data.reason }}</p>
+                            </div>
+                            <div class="charges-results" style="margin-top: .3rem;">
+                                <button @click="SendInput(data.reason,null,data.money,data.communityservice,data.jailtime)">{{locales['ADD']}}</button>
+                                <button id="button1" @click="viewCharges(index2)">
+                                    <img src="./assets/uparrow.png" alt="" v-if="selectedChagresIndex == index2">
+                                    <img src="./assets/downarrow.png" alt="" v-else>
+                                </button>
+                            </div>
+                            <div class="category-info" v-if="selectedChagresIndex == index2">
+                              <p style="color: #0F0;">{{ data.money }}{{locales['CURRENCY']}}</p>
+                              <p style="color: #FFA500;">{{ data.communityservice }} {{locales['COMMUNITYSERVICE']}}</p>
+                              <p style="color: #F00;">{{ data.jailtime }} {{locales['JAILTIME']}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ADD PHOTO INPUT -->
+
+        <div class="inputShow" v-if="input3" :style="{ filter: null }">
+            <div class="dashboard-column-info" style="width: 95%;">
+                <p>{{locales['INPUTS_ADDPHOTO']}}</p>
+            </div>
+
+            <input type="text" :placeholder="locales['ENTER_URL']" v-model="url">
+            <div>
+                <button @click="AddText">{{locales['ADD']}}</button>
+                <button @click="TakePhoto">{{locales['INPUTS_TAKEPHOTO']}}</button>
+            </div>
+        </div>
+
+        <!-- FULL SCREEN PHOTO -->
+
+        <div class="fullScreenPhoto" v-if="previewPhoto">
+            <button @click="deleteImage()">{{locales['DELETE']}}</button>
+            <img :src="previewPhotoLink" alt="">
+        </div>
+
+        <!-- CAM -->
+
+        <div class="opencam" v-if="cam">
+            <div class="open-cam-date">{{day}}/{{month}}/{{year}}</div>
+            <div class="open-cam-time">{{gametime}}</div>
+            <div class="open-cam-name">{{camname}}</div>
+            <div class="open-cam-ip">{{locales['CAMIP']}}</div>
+        </div>
+
+    </div>
+</body>
+<script src="./app/main.js"></script>
+</html>

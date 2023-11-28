@@ -1,0 +1,174 @@
+<div class="main-page">
+    <div class="active-vehicle">
+        <div class="vehicle-info" v-if="previewingVehicle">
+            <div class="welcome-text">
+                <strong>
+                    Premium Deluxe Motosport'a Hoşgeldiniz
+                </strong>
+                <span>
+                    {{player.name}}
+                </span>
+            </div>
+            <div class="class">
+                <span>
+                    &bull; Araç Sınıfı
+                </span>
+                <span class="accent">
+                    {{gameData.className}}
+                </span>
+            </div>
+            <div class="brand-img">
+                <img :src="previewingVehicle.brandImage" alt="brand">
+            </div>
+            <div class="description">
+                <div class="title">
+                    {{previewingVehicle.name}}
+                </div>
+                <div class="text">
+                    {{vehicleDescriptions[gameData.classId]}}
+                </div>
+            </div>
+            <div class="colors" v-if="!testDriveActive">
+                <div class="title">
+                    &bull; Stock Renkler
+                </div>
+                <div class="color-list">
+                    <div class="color" v-for="color, key in colors" :class="{active: selectedColor == key}" :style="{background: `rgb(${color[0]}, ${color[1]}, ${color[2]})`}"
+                        :key="color" @click="selectColor(key)">
+                    </div>
+                </div>
+            </div>
+            <div class="price" v-if="!testDriveActive">
+                {{formatPrice(previewingVehicle.price)}}
+            </div>
+        </div>
+        <div class="previewSilder" v-if="previewActive" @mousemove="turnVehicle">
+            <inline-svg src=".\assets\previewSilder.svg" class="slider"></inline-svg>
+        </div>
+        <div class="vehicle-spec" v-if="previewingVehicle">
+            <div class="spec-title">
+                <span>
+                    Araç Özellikleri
+                </span>
+                <h4>
+                    {{gameData.class}}
+                    <inline-svg src=".\assets\class-footer.svg" class="mark"></inline-svg>
+                </h4>
+            </div>
+            <div class="spec-item">
+                <div class="title">
+                    Üst Hız
+                </div>
+                <div class="text">
+                    {{gameData.topspeed}} km/h
+                </div>
+            </div>
+            <div class="spec-item" v-for="spec, id in gameData.specs" :key="id">
+                <div class="title">
+                    {{spec.name}}
+                </div>
+                <div class="text">
+                    {{FormatSpecVal(spec.value)}}
+                </div>
+            </div>
+            <div class="spec-item">
+                <div class="title">
+                    Stok
+                </div>
+                <div class="text">
+                    x{{previewingVehicle.stock}}
+                </div>
+            </div>
+            <div class="buttons" v-if="!testDriveActive && !previewActive">
+                <button class="buy" @click="buyAction()" :disabled="previewingVehicle.stock == 0">
+                    Aracı Satın Al
+                </button>
+                <button @click="testDriveAction">
+                    Test Sürüşü
+                </button>
+                <button @click="previewAction">
+                    Aracı Önizle
+                </button>
+            </div>
+            <div class="buttons close" v-else-if="previewActive">
+                <button @click="previewAction">
+                    Önizlemeyi Kapat
+                </button>
+            </div>
+            <div class="countdown" v-if="testDriveActive">
+                <div class="class">
+                    <span>
+                        &bull; Kalan Süreniz:
+                    </span>
+                    <span class="accent">
+                        {{showingCountdown}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-drive-close" v-if="testDriveActive">
+            “ ESC “ Tuşuna basarak test sürüşünü sonlandırın.
+        </div>
+    </div>
+    <div class="vehicle-filter" v-if="selectedNav && !testDriveActive && !previewActive">
+        <div class="nav-list">
+            <div class="nav-active" ref="navActive"></div>
+            <div class="nav-items" ref="navItems" v-if="!searchActive">
+                <div class="nav-item" v-for="item in navItems" :key="item" :class="{active: item.id == selectedNav.id}" @click="selectNav(item)">
+                    <div class="title">
+                        {{item.name}}
+                    </div>
+                </div>
+            </div>
+            <div class="search-container" v-if="searchActive">
+                <input type="text" placeholder="Search any vehicle by their name..." v-model="searchInput">
+            </div>
+            <div class="search-btn" @click="searchActive = !searchActive" ref="searchBtn">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="filter-text" v-if="!searchActive && selectedNav">
+            &bull; {{selectedNav.name}} Araçlar
+        </div>
+        <div class="cancel-search" v-if="searchActive" @click="searchActive = false">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+    <div class="vehicles-list-wrapper" v-if="!testDriveActive && !previewActive && selectedNav">
+        <transition-group name="slideX" v-for="vehiclelist, category in vehicles" :key="category" tag="div" class="vehicles-list-container">
+            <div class="vehicles-list" ref="vehiclesList" @mousemove="vehiclesListMove" @mousedown="vehiclesListDown" @mouseup="vehiclesListUp" @mouseleave="vehiclesListUp"
+                @mousewheel="vehiclesListWheel" v-if="selectedNav.id == category">
+                <div class="vehicle" v-for="veh in searchInput ? filteredVehicles : vehiclelist" :key="veh" :class="{active: veh.id == previewVehicle?.id}"
+                    @click="selectVehicle(veh)" :ref="`vehicle-item-${veh.id}`">
+                    <div class="header">
+                        <div class="text">
+                            <div class="brand">
+                                {{veh.brand}}
+                            </div>
+                            <div class="model">
+                                {{veh.name}}
+                            </div>
+                        </div>
+                        <div class="brand-image">
+                            <img :src="veh.brandImage" @error="onBrandLogoError" :alt="veh.brand">
+                        </div>
+                    </div>
+                    <div class="vehicle-image">
+                        <img :src="veh.vehImage" :alt="veh.hash" @error="onVehicleImageError">
+                    </div>
+                    <div class="footer">
+                        <div class="price">
+                            {{formatPrice(veh.price)}}
+                        </div>
+                    </div>
+                </div>
+                <div class="vehicle" v-if="!vehiclelist || vehiclelist.length == 0">
+                    <div class="no-vehicles">
+                        Araç Bulunamadı.
+                    </div>
+                </div>
+            </div>
+        </transition-group>
+    </div>
+</div>

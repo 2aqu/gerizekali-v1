@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/fontawesome.css" />
+    </head>
+    <body>
+        <div class="generalFishMenu">
+            <div class="css-blurry-gradient1"></div>
+            <div class="css-blurry-gradient2"></div>
+            <div class="app">
+                <div class="topBar">
+                    <div class="infoButton"><i class="fas fa-info-circle"></i> Bilgilendirme</div>
+                    <div class="backButtonMain"><i class="fa fa-home" aria-hidden="true"></i> Ana Menü</div>
+                    <div class="title">Advanced Fishing</div>
+                </div>
+
+                <div class="infoMenuApp">
+                    <div class="middleInfoArea">
+                        <li>
+                            <p>FISHPASS Level Nedir?</p>
+                            Balık tutarak ve görev yaparak xp kazanabileceğiniz ve bu
+                        doğrultuda level atlayabileceğiniz bir sistem. Bu sistem aşağıdaki "Balık Seviyesi" sistemi ile
+                        doğru orantıda çalışır.
+                        </li>
+                        <li>
+                            <p>Balık Seviyesi Nedir?</p>
+                            Her balığın kendine özgü bir level gerekliliği vardır, Balığın leveli
+                        sizin BALIKPASS Levelinizden yüksek ise balığı yakalayamazsınız. (NOT: Balık leveli gibi balığın
+                        tutulabilir olmasına etki eden olta seviyesi gerekliliği de vardır ve bunlar birbirinden
+                        bağımsızdır)
+                        </li>
+                        <li>
+                            <p>Olta Seviyesi Nedir?</p>
+                            Her balığın tutulabilir olması için kendine özgü bir Olta Seviyesi
+                        gerekliliği vardır, Balık tuttuğunuz olta eğer tutmak istediğiniz balığın Olta Gereksinimi
+                        Seviyesinden düşükse balığı tutamazsınız.
+                        </li>
+                        <li>
+                            <p>Olta Seviyesi Nasıl Yükseltilir?</p>
+                            Olta Ustası ile iletişime geçerek; Elinizdeki
+                        mevcut oltayı belli bir ücret karşılığında bir sonraki seviye olta ile değiştirebilirsiniz. (Bu
+                        işlem sırasında şansınıza bağlı olarak elinizdeki olta kırılabilir)
+                        </li>
+                        <li>
+                            <p>Görevler ve İşleyişi</p>
+                            Herhangi bir görevi bitirip ödülünüzü aldığınız taktirde tüm
+                        görevleriniz ortalama 3 gün içinde sıfırlanacaktır. Görevlerinizi aksatmadan yaparsanız hızlı
+                        bir şekilde FISHPASS levelinizi kasmanızda yardımcı olacaktır.
+                        </li>
+
+                        <span class="infoBottomX">
+                            <div align="center">Yem kullanmadığınız takdirde oltanıza çöp eşya takılma oranı daha yüksek
+                                olacaktır..</div>
+                            <div align="center">
+                                İllegal yem kullanmadığınız takdirde illegal bölgede yakalamaya
+                            calıştığınız nesli tükenen balıklar oltanıza takılmayacaktır!
+                            </div>
+                            <div align="center">
+                                Bir balığı tutabilmek için FISHPASS menüsündeki hem Balık Leveli hem de
+                            Olta Seviyesi gereksinimi karşılamalısınız.
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="mainMenuApp">
+                    <div class="middleSection">
+                        <div class="middleLeftArea">
+                            <div class="middleText">Balıklar</div>
+                            <div class="inMiddle"></div>
+                        </div>
+                        <div class="middleRightArea">
+                            <div class="rightText">Görevlerin</div>
+                            <div class="rightArea"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottomBar">
+                    <div class="topBarInfoSection">
+                        <div class="currentLevel" id="currentLevelBottom">1 Lv.</div>
+                    </div>
+                    <div class="levelInfoSection">
+                        <div class="levelInfoLeft">
+                            <span id="currentText">Mecut: </span>
+                            <p id="currentXpBottom">0 XP</p>
+                        </div>
+                        <div class="levelInfoRight">
+                            <p id="currentRequiredBottom">1000 XP</p>
+                            <span id="requiredText">Gerekli: </span>
+                        </div>
+                    </div>
+                    <div class="topBarLevelSection">
+                        <div class="levelFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="upgradeRod">
+            <div class="upTopSection">Oltanızı yükseltmek istediğiniz seviyeyi seçin.</div>
+            <div class="upgradeTop">
+                <div class="upTopItem" id="2">2 Lv.</div>
+                <div class="upTopItem" id="3">3 Lv.</div>
+                <div class="upTopItem" id="4">4 Lv.</div>
+                <div class="upTopItem" id="5">5 Lv.</div>
+            </div>
+
+            <div class="upgradeMiddle">
+                <div class="upgradeItem" id="currentRodLv">1 Lv.</div>
+                <span class="material-icons" id="arrowsIcon"> double_arrow </span>
+                <div class="upgradeItem" id="hedefRodLv">2 Lv.</div>
+            </div>
+
+            <div class="infoRodUp">Bu işlem sırasında mevcut oltanız kırılabilir!</div>
+
+            <div class="bottomUpg">
+                <div class="upgradeRodButton">
+                    Geliştir
+                    <span class="priceUpgrade">$500</span>
+                </div>
+                <div class="cancelRodButton">İptal</div>
+            </div>
+        </div>
+
+        <!-- ! ALT TARAFA JS YAZILACAK -->
+
+        <div class="marketSelectMenu">
+            <div class="marketSelectText">Hangi menüyü açmak istersiniz?</div>
+            <div class="marketSelectItemArea">
+                <div class="marketSelectMenuItem" id="buyMenuOpen">
+                    <div class="marketSelectItemText">
+                        <span>Satın Alma Menüsü</span>
+                    </div>
+                    <img src="./css/imgs/satin.png" alt="" />
+                </div>
+                <div class="marketSelectMenuItem" id="sellMenuOpen">
+                    <div class="marketSelectItemText">
+                        <span>Satış Yapma Menüsü</span>
+                    </div>
+                    <img src="./css/imgs/satis.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="classMarketSection">
+            <div class="MarketTextTop">
+                <span class="marketText">Balık Market</span>
+                <span class="material-icons" id="marketCloseButon"> close </span>
+            </div>
+
+            <div class="marketLine"></div>
+
+            <div class="marketMiddle"></div>
+        </div>
+
+        <div class="classSellItemSection">
+            <div class="sellItemTextTop">
+                <span class="sellItemsText">Balıkçı - Market</span>
+                <span class="material-icons" id="sellCloseButon"> close </span>
+            </div>
+            <div class="sellMiddleSection">
+                <div class="sellItemMiddle"></div>
+
+                <div class="sellItemRightArea">
+                    <div class="sellItemLevelArea">
+                        <div class="sellItemCircle">50 Lv.</div>
+                        <div class="sellItemCharName">FIRSTNAME LASTNAME</div>
+                    </div>
+                    <div class="sellItemCanSellFishes">
+                        <div class="canSellFishText">Satabileceğin balıklar</div>
+                        <div class="canSellItemAreaS"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="baitText">
+            <div class="currentBaitArea">
+                <span class="material-icons" id="baitIcon"> set_meal </span>
+                <div class="currentBaitName">x</div>
+            </div>
+        </div>
+
+        <div id="tuslar"></div>
+
+        <script src="js/fontawesome.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

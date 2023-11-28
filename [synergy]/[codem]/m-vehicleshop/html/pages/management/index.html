@@ -1,0 +1,220 @@
+<div class="management-page">
+    <div class="page-container">
+        <div class="welcome-text">
+            <strong>
+                Premium Deluxe Motosport'a Hoşgeldiniz,
+            </strong>
+            <span>
+                {{player.name}}
+            </span>
+        </div>
+        <div class="actions-grid">
+            <div class="grid-item">
+                <div class="header">
+                    <div class="title">
+                        <h3>
+                            Çalışan
+                        </h3>
+                        <h4>
+                            Yönetim
+                        </h4>
+                    </div>
+                    <div class="buttons">
+                        <button @click="bossEditMode = !bossEditMode">
+                            <inline-svg src="./assets/edit.svg" class="icon" v-if="!bossEditMode">
+                                ></inline-svg>
+                            <span v-if="bossEditMode">
+                                Geri
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="list-items employees">
+                        <div class="item add" v-if="bossEditMode" @click="addEmployee()">
+                            <span>
+                                Çalışan Ekle
+                            </span>
+                            <div class="actions">
+                                <button class="plus">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item" v-for="item in employees">
+                            <span>
+                                {{item.name}}
+                            </span>
+                            <span>
+                                {{formatPrice(item.salary)}}
+                            </span>
+                            <div class="actions" v-if="!bossEditMode">
+                                <button :class="{active: hasAccess(item, 'vehicle')}" @click="toggleAccess(item, 'vehicle')">
+                                    <inline-svg src="./assets/edit.svg" class="icon"></inline-svg>
+                                </button>
+                                <button :class="{active: hasAccess(item, 'vault')}" @click="toggleAccess(item, 'vault')">
+                                    <inline-svg src="./assets/vault.svg" class="icon"></inline-svg>
+                                </button>
+                                <button class="text" @click="payEmployee(item)">
+                                    Ödeme Yap
+                                </button>
+                            </div>
+                            <div class="actions" v-else>
+                                <button class="text" @click="editSalary(item)">
+                                    Maaş
+                                </button>
+                                <button class="text red" @click="fireEmployee(item)">
+                                    Kov
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="header">
+                    <div class="title">
+                        <h3>
+                            Premium Deluxe
+                        </h3>
+                        <h4>
+                            Logları
+                        </h4>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search logs..." v-model="logsSearchInput">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="list-items logs">
+                        <div class="item" v-for="log in filteredLogs" :key="log">
+                            <span v-for="item in log" :key="item" :class="item.class">
+                                {{item.class && item.class.includes('money') ? formatPrice(item.text) : item.text}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="header">
+                    <div class="title">
+                        <h3>
+                            PDM
+                        </h3>
+                        <h4>
+                            Kasası
+                        </h4>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="vault-container">
+                        <inline-svg src="./assets/vault.svg" class="icon"></inline-svg>
+                        <div class="money" v-if="playerHasVaultAccess()">
+                            {{formatPrice(vaultMoney)}}
+                        </div>
+                        <div class="money" v-else>
+                            ${{blurredVaultMoney}}
+                        </div>
+                        <input type="text" placeholder="Amount" v-model="vaultAmount">
+                        <button class="deposit" @click="depositMoney()">
+                            Yatır
+                        </button>
+                        <button class="withdraw" @click="withdrawMoney()">
+                            Çek
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vehicle-filter">
+            <div class="nav-list" v-if="selectedNav">
+                <div class="nav-active" ref="navActive"></div>
+                <div class="nav-items" ref="navItems" v-if="!searchActive">
+                    <div class="nav-item" v-for="item in navItems" :key="item" :class="{active: item.id == selectedNav.id}" @click="selectNav(item)"
+                        @dblclick="editCategoryName(item)">
+                        <div class="title">
+                            <span v-if="!item.editing">
+                                {{item.name}}
+                            </span>
+                            <input type="text" v-if="item.editing" v-model="tempCategoryName" @keyup.enter="saveCategoryName(item)" @keyup.esc="cancelCategoryName(item)"
+                                @blur="saveCategoryName(item)">
+                        </div>
+                    </div>
+                </div>
+                <div class="search-container" v-if="searchActive">
+                    <input type="text" placeholder="Search any vehicle by their name..." v-model="searchInput">
+                </div>
+                <div class="search-btn" @click="searchActive = !searchActive" ref="searchBtn">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="filter-text" v-if="!searchActive && selectedNav">
+                &bull; {{selectedNav.name}} Araçlar
+            </div>
+            <div class="cancel-search" v-if="searchActive" @click="searchActive = false">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="cancel-search red" v-if="!searchActive && selectedNav" @click="removeCategory()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="cancel-search" @click="addCategory()" v-if="!searchActive">
+                <i class="fas fa-plus"></i>
+            </div>
+            <button class="btn-text" @click="transferBusiness()" v-if="!searchActive">
+                İşletmeyi Devret
+            </button>
+        </div>
+        <div class="vehicles-list" ref="vehiclesList" @mousewheel="vehiclesListWheel">
+            <div class="vehicle" @click="addVehicle()" v-if="selectedNav?.id">
+                <div class="header">
+                    <div class="text">
+                        <div class="brand">
+                            Yeni Ekle
+                        </div>
+                        <div class="model">
+                            Araçlar
+                        </div>
+                    </div>
+                </div>
+                <div class="add-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="footer">
+                    <div class="price">
+                        Ekle
+                    </div>
+                </div>
+            </div>
+            <div class="vehicle" v-if="selectedNav?.id" v-for="veh in filteredVehicles || vehicles[selectedNav.id]" :key="veh" :class="{active: veh.hash == 1}">
+                <div class="header">
+                    <div class="text">
+                        <div class="brand">
+                            {{veh.brand}}
+                        </div>
+                        <div class="model">
+                            {{veh.name}}
+                        </div>
+                    </div>
+                    <div class="brand-image">
+                        <img :src="veh.brandImage" @error="onBrandLogoError" :alt="veh.brand">
+                    </div>
+                </div>
+                <div class="vehicle-image">
+                    <img :src="veh.vehImage" :alt="veh.hash" @error="onVehicleImageError">
+                </div>
+                <div class="footer">
+                    <button class="edit" @click="editVehicle(veh)">
+                        <inline-svg src="./assets/edit.svg" class="icon"></inline-svg>
+                    </button>
+                    <div class="price">
+                        {{formatPrice(veh.price)}}
+                    </div>
+                    <button class="delete" @click="deleteVehicle(veh)">
+                        <i class="icon fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

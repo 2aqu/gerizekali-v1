@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div id="app" v-if="show">
+   
+        <div class="col-12  d-flex justify-content-center align-items-center" style="height: 100vh; background-image: url('./images/loan-2.png'); background-size: 100% 100%;">
+
+          <div v-if="atm" class="d-flex justify-content-center align-items-start flex-wrap" style="width:25%; height:78%;background-image: url('./images/atm-bg.png'); background-size: 100% 100%;">
+            <div class="" style="z-index:2;width: 100%; height: 30%; background-image: url('./images/atm-half.png'); background-size: 100% 100%;">
+              <div class=" d-flex align-items-center justify-content-center" style="height: 8vh;" >
+                <div class="h-25 d-flex align-items-center justify-content-center">
+                  <img  class="h-100" :src="uiLogo.bluelogo" alt="">
+                </div>
+                <div class=" ms-2 h-25  d-flex align-items-center justify-content-center">
+                  <h2 class="text-white my-0" style="font-size:1.5vw; letter-spacing: 0.2vw; font-family: gilroy;">{{language['bankatm']}}</h2>
+                </div>
+              </div>
+              <div class="col-12 d-flex align-items-center justify-content-center " style="height: 30%; ">
+                <img  style="filter: drop-shadow(0px 0px 15px #00F0FF);" src="./images/danger.png" alt="">
+              </div>
+              <div class="col-12   text-white d-flex align-items-center justify-content-center" style="height: 18%;font-family: proxima-bold; letter-spacing: 0.1vw; font-size: 0.8vw;">{{language['pleaseinsert']}}</div>
+            </div>
+
+            <div class="mt-5" :class="{movecard : insertAnime}" style="width: 70%; height: 25%;  background-image: url('./images/player-bank-card.png'); background-size: 100% 100%;">
+           
+                <div class=" mt-4 col-4  d-flex justify-content-start align-items-center " style="height: 10%; margin-left:11%">
+                  <img class="h-75 img-fluid" src="./images/m-logo-white.png" alt="">
+                  <h2 class=" ms-2 h-100 my-auto text-white" style="font-size: 1vw; font-family: gilroy; letter-spacing: 0.2vw;">{{language['banktext']}}</h2>
+                </div>
+                <div class="col-12 d-flex justify-content-end" style="height: 20%; margin-top: 8%;">
+                  <h2 class="me-5 h-100"  style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 1.2vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 100%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;">{{playerData.xPlayerBankMoney.toLocaleString()}} $</h2>
+                </div>
+                <div class="mt-3 ms-4  col-12 d-flex justify-content-start align-items-center" style="height: 10%;">
+                  <h2 class="ms-3 h-100 my-0 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 1.2vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 70%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;">{{playerData.xPlayerName}}</h2>
+                </div>
+                <div class="mt-2 ms-4 col-12 d-flex justify-content-start align-items-center" style="height: 10%;">
+                  <h2 class="ms-3 h-100 my-auto"  style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 0.9vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 70%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;">**** **** **{{playerIban12}} {{playerIban34}}</h2>
+                </div>
+            </div>
+            <div  class=" progressBarTime position-absolute w-25 h-25 d-flex align-items-center justify-content-center " style="bottom:30vh; display: none !important;">
+               <div  class=" d-flex align-items-center justify-content-center" style="width: 50%; height:80%; ">
+                <div  class="d-flex align-items-center justify-content-center" style="width: 90%; height:100%;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="186" height="186" viewBox="0 0 186 186" fill="none">
+                    <circle id="progressbaratm" cx="93" cy="93" r="87" stroke="url(#paint0_linear_1040_5043)" stroke-width="12"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_1040_5043" x1="93" y1="6" x2="93" y2="180" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00C2FF"/>
+                    <stop offset="1" stop-color="#ED72D4"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                    <div class="position-absolute   d-flex align-items-center justify-content-center" style="height: 45%; width:45%; " >
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="186" height="186" viewBox="0 0 186 186" fill="none">
+                        <circle cx="93" cy="93" r="87" stroke="url(#paint0_linear_1040_5043)" stroke-opacity="0.1" stroke-width="12"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1040_5043" x1="93" y1="6" x2="93" y2="180" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00C2FF"/>
+                        <stop offset="1" stop-color="#ED72D4"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                    </div>
+                 
+                  <div class="position-absolute  p-1"  style="width: 16%; height: 20%;" >
+                    <img class="h-100 w-100" src="./images/progress-logo.png" alt="">
+                  </div>
+                </div>
+              </div> 
+           
+            </div>
+
+            <div class=" col-12 d-flex align-items-center justify-content-center" style="height: 10%; ">
+              <h2 class="insertButton h-75 my-auto  w-50 d-flex align-items-center justify-content-center text-white" style="border-radius: 1rem; font-size: 1.3vw; filter: drop-shadow(-5px 15px 40px #00F0FF); background: linear-gradient(90deg, #00B2FF 0%, #00FF47 156.25%); ;" @click="atmCardInsertButton">{{language['insert']}}</h2>
+            </div>
+          </div>
+
+          <div class="col-9 d-flex justify-content-center align-items-center" style="height: 837px;" v-if="!atm">
+            <!-- doshboard page main content -->
+            <div class="animationFadein d-flex justify-content-start align-items-center flex-wrap " :style="getBackground(selectCategoryButton)" style=" width: 95%; height: 77vh; background-image: url('./images/dashboardbg.png'); background-size: 100% 100%; opacity: 1;">
+              <!-- header content -->
+              <div class="col-12  d-flex justify-content-between align-items-center" style="height: 8vh;">
+                
+                <div class="col-3  d-flex justify-content-start align-items-center" style="height:100%">
+                    <div class="col-2 ms-4 mb-2 me-1  h-40 d-flex justify-content-center align-items-center" style="width: 16%;">
+                        <img v-if="!bankCategory.societyCategory" :src="uiLogo.bluelogo" alt="" style="width: 80%; height: 10%;">
+                        <img v-else :src="uiLogo.purplelogo" alt="" style="width: 80%; height: 10%;">
+                    </div>
+                    <div class="col-2 d-flex justify-content-start align-items-center  w-75 ms-3" >
+                      <h2 v-if="!bankCategory.societyCategory"  class="text-white " style=" font-size: 100%; font-family: gilroy; letter-spacing: 0.9vh;">{{language['banktext']}}</h2>
+                      <h2 v-else class="text-white  d-flex justify-content-start align-items-center " style=" font-size: 100%; font-family: gilroy; letter-spacing: 0.9vh;">{{language['banktext']}} <span style="font-family: futura; font-size: 0.9vw;">{{language['society2']}}</span></h2>
+                    </div>
+                </div>
+
+                <div class="col-3  d-flex justify-content-center align-items-center" style="height:100%">
+                  <h2 class="text-white " style="font-size:1.3vw; font-family: gilroy; letter-spacing: 0.5vh;">{{pageName}}</h2>
+                </div>
+
+                <div class="col-3  d-flex justify-content-end align-items-center" style="height:100%">
+                  <div class="col-12  h-100 d-flex justify-content-center align-items-center">
+                    <div class="notify-container">
+                      <div class="denemetest">
+                        <div class="container-not">
+                          <img src="./images/notification-icon.png">  
+                        </div>
+                           
+                        </div>
+                      
+                     
+                    </div>
+                      <!-- <div class="col-5  d-flex justify-content-center align-items-center" style="border-radius: 3rem; height: 60%;background: rgba(0, 178, 255, 0.04);">
+                          <img src="./images/notification.png" alt="">
+                          <h2 class="position-absolute ms-5    d-flex justify-content-center align-items-center" style="margin-bottom: 2rem;width: 1%; background-color: #480000; height: 2%; border-radius: 1rem; font-size: 80%; color:#FF0000">1</h2>
+                      </div> -->
+                  </div>
+                </div>
+              </div>
+              <!-- left content -->
+              <div class="  position-relative" style="height: 89%; width: 23.5%;">
+
+                  <!-- card container -->
+                  <div class="position-absolute d-flex align-items-end justify-content-start" style="width: 1.5vw; height: 20vh; ">
+                    <div class="position-absolute card-shadow" ></div>
+                  </div>
+                  <div class="ms-3  " style="width: 92%;height: 25%;  margin-top:10%; border-radius: 2rem;  background-size: 100% 100%;" :style="getCardStyle(selectCategoryButton)">
+                      <div class="col-12 d-flex justify-content-start align-items-end " style="height: 50%;  ">
+                        <div v-if="!bankCategory.societyCategory" class="col-4 ms-4 mb-2  d-flex align-items-center justify-content-center" style="width: 20%; height: 65%; border:2px solid #00B2FF; border-radius: 3rem;">
+                          <img   :src="playerData.xPlayerAvatar" alt="" style="width: 100%; height: 100%; border-radius: 2rem; padding: 0.1vw;">
+                        </div>
+                        <div v-else class="col-4 ms-4 mb-2  d-flex align-items-center justify-content-center" style="width: 20%; height: 65%; border:2px solid #EB00FF; border-radius: 3rem;">
+                          <img   :src="playerData.xPlayerAvatar" alt="" style="width: 100%; height: 100%; border-radius: 2rem; padding: 0.1vw;">
+                        </div>
+                        <div class="ms-2 mb-1" style="width: 65%; height: 65%;  ">
+                          <div class=" m-0 text-white d-flex justify-content-start align-items-center flex-wrap align-content-center" style=" width: 100%;  font-family: proxima-bold; font-size:0.8vw; ">{{language['helloWelcome']}}</div>
+                          <div class=" m-0 text-white d-flex justify-content-start align-items-center flex-wrap align-content-center text-truncate " style=" width: 100%;  font-family: proxima-bold; font-size:0.8vw; ">{{playerData.xPlayerName}}</div>
+
+                        </div>
+                      </div>
+                      <h2 v-if="!bankCategory.societyCategory" class="text-center text-white  mt-2" style="font-family:  proxima-bold; letter-spacing: 0.2vh; font-size:1vw;">{{selectCategoryButton == 'dashboard' ? 'Wallet' : 'Bank'}}</h2>
+                      <h2 v-else class="text-center text-white  mt-2" style="font-family:  proxima-bold; letter-spacing: 0.2vh; font-size:1vw;">{{selectCategoryButton == 'society' ? 'Wallet' : 'Bank'}}</h2>
+
+                      <div v-if="!bankCategory.societyCategory" class="col-12 d-flex align-items-center justify-content-center h-25 " >
+                        <div class="col-7  h-75 mb-2 d-flex align-items-center justify-content-start" style="border-radius: 1rem; background: linear-gradient(90deg, #00B2FF 0%, #00FF47 156.25%);">
+                          <img v-if="selectCategoryButton == 'dashboard'" class="ms-3" src="./images/wallet.png" alt="">
+                          <img v-else class="ms-3" src="./images/bank-small-icon.png" alt="">
+                          <div class="col-8 text-center text-truncate  " style="color: #0A5B73; font-family:  proxima-bold; font-size:0.8vw;">$ {{ selectCategoryButton == 'dashboard' ? playerData.xPlayerWallet.toLocaleString() : playerData.xPlayerBankMoney.toLocaleString() }}</div>
+                        </div>
+                      </div>
+
+                      <div v-else class="col-12 d-flex align-items-center justify-content-center h-25 " >
+                        <div class="col-7  h-75 mb-2 d-flex align-items-center justify-content-start" style="border-radius: 1rem; background: linear-gradient(89.71deg, #EB00FF 0.19%, #01B8E0 101.38%);">
+                          <img v-if="selectCategoryButton == 'society'" class="ms-3" src="./images/wallet.png" alt="">
+                          <img v-else class="ms-3" src="./images/bank-small-icon.png" alt="">
+                          <div class="col-8 text-center text-truncate  " style="color: #3B0043; font-family:  proxima-bold; font-size:0.8vw;">$ {{ selectCategoryButton == 'society'  ? playerData.xPlayerWallet.toLocaleString() : playerData.xPlayerBankMoney.toLocaleString() }}</div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-12 mt-2 d-flex justify-content-start align-items-center position-relative"  style="height: 4%; ">
+                    <div class="position-absolute" style="width: 0.8vw; height: 0.1vw; border:1px solid rgba(255, 255, 255, 0.19);;"></div>
+                    <div class="ms-3" style="color: rgba(255, 255, 255, 0.2); font-family: proxima; font-size:90%; letter-spacing: 0.1vh; text-indent: 0.4vw;"> {{language['Personel']}}</div>
+                  </div>
+                  <!-- personel Category -->
+                  <div class="col-12 " style="height: 28%; ">
+                 
+                    <div class= "dashboard-hover position-relative col-12 d-flex justify-content-start align-items-center" :class="{doshboardclick : selectCategoryButton == 'dashboard'}" style="height: 25%;" @click="changeSelectCategoryButton('dashboard')"  >
+                      <div v-if="selectCategoryButton == 'dashboard'" class="position-absolute border-dashboard"></div>
+                        <div class="col-2 d-flex justify-content-center align-items-center">
+                           <img class="img-fluid" src="./images/dashboard-icon.png" alt=""> 
+                        </div>
+                      
+                        <div class="col-8 " >
+                          <h2 class=" mt-2  justify-content-start align-items-center h-100 labelhover" v-bind:style="selectCategoryButton == 'dashboard' ?  {'color':'#00B2FF'} : {'color':'white'} " style=" font-size:0.8vw;font-family:gilroy; letter-spacing: 0.2vh;">{{language['dashboard']}}</h2>
+                        </div>
+                    </div>
+
+                    <div class= "transactions-hover  position-relative col-12 d-flex justify-content-start align-items-center"  :class="{transactionsclick : selectCategoryButton == 'transactions'}" style="height: 25%;"  @click="changeSelectCategoryButton('transactions')" >
+                      <div v-if="selectCategoryButton == 'transactions'" class="position-absolute border-transaction"></div>
+                      <div class="col-2 d-flex justify-content-center align-items-center">
+                         <img class="img-fluid" src="./images/transactions-icon.png" alt=""> 
+                      </div>
+                      <div class="col-8 " >
+                        <h2 class=" mt-2  justify-content-start align-items-center h-100 labelhover" v-bind:style="selectCategoryButton == 'transactions' ?  {'color':'#FF8228'} : {'color':'white'} "  style="font-size:0.8vw;font-family:gilroy; letter-spacing: 0.2vh;">{{language['transaction']}}</h2>
+                      </div>
+                    </div>
+
+                    <div v-if="loanData.loanUse" class= "loanhover position-relative  col-12 d-flex justify-content-start align-items-center" :class="{ loanhover2 : selectCategoryButton == 'loan'}"  style="height: 25%;"    @click="changeSelectCategoryButton('loan')"  >
+                      <div v-if="selectCategoryButton == 'loan'" class="position-absolute test-border"></div>
+                      <div class="col-2 d-flex justify-content-center align-items-center">
+                         <img class="img-fluid" src="./images/loan-icon.png" alt=""> 
+                      </div>
+                      <div class="col-8 " >
+                        <h2 class=" mt-2  justify-content-start align-items-center h-100 labelhover" v-bind:style="selectCategoryButton == 'loan' ?  {'color':'#89F400'} : {'color':'white'} "  style="font-size:0.8vw;font-family:gilroy; letter-spacing: 0.2vh;">{{language['loan']}}</h2>
+                      </div>
+                    </div>
+
+                    <div class= "bills-hover position-relative col-12 d-flex justify-content-start align-items-center" :class="{billsclick : selectCategoryButton == 'bills'}"  style="height: 25%;" @click="changeSelectCategoryButton('bills')"  >
+                      <div v-if="selectCategoryButton == 'bills'" class="position-absolute border-bill"></div>
+                      <div class="col-2 d-flex justify-content-center align-items-center">
+                         <img class="img-fluid" style="object-fit:cover;" src="./images/bills-icon.png" alt=""> 
+                      </div>
+                      <div class="col-8 " >
+                        <h2 class=" mt-2  justify-content-start align-items-center h-100 labelhover" v-bind:style="selectCategoryButton == 'bills' ?  {'color':'#B00AFF'} : {'color':'white'} " style=" font-size:0.8vw;font-family:gilroy; letter-spacing: 0.2vh;">{{language['bills']}}</h2>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                  <div class="col-12" style="height: 19.5vh;">
+                    <div v-if="playerJob" class="col-12 mt-2 d-flex justify-content-start align-items-center position-relative"  style="height: 4%; ">
+                      <div class="position-absolute" style="width: 0.8vw; height: 0.1vw; border:1px solid rgba(255, 255, 255, 0.19);;"></div>
+                      <div class="ms-3" style="color: rgba(255, 255, 255, 0.2); font-family: proxima; font-size:90%; letter-spacing: 0.1vh; text-indent: 0.4vw;"> {{language['society3']}}</div>
+                    </div>
+                    <div v-if="playerJob" class="col-12 mt-2" style="height: 80%; ">
+                      <div class= "society-hover  position-relative col-12 d-flex justify-content-start align-items-center" :class="{societyclick : selectCategoryButton == 'society'}"  style="height: 30%;" @click="changeSelectCategoryButton('society')"  >
+                        <div v-if="selectCategoryButton == 'society'" class="position-absolute border-society"></div>
+                        <div class="col-2 d-flex justify-content-center align-items-center">
+                           <img class="img-fluid" style="object-fit:cover;" src="./images/society-icon.png" alt=""> 
+                        </div>
+                        <div class="col-8 " >
+                          <h2 class=" mt-2  justify-content-start align-items-center h-100 labelhover" v-bind:style="selectCategoryButton == 'society' ?  {'color':'#EB00FF'} : {'color':'white'} " style=" font-size:0.8vw;font-family:gilroy; letter-spacing: 0.2vh;">{{language['dashboard']}}</h2>
+                        </div>
+                      </div>
+                      <div class= "society-hover position-relative col-12 d-flex justify-content-start align-items-center" :class="{societyclick : selectCategoryButton == 'society_transaction'}"  style="height: 30%;" @click="changeSelectCategoryButton('society_transaction')"  >
+                        <div v-if="selectCategoryButton == 'society_transaction'" class="position-absolute border-society"></div>
+                        <div class="col-2 d-flex justify-content-center align-items-center">
+                           <img class="img-fluid" style="object-fit:cover;" src="./images/transactions-icon.png" alt=""> 
+                        </div>
+                        <div class="col-8 " >
+                          <h2 class=" mt-2  justify-content-start align-items-center h-100 labelhover" v-bind:style="selectCategoryButton == 'society_transaction' ?  {'color':'#EB00FF'} : {'color':'white'} " style=" font-size:0.8vw;font-family:gilroy; letter-spacing: 0.2vh;">{{language['transaction']}}</h2>
+                        </div>
+                      </div>
+                    </div> 
+                
+                  </div>
+                 
+
+
+                  <div class="col-12" style="height: 5%; ">
+                    <div class= "col-12  d-flex justify-content-start align-items-center" style="height: 55%; cursor: pointer; " @click="exitBank">
+                        <div class="col-2 d-flex justify-content-center align-items-center">
+                          <img src="./images/exit-icon.png" alt="">
+                        </div>
+                        <div class="col-8 ">
+                          <h2 class=" mt-2 justify-content-start align-items-center h-100" style="font-size:0.8vw;color:white;font-family:gilroy; letter-spacing: 0.2vh;">{{language['exit']}}</h2>
+                        </div>
+                    </div>
+                  </div>
+              
+              </div>
+      
+              <!-- dashboard  right content -->
+              <div  v-if="selectCategoryButton == 'dashboard'" class=" d-flex justify-content-start align-items-center " style="width : 76.5% ; height: 89%; ">
+                <div class=" ms-2" style="border-radius:3vh; width: 67%; height: 90%; background-image: url('./images/dashboard-main.png'); background-size: 100% 100%;">
+                     <!-- right content üst -->
+                  <div class="col-12 d-flex justify-content-center align-items-center" style="height: 50%; ">
+                    <div class="d-flex justify-content-center align-items-center "style="width: 95%; height: 90%;background-image: url('./images/charts-bg-rec.png'); background-size: 100% 100%; background-repeat: no-repeat; ">
+                       <div class="d-flex justify-content-center align-items-center " style="width: 95%; height: 85%; background-image: url('./images/charts-bg.png'); background-size: 100% 100%; background-repeat: no-repeat;">
+                        <div class="d-flex justify-content-center align-items-center " style="width: 100%; height: 90%; " >
+                          <canvas id="myChart" height="15" width="40" style="width: 100% !important; height: 100% !important; display: block; box-sizing: border-box;"></canvas> 
+                        </div>
+                       
+                      </div> 
+                      
+                    </div>
+                  </div>
+
+                  <!-- right content alt -->
+                  <div class="col-12 d-flex justify-content-start " style="height: 50%; ">
+                       <!-- bank kart content -->
+                      <div class="h-100" style="width: 55%;">
+                        <div class="ms-4 mt-4 d-flex flex-column" style="width: 92%;height: 68%; background-image: url('./images/player-bank-card.png'); background-size: 100% 100%;">
+                            <div class=" mt-4 col-4  d-flex justify-content-start align-items-center " style="height: 10%; margin-left:11%">
+                              <img class="h-75 img-fluid" :src="uiLogo.whitelogo" alt="">
+                              <h2 class=" ms-2 h-100 my-auto text-white" style="font-size: 1vw; font-family: gilroy; letter-spacing: 0.2vw;">{{language['banktext']}}</h2>
+                            </div>
+                            <div class="col-12 d-flex justify-content-end" style="height: 20%; margin-top: 8%;">
+                              <h2 class="me-5 h-100"  style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 1.2vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 100%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;">{{playerData.xPlayerBankMoney.toLocaleString()}} $</h2>
+                            </div>
+                            <div class="mt-3 ms-4  col-12 d-flex justify-content-start align-items-center" style="height: 10%;">
+                              <h2 class="ms-3 h-100 my-0 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 1.2vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 70%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;">{{playerData.xPlayerName}}</h2>
+                            </div>
+                            <div class="mt-2 ms-4 col-12 d-flex justify-content-start align-items-center" style="height: 10%;">
+                              <h2 class="ms-3 h-100 my-auto"  style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 0.9vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 70%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;">**** **** **{{playerIban12}} {{playerIban34}}</h2>
+                            </div>
+                        </div>
+                        <div class="ms-4 mt-3 d-flex justify-content-center align-items-center" style="border-radius:2vh;width: 92%;height: 13%; background: linear-gradient(90deg, #FFFFFF 0%, #00FFF0 201.28%);">
+                          <h2 class="my-auto" style="font-size: 1vw; color: #005853; font-family: proxima-bold; cursor: pointer;" @click="changeIban">{{language['changeiban']}}</h2>
+                        </div>
+                      </div>
+
+                      <!-- transfer content -->
+                      <div class="h-100 ms-2 d-flex  justify-content-start align-items-start " style="width: 42%;">
+                        <div class="col-12  mt-4 d-flex  justify-content-center align-items-center" style="height: 88%; border-radius: 2vw; background-image: url('./images/dashboard-transfer-bg.png'); background-size: 100% 100%;">
+                          <div class="col-12  " style="height: 90%;">
+                            <div class="col-12 d-flex justify-content-end align-items-center" style="height: 20%;">
+                              <div class="col-7 h-100">
+                                <h2 class="text-white my-auto d-flex justify-content-start align-items-center" style="font-size: 1vw; font-family: proxima-bold; height: 100%; text-indent: 0.5vw; ">{{language['transfer']}}</h2>
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-end" style="height: 25%;">
+                              <div class="  col-12 d-flex justify-content-center align-items-end   " style="height: 80%;">
+                                <input class="text-center text-white" v-model="targetTransfer.targetIban"  type="text" placeholder="IBAN" style="font-family: gilroy; border-radius:1vh;width:9vw;height:100%;background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(158, 0, 255, 0.1) 97.16%); border:none; outline: none;">
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-end" style="height: 25%;">
+                              <div class="  col-12 d-flex justify-content-center align-items-end   " style="height: 80%;">
+                                <input class="text-center text-white"  v-model="targetTransfer.targetAmount" type="text" placeholder="Amount" style="font-family: gilroy; border-radius:1vh;width:9vw;height:100%;background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(158, 0, 255, 0.1) 97.16%); border:none; outline: none;">
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-end" style="height: 30%; ">
+                              <div class="  col-12 d-flex justify-content-center align-items-end   " style="height: 75%;">
+                                <h2 class=" text-white my-auto d-flex justify-content-center align-items-center" style="cursor: pointer; font-size:1.2vw;font-family:proxima-bold;width:12vw; height: 100%; border-radius: 2rem; background: linear-gradient(90deg, #00FFFF 0%, #9E00FF 97.16%);" @click="transferMoney">{{language['transfer']}}</h2>
+                              </div>
+                            </div>
+                          </div>
+                    
+                        
+                        </div>
+                      </div>
+                      
+                  </div>
+                </div>
+              
+                <div class="d-flex justify-content-center align-items-center " style="width: 32% ; height: 89%;">
+                  <div class="d-flex justify-content-center align-items-center flex-wrap" style="width: 90%; height: 100%; background-image: url('./images/withdraw-bg.png'); background-size: 100% 100%;">
+                    <div class="h-50 w-100" >
+                      <div class="d-flex justify-content-center align-items-start flex-wrap align-content-start"  style=" width: 100%;height: 70%; background-image: url('./images/withdraw-atm.png'); background-size: 100% 100%;">
+                          <div class=" d-flex   justify-content-center align-items-end align-content-start " style="width: 60%; height: 17%; ">
+                            <div class="col-3  d-flex justify-content-center align-items-center align-content-center " style="height: 50%; width: 10%;" >
+                              <img style="height: 80%; width: 95%;" :src="uiLogo.bluelogo" alt="">
+                            </div>
+                            
+                            <h2 class="ms-2 d-flex justify-content-center align-items-end h-100 my-auto" style="color: rgba(0, 0, 0, 0.54);font-size: 0.8vw; font-family: gilroy; letter-spacing: 0.2vh;">{{language['banktext']}}</h2>
+                          </div>
+                          <div class="d-flex  justify-content-center align-items-end flex-wrap align-content-center" style="width: 60%; height: 60%; ">
+                              <div class="col-12 d-flex justify-content-center align-items-end" style="height: 40%;">
+                                <input class=" text-center" type="text" v-model="withdrawAmount" placeholder="Amount" style="color: white; letter-spacing:0.1vw;font-family:gilroy;background-color:transparent; border-bottom:1px solid rgba(255, 255, 255, 0.19); outline:none;  width: 60%; border-top: none; border-left: none; border-right: none;">
+                              </div>
+                              <div class=" col-12 d-flex justify-content-center align-items-end " style="height: 30%; ">
+                                <img src="./images/withdraw-small-icon.png" alt="">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-center" style="height: 25%; cursor: pointer;" @click="withdrawMoney">
+                        <h2 class="withdraw-shadow mt-1 d-flex justify-content-center align-items-center" style="color: #590D00;font-size:1vw;font-family: proxima-bold ;width: 73%; height: 70%; border-radius: 2vw; background: linear-gradient(90deg, #FF4747 0%, #FF4D00 201.28%);">{{language['withdraw']}}</h2>
+                       
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="h-50 w-100" >
+                      <div class="d-flex  justify-content-center align-items-start flex-wrap align-content-start"  style=" width: 100%;height: 70%; background-image: url('./images/deposit-atm.png'); background-size: 100% 100%;">
+                        <div class=" d-flex    justify-content-center align-items-end align-content-start " style="width: 60%; height: 17%; ">
+                          <div class="col-3  d-flex justify-content-center align-items-center align-content-center " style="height: 50%; width: 10%;" >
+                            <img style="height: 80%; width: 95%;" :src="uiLogo.bluelogo" alt="">
+                          </div>
+                          <h2 class="ms-2 d-flex justify-content-center align-items-end h-100 my-auto" style="color: rgba(0, 0, 0, 0.54);font-size: 0.8vw; font-family: gilroy; letter-spacing: 0.2vh;">{{language['banktext']}}</h2>
+                        </div>
+                        <div class="d-flex  justify-content-center align-items-end flex-wrap align-content-center" style="width: 60%; height: 60%; ">
+                          <div class="col-12 d-flex justify-content-center align-items-end" style="height: 40%;">
+                            <input class=" text-center" type="text" v-model="depositAmount" placeholder="Amount" style="color: white; letter-spacing:0.1vw;font-family:gilroy;background-color:transparent; border-bottom:1px solid rgba(255, 255, 255, 0.19); outline:none;  width: 60%; border-top: none; border-left: none; border-right: none;">
+                          </div>
+                          <div class=" col-12 d-flex justify-content-center align-items-end " style="height: 30%; ">
+                            <img style="transform: rotate(180deg);" src="./images/withdraw-small-icon.png" alt="">
+                          </div>
+                      </div>
+                    </div>
+                      <div class="d-flex justify-content-center align-items-center" style="height: 25%;" @click="depositMoney">
+                        <h2 class="deposit-shadow mt-1 d-flex justify-content-center align-items-center" style="color: #00410C;font-size:1vw;font-family: proxima-bold ;width: 73%; height: 70%;  border-radius: 2vw; background: linear-gradient(90deg, #8DFF47 0%, #00FFF0 201.28%); cursor: pointer;">{{language['deposit']}}</h2>
+                       
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                
+                </div>
+             
+              </div>
+              <!-- transactions  right content -->
+              <div  v-if="selectCategoryButton == 'transactions'" class="animationFadein  d-flex justify-content-start align-items-center " style="width : 76.5% ; height: 89%; ">
+                <div class="w-100 h-100  ">
+                  <div class="col-12  d-flex justify-content-center align-items-center" style="height: 30%; ">
+                    <div class="mt-3 d-flex justify-content-around align-items-center flex-wrap" style="width: 95%; height: 80%; background-image: url('./images/transaction-top-bg.png'); background-size: 100% 100%;" v-if="transactionsData">
+                      <div class="d-flex align-items-center justify-content-center flex-wrap align-content-center " style="width: 15%; height:83%; background-size: 100% 100%;"  :style="{'background-image': 'url(./images/'+data.name+'.png)'}" v-for="data in transactionsData">
+                          <div class="mt-2 text-white text-center d-flex align-items-center justify-content-center flex-wrap align-content-center" style="font-family:proxima-bold; font-size:0.8vw;letter-spacing: 0.1vw; height: 35%; ">{{data.label}}</div>
+                          <div class="mt-3 col-9  text-center" :style="transictionGradient(data.name)" style="font-family:proxima-bold; font-size:1vw;letter-spacing: 0.1vw; height: 18%;" >{{data.name == 'trans-total' ?  data.value  :  '' + data.value.toLocaleString() +'$' }}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex justify-content-center align-items-center"  style="height: 70%;">
+                    <div class="" style="width: 98%;  height: 100%;  background-image: url('./images/transaction-bottom-bg.png'); background-size: 100% 100%; ">
+                      <div class="mt-4 d-flex justify-content-start align-items-center" style="height: 15%;">
+                        <div class="ms-5 col-5 h-50 d-flex justify-content-start align-items-center" style="border-radius: 2rem; background: rgba(255, 255, 255, 0.02)">
+                            <img class="ms-3" src="./images/search-icon.png" alt="">
+                            <input class="searchInputTrans ms-4 h-100 text-white" v-model="searchTransactions" placeholder="Search Transactions..." style="width: 75%; background-color: transparent; outline: none; border: none;" type="text">
+                            <img @click="searchClear" class="ms-3" style="cursor: pointer;" src="./images/close-icon.png" alt="">
+                        </div>
+                        <div class="left-right-button">
+                          <div class="col-6  h-100 d-flex align-items-center justify-content-center" v-if="filterByTerm" >
+                            <div class="col-6 h-100 d-flex align-items-center justify-content-evenly" @click="clearTransaction" style="cursor: pointer; border-radius: 1rem; background: linear-gradient(90.76deg, #FF002E 0.5%, #FF00B8 110.52%);">
+                              <h2 class="text-white my-0 d-flex align-items-center justify-content-center" style="font-size: 0.9vw; font-family: proxima;">{{language['clearAll']}}</h2>
+                              <img src="./images/delete.png" alt="">
+                            </div>
+                          </div>
+                          <h2 class="d-flex justify-content-center align-items-center my-0" style="color:white; font-size:0.8vw; font-family:proxima; height: 100%;">{{language['alltransactionPage']}}   {{transactionsPageData}}</h2>
+                          <div class="right-button-wrapper">
+                            <div @click="transactionsPageData--" class="right-transaction-button swiper-button-prev "></div>
+                          </div>
+                          <div class="left-button-wrapper">
+                            <div @click="transactionsPageData++" class="left-transaction-button swiper-button-next "></div>
+                          </div>
+
+                        </div>
+                        
+                       
+                      </div>
+                      <div class="mt-3 transiction-swiper swiper mySwiper">
+                        <div class="swiper-wrapper" v-if="filterByTerm">
+                          <div class="swiper-slide"   v-for="data in filterByTerm.slice().reverse()" :style="{'background-image': 'url(./images/' +data.action+ '.png)'}">
+                            <!-- deposit template -->
+                            <div v-if="data.action == 'transaction-deposit'" class="h-100 w-100 d-flex justify-content-center align-items-start flex-wrap align-content-start">
+                              <h2   class="m-0 col-10 text-start d-flex justify-content-start align-items-end" style="color:#00461E; font-family:proxima-bold; font-size:0.8vw; height: 28%;">{{language['banktext2']}}</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:1vw;height: 15%; font-size: 0.9vw; text-indent: 1vw;">{{data.title}}</h2>
+                              <h2   class="m-0 col-12 text-start d-flex justify-content-start align-items-end" style="color:#01FF66; font-family:proxima-bold; font-size:0.8vw; height: 15%;text-indent: 1vw;">{{language['date']}}</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 15%;text-indent: 1vw;">{{data.date}}</h2>
+                               <div class="col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto text-start " style="color:#01FF66; font-family:proxima-bold; font-size:0.9vw;text-indent: 1vw;">{{language['deposited']}}</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="color:#00471C;font-family:proxima-bold; font-size:0.9vw; background: linear-gradient(90.76deg, #00FF66 0.5%, #00FFC2 110.52%); border-radius: 1rem;">{{data.amount.toLocaleString()}}$</h2>
+                               </div>
+                            </div>
+                              <!-- withdraw template -->
+                            <div v-else-if="data.action == 'transaction-withdraw'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-center">
+                             <h2   class="m-0    pt-1  ms-4    p-0     col-12 text-start" style="color:#3E000B; font-family:proxima-bold; font-size:0.8vw;">{{language['banktext2']}}</h2>
+                             <h2   class="m-0    pt-0  ms-4    col-12  text-start"        style="color:white; font-family:proxima-bold; font-size:1vw;height: 10%;">{{language['withdraw']}}</h2>
+                             <h2   class="ms-4   pt-2  col-12  text-start"                style="color:#FF022E; font-family:proxima-bold; font-size:0.8vw; height: 10%;">{{language['date']}}</h2>
+                             <h2   class="mt-1   pt-0  ms-4    col-12 text-start"          style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 5%;">{{data.date}}</h2>
+                              <div class="ms-1 col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                <h2 class="col-6 my-auto" style="color:#FF022E; font-family:proxima-bold; font-size:0.9vw;">{{language['withdrawed']}}</h2>
+                                <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; font-size:0.9vw; background:linear-gradient(90.76deg, #FF002E 0.5%, #FF00B8 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}} $</h2>
+                              </div>
+                            </div>
+                            <!-- money transfer template -->
+                            <div v-else-if="data.action == 'people_withdraw'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-center">
+                              <h2   class="m-0    pt-1  ms-4    p-0     col-12 text-start" style="color:#3E000B; font-family:proxima-bold; font-size:0.8vw;">To</h2>
+                              <h2   class="m-0    pt-0  ms-4    col-12  text-start"        style="color:white; font-family:proxima-bold; font-size:1vw;height: 10%;">{{data.name}}</h2>
+                              <h2   class="ms-4   pt-2  col-12  text-start"                style="color:#FF022E; font-family:proxima-bold; font-size:0.8vw; height: 10%;">Date</h2>
+                              <h2   class="mt-1   pt-0  ms-4    col-12 text-start"          style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 5%;">{{data.date}}</h2>
+                               <div class="ms-1 col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto" style="color:#FF022E; font-family:proxima-bold; font-size:0.9vw;">Sent</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; font-size:0.9vw; background:linear-gradient(90.76deg, #FF002E 0.5%, #FF00B8 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}} $</h2>
+                               </div>
+                             </div>
+
+                             <div v-else-if="data.action == 'trans-income'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-center">
+                              <h2   class="m-0    pt-1  ms-4    p-0     col-12 text-start" style="color:#00fb19; font-family:proxima-bold; font-size:0.8vw;">From</h2>
+                              <h2   class="m-0    pt-0  ms-4    col-12  text-start"        style="color:white; font-family:proxima-bold; font-size:1vw;height: 10%;">{{data.name}}</h2>
+                              <h2   class="ms-4   pt-2  col-12  text-start"                style="color:#02ffa6; font-family:proxima-bold; font-size:0.8vw; height: 10%;">Date</h2>
+                              <h2   class="mt-1   pt-0  ms-4    col-12 text-start"          style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 5%;">{{data.date}}</h2>
+                               <div class="ms-1 col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto" style="color:#02ff81; font-family:proxima-bold; font-size:0.9vw;">Recived</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; font-size:0.9vw; background:linear-gradient(90.76deg, #2df500 0.5%, #00ffbf 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}} $</h2>
+                               </div>
+                             </div>
+                              <!-- bills template -->
+                            <div v-if="data.action == 'transaction-bill'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-start">
+                             <h2   class="m-0 col-10 text-start d-flex justify-content-start align-items-end" style="color:#11001A; font-family:proxima-bold; font-size:0.8vw; height: 28%; text-indent: 1vw;">Bill</h2>
+                             <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:1vw;height: 15%; font-size: 0.6vw; text-indent: 1vw;">{{data.title}}</h2>
+                             <h2   class="m-0 col-12 text-start d-flex justify-content-start align-items-end" style="color:#B00AFF; font-family:proxima-bold; font-size:0.8vw; height: 15%;text-indent: 1vw;">Date</h2>
+                             <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 15%;text-indent: 1vw;">{{data.date}}</h2>
+                              <div class="col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                <h2 class="col-6 my-auto text-start " style="color:#B00AFF; font-family:proxima-bold; font-size:0.9vw;text-indent: 1vw;">Paid</h2>
+                                <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="color:#390050;font-family:proxima-bold; font-size:0.9vw; background: linear-gradient(90.76deg, #B00AFF 0.5%, #FF00B8 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}}$</h2>
+                              </div>
+                            </div>
+                                <!-- loan template -->
+                            <div v-if="data.action == 'transaction-loan'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-start">
+                              <h2   class="m-0 col-10 text-start d-flex justify-content-start align-items-end" style="color:#003348; font-family:proxima-bold; font-size:0.8vw; height: 28%; text-indent: 1vw;">Loan</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:1vw;height: 15%; font-size: 0.6vw; text-indent: 1vw;">{{data.title}}</h2>
+                              <h2   class="m-0 col-12 text-start d-flex justify-content-start align-items-end" style="color:#00B2FF; font-family:proxima-bold; font-size:0.8vw; height: 15%;text-indent: 1vw;">Date</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 15%;text-indent: 1vw;">{{data.date}}</h2>
+                               <div class="col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto text-start " style="color:#00B2FF; font-family:proxima-bold; font-size:0.9vw;text-indent: 1vw;">Paid</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="color:#390050;font-family:proxima-bold; font-size:0.9vw; background: linear-gradient(90.76deg, #00B2FF 0.5%, #00FFC2 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}}$</h2>
+                               </div>
+                            </div>
+
+                          </div>
+                        
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                
+                
+              </div>
+                  <!-- bills  right content -->
+              <div  v-if="selectCategoryButton == 'bills'" class=" d-flex justify-content-start align-items-center " style="width : 76.5% ; height: 89%; ">
+                <div class="bills-overflow animationFadein w-100 h-100  d-flex align-items-start justify-content-start flex-wrap" style="overflow: auto;">
+                 
+                    <div v-if="billsData != 'null' && billingSystem == 'default'" class="billssetting mt-4 ms-3 d-flex justify-content-start align-items-start  flex-column" style="width: 25.5%; height: 40%;  margin-left: 5vw; background-image: url('./images/bills-data-bg.png'); background-size: 100% 100%;" v-for="data in billsData">
+                    
+                        <div  class=" col-12   d-flex align-items-start justify-content-start " style="height: 13%;">
+                          <h2 class="col-4 text-center  my-0   d-flex align-items-center justify-content-center " style="color:#B00AFF; font-size:0.8vw; letter-spacing:0.1vw;height: 100%;">From</h2>
+                          <!-- <h2 class="col-6  text-end  text-white my-0 " style="font-size: 0.8vw;">12.12.2022</h2> -->
+                          <!-- <div class="col-2 my-0 d-flex align-items-center justify-content-center " style="height:100%">
+                            <img class="img-fluid" style="height: 40%;" src="./images/callender.png" alt="">
+                          </div> -->
+                        </div>
+                        <h2 class="col-8 " style="color:white; font-size:0.8vw; letter-spacing:0.1vw;text-indent: 1.1vw; ">{{data.target ? data.target : data.society}} </h2>
+
+                        <h2 class="col-4  text-center " style="color:#B00AFF; font-size:0.8vw; letter-spacing:0.1vw;">{{language['type']}}</h2>
+                        <div class="col-11 d-flex align-items-center justify-content-center text-start  mt-2 "  style="height:7vh; ">
+                          <h2 class="col-10 h-100" style="color:white; font-size:0.8vw; letter-spacing:0.1vw;">{{data.label}}</h2>
+                        </div>
+                        <div class="col-12 mt-1 d-flex align-items-center justify-content-center  flex-wrap align-content-center"  style="height: 40%; ">
+                            <h2 class="col-7    text-center  d-flex align-items-center justify-content-center" style="border-radius: 2rem; background: linear-gradient(90.76deg, #9516D3 0.5%, #00B2FF 110.52%); font-size:0.8vw; height: 30%;  color:#260047;">{{data.amount}} $</h2>
+                            <h2 class="col-7  text-center  d-flex align-items-center justify-content-center" style="border-radius: 2rem;background: linear-gradient(90.76deg, #16D38F 0.5%, #AD00FF 110.52%); font-size:0.8vw; height: 30%; 
+                            color:white; cursor: pointer;" @click="billPay(data.id,data.amount,data.label)">{{language['pay']}}</h2>
+                        </div>
+                    
+                    </div>
+
+                    <div v-if="billsData != 'null' && billingSystem == 'okok'" class="billssetting mt-4 ms-3 d-flex justify-content-start align-items-start  flex-column" style="width: 25.5%; height: 40%;  margin-left: 5vw; background-image: url('./images/bills-data-bg.png'); background-size: 100% 100%;" v-for="data in billsData" v-show="data.status == 'unpaid'">
+                    
+                      <div  class=" col-12   d-flex align-items-start justify-content-start " style="height: 13%;">
+                        <h2 class="col-4 text-center  my-0   d-flex align-items-center justify-content-center " style="color:#B00AFF; font-size:0.8vw; letter-spacing:0.1vw;height: 100%;">From</h2>
+                        <!-- <h2 class="col-6  text-end  text-white my-0 " style="font-size: 0.8vw;">12.12.2022</h2> -->
+                        <!-- <div class="col-2 my-0 d-flex align-items-center justify-content-center " style="height:100%">
+                          <img class="img-fluid" style="height: 40%;" src="./images/callender.png" alt="">
+                        </div> -->
+                      </div>
+                      <h2 class="col-8 " style="color:white; font-size:0.8vw; letter-spacing:0.1vw;text-indent: 1.1vw; ">{{data.author_name ? data.author_name : data.society}} </h2>
+
+                      <h2 class="col-4  text-center " style="color:#B00AFF; font-size:0.8vw; letter-spacing:0.1vw;">{{language['type']}}</h2>
+                      <div class="col-11 d-flex align-items-center justify-content-center text-start  mt-2 "  style="height:7vh; ">
+                        <h2 class="col-10 h-100" style="color:white; font-size:0.8vw; letter-spacing:0.1vw;">{{data.notes}}</h2>
+                      </div>
+                      <div class="col-12 mt-1 d-flex align-items-center justify-content-center  flex-wrap align-content-center"  style="height: 40%; ">
+                          <h2 class="col-7    text-center  d-flex align-items-center justify-content-center" style="border-radius: 2rem; background: linear-gradient(90.76deg, #9516D3 0.5%, #00B2FF 110.52%); font-size:0.8vw; height: 30%;  color:#260047;">{{data.invoice_value}} $</h2>
+                          <h2 class="col-7  text-center  d-flex align-items-center justify-content-center" style="border-radius: 2rem;background: linear-gradient(90.76deg, #16D38F 0.5%, #AD00FF 110.52%); font-size:0.8vw; height: 30%; 
+                          color:white; cursor: pointer;" @click="billPay(data.id,data.invoice_value,data.notes)">{{language['pay']}}</h2>
+                      </div>
+                  
+                  </div>
+
+                    <div v-else class="text-white col-12 d-flex align-items-center justify-content-center" style="height: 100%;">
+                      <h2 class="text-white" style="font-family: proxima-bold; font-size: 1.3vw;">{{language['notbill']}}</h2>
+                    </div>
+                </div>
+                
+                
+              </div>
+                <!-- loan  right content -->
+              <div  v-if="selectCategoryButton == 'loan'" class="animationFadein d-flex justify-content-start align-items-center " style="width : 76.5% ; height: 89%; ">
+                <div class="w-100 h-100 position-relative" >
+                  <div v-if="loanPopup" class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                    <div class="blur-loans d-flex align-items-center justify-content-center" style="width: 91.5%; height: 90%;">
+                      <div class="" style="width: 25vw; height: 25vh;  background-image: url('./images/pop-up.png'); background-size: 100% 100%; background-repeat: no-repeat; object-fit: cover;">
+                        <div class="col-12 d-flex align-items-center justify-content-center" style="height: 30%;">
+                            <img class="img-fluid " style="height: 40%;" :src="uiLogo.bluelogo" alt="">
+                            <h2 class="d-flex align-items-end justify-content-center" style="font-size:1.5vw; color:white; font-family:gilroy; text-indent:0.6vw; height: 60%; letter-spacing: 0.2vw; ">{{language['banktext']}}</h2>
+                          
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-center flex-wrap align-items-center" style="height: 30%;">
+                            <h2 class="col-12 text-center h-50 d-flex align-items-end justify-content-center" style="font-family:proxima-bold; color:white; font-size:1vw; text-shadow: 0px 0px 35px rgba(255, 255, 255, 0.25);">{{language['loantext1']}}</h2>
+                            <h2 class="col-12 text-center h-50 d-flex align-items-start justify-content-center"  style="font-family:proxima-bold; color:white; font-size:1vw; text-shadow: 0px 0px 35px rgba(255, 255, 255, 0.25);">{{language['loantext2']}}</h2>
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-center flex-wrap align-items-center" style="height: 30%;">
+                          <div class="col-6  h-100  d-flex align-items-center justify-content-center">
+                              <h2 class="col-10 d-flex align-items-center justify-content-center" style="height: 70%; border-radius: 2rem;background: linear-gradient(90deg, #00B2FF 0%, #00FF47 156.25%);font-size: 1.2vw; 
+                              font-family: proxima-bold; color: white; -webkit-box-shadow: 0px 17px 37px -14px rgba(0,255,71,1);
+                              -moz-box-shadow: 0px 17px 37px -14px rgba(0,255,71,1);
+                              box-shadow: 0px 17px 37px -14px rgba(0,255,71,1); cursor: pointer;" @click="loanBuyConfirm('yes')"> {{language['yes']}} </h2>
+                          </div>
+                          <div class="col-6  h-100  d-flex align-items-center justify-content-center">
+                            <h2 class="col-10 d-flex align-items-center justify-content-center" style="height: 70%; border-radius: 2rem;background: linear-gradient(90.76deg, #FF002E 0.5%, #FF00B8 110.52%); font-size: 1.2vw; font-family: proxima-bold; color: white;-webkit-box-shadow: 0px 17px 37px -14px rgba(255,0,184,1);
+                            -moz-box-shadow: 0px 17px 37px -14px rgba(255,0,184,1);
+                            box-shadow: 0px 17px 37px -14px rgba(255,0,184,1); cursor: pointer;"@click="loanBuyConfirm('no')"> {{language['no']}} </h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12   d-flex justify-content-center align-items-center" style="height: 44%; ">
+                    <div v-if="updateLoan && !updateLoan.loans.hasActiveLoan" class="mt-3 d-flex justify-content-center align-items-start flex-wrap align-content-start" style="width: 92%; height: 80%; background-image: url('./images/loan-top-bg-notloan.png'); background-size: 100% 100%;">
+                        <h2 class="col-12 d-flex justify-content-center align-items-end" style="height: 11vh; color:#FFFFFF; font-family: proxima-bold; font-size: 1.3vw;">{{language['info']}}</h2>
+                        <div class="col-12 d-flex justify-content-center align-items-center" style="height: 12vh; ">
+                          <div class="col-3 text-center " style=" height: 100%; color: #ffffff23; font-family: proxima-bold; font-size: 0.9vw; letter-spacing: 0.1vw;">{{language['loantext3']}}</div>
+                        </div>
+                    </div>
+                    <div v-else class="mt-3 d-flex justify-content-center align-items-start flex-wrap align-content-start  position-relative" style="width: 92%; height: 80%; background-image: url('./images/loan-top-bg.png'); background-size: 100% 100%;">
+                      <h2 class="position-absolute text-white" style="top:-0.5vw;left:0; font-family:proxima-bold ; font-size: 1vw;">{{language['myloan']}}</h2>
+                      <div class="col-12 d-flex justify-content-evenly align-items-center flex-wrap " style="height: 100%;">
+                        
+                        <div class="col-5 d-flex justify-content-center align-items-center" style=" height: 95%;" v-if="updateLoan">
+                          <div class="d-flex align-items-start justify-content-center flex-wrap align-content-start"  :style="{'background-image': 'url(./images/loan-active-card.png)'}" style="background-size: 100% 100%; width: 90%; height: 90%;">
+                            <div class="col-12 h-25 d-flex align-items-center justify-content-start"  >
+                              <div class=" h-100  d-flex align-items-center justify-content-center" style="width: 4vw;">
+                                <img class="img-fluid h-50" :src="uiLogo.bluelogo" alt="">
+                              </div>
+                              <div class="ms-1 h-100 d-flex align-items-center justify-content-start text-white" style="font-size: 1.2vw; font-family: proxima-bold; letter-spacing: 0.4vw; width: 8vw;">{{language['banktext']}}</div>
+                              <div class="col-4 h-50">
+                                <div class="col-12 h-100 text-center d-flex align-items-center justify-content-center" style="background: linear-gradient(90.76deg, #01B4FB 0.5%, #00FFC2 110.52%); border-radius:1rem; font-family: proxima-bold;-webkit-box-shadow: 1px -2px 28px -7px rgba(0,255,194,1);
+                                -moz-box-shadow: 1px -2px 28px -7px rgba(0,255,194,1);
+                                box-shadow: 1px -2px 28px -7px rgba(0,255,194,1);">{{language['active']}}</div>
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-start"style=" height:4vh;">
+                              <h2 class="my-0  " style="font-size:0.8vw; font-family: gilroy; letter-spacing: 0.2vw; color:#01BFF4; text-indent: 1vw;">{{updateLoan.loans.loanLabel}}  {{updateLoan.loans.amount.toLocaleString()}} $</h2>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center" style="height: 10vh;">
+                              <div class="col-6 h-100 d-flex align-items-center justify-content-center flex-wrap">
+                                  <div class="col-12 h-50 d-flex align-items-end justify-content-start">
+                                    <h2 style="font-size:1vw; font-family:proxima-bold; color:White; text-indent: 1vw;">{{language['loanLeft']}}</h2>
+                                  </div>
+                                  <div class="col-12 h-50">
+                                    <div class="col-12 h-75 d-flex align-items-center justify-content-end" style="cursor:pointer;" >
+                                      <div class="col-11 h-100 text-center d-flex align-items-center justify-content-center" style="background: linear-gradient(90.76deg, #01B4FB 0.5%, #00FFC2 110.52%); border-radius:1rem; font-family: proxima-bold; border-radius: 1rem; -webkit-box-shadow: 1px -2px 28px -7px rgba(0,255,194,1);
+                                      -moz-box-shadow: 1px -2px 28px -7px rgba(0,255,194,1);
+                                      box-shadow: 1px -2px 28px -7px rgba(0,255,194,1);" @click="loanLeft">{{updateLoan.loans.requiredPayment.toLocaleString()}} $</div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <div class="col-6"></div>
+                            </div>
+                          </div>
+                        
+                        </div>
+                        <div class="col-3 d-flex justify-content-center align-items-center" style=" height: 95%;">
+                          <div class="d-flex justify-content-center align-items-center flex-wrap align-content-start" style="width:90%; height: 90%; background-image:url('./images/loan-warning-bg.png'); background-size: 100% 100%; background-repeat: no-repeat;">
+                            <div class="col-10 d-flex justify-content-center align-items-end" style="height: 35%;  font-family: proxima-bold; font-size: 0.8vw; color: #FFFFFF67; letter-spacing: 0.1vw;" >{{language['warning']}}</div>
+                            <div class="col-9 mt-1 d-flex justify-content-center align-items-center text-center" style="height: 60%; font-family: proxima-bold; font-size: 0.6vw; color: #FFFFFF67; letter-spacing: 0.1vw;" >{{language['loantext4']}}</div>
+                          </div>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center align-items-center" style=" height: 95%;">
+                          <div class="d-flex justify-content-center align-items-center flex-wrap align-content-start" style="width:90%; height: 90%; background-image:url('./images/loan-pay-bg.png'); background-size: 100% 100%; background-repeat: no-repeat;">
+                              <div class="col-12 d-flex justify-content-center align-items-end" style="height: 30%;">
+                                <div class="col-5 d-flex justify-content-between align-items-center" style="height: 80%; ">
+                                  <img src="./images/loan-pay-icon.png" alt="">
+                                  <h2 class="text-white my-0" style="font-size: 1vw; font-family: proxima-bold;">{{language['payment']}}</h2>
+                                </div>
+                              </div>
+                              <div class="col-12 d-flex justify-content-center align-items-end" style=" height: 30%;">
+                                <div class="col-6 d-flex justify-content-center align-items-center" style="height: 70%; background: linear-gradient(90deg, rgba(137, 244, 0, 0.1) 0%, rgba(0, 209, 255, 0.1) 97.16%); border-radius: 0.5rem;">
+                                  <input type="text" v-model="loanInstallmentAmount" class="text-center" style="font-family: proxima-bold; color:white; width: 70%; height: 70%; border-top:none; border-left: none; border-right: none; border-bottom: 1px solid gray; outline: none; background-color: transparent;" placeholder="Amount">
+                                </div>
+                              </div>
+                              <div class="col-12 d-flex justify-content-center align-items-end" style=" height: 35%;  ">
+                                <div class="col-8  d-flex justify-content-center align-items-center" style="letter-spacing: 0.1vw; height: 70%; font-family: proxima-bold; font-size: 1vw; border-radius: 2rem; background: linear-gradient(90deg, #89F400 0%, #00D1FF 97.16%); cursor: pointer; -webkit-box-shadow: 1px 8px 28px -7px rgba(137,244,0,0.49);
+                                -moz-box-shadow: 1px 8px 28px -7px rgba(137,244,0,0.49);
+                                box-shadow: 1px 8px 28px -7px rgba(137,244,0,0.49);" @click="loanInstallment" >{{language['pay']}}</div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-12 d-flex justify-content-center align-items-center" style="height: 50%;">
+                    <div class="" style="width: 92%;  height: 110%;  background-image: url('./images/loan-bottom-bg.png'); background-size: 100% 100%; ">
+                      <div class="mt-4 d-flex justify-content-start align-items-center" style="height: 15%;">
+                        <div class="ms-5 col-5 h-50 d-flex justify-content-start align-items-center" >
+                            <h2 style="color:White; font-size: 1vw; letter-spacing: 0.1vw;">{{language['aloan']}} </h2>
+                        </div>
+                        <div class="left-right-button">
+                          <h2 class="d-flex justify-content-center align-items-center my-0" style="color:white; font-size:0.8vw; font-family:proxima; height: 100%;">{{language['alltransactionPage']}}   {{transactionsPageData}}</h2>
+                          <div class="right-button-wrapper">
+                            <div @click="transactionsPageData--" class="right-transaction-button swiper-button-prev "></div>
+                          </div>
+                          <div class="left-button-wrapper">
+                            <div @click="transactionsPageData++" class="left-transaction-button swiper-button-next "></div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="mt-3 loans-swiper swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class=" loan-swiper swiper-slide " v-for="data in loanData.loan" >
+                              <div class="h-75 w-75 d-flex align-items-start justify-content-center flex-wrap align-content-start"  :style="{'background-image': 'url(./images/'+data.name+'.png)'}" style="background-size: 100% 100%;">
+                                <div class="col-12 h-25 d-flex align-items-center justify-content-start"  >
+                                  <div class=" h-100  d-flex align-items-center justify-content-end" style="width: 2vw;">
+                                    <img class="img-fluid h-25" :src="'./images/'+data.smallIcon+'.png'">
+                                  </div>
+                                  <div class="ms-1 h-100 d-flex align-items-center justify-content-start text-white" style="font-size: 0.8vw; font-family: proxima-bold; letter-spacing: 0.2vw;">{{data.bankname}}</div>
+                                </div>
+                                <div class="col-12 d-flex align-items-center justify-content-center"style=" height:4vh;">
+                                  <h2 class="my-0  " style="font-size:0.8vw; font-family: gilroy; letter-spacing: 0.2vw;" :style="{'color' : data.textcolor }" >{{data.label}}</h2>
+                                </div>
+                                <div class="col-12 d-flex align-items-center justify-content-center"style="height:4vh;">
+                                  <h2 class="my-0 " style="font-size:0.8vw; font-family: gilroy; letter-spacing: 0.2vw;" :style="{'color' : data.textcolor }">{{language['loanprice']}} </h2>
+                                </div>
+                                <div class="col-12 d-flex align-items-center justify-content-center"style="height:4vh; cursor: pointer;" @click="loanBuy(data.loan,data.label,data.name)">
+                                  <h2 class="my-0 h-75 d-flex align-items-center justify-content-center" style="font-size:0.7vw; font-family: proxima-bold; letter-spacing: 0.1vw;  width: 7vw; border-radius: 2rem;" :style="getLoanTextColor(data.name)">{{data.loan.toLocaleString()}}$</h2>
+                                </div>
+                              </div>
+
+                          </div>
+                        
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                
+                
+              </div>
+                <!-- ---- society right content -->
+              <div  v-if="selectCategoryButton == 'society'" class=" d-flex justify-content-start align-items-center " style="width : 76.5% ; height: 89%; ">
+               
+                  <div v-if="!societyFirstAccount" class="d-flex justify-content-center align-items-center" style="width: 95%; height: 90%; background-image:url('./images/society-code.png'); background-repeat: no-repeat;background-size: 100% 100%;" >
+                    <div class="col-4  d-flex justify-content-center align-items-start flex-wrap align-content-start" style="height: 70%;">
+                      <h2 class="text-center" style="height: 10%; color: rgba(255, 255, 255, 0.67); font-family: proxima-bold; font-size: 0.8vw;">{{language['information']}}</h2>
+                      <h2 class="text-center" style=" width: 70%; height: 35%; color: rgba(255, 255, 255, 0.67); font-family: proxima-bold; font-size: 0.8vw;letter-spacing: 0.1vw;">{{language['infotext1']}}</h2>
+                      <h2 class="text-center" style="width: 70%; height: 15%; color: white; font-family: proxima-bold; font-size: 0.8vw;">{{language['infotext2']}}</h2>
+                      <div class="col-12 d-flex justify-content-center align-items-center" style="height: 15%;">
+                        <input class="input-society" v-model="joinSocietyInput" placeholder="Type your society code in here" type="text">
+                      </div>
+                      <div class="col-12 d-flex justify-content-center align-items-center" style="height: 15%;" @click="joinSociety">
+                        <h2 class="society-button d-flex justify-content-center align-items-center">{{language['joinSoc']}}</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div v-else class="col-12 d-flex align-items-center justify-content-start" style="height: 100%;">
+                    <div class=" ms-2" style="border-radius:3vh; width: 67%; height: 90%; background-image: url('./images/dashboard-main.png'); background-size: 100% 100%;">
+                      <!-- right content üst -->
+                      <div class="col-12 d-flex justify-content-center align-items-center" style="height: 50%; ">
+                        <div class="d-flex justify-content-center align-items-center "style="width: 95%; height: 90%;background-image: url('./images/charts-bg-rec.png'); background-size: 100% 100%; background-repeat: no-repeat; ">
+                           <div class="d-flex justify-content-center align-items-center " style="width: 95%; height: 85%; background-image: url('./images/charts-bg.png'); background-size: 100% 100%; background-repeat: no-repeat;">
+                            <div class="d-flex justify-content-center align-items-center " style="width: 100%; height: 90%; " >
+                              <canvas id="myChartSociety" height="15" width="40" style="width: 100% !important; height: 100% !important; display: block; box-sizing: border-box;"></canvas> 
+                            </div>
+                           
+                          </div> 
+                          
+                        </div>
+                      </div>
+ 
+                   <!-- right content alt -->
+                   <div class="col-12 d-flex justify-content-start " style="height: 50%; ">
+                        <!-- bank kart content -->
+                       <div class="h-100" style="width: 55%;">
+                         <div class="ms-4 mt-4 d-flex flex-column" style="width: 92%;height: 68%; background-image: url('./images/society_credit_card.png'); background-size: 100% 100%;">
+                             <div class=" mt-4 col-10  d-flex justify-content-start align-items-center " style="height: 10%; margin-left:11%">
+                               <img class="h-75 img-fluid" :src="uiLogo.whitelogo" alt="">
+                               <h2 class=" ms-2 h-100 my-auto text-white" style="font-size: 1vw; font-family: gilroy; letter-spacing: 0.2vw;">{{language['banktext']}} <span style="font-family: futura;">{{language['society2']}}</span> </h2>
+                             </div>
+                             <div class="col-12 d-flex justify-content-end" style="height: 20%; margin-top: 8%;">
+                               <h2 class="me-5 h-100"  style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 1.2vw;color:white;">{{societyBankMoney.toLocaleString()}} $</h2>
+                             </div>
+                             <div class="mt-3 ms-4  col-12 d-flex justify-content-start align-items-center" style="height: 10%;">
+                               <h2 class="ms-3 h-100 my-0 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 1.2vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 70%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent; text-transform: uppercase;">{{playerJob}}</h2>
+                             </div>
+                             <div class="mt-2 ms-4 col-12 d-flex justify-content-start align-items-center" style="height: 10%;">
+                               <h2 class="ms-3 h-100 my-auto"  style="font-family:proxima-bold; letter-spacing: 0.1vw; font-size: 0.9vw; background: linear-gradient(90deg, #07FFFF 0%, #ECDCFF 70%);-webkit-background-clip: text; -webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;">{{playerSocietyCardNumber}}</h2>
+                             </div>
+                           
+                         </div>
+                         <div class="ms-4 mt-3 d-flex justify-content-center align-items-center" style="border-radius:2vh;width: 92%;height: 13%; background: linear-gradient(90deg, #FFFFFF 0%, #00FFF0 201.28%); opacity: 0.3;">
+                           <h2 class="my-auto" style="font-size: 1vw; color: #005853; font-family: proxima-bold; cursor: pointer;">{{language['changeiban']}} </h2>
+                         </div>
+                       </div>
+ 
+                       <div class="h-100 ms-2 d-flex  justify-content-start align-items-start " style="width: 42%;">
+                        <div class="col-12  mt-4 d-flex  justify-content-center align-items-center" style="height: 88%; border-radius: 2vw; background-image: url('./images/dashboard-transfer-bg.png'); background-size: 100% 100%;">
+                          <div class="col-12  " style="height: 90%;">
+                            <div class="col-12 d-flex justify-content-end align-items-center" style="height: 20%;">
+                              <div class="col-7 h-100">
+                                <h2 class="text-white my-auto d-flex justify-content-start align-items-center" style="font-size: 1vw; font-family: proxima-bold; height: 100%; text-indent: 0.5vw; ">{{language['transfer']}}</h2>
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-end" style="height: 25%;">
+                              <div class="  col-12 d-flex justify-content-center align-items-end   " style="height: 80%;">
+                                <input class="text-center text-white" v-model="targetTransfer.targetIban"  type="text" placeholder="IBAN" style="font-family: gilroy; border-radius:1vh;width:9vw;height:100%;background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(158, 0, 255, 0.1) 97.16%); border:none; outline: none;">
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-end" style="height: 25%;">
+                              <div class="  col-12 d-flex justify-content-center align-items-end   " style="height: 80%;">
+                                <input class="text-center text-white"  v-model="targetTransfer.targetAmount" type="text" placeholder="Amount" style="font-family: gilroy; border-radius:1vh;width:9vw;height:100%;background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(158, 0, 255, 0.1) 97.16%); border:none; outline: none;">
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-end" style="height: 30%; ">
+                              <div class="  col-12 d-flex justify-content-center align-items-end   " style="height: 75%;">
+                                <h2 class=" text-white my-auto d-flex justify-content-center align-items-center" style="cursor: pointer; font-size:1.2vw;font-family:proxima-bold;width:12vw; height: 100%; border-radius: 2rem; background: linear-gradient(90deg, #00FFFF 0%, #9E00FF 97.16%);" @click="transferMoneySociety">{{language['transfer']}}</h2>
+                              </div>
+                            </div>
+                          </div>
+                    
+                        
+                        </div>
+                      </div>
+                       
+                   </div>
+                 </div>
+               
+                 <div class="d-flex justify-content-center align-items-center " style="width: 32% ; height: 89%;">
+                   <div class="d-flex justify-content-center align-items-center flex-wrap" style="width: 90%; height: 100%; background-image: url('./images/withdraw-bg.png'); background-size: 100% 100%;">
+                     <div class="h-50 w-100" >
+                       <div class="d-flex justify-content-center align-items-start flex-wrap align-content-start"  style=" width: 100%;height: 70%; background-image: url('./images/withdraw-atm.png'); background-size: 100% 100%;">
+                           <div class=" d-flex   justify-content-center align-items-end align-content-start " style="width: 60%; height: 17%; ">
+                             <div class="col-3  d-flex justify-content-center align-items-center align-content-center " style="height: 50%; width: 10%;" >
+                               <img style="height: 80%; width: 95%;" :src="uiLogo.bluelogo" alt="">
+                             </div>
+                             
+                             <h2 class="ms-2 d-flex justify-content-center align-items-end h-100 my-auto" style="color: rgba(0, 0, 0, 0.54);font-size: 0.8vw; font-family: gilroy; letter-spacing: 0.2vh;">{{language['banktext']}}</h2>
+                           </div>
+                           <div class="d-flex  justify-content-center align-items-end flex-wrap align-content-center" style="width: 60%; height: 60%; ">
+                               <div class="col-12 d-flex justify-content-center align-items-end" style="height: 40%;">
+                                 <input class=" text-center" type="text" v-model="withdrawAmount" placeholder="Amount" style="color: white; letter-spacing:0.1vw;font-family:gilroy;background-color:transparent; border-bottom:1px solid rgba(255, 255, 255, 0.19); outline:none;  width: 60%; border-top: none; border-left: none; border-right: none;">
+                               </div>
+                               <div class=" col-12 d-flex justify-content-center align-items-end " style="height: 30%; ">
+                                 <img src="./images/withdraw-small-icon.png" alt="">
+                               </div>
+                           </div>
+                       </div>
+                       <div class="d-flex justify-content-center align-items-center" style="height: 25%; cursor: pointer;" @click="withdrawMoneySociety">
+                         <h2 class="withdraw-shadow mt-1 d-flex justify-content-center align-items-center" style="color: #590D00;font-size:1vw;font-family: proxima-bold ;width: 73%; height: 70%; border-radius: 2vw; background: linear-gradient(90deg, #FF4747 0%, #FF4D00 201.28%);">{{language['withdraw']}}</h2>
+                        
+                       </div>
+                       
+                       
+                     </div>
+                     <div class="h-50 w-100" >
+                       <div class="d-flex  justify-content-center align-items-start flex-wrap align-content-start"  style=" width: 100%;height: 70%; background-image: url('./images/deposit-atm.png'); background-size: 100% 100%;">
+                         <div class=" d-flex    justify-content-center align-items-end align-content-start " style="width: 60%; height: 17%; ">
+                           <div class="col-3  d-flex justify-content-center align-items-center align-content-center " style="height: 50%; width: 10%;" >
+                             <img style="height: 80%; width: 95%;" :src="uiLogo.bluelogo" alt="">
+                           </div>
+                           <h2 class="ms-2 d-flex justify-content-center align-items-end h-100 my-auto" style="color: rgba(0, 0, 0, 0.54);font-size: 0.8vw; font-family: gilroy; letter-spacing: 0.2vh;">{{language['banktext']}}</h2>
+                         </div>
+                         <div class="d-flex  justify-content-center align-items-end flex-wrap align-content-center" style="width: 60%; height: 60%; ">
+                           <div class="col-12 d-flex justify-content-center align-items-end" style="height: 40%;">
+                             <input class=" text-center" type="text" v-model="depositAmount" placeholder="Amount" style="color: white; letter-spacing:0.1vw;font-family:gilroy;background-color:transparent; border-bottom:1px solid rgba(255, 255, 255, 0.19); outline:none;  width: 60%; border-top: none; border-left: none; border-right: none;">
+                           </div>
+                           <div class=" col-12 d-flex justify-content-center align-items-end " style="height: 30%; ">
+                             <img style="transform: rotate(180deg);" src="./images/withdraw-small-icon.png" alt="">
+                           </div>
+                       </div>
+                     </div>
+                       <div class="d-flex justify-content-center align-items-center" style="height: 25%;" @click="depositMoneySociety">
+                         <h2 class="deposit-shadow mt-1 d-flex justify-content-center align-items-center" style="color: #00410C;font-size:1vw;font-family: proxima-bold ;width: 73%; height: 70%;  border-radius: 2vw; background: linear-gradient(90deg, #8DFF47 0%, #00FFF0 201.28%); cursor: pointer;">{{language['deposit']}}</h2>
+                        
+                       </div>
+                       
+                       
+                     </div>
+                   </div>
+                 </div>
+                  </div>
+                 
+              </div>
+              <div  v-if="selectCategoryButton == 'society_transaction'" class="animationFadein  d-flex justify-content-start align-items-center " style="width : 76.5% ; height: 89%; ">
+                <div class="w-100 h-100  ">
+                  <div class="col-12  d-flex justify-content-center align-items-center" style="height: 30%; ">
+                    <div class="mt-3 d-flex justify-content-around align-items-center flex-wrap" style="width: 95%; height: 80%; background-image: url('./images/transaction-top-bg.png'); background-size: 100% 100%;" v-if="societyTransactionsData">
+                      <div class="d-flex align-items-center justify-content-center flex-wrap align-content-center " style="width: 15%; height:83%; background-size: 100% 100%;"  :style="{'background-image': 'url(./images/'+data.name+'.png)'}" v-for="data in societyTransactionsData">
+                          <div class="mt-2 text-white text-center d-flex align-items-center justify-content-center flex-wrap align-content-center" style="font-family:proxima-bold; font-size:0.8vw;letter-spacing: 0.1vw; height: 35%; ">{{data.label}}</div>
+                          <div class="mt-3 col-9  text-center" :style="transictionGradient(data.name)" style="font-family:proxima-bold; font-size:1vw;letter-spacing: 0.1vw; height: 18%;" >{{data.name == 'trans-total' ||  data.name == 'trans-users' ?  data.value  :  '' + data.value.toLocaleString() +'$' }}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex justify-content-center align-items-center"  style="height: 70%;">
+                    <div class="" style="width: 98%;  height: 100%;  background-image: url('./images/transaction-bottom-bg.png'); background-size: 100% 100%; ">
+                      <div class="mt-4 d-flex justify-content-start align-items-center" style="height: 15%;">
+                        <div class="ms-5 col-5 h-50 d-flex justify-content-start align-items-center" style="border-radius: 2rem; background: rgba(255, 255, 255, 0.02)">
+                            <img class="ms-3" src="./images/search-icon.png" alt="">
+                            <input class="searchInputTrans ms-4 h-100 text-white" v-model="searchTransactionsSociety" placeholder="Search Transactions..." style="width: 75%; background-color: transparent; outline: none; border: none;" type="text">
+                            <img @click="searchClear" class="ms-3" style="cursor: pointer;" src="./images/close-icon.png" alt="">
+                        </div>
+                        <div class="left-right-button">
+                          <h2 class="d-flex justify-content-center align-items-center my-0" style="color:white; font-size:0.8vw; font-family:proxima; height: 100%;">{{language['alltransactionPage']}}   {{transactionsPageData}}</h2>
+                          <div class="right-button-wrapper">
+                            <div @click="transactionsPageData--" class="right-transaction-button swiper-button-prev "></div>
+                          </div>
+                          <div class="left-button-wrapper">
+                            <div @click="transactionsPageData++" class="left-transaction-button swiper-button-next "></div>
+                          </div>
+                       
+                         
+                      
+                        </div>
+                        
+                       
+                      </div>
+                      <div class="mt-3 transiction-swiper-society swiper mySwiper">
+                        <div class="swiper-wrapper" v-if="filterByTermSociety">
+                          <div class="swiper-slide"   v-for="data in filterByTermSociety.slice().reverse()" :style="{'background-image': 'url(./images/' +data.action+ '.png)'}">
+                            <!-- deposit template -->
+                
+                            <div v-if="data.action == 'society-deposit'" class="h-100 w-100 d-flex justify-content-center align-items-start flex-wrap align-content-start">
+                              <h2   class="m-0 col-10 text-start d-flex justify-content-start align-items-end" style="color:#00461E; font-family:proxima-bold; font-size:0.8vw; height: 28%;">{{language['banktext2']}}</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:1vw;height: 15%; font-size: 0.9vw; text-indent: 1vw;">{{data.title}}</h2>
+                              <h2   class="m-0 col-12 text-start d-flex justify-content-start align-items-end" style="color:#01FF66; font-family:proxima-bold; font-size:0.8vw; height: 15%;text-indent: 1vw;">{{language['date']}}</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 15%;text-indent: 1vw;">{{data.date}}</h2>
+                               <div class="col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto text-start " style="color:#01FF66; font-family:proxima-bold; font-size:0.9vw;text-indent: 1vw;">Deposited</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="color:#00471C;font-family:proxima-bold; font-size:0.9vw; background: linear-gradient(90.76deg, #00FF66 0.5%, #00FFC2 110.52%); border-radius: 1rem;">{{data.amount.toLocaleString()}}$</h2>
+                               </div>
+                            </div>
+                              <!-- withdraw template -->
+                            <div v-else-if="data.action == 'society-withdraw'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-center">
+                             <h2   class="m-0    pt-1  ms-4    p-0     col-12 text-start" style="color:#3E000B; font-family:proxima-bold; font-size:0.8vw;">Bank</h2>
+                             <h2   class="m-0    pt-0  ms-4    col-12  text-start"        style="color:white; font-family:proxima-bold; font-size:1vw;height: 10%;">Withdraw</h2>
+                             <h2   class="ms-4   pt-2  col-12  text-start"                style="color:#FF022E; font-family:proxima-bold; font-size:0.8vw; height: 10%;">Date</h2>
+                             <h2   class="mt-1   pt-0  ms-4    col-12 text-start"          style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 5%;">{{data.date}}</h2>
+                              <div class="ms-1 col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                <h2 class="col-6 my-auto" style="color:#FF022E; font-family:proxima-bold; font-size:0.9vw;">Withdrawed</h2>
+                                <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; font-size:0.9vw; background:linear-gradient(90.76deg, #FF002E 0.5%, #FF00B8 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}} $</h2>
+                              </div>
+                            </div>
+                            <!-- money transfer template -->
+                            <div v-else-if="data.action == 'people_withdraw'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-center">
+                              <h2   class="m-0    pt-1  ms-4    p-0     col-12 text-start" style="color:#3E000B; font-family:proxima-bold; font-size:0.8vw;">To</h2>
+                              <h2   class="m-0    pt-0  ms-4    col-12  text-start"        style="color:white; font-family:proxima-bold; font-size:1vw;height: 10%;">{{data.name}}</h2>
+                              <h2   class="ms-4   pt-2  col-12  text-start"                style="color:#FF022E; font-family:proxima-bold; font-size:0.8vw; height: 10%;">Date</h2>
+                              <h2   class="mt-1   pt-0  ms-4    col-12 text-start"          style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 5%;">{{data.date}}</h2>
+                               <div class="ms-1 col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto" style="color:#FF022E; font-family:proxima-bold; font-size:0.9vw;">Sent</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; font-size:0.9vw; background:linear-gradient(90.76deg, #FF002E 0.5%, #FF00B8 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}} $</h2>
+                               </div>
+                             </div>
+
+                             <div v-else-if="data.action == 'trans-income'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-center">
+                              <h2   class="m-0    pt-1  ms-4    p-0     col-12 text-start" style="color:#3E000B; font-family:proxima-bold; font-size:0.8vw;">From</h2>
+                              <h2   class="m-0    pt-0  ms-4    col-12  text-start"        style="color:white; font-family:proxima-bold; font-size:1vw;height: 10%;">{{data.name}}</h2>
+                              <h2   class="ms-4   pt-2  col-12  text-start"                style="color:#FF022E; font-family:proxima-bold; font-size:0.8vw; height: 10%;">Date</h2>
+                              <h2   class="mt-1   pt-0  ms-4    col-12 text-start"          style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 5%;">{{data.date}}</h2>
+                               <div class="ms-1 col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto" style="color:#FF022E; font-family:proxima-bold; font-size:0.9vw;">Recived</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="font-family:proxima-bold; font-size:0.9vw; background:linear-gradient(90.76deg, #005eff 0.5%, #ffc400 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}} $</h2>
+                               </div>
+                             </div>
+                              <!-- bills template -->
+                            <div v-if="data.action == 'transaction-bill'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-start">
+                             <h2   class="m-0 col-10 text-start d-flex justify-content-start align-items-end" style="color:#11001A; font-family:proxima-bold; font-size:0.8vw; height: 28%; text-indent: 1vw;">Bill</h2>
+                             <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:1vw;height: 15%; font-size: 0.6vw; text-indent: 1vw;">{{data.title}}</h2>
+                             <h2   class="m-0 col-12 text-start d-flex justify-content-start align-items-end" style="color:#B00AFF; font-family:proxima-bold; font-size:0.8vw; height: 15%;text-indent: 1vw;">Date</h2>
+                             <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 15%;text-indent: 1vw;">{{data.date}}</h2>
+                              <div class="col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                <h2 class="col-6 my-auto text-start " style="color:#B00AFF; font-family:proxima-bold; font-size:0.9vw;text-indent: 1vw;">Paid</h2>
+                                <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="color:#390050;font-family:proxima-bold; font-size:0.9vw; background: linear-gradient(90.76deg, #B00AFF 0.5%, #FF00B8 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}}$</h2>
+                              </div>
+                            </div>
+                                <!-- loan template -->
+                            <div v-if="data.action == 'transaction-loan'" class="h-100 w-100 d-flex justify-content-start align-items-start flex-wrap align-content-start">
+                              <h2   class="m-0 col-10 text-start d-flex justify-content-start align-items-end" style="color:#003348; font-family:proxima-bold; font-size:0.8vw; height: 28%; text-indent: 1vw;">Loan</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:1vw;height: 15%; font-size: 0.6vw; text-indent: 1vw;">{{data.title}}</h2>
+                              <h2   class="m-0 col-12 text-start d-flex justify-content-start align-items-end" style="color:#00B2FF; font-family:proxima-bold; font-size:0.8vw; height: 15%;text-indent: 1vw;">Date</h2>
+                              <h2   class="m-0 col-12 text-start" style="color:white; font-family:proxima-bold; font-size:0.6vw;height: 15%;text-indent: 1vw;">{{data.date}}</h2>
+                               <div class="col-12 d-flex justify-content-start align-items-center " style="height: 20%; ">
+                                 <h2 class="col-6 my-auto text-start " style="color:#00B2FF; font-family:proxima-bold; font-size:0.9vw;text-indent: 1vw;">Paid</h2>
+                                 <h2 class="col-5 h-100 d-flex justify-content-center align-items-center" style="color:#390050;font-family:proxima-bold; font-size:0.9vw; background: linear-gradient(90.76deg, #00B2FF 0.5%, #00FFC2 110.52%);border-radius: 1rem;">{{data.amount.toLocaleString()}}$</h2>
+                               </div>
+                            </div>
+
+                          </div>
+                        
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                
+                
+              </div>
+
+            </div>
+              
+  
+          </div>
+        </div>
+      
+    </div>
+    
+    <audio id="click" src="./sound/codem-click-sfx.mp3" preload></audio>
+  </body>
+
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script src="lib/bootstrap.bundle.min.js"></script>
+  <script src="lib/progressbar.js"></script>,
+
+  <script src="app/script.js"></script>
+ 
+</html>

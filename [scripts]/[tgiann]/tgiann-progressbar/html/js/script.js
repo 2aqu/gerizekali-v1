@@ -1,0 +1,58 @@
+var cancelledTimer = null;
+
+$('document').ready(function() {
+    Progressbar = {};
+
+    Progressbar.Progress = function(data) {
+        clearTimeout(cancelledTimer);
+        $("#progress-label").text(data.label);
+        $(".progress-container").fadeIn('fast', function() {
+            $("#progress-bar").stop().css({"width": 0, "background-color": "#1787e2a6"}).animate({
+              width: '100%'
+            }, {
+              duration: parseInt(data.duration),
+              complete: function() {
+                $(".progress-container").fadeOut('fast', function() {
+                    $('#progress-bar').removeClass('cancellable');
+                    $("#progress-bar").css("width", 0);
+                    $.post('https://tgiann-progressbar/FinishAction');
+                })
+              }
+            });
+        });
+    };
+
+    Progressbar.ProgressCancel = function() {
+        $("#progress-label").text("İPTAL EDİLDİ");
+        $("#progress-bar").stop().css({"width": $("#progress-bar").width(), "background-color": "#1787e2a6"}).animate({
+            width: '100%'
+          }, {
+            duration: 500,
+            complete: function() {
+                $('#progress-bar').removeClass('cancellable');
+                cancelledTimer = setTimeout(function () {
+                    $(".progress-container").fadeOut('fast', function() {
+                        $("#progress-bar").css("width", 0);
+                        $.post('https://tgiann-progressbar/CancelAction');
+                    });
+                }, 1000);
+            }
+        });
+       
+    };
+
+    Progressbar.CloseUI = function() {
+        $('.main-container').fadeOut('fast');
+    };
+    
+    window.addEventListener('message', function(event) {
+        switch(event.data.action) {
+            case 'progress':
+                Progressbar.Progress(event.data);
+                break;
+            case 'cancel':
+                Progressbar.ProgressCancel();
+                break;
+        }
+    });
+});

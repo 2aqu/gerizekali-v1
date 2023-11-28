@@ -1,0 +1,307 @@
+body {
+    /* background: url("https://i.pinimg.com/originals/c2/24/50/c2245051be2e36408757aa1a4ff1dcf1.jpg"); */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
+}
+
+.main {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.car-slider-2 {
+    display: flex;
+    flex-direction: row;
+    margin: 50px -50px;
+}
+
+.displayNone {
+    display: none;
+}
+
+.rightClickNone {
+    opacity: 1.0;
+}
+
+.close-container {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    color: #fff;
+    position: absolute;
+    right: 10vh;
+    top: 5vh;
+}
+
+.close-text {
+    text-shadow: 0.1vh 0.1vh 0 rgba(0, 0, 0, 0.75);
+}
+
+#close {
+    font-size: 1.7vh;
+    color: #333;
+    background: #FFC900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5vh 1vh;
+    border-radius: 0.3vh;
+}
+
+.car-buy-button:hover , .car-test-button:hover, #close:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.car-slider-content {
+    display: flex !important;
+    background: #1a1b20;
+    margin: 0 5px;
+    height: 120px;
+    width: 200px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-family: arial;
+    color: #999;
+}
+
+.slick-active, .slick-center {
+    padding: 25px;
+}
+
+.top-menu {
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    text-shadow: 0.1vh 0.1vh 0.1vh rgba(0, 0, 0, 0.75);
+    align-items: center;
+}
+
+.top-menu-button {
+    transition: color 0.5s, font-size 0.5s;
+    padding-right: 2.5vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3vh;
+}
+
+.topMenuFontSize {
+    font-size: 3.8vh;
+}
+
+/* Araç Bilgi Kutusu */
+.car-info {
+    color: #fff;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.car-money-container {
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-shadow: 0.1vh 0.1vh 0.1vh rgb(0 0 0 / 75%);
+}
+
+.car-money-text {
+    color: #fff;
+    font-size: 1.7vh;
+}
+
+.car-money {
+    color: #ffc900;
+    font-size: 5vh;
+    text-align: left;
+    align-self: flex-end;
+}
+
+.car-info-box {
+    width: 30vh;
+    margin-top: 1.3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vh;
+}
+.box-text {
+    font-size: 1.4vh;
+    text-shadow: 0.1vh 0.1vh 0.1vh rgb(0 0 0 / 75%);
+}
+
+.box-bg {
+    background: rgb(255 255 255 / 30%);
+    width: 100%;
+    height: 0.6vh;
+    border-radius: 50vh;
+    position: relative;
+    box-shadow: 0px 1px 1px 0px rgb(50 50 50 / 25%);
+}
+
+.box-bar {
+    transition: width 0.5s;
+    height: 100%;
+    position: absolute;
+    background: #ffc900;
+    left: 0;
+    border-radius: 50vh;
+}
+
+#box-speed-bar {
+    width: 50%;
+}
+
+.box-bar::after {
+    content: "";
+    width: 1.3vh;
+    height: 1.3vh;
+    background: #ffc900;
+    border-radius: 50vh;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#box-handling-bar {
+    width: 50%;
+}
+
+#box-braking-bar {
+    width: 50%;
+}
+
+#box-accel-bar {
+    width: 50%;
+}
+
+.car-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+}
+
+.car-buy-button {
+    font-size: 1.8vh;
+    width: 20vh;
+    background: #ffc900;
+    color: #333;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3vh;
+}
+
+.car-test-button {
+    padding: 0 2vh;
+    height: 4vh;
+    background: #333;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4vh;
+}
+
+
+/* Buy Menu */
+.buy-menu, .test-menu {
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    margin: auto auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    box-shadow: 0px 0px 2px 0px rgba(50, 50, 50, 0.5);
+}
+
+.buy-menu-money, .test-menu-money {
+    font-size: 20px;
+}
+
+.buy-menu-button {
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 25px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.buy-menu-button:hover {
+    background: #333;
+}
+
+/* notif */
+#notif {
+    background-color: #f90f59;
+    padding: 10px 20px;
+    display: flex;
+    position: absolute;
+    top: 110px;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    left: -20%;
+}
+
+/* color info */
+.car-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10vh;
+}
+
+.car-colors {
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #111;
+    gap: 0.5vh;
+    grid-template-columns: repeat(10, 1fr);
+    padding: 0.5vh;
+    border-radius: 0.3vh;
+}
+
+.color-box {
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+.color-box:hover, .car-buy-button:hover, .car-test-button:hover, #close:hover, .top-menu-button:hover {
+    cursor: pointer;
+}

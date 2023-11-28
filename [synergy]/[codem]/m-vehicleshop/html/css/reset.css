@@ -1,0 +1,29 @@
+button {
+  outline: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+  cursor: pointer; }
+
+input,
+textarea {
+  outline: none;
+  border: none;
+  font: inherit;
+  resize: none;
+  color: white; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font: inherit; }
+
+* {
+  box-sizing: border-box; }
+
+p {
+  margin: 0; }

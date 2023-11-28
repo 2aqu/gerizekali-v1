@@ -1,0 +1,129 @@
+/*
+* Import Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/*
+* General Styles
+*/
+
+#menu_container
+{
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(0 0 0 / 77%);
+    /*border: 2px solid rgb(236, 240, 241);*/
+    width: 40vh;
+    font-family: 'Roboto', sans-serif;
+    /* text-transform: lowercase !important; */
+    max-height: 78vh;
+    border-radius: 1.2vh;
+}
+
+#menu_heading
+{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(236, 240, 241);
+    background-image: url("../bennys.png");
+    border-radius: 0.6vh;
+    background-size: contain;
+    margin: 1vh;
+    height: 11vh;
+    padding: -1vh;
+    width: 36.5vh;
+    height: 10vh;
+    background-repeat: no-repeat;
+    margin-left: 2vh;
+}
+
+#menu_heading span 
+{
+    display: none !important;
+}
+
+#menu_subheading
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    /* text-transform: uppercase; */
+    font-size: 10pt;
+    font-weight: 300;
+    color: #ffffffd6;
+    background-color: #000000;
+    margin-bottom: 1vh;
+    margin-left: 1vh;
+    width: 39vh;
+    height: 3vh;
+    padding-top: .5vh;
+    border-radius: .4vh;
+}
+
+#menu_items
+{
+    margin: 0px;
+    padding: 0px;
+    /* font-family: 'Arial','Roboto', sans-serif; */
+    color: rgb(236, 240, 241);
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    line-height: 33px;
+    width: 40vh;
+}
+
+#menu_items li
+{
+    height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#menu_items li:nth-child(odd)
+{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#menu_items li:nth-child(even)
+{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.item_selected
+{
+    background-color: rgb(236, 240, 241) !important;
+    color: black;
+    font-weight: 400;
+}
+
+#menu_status
+{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: 400;
+    color: #171717;
+    
+    background-color: #ededed;
+
+    width: 40vh;
+}
+
+#menu_directions
+{
+    padding-top: 5.5px;
+    padding-bottom: 5.5px;
+    text-align: center;
+    font-size: 18pt;
+    color: #ededed;
+    width: 40vh;
+    margin-top: 1vh;
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    background-color: #000000;
+}

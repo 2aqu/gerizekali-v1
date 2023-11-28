@@ -1,0 +1,452 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+#buymenu, #housemenu, #housesettings, #houseapartment {
+    display: none;
+}
+
+.bg {
+    display: none;
+    position: absolute;
+    background: url("../img/blurbg.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.houseMenu {
+    position: relative;
+    background: url("../img/bg.png");
+    color: #fff;
+    font-size: 1.6vh;
+    padding: 5vh;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: default;
+    position: relative;
+    border-top: 7px solid;
+    border-image: linear-gradient(29deg, #ff0000, #a80000) 1 stretch;
+    width: 100vh;
+}
+
+#housesettings {
+    background: url("../img/bgSettings.png");
+    width: fit-content;
+}
+
+.houseNameBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.houseNameBoxIcon {
+    font-size: 4.5vh;
+    color: #e81616;
+}
+
+.houseName  {
+    font-family: Aeonik-Black;
+    font-size: 4.5vh;
+    line-height: 4.5vh;
+    padding-left: 1vh;
+    border-right: 4px solid rgb(168, 0, 0);
+    padding-right: 3vh;
+}
+
+.houseMenuHeader {
+    font-size: 2.5vh;
+    font-family: Aeonik-Black;
+    padding-right: 4vh;
+}
+
+.houseFeaturesMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 55%;
+}
+
+.houseFeatures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-size: 1.5vh;
+}
+
+.miniRedBox {
+    background: rgb(255,0,0);
+    background: linear-gradient(29deg, rgba(255,0,0,1) 0%, rgba(168,0,0,1) 100%);
+    width: fit-content;
+    padding: 0.5vh 1vh;
+    font-family: Aeonik-Black;
+    font-size: 1.4vh;
+    border-radius: 2px;
+}
+
+.houseFeature, .houseFeatureNotExist {
+    font-family: Aeonik-Bold;
+    flex-wrap: wrap;
+    padding-bottom: 0.3vh;
+    padding-left: 1.2vh;
+    display: flex;
+    align-items: baseline;
+    color: #00ff0c;
+}
+
+.houseFeature svg, .houseFeatureNotExist svg {
+    font-size: 0.8vh;
+    padding-right: 0.2vh;
+    filter: drop-shadow(rgba(0, 255, 12, 0.8) 0px 0px 2px);
+}
+
+.houseFeatureNotExist svg {
+    filter: drop-shadow(rgba(168, 0, 0, 0.8) 0px 0px 2px);
+}
+
+.houseFeatureNotExist {
+    color: #fe0000;
+}
+
+#redBoxFeatureshtml {
+    padding: 1.5vh 2vh;
+    margin-bottom: 1vh;
+}
+
+#price {
+    display: flex;
+    font-family: DharmaGothicE-Bold;
+    font-size: 13vh;
+    background: linear-gradient( -157deg, #A5A5A5 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 13vh;
+}
+
+.priceIcon {
+    background: linear-gradient( -157deg, rgba(168,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 100px #000000;
+    position: relative;
+    z-index: 3;
+}
+
+.priceIcon::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 1px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 100px 50px rgba(168, 0, 0, 0.322); 
+}
+
+.houseBuyMenuTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.houseBuyMenuMid {
+
+}
+
+.houseInsideFeaturesMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.houseInsideFeature {
+    height: 4vh;
+    display: flex;
+    align-items: center;
+}
+
+.houseInsideFeatureIcon {
+    color: #e81616;
+    font-size: 2.5vh;
+    width: 4.5vh;
+    position: relative;
+}
+
+.houseInsideFeatureIcon::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 1px;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 50px 20px rgba(168, 0, 0, 0.322); 
+}
+
+.houseInsideFeatureText {
+    font-family: Aeonik-Bold;
+    color: #ffffff;
+    font-size: 1.4vh;
+    padding-bottom: 4px;
+}
+
+.houseBuyButtonMenu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5vh;
+    align-items: center;
+}
+
+.houseMenuButtons {
+    display: flex;
+}
+
+#houseBuyButtonMenuLeftText {
+    font-family: Aeonik-Medium;
+    font-size: 1vh;
+}
+
+.whiteBorderButton, .bigRedButton, .bigYellowButton, .bigPurbleButton {
+    height: 6vh;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+    padding: 0 4vh;
+    text-transform: uppercase;
+    font-family: DharmaGothicE-BoldItalic;
+    font-size: 2.2vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 2vh;
+}
+
+.whiteBorderButton:hover, .bigRedButton:hover, .bigYellowButton:hover, .bigPurbleButton:hover, .houseMenuSettingButton:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.whiteBorderButton:first-child, .bigRedButton:first-child, .bigYellowButton:first-child, .bigPurbleButton:first-child {
+    margin-left: 0;
+}
+
+.whiteBorderButton::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 0;
+    box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.2); 
+    z-index: 2;
+}
+
+.whiteBorderButtonIcon {
+    zoom: 80%;
+    padding-left: 1vh;
+    font-size: 2.4vh;   
+    display: flex; 
+}
+
+.bigRedButton {
+    box-shadow: none;
+    background: linear-gradient( -157deg, rgba(168,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    box-shadow: 0 0 100px 50px rgba(168, 0, 0, 0.3); 
+}
+
+.bigYellowButton {
+    box-shadow: none;
+    background: linear-gradient( -157deg, #f99f05 0%, #a46903 100%);
+    box-shadow: 0 0 100px 20px rgba(249, 159, 5, 0.3); 
+}
+
+.bigPurbleButton {
+    box-shadow: none;
+    background: linear-gradient( -157deg, #8a00ff 0%, #5c01a7 100%);
+    box-shadow: 0 0 100px 20px rgba(138, 0, 255, 0.3); 
+}
+
+.houseMenuClose {
+    font-size: 2.5vh;
+    position: absolute;
+    right: 1.5vh;
+    top: 1.5vh;
+    filter: drop-shadow(rgba(255, 255, 255, 1) 0px 0px 20px);
+}
+
+.houseMenuClose:hover {
+    color: #c62828;
+    cursor: pointer;
+}
+
+/* Settings */
+#houseSettingsBottom {
+    display: flex;
+    align-items: baseline;
+    padding-top: 4vh;
+}
+
+.houseMenuSetting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1vh;
+}
+
+.houseMenuSettingSelect {
+    width: 25vh;
+}
+
+.houseMenuSettingButtons {
+    display: flex;
+}
+
+.houseMenuSettingButton {
+    display: flex;
+    height: 4.3vh;
+    width: 15vh;
+    margin-left: 0.5vh;
+    background: linear-gradient( -157deg, #fba704 0%, #a47102 100%);
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-family: DharmaGothicE-BoldItalic;
+    font-size: 1.8vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsBuyPrice {
+    font-size: 2.2vh;
+    display: flex;
+    font-family: DharmaGothicE-Bold;
+    align-items: center;
+    padding-left: 1vh;
+}
+
+.houseMenuSettingLeft {
+    display: flex;
+    align-items: center;
+}
+
+.houseMenuSettingName {
+    font-size: 1.5vh;
+    width: 10vh;
+    font-family: Aeonik-Black;
+}
+
+#settingsBuy {
+    background: linear-gradient( -157deg, #28fd00 0%, #19a800 100%);
+}
+
+/* select */
+select {
+    padding: 1vh 2vh;
+    font-size: 1.6vh;
+    border-radius: 3px;
+    font-weight: 500;
+    height: fit-content;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    width: -webkit-fill-available;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) 2vh, calc(100% - 15px) 2vh, calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 3vh;
+    background-repeat: no-repeat;
+    background: linear-gradient( -157deg, rgba(168,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    font-family: DharmaGothicE-BoldItalic;
+}
+
+select option {
+    color: #e81616;
+}
+
+/* areyousureMenu */
+.areyousureMenu {
+    border-top: 4px solid;
+    border-image: linear-gradient(29deg, #ff0000, #a80000) 1 stretch;
+    background: url("../img/bgays.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1vh;
+    width: 25vh;
+    display: none;
+    position: absolute;
+    z-index: 9;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 54px 55px 100vh;
+}
+
+.areyousureMenuHeader {
+    padding-bottom: 1vh;
+    font-weight: bold;
+}
+
+.areyousureMenuButtons {
+    display: flex;
+}
+
+.areyousureMenuButton {
+    background: red;
+    width: 100%;
+    border-radius: 3px;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+#areyousureno, #areyousureyes {
+    height: 4vh;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.areyousureMenuButton:first-child {
+    margin-right: 0.5vh;
+}
+
+#hosuseApertmentList {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 100%;
+}
+
+#hosuseApertmentList::-webkit-scrollbar {
+    display: none;
+}
+
+#houseapartment {
+    height: 80vh;
+    width: fit-content;
+}
+
+.apartmentButton {
+    margin-left: 0;
+    margin-bottom: 0.5vh;
+    width: 30vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: none;
+    padding: 2vh 0;
+}
+
+.apartmentButton:last-child {
+    margin-bottom: 0;
+}

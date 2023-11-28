@@ -1,0 +1,1136 @@
+@import url("https://db.onlinewebfonts.com/c/4b0ee045520eff904c5fa778c4545547?family=Opinion+Pro+Condensed+W05+Bold");
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 0.2vw;
+    border-radius: 0.932px;
+    background: rgba(217, 217, 217, 0.15);
+}
+ 
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFAC30;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #f1f1f1;
+} */
+
+.yellowscroll::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.workersbox::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.itemmanage::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.dashboarditems::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.yonetmesepet::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.normalitems::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.manageitems::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.normalsepet::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFEA30;
+}
+
+.shops::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFAC30;
+}
+
+.orangescroll::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFAC30;
+}
+
+.marketboxtextaq::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FFAC30;
+}
+
+.redscroll::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FF3062;
+}
+
+.whosalleritems::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FF3062;
+}
+
+.whosallerbasket::-webkit-scrollbar-thumb {
+    border-radius: 0.932px;
+    background: #FF3062;
+}
+
+input {border:0;outline:0;}
+input:focus {outline:none!important;}
+
+body {
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(./img/yellowbg.png); */
+    /* background-image: url(./img/yellowconfirm.png);   */
+    /* background: rgb(0, 0, 0); */
+    background-size: cover;
+    overflow: hidden;
+}
+
+.BuyMarket {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.ShopScreenNormal {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.ShopScreenManageable {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.ShopScreenWholeSaler {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.ItemManagement {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.Dashboard {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.SellConfirm {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.MarketHireWorker {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.ExtendConfirm {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.CloseMarket {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.Notify {
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.buyableshops {
+    color: #FFAC30;
+    font-family: "Bebas Neue";
+    font-size: 3.884vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.buyableshopsdesc {
+    color: #FFAC30;
+    font-family: "Bebas Neue";
+    font-size: 1.356vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.buythemarket {
+    color: #FFAC30;
+    font-family: "Bebas Neue";
+    font-size: 3.884vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.youcanpayhere {
+    color: #FFAC30;
+    font-family: "Bebas Neue";
+    font-size: 1.656vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.closex:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.xvector {
+    width: 30%;
+    height: 33%;
+    background-image: url(./img/xvector.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.input-search {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+
+    color: #BDBDBD;
+    text-align: left;
+    font-family: "Poppins";
+    font-size: 0.681vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.input-hire {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+
+    color: #7F7F7F;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 2.083vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.input-item {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 0.93vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.input-item::-webkit-input-placeholder {
+    color: #000;
+}
+
+.buy-item-input {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+    text-align: center;
+    color: #FF3062;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.buy-item-input::-webkit-input-placeholder {
+    color: #FF3062;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputbutton:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.manageitem-input {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+    text-align: center;
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.manageitem-input::-webkit-input-placeholder {
+    color: #A1A1A1;
+}
+
+.dashboard-price-input {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+    text-align: center;
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 0.905vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboard-price-input::-webkit-input-placeholder {
+    color: #A1A1A1;
+}
+
+.dashboard-stock-input {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+    text-align: center;
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 0.905vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboard-stock-input::-webkit-input-placeholder {
+    color: #A1A1A1;
+}
+
+.input-money-wd {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 89%;
+    height: 100%;
+
+    text-align: center;
+    color: #5E5E5E;
+    font-family: "Bebas Neue";
+    font-size: 3.614vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.input-money-wd::-webkit-input-placeholder {
+    color: #5E5E5E;
+}
+
+
+.marketbox {
+    border-radius: 0.054vw;
+    border: 0.061vw solid #242226;
+    background: radial-gradient(70.12% 70.12% at 50% 50%, rgba(255, 255, 255, 0.00) 0%, rgba(11, 10, 14, 0.10) 100%);
+}
+
+.marketboxmarketname {
+    color: #7C7C7C;
+    font-family: "Bebas Neue";
+    font-size: 0.86vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.marketboxmarketname2 {
+    color: #BDBDBD;
+    font-family: "Bebas Neue";
+    font-size: 1.566vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.marketboxpricetext {
+    color: #FFAC30;
+    font-family: "Bebas Neue";
+    font-size: 1.766vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.marketboxpricetextinactive {
+    color: #727272;
+    font-family: "Bebas Neue";
+    font-size: 1.766vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.seedetailstext {
+    color: #000;
+    font-family: "Bebas Neue";
+    font-size: 1.613vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.seedetailstext:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.sagboxtext1 {
+    color: #7C7C7C;
+    font-family: "Bebas Neue";
+    font-size: 1.136vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sagboxtext2 {
+    color: #BDBDBD;
+    font-family: "Bebas Neue";
+    font-size: 2.403vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.marketboxtextaq {
+    color: #6D6D6D;
+    font-family: "Satoshi";
+    font-size: 0.99vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.totalpricetext {
+    color: #FFAC30;
+    font-family: "Bebas Neue";
+    font-size: 1.066vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+/* 
+.red {
+    color: #FF3062;
+} */
+
+.totalpricenumber {
+    color: #FFAC30;
+    font-family: "Bebas Neue";
+    font-size: 2.608vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* .red {
+    color: #FF3062;
+} */
+
+.paytext {
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 1.594vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.paytext:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.welcomeshop {
+    color: #FFEA30;
+    font-family: "Bebas Neue";
+    font-size: 3.884vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* .red {
+    color: #FF3062;
+} */
+
+.welcomeshopdesc {
+    color: #FFEA30;
+    font-family: "Bebas Neue";
+    font-size: 1.356vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* .red {
+    color: #FF3062;
+} */
+
+.shoppingcard {
+    color: #FFEA30;
+    font-family: "Bebas Neue";
+    font-size: 3.884vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* .red {
+    color: #FF3062;
+} */
+
+.youcanpayhereshop {
+    color: #FFEA30;
+    font-family: "Bebas Neue";
+    font-size: 1.656vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* .red {
+    color: #FF3062;
+} */
+
+.totalpricetextyellow {
+    color: #FFEA30;
+    font-family: "Bebas Neue";
+    font-size: 1.066vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.totalpricenumberyellow {
+    color: #FFEA30;
+    font-family: "Bebas Neue";
+    font-size: 2.608vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.itemtext {
+    color: #A4A4A4;
+    font-family: "Bebas Neue";
+    font-size: 1.751vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.itemamount {
+    color: #797979;
+    font-family: "Bebas Neue";
+    font-size: 1.156vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.itemprice {
+    color: #FFEA30;
+    font-family: "Bebas Neue";
+    font-size: 1.176vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.itemname {
+    color: #A4A4A4;
+    font-family: "Bebas Neue";
+    font-size: 1.464vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.yellow {
+    color: #FFEA30;
+}
+
+.itemamounttext {
+    color: #A4A4A4;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.yellow {
+    color: #FFEA30;
+}
+
+.itempricetext {
+    color: #A4A4A4;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.yellow {
+    color: #FFEA30;
+}
+
+.stocktext {
+    color: #000;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.stocktext:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.blackandwhite {
+    filter: url("data:image/svg+xml;utf8,<svg></svg>#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+}
+
+.ustyazi {
+    color: #000;
+    font-family: "Bebas Neue";
+    font-size: 1.613vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ustyazi:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.whosalerstock {
+    color: #FF3062;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.whosalerprice {
+    color: #FF3062;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.whosalerlabel {
+    color: #FF3062;
+    font-family: "Bebas Neue";
+    font-size: 1.464vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.whosalerlabelgray {
+    color: #454545;
+    font-family: "Bebas Neue";
+    font-size: 1.464vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.buyitemtext {
+    color: #000;
+    font-family: "Bebas Neue";
+    font-size: 0.967vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.buyitemtext:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.manageitemtext {
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 1.434vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.manageitemstock {
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 1.357vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.manageitemsdelete {
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 1.033vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.manageitemsdelete:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.dashboardearn {
+    color: #000;
+    font-family: "Bebas Neue";
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboardearncprice {
+    color: #000;
+    font-family: "Bebas Neue";
+    font-size: 3.501vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.remainingtime {
+    color: #000;
+    font-family: "Bebas Neue";
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboarditemname {
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 1.434vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboarditemcount {
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 1.357vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboardadditembutton {
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 1.033vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboardadditembutton:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.dashboardmarketname {
+    color: #7C7C7C;
+    font-family: "Bebas Neue";
+    font-size: 1.082vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.marketname {
+    color: #BDBDBD;
+    font-family: "Bebas Neue";
+    font-size: 2.288vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sellmarket {
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 1.531vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.sellmarket:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.wdtext {
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 1.531vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.wdtext:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.workername {
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 1.656vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.workerrank {
+    color: #A1A1A1;
+    font-family: "Bebas Neue";
+    font-size: 0.995vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboardpermbuttonstext {
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 0.995vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.dashboardpermbuttonstext:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.notifyinfo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50%;
+
+    color: #FE3162;
+    font-family: "Opinion Pro Condensed W05 Bold";
+    font-size: 0.95vw;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.notifyinfo2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50%;
+
+    color: #B9B9B9;
+    font-family: "Opinion Pro Condensed W05 Bold";
+    font-size: 0.8vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.NotifySuccess {
+    width: 15.775%;
+    height: 8%;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.11);
+    background: rgba(217, 217, 217, 0.04);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.confirmbuttontext {
+    color: #A3A3A3;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 2.737vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.confirminboxtext {
+    color: #000;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 1.342vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.confirminboxtext:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@keyframes menuAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes menuAnimationTers {
+    0% {
+        opacity: 0;
+        transform: translateY(-10);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(3%);
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-1px);
+    }
+    50% {
+      transform: translateX(1px);
+    }
+    75% {
+      transform: translateX(-1px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.gray {
+    color: #B0B0B0;
+}
+
+.red {
+    color: #FF3062;
+}
+
+.orange {
+    color: #FFAC30;
+}
+
+.dashboardgray {
+    color: #5B5B5B;
+}

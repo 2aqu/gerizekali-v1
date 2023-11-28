@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@next"></script> -->
+    <script src="https://unpkg.com/vuex@4.1.0/dist/vuex.global.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>GALERİ</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="app-container" v-if="activePage" :class="[activePage, testDriveActive ? 'no-bg' : null]">
+            <img src="./assets/overlay.png" alt="" class="overlay">
+            <div class="header">
+                <div class="logo">
+                    <img src="./assets/pdm-brand.png" alt="pdm">
+                </div>
+                <div class="title">
+                    {{pageTitle}}
+                </div>
+                <div class="user">
+                    <div class="info">
+                        <div class="name">
+                            {{player.name}}
+                        </div>
+                        <div class="money">
+                            {{formatPrice(player.money)}}
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img v-if="player.avatar" :src="player.avatar" alt="pp">
+                        <img v-else src="./assets/pp.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="page-container">
+                <!-- <transition name="fade-transition">       -->
+                <div class="modal-container" v-if="modalActive">
+                    <div class="modal-wrapper">
+                        <div class="modal-header">
+                            <div class="vehicles-list" v-if="modalContent.type === 'new-vehicle'">
+                                <div class="vehicle">
+                                    <div class="header">
+                                        <div class="text">
+                                            <div class="brand">
+                                                {{findModalInput('brand')?.value || 'Manifacturer'}}
+                                            </div>
+                                            <div class="model">
+                                                {{findModalInput('name')?.value || 'Model'}}
+                                            </div>
+                                        </div>
+                                        <div class="brand-image">
+                                            <img :src="findModalInput('brandImage')?.value || './assets/brand-form-placeholder.png'" alt="brand">
+                                        </div>
+                                    </div>
+                                    <div class="vehicle-image">
+                                        <img :src="findModalInput('vehImage')?.value || './assets/vehicle-form-placeholder.png'" alt="vehicle">
+                                    </div>
+                                    <div class="footer">
+                                        <div class="price">
+                                            {{findModalInput('price')?.value ? formatPrice(findModalInput('price')?.value) : 'Price'}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-plate" v-if="modalContent.type === 'custom-plate' ">
+                                <h3>
+                                    Özel Plaka
+                                </h3>
+                                <h4>
+                                    + {{formatPrice(config.customPlatePrice)}}
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="modal-box" :class="modalContent.content" v-if="modalContent.type != 'custom-plate'">
+                            <div class="title">
+                                {{modalContent.title}}
+                            </div>
+                            <div class="content">
+                                <div class="text" v-if="modalContent.content === 'text'">
+                                    {{modalContent.text}}
+                                </div>
+                                <div class="input" v-if="modalContent.content === 'input'">
+                                    <input type="text" :placeholder="modalContent.placeholder" :maxlength="modalContent.maxlength" v-model="modalContent.input">
+                                </div>
+                                <div class="form" v-if="modalContent.content === 'form'">
+                                    <div class="input" v-for="input in modalContent.fields">
+                                        <input :type="input.type || 'text'" :placeholder="input.placeholder" :maxlength="input.maxlength" v-model="input.value">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons" v-if="modalContent.buttons" :style="{'--btn-count': modalContent.buttons.length}">
+                                <button v-for="button in modalContent.buttons" :class="button.class" @click="modalButtonHandler(button.value)">
+                                    {{button.text}}
+                                </button>
+                            </div>
+                            <div class="buttons" v-else style="--btn-count: 1">
+                                <button class="red" @click="closeModal()">Close</button>
+                            </div>
+                        </div>
+                        <div class="modal-box customplate" v-else-if="modalContent.type === 'custom-plate'">
+                            <div class="plate-input">
+                                <input type="text" placeholder="Plate" maxlength="8" v-model="modalContent.input">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="custom-plate" v-if="modalContent.type === 'buy-vehicle' && config.EnableCustomPlate" @click="modalContent.type = 'custom-plate'">
+                                <h3>
+                                    Custom Plate
+                                </h3>
+                                <h4>
+                                    + {{formatPrice(config.customPlatePrice)}}
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="buttons buy-vehicle" v-if="modalContent.buttons && modalContent.type == 'custom-plate'" :style="{'--btn-count': modalContent.buttons.length}">
+                            <button v-for="button in modalContent.buttons" :class="button.class" @click="modalButtonHandler(button.value)">
+                                {{button.text}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- </transition> -->
+                <component v-if="activePage" :is="activePage"></component>
+            </div>
+
+            <transition name="slideY">
+                <div class="notification" v-if="activeNotification" :style="notificationStyle">
+                    {{activeNotification}}
+                </div>
+            </transition>
+
+            <object type="application/x-cfx-game-view" class="gameview-container" v-if="!testDriveActive">
+            </object>
+        </div>
+    </div>
+    <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>

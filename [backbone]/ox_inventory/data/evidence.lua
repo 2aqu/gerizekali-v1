@@ -1,0 +1,26 @@
+return {
+	-- {
+	-- 	coords = vec3(458.97, -982.79, 30.68),
+	-- 	target = {
+	-- 		name = 'mrpd_evidence', -- name of zone must be uniuqe
+	-- 		loc = vec3(604.19, 4.54, 87.82),
+	-- 		length = 1.2,
+	-- 		width = 5.6,
+	-- 		heading = 61,
+	-- 		minZ = 86.49,
+	-- 		maxZ = 90.09,
+	-- 	}
+	-- },
+	-- {
+	-- 	coords = vec3(302.03, -599.4, 43.28),
+	-- 	target = {
+	-- 		name = 'hospital', -- name of zone must be uniuqe
+	-- 		loc = vec3(302.03, -599.4, 43.28),
+	-- 		length = 1.2,
+	-- 		width = 5.6,
+	-- 		heading = 61,
+	-- 		minZ = 42.49,
+	-- 		maxZ = 45.09,
+	-- 	}
+	-- }
+}
