@@ -4999,6 +4999,15 @@ QBShared.Vehicles = {
     },
 	
 	-- DONATE ARAÇLARI
+	['bmwm4csl'] = {
+        ['name'] = 'bmwm4csl',
+        ['brand'] = 'bmwm4csl',
+        ['model'] = 'bmwm4csl',
+        ['price'] = 0,
+        ['category'] = 'donate',
+        ['hash'] = `bmwm4csl`,
+        ['shop'] = 'donate',
+    },
 	['acs8'] = {
         ['name'] = 'acs8',
         ['brand'] = 'acs8',
