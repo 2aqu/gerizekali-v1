@@ -100,6 +100,31 @@ Garages = {
         debug = false,
     },
 
+    ['cockatoos'] = {
+        ['Zone'] = {
+            ['Shape'] = {
+                vector2(-422.36834716797, -45.199298858643),
+                vector2(-422.36834716797, -45.199298858643),
+                vector2(-422.3811340332, -42.50435256958),
+                vector2(-418.01498413086, -42.557811737061),
+                vector2(-418.16793823242, -39.873737335205),
+                vector2(-429.95977783203, -39.022163391113),
+                vector2(-429.56280517578, -44.935245513916)
+            },
+            ['minZ'] = 44.2,  -- min height of the parking zone
+            ['maxZ'] = 49.30,  -- max height of the parking zone
+        },
+        label = 'Garaj',
+        showBlip = true,
+        blipcoords = vector3(-426.1, -43.29, 46.23),
+        blipName = 'Garaj',
+        blipNumber = 357,
+        type = 'public',
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
+        drawText = '[F3] Garaj',
+        debug = false,
+    },
+
     ['wutanggarag'] = {
         ['Zone'] = {
             ['Shape'] = {

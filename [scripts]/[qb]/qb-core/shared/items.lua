@@ -406,6 +406,11 @@ QBShared.Items = {
 	["rentalpapers"]        = { ["name"] = "rentalpapers", ["label"] = "Kiralama Kontratı", ["weight"] = 50, ["type"] = "item", ["image"] = "rentalpapers.png", ["unique"] = true, ["useable"] = false, ["shouldClose"] = false, ["combinable"] = nil, ["description"] = "", ["decay"] = 1.0 },
 	['rentcertificate']     = { ['name'] = 'rentcertificate', ['label'] = 'Kiralama Kontratı', ['weight'] = 0, ['type'] = 'item', ['image'] = 'rentalpapers.png', ['unique'] = true, ['useable'] = false, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = '', ["decay"] = 1.0 },
 
+	["soganhalkasi"]           = { ["name"] = "soganhalkasi", ["label"] = "Soğan Halkası", ["weight"] = 100, ["type"] = "item", ["image"] = "latte.png", ["unique"] = true, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "", ["decay"] = 1.0 },
+	["pattatotab"]           = { ["name"] = "pattatotab", ["label"] = "Patates Kovası", ["weight"] = 100, ["type"] = "item", ["image"] = "latte.png", ["unique"] = true, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "", ["decay"] = 1.0 },
+	["pmisir"]           = { ["name"] = "pmisir", ["label"] = "Patlamış Mısır", ["weight"] = 100, ["type"] = "item", ["image"] = "latte.png", ["unique"] = true, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "", ["decay"] = 1.0 },
+	["nuggetk"]           = { ["name"] = "nuggetk", ["label"] = "Nugget Kovası", ["weight"] = 100, ["type"] = "item", ["image"] = "latte.png", ["unique"] = true, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "", ["decay"] = 1.0 },
+
 
 	-- PHONE
 

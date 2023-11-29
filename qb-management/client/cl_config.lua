@@ -179,6 +179,9 @@ Config.BossMenus = {
     ['bong'] = {
         vector3(-188.73, -1713.28, 33.0),
     },
+    ['cockatoos'] = {
+        vector3(-442.56, -37.32, 40.88),
+    },
 }
 
 Config.BossMenuZones = {

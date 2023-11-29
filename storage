@@ -1,0 +1,4170 @@
+{
+  "VPN": {
+    "AntiVPN": false,
+    "WhiteListVPN": [
+      "1.1.1.1",
+      "0.0.0.0"
+    ]
+  },
+  "Logs": {
+    "LogConnectionIP": true,
+    "ExplosionsLogs": true,
+    "WebhookExplosionsLogs": "https://discord.com/api/webhooks/1139920468133019808/UOvS7Dq8hv2S9umWKQD5QMXnBafmOnROsQQv56LnR0jtk3_-Aw7SW7JcgEzRmDikPxhG",
+    "JoinLogs": true,
+    "WebhookJoinLogs": "https://discord.com/api/webhooks/1170483327745138728/v-tbYRfFB4yc2a5Y7LwXDe_SLK_AImT1P0VV_qnMfyuLwxq_9lKTQghGaFN6x6doQwpT",
+    "WebhookAdminFunctionsLogs": "https://discord.com/api/webhooks/1139920600886947860/lMHNd86ToYHZIDB2pTzFmHlm6IFzYKQDfaJrlkKegUvKqt8KO57Kkl3JPNgAzr3A5oQJ",
+    "WebhookLogs": "https://discord.com/api/webhooks/1139920645329797132/xZFUK-WrFe1Vrl84V3JC0bInQIpU8dnydgG8067-wUMN9S96dJz99A_e99RJgvJ2VsC3",
+    "WebhookBanLogs": "https://discord.com/api/webhooks/1170483075772338258/QF7iroGQx8wkozLOrK4aGRPtl-ulu-48n1BKnW-oACBhBUHoScqDxHrFfyBC9IWzkH1M",
+    "WebhookScreenshotsStorage": "https://discord.com/api/webhooks/1170483424813920338/grm1t9OfGqGuStw-ZR3RyybvTdb2SH61yj4fII6AHvwPTaqmLiBgBmDOc3ZHxTeoNfYB",
+    "ObjectsAIDetectionLog": true,
+    "WebhookObjectsAIDetectionLogs": "https://discord.com/api/webhooks/1139929818281029738/kgDusjSOo8QBsvsy0SWBKckqBGJS72CRuo3gaGU3OHy3LiH9PofYrFtFFpBRtZy-flxd",
+    "LogsConsole": true
+  },
+  "EntityDetection": {
+    "EntityDetection": true,
+    "ObjectsAIDetection": false,
+    "ObjectsAIResourceWhitelist": [],
+    "AntiWeirdObjectsSpawn": true,
+    "AntiAggresivePeds": false,
+    "AntiLaunchPlayer": true,
+    "EntityDetectionBan": true,
+    "EntityLockdownMode": "relaxed",
+    "AntiAttachEntityToPlayer": true,
+    "AntiPedWithBlacklistedWeapon": true,
+    "MassPedsMaxValue": 10,
+    "MassPedsResetCounterAfter": 4,
+    "MassVehiclesMaxValue": 4,
+    "MassVehiclesResetCounterAfter": 15,
+    "MassEntititesMaxValue": 50,
+    "MassEntitiesResetCounterAfter": 10,
+    "EntityDetectionMethod": "blacklist",
+    "IgnoreVehiclesInWhiteListMode": false,
+    "EntityDetectionList": [
+      "76642561",
+      "riot2",
+      "titan",
+      "953286133",
+      "1458294777",
+      "2042825373",
+      "240334974",
+      "-2003082453",
+      "953286133",
+      "1458294777",
+      "apa_prop_flag_turkey",
+      "prop_const_fence02b",
+      "prop_doghouse_01",
+      "prop_dog_cage_01",
+      "prop_dog_cage_02",
+      "prop_fncsec_03c",
+      "prop_ld_filmset",
+      "sr_prop_stunt_tube_crn2_05a",
+      "apa_mp_apa_crashed_usaf_01a",
+      "prop_airport_sale_sign",
+      "lts_prop_lts_elecbox_24b",
+      "p_ld_coffee_vend_01",
+      "hei_prop_cash_crate_half_full",
+      "p_yacht_sofa_01_s",
+      "apa_prop_flag_turkey",
+      "apa_prop_flag_german_yt",
+      "xs_prop_arena_goal",
+      "xs_prop_arena_industrial_a",
+      "xs_propintarena_lamps_01a",
+      "xs_prop_ar_buildingx_01a_sf",
+      "xs_prop_arena_pit_fire_01a_wl",
+      "xs_combined_dyst_03_brdg01",
+      "xs_propint2_building_base_02",
+      "p_spinning_anus_s",
+      "p_cs_mp_jet_01_s",
+      "prop_temp_carrier",
+      "apa_mp_apa_yacht",
+      "gr_prop_damship_01a",
+      "des_shipsink_01",
+      "prop_fnclink_05crnr1",
+      "prop_logpile_07b",
+      "prop_air_lights_04a",
+      "apa_prop_flag_belgium",
+      "apa_prop_flag_netherlands",
+      "prop_xmas_tree_int",
+      "prop_xmas_ext",
+      "xs_propintxmas_cluboffice_2018",
+      "xm_prop_x17_barge_01",
+      "xm_prop_x17_sub_damage",
+      "csx_seabed_rock3_",
+      "v_res_d_dildo_c",
+      "prop_washer_02",
+      "p_crahsed_heli_s",
+      "prop_rub_cage01a",
+      "prop_toilet_01",
+      "tug",
+      "cs_fbisuit_01",
+      "-949687624",
+      "-192896587",
+      "ig_jimmydisanto",
+      "cs_jimmydisanto",
+      "u_m_m_jesus_01",
+      "a_c_rhesus",
+      "S_M_Y_Clown_01",
+      "a_c_chimp",
+      "-119068501",
+      "28071787",
+      "-331093529",
+      "1426534598",
+      "-475096939",
+      "954232759",
+      "-1493938606",
+      "1224329141",
+      "-112762029",
+      "1018925231",
+      "1369098570",
+      "580043721",
+      "681228397",
+      "-1757347351",
+      "197486036",
+      "-2138403432",
+      "-1103279079",
+      "1627828183",
+      "-2068800526",
+      "-618373093",
+      "682082323",
+      "-686248546",
+      "1508366658",
+      "1236729421",
+      "1292037482",
+      "1842594658",
+      "622445601",
+      "-1154398125",
+      "-343452421",
+      "773471646",
+      "1837131426",
+      "-1698655922",
+      "-2055846053",
+      "757141590",
+      "-505146969",
+      "1976910263",
+      "1903950414",
+      "11846651",
+      "1008408794",
+      "-1092735855",
+      "1769203125",
+      "-129712519",
+      "-274578370",
+      "-1569709143",
+      "-1003748966",
+      "1173789637",
+      "-743852035",
+      "-488251817",
+      "541248010",
+      "-1788250883",
+      "1688773919",
+      "975952735",
+      "-539514212",
+      "160789653",
+      "-1516650945",
+      "1598655701",
+      "-225680251",
+      "629736282",
+      "-340072417",
+      "-992802541",
+      "-1234220885",
+      "-2118478270",
+      "1793411117",
+      "1919186893",
+      "-229548160",
+      "371888173",
+      "-1811563816",
+      "-1412478294",
+      "-1169517510",
+      "2042668880",
+      "1372760199",
+      "1979131058",
+      "-1734859577",
+      "1117917059",
+      "-134415992",
+      "1970675376",
+      "583703297",
+      "672032421",
+      "-755161417",
+      "-1268267712",
+      "1155186447",
+      "-1816121969",
+      "-2079407903",
+      "1338692320",
+      "1765283457",
+      "-867013621",
+      "206865238",
+      "1969602791",
+      "-1977537780",
+      "2056002078",
+      "-976950702",
+      "-235062017",
+      "-617857480",
+      "-543669801",
+      "562994684",
+      "-666399476",
+      "1000293277",
+      "1689290811",
+      "461118750",
+      "-571659335",
+      "-1903396261",
+      "-755317751",
+      "1645015522",
+      "-1362561848",
+      "1984295334",
+      "-1707619391",
+      "1698512660",
+      "1170592309",
+      "-1207959739",
+      "-1225654638",
+      "1415268135",
+      "-1535237753",
+      "-877983947",
+      "-1988580127",
+      "899107992",
+      "1155768571",
+      "1357789167",
+      "-1053945082",
+      "180220464",
+      "-676470600",
+      "1667978160",
+      "-1186241930",
+      "-744663668",
+      "-545302151",
+      "654887944",
+      "-2114165809",
+      "-930747176",
+      "226195484",
+      "-716201733",
+      "1708919037",
+      "374873226",
+      "-1034797968",
+      "-1072941776",
+      "959275690",
+      "1005459521",
+      "1181113836",
+      "1331740517",
+      "677027815",
+      "-1823588909",
+      "2037646701",
+      "1603975478",
+      "1895399514",
+      "-178815855",
+      "-341110564",
+      "1489523481",
+      "-864163686",
+      "1824933088",
+      "478908889",
+      "-328261803",
+      "2126974554",
+      "1033647965",
+      "1072290182",
+      "-607565760",
+      "-188939284",
+      "-2070066454",
+      "366178255",
+      "-1470636752",
+      "-1263908835",
+      "-1714692392",
+      "1004551103",
+      "-212454615",
+      "-1434834004",
+      "2142954192",
+      "1399999408",
+      "238789712",
+      "-175061154",
+      "-1419002455",
+      "-1070059960",
+      "1952396163",
+      "671550515",
+      "-1730980585",
+      "298623376",
+      "-474725660",
+      "-957463636",
+      "-1818980770",
+      "779917859",
+      "1328154590",
+      "-1734671262",
+      "368293996",
+      "-234251256",
+      "1768956181",
+      "-55736864",
+      "-266907635",
+      "1822975168",
+      "-1813095810",
+      "-1591889033",
+      "1257886169",
+      "1326581024",
+      "-1312148780",
+      "-145066854",
+      "748424995",
+      "390860802",
+      "-1296409602",
+      "121220643",
+      "1010190776",
+      "100090969",
+      "1925170211",
+      "-212594584",
+      "-1113679671",
+      "427753832",
+      "1596794389",
+      "1595811309",
+      "-781691717",
+      "-1426408048",
+      "1054678467",
+      "172434341",
+      "-1261472587",
+      "-1146509270",
+      "1515979145",
+      "1113182597",
+      "1955509742",
+      "-1968824367",
+      "1109266474",
+      "-578262686",
+      "-1992528326",
+      "962669262",
+      "1467552538",
+      "-1229477051",
+      "-275220570",
+      "1244244746",
+      "-1088903588",
+      "-1203965791",
+      "-109750292",
+      "-1346431885",
+      "-463637955",
+      "-1885437790",
+      "1966940401",
+      "-1705229539",
+      "42399216",
+      "-109048",
+      "803874239",
+      "1822550295",
+      "-1498002720",
+      "231334217",
+      "-1126512153",
+      "979536889",
+      "-621274213",
+      "-1404481545",
+      "603662479",
+      "334177914",
+      "-1532735116",
+      "-299897619",
+      "-795774545",
+      "-908104950",
+      "1476330609",
+      "1374928302",
+      "-425441205",
+      "434760165",
+      "-1051882404",
+      "-2032933964",
+      "1487401018",
+      "1450792563",
+      "302931829",
+      "1610472905",
+      "268420947",
+      "1668542196",
+      "1980992629",
+      "-1961784071",
+      "-1732910124",
+      "179174997",
+      "2064959419",
+      "1061035135",
+      "-1165757722",
+      "-2132681077",
+      "-2104231017",
+      "-2006859820",
+      "1841195792",
+      "1382367337",
+      "178693626",
+      "-86178201",
+      "920354403",
+      "-1593293071",
+      "-2045742927",
+      "1230400944",
+      "-1962882966",
+      "1422088015",
+      "368211810",
+      "-1469565163",
+      "-1454521733",
+      "690963000",
+      "-2012160162",
+      "965029333",
+      "-1026527405",
+      "1531218220",
+      "1456705429",
+      "1264941816",
+      "-1026527405",
+      "-1404353274",
+      "-1350614016",
+      "-234152995",
+      "899449633",
+      "-1008818392",
+      "-613725916",
+      "-685641702",
+      "2131364229",
+      "949515150",
+      "-1495513247 ",
+      "-173048366",
+      "14112042",
+      "prop_gascage01",
+      "prop_rock_4_big2",
+      "prop_coffin_01",
+      "prop_tree_birch_02",
+      "prop_speaker_05",
+      "prop_speaker_03",
+      "prop_speaker_01",
+      "stt_prop_stunt_soccer_ball",
+      "prop_prop_tree_02",
+      "xs_prop_hamburgher_wl",
+      "stt_prop_race_start_line_03b",
+      "test_prop_gravestones_09a",
+      "stt_prop_stunt_track_jump",
+      "stt_prop_stunt_soccer_sball",
+      "fib_5_mcs_10_lightrig",
+      "prop_tree_birch_02",
+      "prop_tyre_wall_03b",
+      "miss_rub_couch_01_l1",
+      "prop_rub_t34",
+      "u_m_y_abner",
+      "prop_rock_4_big2",
+      "p_med_jet_01_s",
+      "apa_prop_flag_us_yt",
+      "prop_mp_barrier_02b",
+      "prop_mp_ramp_03_tu",
+      "stt_prop_ramp_adj_loop",
+      "stt_prop_ramp_multi_loop_rb",
+      "prop_skate_flatramp_cr",
+      "prop_air_bagloader2_cr",
+      "stt_prop_race_start_line_03b",
+      "v_ilev_bk_vaultdoor",
+      "prop_air_bigradar",
+      "prop_air_blastfence_01",
+      "stt_prop_race_start_line_03b",
+      "stt_prop_stunt_soccer_sball",
+      "prop_beachflag_le",
+      "prop_beach_fire",
+      "stt_prop_stunt_bowling_ball",
+      "prop_jetski_ramp_01",
+      "lts_prop_lts_ramp_03",
+      "stt_prop_stunt_track_dwslope30"
+    ],
+    "AntiMassSameEntitiesSpam": {
+      "ban": true,
+      "kick": true,
+      "MaxValue": 10,
+      "ResetCounterAfter": 2,
+      "log": true,
+      "enabled": true
+    },
+    "AntiMassSamePedsSpam": {
+      "ban": true,
+      "kick": true,
+      "MaxValue": 3,
+      "ResetCounterAfter": 1,
+      "log": true,
+      "enabled": true
+    },
+    "AntiMassSameVehiclesSpam": {
+      "ban": true,
+      "kick": true,
+      "MaxValue": 5,
+      "ResetCounterAfter": 2,
+      "log": true,
+      "enabled": true
+    },
+    "IgnoreEntitesInAntiMassSpawn": [
+      "307287994",
+      "1142162924",
+      "1430544400",
+      "s_m_y_dealer_01",
+      "-459818001",
+      "g_m_y_ballaorig_01",
+      "mp_m_securoguard_01",
+      "s_m_m_doctor_01",
+      "s_m_m_paramedic_01",
+      "ch_prop_arcade_drone_01a",
+      "ch_prop_casino_drone_02a",
+      "s_m_m_prisguard_01",
+      "716763602",
+      "bzzz_prop_seeds",
+      "269934519",
+      "hei_prop_hei_cash_trolly_01",
+      "ch_prop_gold_trolly_01a",
+      "-1275859404",
+      "s_m_y_blackops_01",
+      "tr_prop_tr_grinder_01a",
+      "ch_p_m_bag_var02_arm_s",
+      "hei_p_m_bag_var22_arm_s"
+    ]
+  },
+  "Explosions": {
+    "ExplosionProtection": true,
+    "AIExplosionDetection": false,
+    "BlockInvisibleExplosions": false,
+    "BlockSilentExplosions": true,
+    "AntiMassExplosion": true,
+    "MassExplosionValue": 4,
+    "MassExplosionResetCounterAfter": 1,
+    "ExplosionsList": {
+      "0": {
+        "name": "Grenade",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "1": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "2": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "3": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "4": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "5": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "6": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "7": {
+        "name": "Car",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "8": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "9": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "10": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "11": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "12": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "13": {
+        "name": "",
+        "log": false,
+        "ban": false,
+        "block": true
+      },
+      "14": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "15": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "16": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "17": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "18": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "19": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "20": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "21": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "22": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "23": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "24": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "25": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "26": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "27": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "28": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "29": {
+        "name": "Dir_Flame_Explode",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "30": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "31": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "32": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "33": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "34": {
+        "name": "",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "35": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "36": {
+        "name": "Proxmine",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "37": {
+        "name": "",
+        "log": true,
+        "ban": true,
+        "block": true
+      },
+      "38": {
+        "name": "FÃÂ±reWork",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "39": {
+        "name": "Snowball",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "40": {
+        "name": "Proxmine",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "41": {
+        "name": "Valkyrie",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "42": {
+        "name": "AÃÂ±r Defence",
+        "log": true,
+        "ban": false,
+        "block": true
+      },
+      "43": {
+        "name": "Pipebomb",
+        "log": true,
+        "ban": false,
+        "block": true
+      }
+    }
+  },
+  "Particles": {
+    "ParticlesDetection": true,
+    "AntiMassParticles": true,
+    "ParticlesMaxScale": 10,
+    "MassParticlesValue": 10,
+    "MassParticlesResetCounterAfter": 2,
+    "ParticlesIgnoreList": [
+      "2079614007",
+      "412668215",
+      "716763602",
+      "bzzz_prop_seeds",
+      "2601776693"
+    ]
+  },
+  "Permissions": {
+    "AlternativePermissionsCheck": true,
+    "AlternativePermissions": {
+      "license:60cb998c420579be32f2b3d675f046bdcc03eb1b": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:4acd486021f57d98f866611f5dce0a65e2da5c6a": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:95cec8c80d34e88fb61f7d3aca9f014cb7dac867": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:3ecf65af64df6c9bff520e74c995f8825dc12283": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:a2c4764dc8aec50af346b1903c95c0415ba3bc77": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:8d9baefb56b2af811361e8dd59ffa7f7edfa85b6": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:965e97e77b3621f1c2e6f0c682bfd8c432edb62b": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:d2dd731b55c446ac74f6b6b595f2f683bf63ecdf": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:6f737759fa90c34f4fa63437c34d6f8ea8f3c2bf": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:f2ebf2936dc271d33278fc80c4dccc52579f6956": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:3c4735bd07830cea2401339a206f948190c4e10d": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:2136185fb6623515060bff0909de0ae875025561": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:947828d07cab11872ab201dc39a1c3946d776741": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:0592a3b589d610923adeff0a17994f4ef494b5a3": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:515909192444411904": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:206895456263864322": {
+        "AdminMenu": {
+          "AdminMenuAccess": false,
+          "AnnoucmentAccess": false,
+          "ESPAccess": false,
+          "ClearEntitiesAccess": false,
+          "BanAndKickAccess": false,
+          "GotoAndBringAccess": false,
+          "VehicleAccess": false,
+          "MiscAccess": false,
+          "LogsAccess": false,
+          "PlayerSelectorAccess": false,
+          "BanListAndUnbanAccess": false,
+          "ModelChangerAccess": false
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": false,
+          "BypassInfAmmo": false,
+          "BypassNoReload": false,
+          "BypassRapidFire": false
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": false,
+          "BypassVehicleHandlingEdit": false,
+          "BypassVehicleModifier": false,
+          "BypassBulletproofTires": false,
+          "BypassVehiclePlateChanger": false
+        },
+        "Blacklist": {
+          "BypassModelChanger": false,
+          "BypassWeaponBlacklist": false
+        },
+        "Misc": {
+          "FGCommands": false,
+          "BypassVPN": false,
+          "BypassExplosion": false,
+          "BypassClearTasks": false,
+          "BypassParticle": false
+        }
+      },
+      "discord:372019631428337665": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:826509489163337758": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:1033442591779344515": {
+        "AdminMenu": {
+          "AdminMenuAccess": false,
+          "AnnoucmentAccess": false,
+          "ESPAccess": false,
+          "ClearEntitiesAccess": false,
+          "BanAndKickAccess": false,
+          "GotoAndBringAccess": false,
+          "VehicleAccess": false,
+          "MiscAccess": false,
+          "LogsAccess": false,
+          "PlayerSelectorAccess": false,
+          "BanListAndUnbanAccess": false,
+          "ModelChangerAccess": false
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": false,
+          "BypassInfAmmo": false,
+          "BypassNoReload": false,
+          "BypassRapidFire": false
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": false,
+          "BypassVehicleHandlingEdit": false,
+          "BypassVehicleModifier": false,
+          "BypassBulletproofTires": false,
+          "BypassVehiclePlateChanger": false
+        },
+        "Blacklist": {
+          "BypassModelChanger": false,
+          "BypassWeaponBlacklist": false
+        },
+        "Misc": {
+          "FGCommands": false,
+          "BypassVPN": false,
+          "BypassExplosion": false,
+          "BypassClearTasks": false,
+          "BypassParticle": false
+        }
+      },
+      "discord:223399121258545152": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:1163567715567546473": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:282882553931890688": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:1128298694677123153": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:842491455662850070": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:951521307961491467": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:197836490401644545": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:852621763129245766": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:848552649615081484": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:569f8a1044f03b6f6eb5b74846c12c71e7764136": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:c306428edf84870ae52050f3047084846bd5ede8": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:272463384480317440": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:c8db53b0bce755c994b69486919468d1c8bab66c": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:938554091121037342": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:868404051136634890": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:254366164476493824": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:276434292580810753": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:657469398046736427": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:767433504790413344": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:604978417556914186": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:393f5e0ec06447afb512173c462f88fada6bddf4": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:572670624049266688": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "license:b4391a1ce24c94d30fb81badadf0eba0d272e063": {
+        "AdminMenu": {
+          "AdminMenuAccess": true,
+          "AnnoucmentAccess": true,
+          "ESPAccess": true,
+          "ClearEntitiesAccess": true,
+          "BanAndKickAccess": true,
+          "GotoAndBringAccess": true,
+          "VehicleAccess": true,
+          "MiscAccess": true,
+          "LogsAccess": true,
+          "PlayerSelectorAccess": true,
+          "BanListAndUnbanAccess": true,
+          "ModelChangerAccess": true
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": true,
+          "BypassInfAmmo": true,
+          "BypassNoReload": true,
+          "BypassRapidFire": true
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": true,
+          "BypassVehicleHandlingEdit": true,
+          "BypassVehicleModifier": true,
+          "BypassBulletproofTires": true,
+          "BypassVehiclePlateChanger": true
+        },
+        "Blacklist": {
+          "BypassModelChanger": true,
+          "BypassWeaponBlacklist": true
+        },
+        "Misc": {
+          "FGCommands": true,
+          "BypassVPN": true,
+          "BypassExplosion": true,
+          "BypassClearTasks": true,
+          "BypassParticle": true
+        }
+      },
+      "discord:767098756197777408": {
+        "AdminMenu": {
+          "AdminMenuAccess": false,
+          "AnnoucmentAccess": false,
+          "ESPAccess": false,
+          "ClearEntitiesAccess": false,
+          "BanAndKickAccess": false,
+          "GotoAndBringAccess": false,
+          "VehicleAccess": false,
+          "MiscAccess": false,
+          "LogsAccess": false,
+          "PlayerSelectorAccess": false,
+          "BanListAndUnbanAccess": false,
+          "ModelChangerAccess": false
+        },
+        "Client": {
+          "BypassSpectate": true,
+          "BypassGodMode": true,
+          "BypassInvisible": true,
+          "BypassStealOutfit": true,
+          "BypassInfStamina": true,
+          "BypassNoclip": true,
+          "BypassSuperJump": true,
+          "BypassFreecam": true,
+          "BypassSpeedHack": true,
+          "BypassTeleport": true,
+          "BypassNightVision": true,
+          "BypassThermalVision": true,
+          "BypassExplosiveAmmo": true,
+          "BypassOCR": true,
+          "BypassNuiDevtools": true,
+          "BypassBlacklistedTextures": true,
+          "BlipsBypass": true,
+          "BypassCbScanner": true
+        },
+        "Weapon": {
+          "BypassWeaponDmgModifier": false,
+          "BypassInfAmmo": false,
+          "BypassNoReload": false,
+          "BypassRapidFire": false
+        },
+        "Vehicle": {
+          "BypassVehicleFixAndGodMode": false,
+          "BypassVehicleHandlingEdit": false,
+          "BypassVehicleModifier": false,
+          "BypassBulletproofTires": false,
+          "BypassVehiclePlateChanger": false
+        },
+        "Blacklist": {
+          "BypassModelChanger": false,
+          "BypassWeaponBlacklist": false
+        },
+        "Misc": {
+          "FGCommands": false,
+          "BypassVPN": false,
+          "BypassExplosion": false,
+          "BypassClearTasks": false,
+          "BypassParticle": false
+        }
+      }
+    }
+  },
+  "SafeEvents": {
+    "SafeEvents": true,
+    "IgnoreEventsList": [
+      "loaf_lib:trigger_callback",
+      "lvc_SetAirManuState_s",
+      "lvc_TogIndicState_s",
+      "lvc_TogPwrcallState_s",
+      "lvc_TogDfltSrnMuted_s",
+      "lvc_SetLxSirenState_s",
+      "lvc_TogIndicState_s",
+      "weapons:server:AddWeaponAmmo",
+      "weapons:server:UpdateWeaponAmmo",
+      "Queue:playerActivated",
+      "QBCore:Server:TriggerCallback",
+      "fivem-appearance:server:GetPlayerAces",
+      "renzu_stancer:servercallback",
+      "cmg2_animations:stop",
+      "qb-customs:server:attemptPurchase",
+      "qb-garage:server:updateVehicle",
+      "renzu_stancer:save",
+      "cmg2_animationsCarry:stop",
+      "tgiann-showid:add-id",
+      "wm-vehiclerentals:server:removemoney",
+      "police:server:Impound",
+      "inventory:server:GiveItem",
+      "nova_bilardo:requestTables",
+      "qb-radialmenu:trunk:server:Door",
+      "nation:server:loadjoinblips",
+      "gp-trade:server:SellItems",
+      "qb-tunerchip:server:TuneStatus",
+      "kq_wheeldamage:setBroken",
+      "17mov_Callbacks:GetResponse17mov_Lumberjack",
+      "brutal_shop_robbery:server:sync",
+      "InteractSound_SV:PlayOnSource",
+      "codem-venice-notification:RequestPreferences",
+      "sendclient-l1-uzum",
+      "ls_ads_server:RefreshIndividually",
+      "m-multichar:setbucket",
+      "wasabi_boombox:DiscordKnows",
+      "qb-doorlock:server:updateState",
+      "hospital:server:SetLaststandStatus",
+      "pmms:start",
+      "pmms:loadPermissions",
+      "hospital:server:SetDeathStatus",
+      "pmms:loadSettings",
+      "nitrous:server:SyncFlames",
+      "nitrous:server:UpdateNitroLevel",
+      "illenium-appearance:server:resetOutfitCache",
+      "DS-Casino:syncPeds",
+      "weapons:server:UpdateWeaponQuality",
+      "rcore_camping:fetchChairCache",
+      "__ox_cb_fivem-scenes:server:isAdmin",
+      "__ox_cb_fivem-scenes:server:getScenes",
+      "pro-advancedDiving:addTaskCount",
+      "gamz-skillsystem:update",
+      "um-hackerphone:broken:vehicle",
+      "cdn-fuel:server:updatelocationlabels",
+      "dispatch:server:notify",
+      "inventory:server:OpenInventory",
+      "miki-ShopSystem:BuyItemCard",
+      "__ox_cb_um-multicharacter:server:GetCharacters"
+    ]
+  },
+  "Events": {
+    "BlacklistedStringEvent": true,
+    "BlacklistedTriggersTable": [
+      "HCheat:TempDisableDetection",
+      "BsCuff:Cuff696999",
+      "adminmenu:allowall",
+      "antilynx8r4a:anticheat",
+      "antilynxr4:detect",
+      "ynx8:anticheat",
+      "lynx8:anticheat",
+      "hentailover:xdlol",
+      "antilynx8:anticheat",
+      "antilynxr6:detection",
+      "FAC:EzExec",
+      "h:xd",
+      "redst0nia:checking"
+    ],
+    "BlacklistedTriggers": true,
+    "BlacklistedStringEventList": [
+      "Mod Menu",
+      "You got fucked",
+      "ATG",
+      "anticheat",
+      "FIVEGUARD",
+      "fiveguard",
+      "fiveguard.net",
+      "cheat",
+      "QBCore:Server:AddItem",
+      "Fuck This",
+      "discord.gg",
+      "Lynx",
+      "Huge",
+      "Brutan",
+      "lynxmenu",
+      "API-AC",
+      "https://",
+      "http://",
+      "EULEN",
+      "hammafia",
+      "onion",
+      "executor",
+      "desudo",
+      "unex"
+    ],
+    "EventsRateLimiter": true,
+    "RateLimiterTime": 4000,
+    "RateLimiterEventsList": {
+      "test": {
+        "limit": 5
+      },
+      "esx_illegal_drugs:startHarvestWeed": {
+        "limit": 3
+      },
+      "esx_drugs:pickedUpCannabis": {
+        "limit": 3
+      },
+      "esx_drugs:startHarvestWeed": {
+        "limit": 3
+      },
+      "esx_drugs:startHarvestCoke": {
+        "limit": 3
+      },
+      "esx_blanchisseur:startWhitening": {
+        "limit": 3
+      },
+      "esx_fueldelivery:pay": {
+        "limit": 2
+      },
+      "esx_carthief:pay": {
+        "limit": 2
+      },
+      "esx_godirtyjob:pay": {
+        "limit": 2
+      },
+      "esx_pizza:pay": {
+        "limit": 2
+      },
+      "esx_ranger:pay": {
+        "limit": 2
+      },
+      "esx_garbagejob:pay": {
+        "limit": 2
+      },
+      "esx_slotmachine:sv:2": {
+        "limit": 2
+      },
+      "esx_dmvschool:pay": {
+        "limit": 2
+      },
+      "esx_truckerjob:pay": {
+        "limit": 2
+      },
+      "esx_gopostaljob:pay": {
+        "limit": 2
+      },
+      "esx_tankerjob:pay": {
+        "limit": 2
+      },
+      "esx_society:billing": {
+        "limit": 2
+      },
+      "esx_policejob:message": {
+        "limit": 4
+      },
+      "esx_blanchisseur:washMoney": {
+        "limit": 3
+      },
+      "esx_blackmoney:washMoney": {
+        "limit": 3
+      },
+      "esx_moneywash:withdraw": {
+        "limit": 3
+      },
+      "laundry:washcash": {
+        "limit": 3
+      },
+      "esx_policejob:handcuff": {
+        "limit": 5
+      },
+      "esx_handcuffs:cuffing": {
+        "limit": 5
+      },
+      "gcPhone:_internalAddMessage": {
+        "limit": 3
+      },
+      "gcPhone:tchat_channel": {
+        "limit": 3
+      },
+      "js:jailuser": {
+        "limit": 2
+      },
+      "ljail:jailplayer": {
+        "limit": 2
+      },
+      "esx_jail:sendToJail": {
+        "limit": 2
+      },
+      "esx_illegal_drugs:startHarvestCoke": {
+        "limit": 3
+      },
+      "esx_drugs:startHarvestMeth": {
+        "limit": 3
+      },
+      "esx_illegal_drugs:startHarvestMeth": {
+        "limit": 3
+      },
+      "esx_drugs:startHarvestOpium": {
+        "limit": 3
+      },
+      "esx_illegal_drugs:startHarvestOpium": {
+        "limit": 3
+      },
+      "esx_jailer:sendToJail": {
+        "limit": 2
+      },
+      "esx-qalle-jail:jailPlayer": {
+        "limit": 2
+      },
+      "QBCore:Server:AddItem": {
+        "limit": "1"
+      }
+    }
+  },
+  "Basic": {
+    "KeepAliveSystem": true,
+    "KeepAliveSystemMode": 1,
+    "KeepAliveTimeout": 120000,
+    "KeepAliveSystemBan": false,
+    "DiscordInviteCode": "coastv",
+    "AdvancedBanLogic": true,
+    "BanLanguage": "tr (Turkish)",
+    "DisableSoundEventRouting": true,
+    "AntiRemoveWeaponFromPed": true,
+    "AdvancedAntiGiveWeapon": true,
+    "AntiFakeChat": false,
+    "BlacklistedStringsInNames": true,
+    "BlacklistedStringsInNamesList": [
+      "ALLAH",
+      "PEYGAMBER",
+      "ATATURK",
+      "ATAKURT",
+      "CANNIBAL",
+      "0917",
+      "EULEN"
+    ],
+    "AntiStopStartResources": false,
+    "ClearPedTasksImmediatelyLog": true,
+    "ClearPedTasksImmediatelyBan": true,
+    "ClearPedTasksImmediatelyDistance": 8,
+    "BanOnIPAddress": true,
+    "AntiSpawnPropsByUnauthorizedResources": true,
+    "AntiSpawnPropsByUnauthorizedResourcesMode": 1,
+    "AntiSpawnPropsByUnauthorizedResourcesMode2Table": [
+      "es_extended",
+      "esx_vehicleshop"
+    ],
+    "DestroyedVehicleDelete": false
+  },
+  "ESX": {
+    "ESX": false,
+    "ESXScriptName": "es_extended",
+    "SharedObjectEvent": "esx:getSharedObject",
+    "WhiteListEventsOnJob": false,
+    "WhiteListEventsOnJobList": {
+      "test": {
+        "JobName": ""
+      }
+    },
+    "AntiSpoofedWeapons": false,
+    "AntiGiveWeaponESX": false,
+    "IgnoreWeaponsListFromAntiGiveWeapon": [
+      "WEAPON_PETROLCAN"
+    ]
+  },
+  "QBCore": {
+    "QBCore": true,
+    "QBCoreScriptName": "qb-core",
+    "SharedObjectEvent": "QBCore:GetObject",
+    "AntiGiveWeaponQBCore": true,
+    "IgnoreWeaponsListFromAntiGiveWeapon": [
+      "weapon_musket"
+    ]
+  },
+  "Pickups": {
+    "DisablePickupCollecting": true,
+    "DeleteWeaponPickupCollect": true
+  },
+  "Client": {
+    "AntiInternal": false,
+    "CheatsDetection": true,
+    "CheatsAiDetection": true,
+    "AntiEulen": true,
+    "AntiNexusMenu": true,
+    "AntiTapiatoMenu": false,
+    "CbScanner": true,
+    "AntiMagneto": false,
+    "AntiStealOutfit": false,
+    "AntiHealthHack": true,
+    "AntiHealthFullRecharge": false,
+    "AntiArmourHack": false,
+    "AntiGodmode": true,
+    "AntiEulenGodmode": false,
+    "AntiSemiGodMode": false,
+    "AntiModifiedMeleeDamage": false,
+    "AntiEditedHeadHitbox": false,
+    "CitizenAntiDamageModifier": true,
+    "CitizenAntiGiveWeapon": true,
+    "AntiInfiniteStamina": false,
+    "AntiAimbot": true,
+    "AntiCitizenAimbot": true,
+    "AntiCitizenMagicBullet": true,
+    "AntiSilentAim": false,
+    "AntiTaze": false,
+    "AntiSpectate": false,
+    "AntiTeleport": false,
+    "AntiTeleportToWayPoint": true,
+    "AntiInvisible": false,
+    "AntiSpeedhack": false,
+    "AntiSuperJump": false,
+    "AntiFreecam": false,
+    "AntiFreecamAllowCoords": {
+      "test": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "radius": 20
+      }
+    },
+    "AntiNightVision": false,
+    "AntiThermalVision": false,
+    "AntiNoclip": true,
+    "AntiEulenNoclip": false,
+    "AntiPlayerExplosion": true,
+    "AntiNuiDevtools": true,
+    "AntiCombatRoll": true,
+    "AntiAttachPedToPlayer": true,
+    "BlipsDetection": false,
+    "BlipsValue": 10,
+    "AntiEnterSoloSession": false,
+    "BlacklistedTexturesList": [
+      "HydroMenuHeader",
+      "John2",
+      "fs12",
+      "fam_DUHSGOSDIUGIHOSDG",
+      "FiveEye",
+      "Fuckery",
+      "egek",
+      "logo",
+      "ISMMENUHeader",
+      "duiTex",
+      "menu_bg",
+      "logo",
+      "logo1",
+      "woof2",
+      "adb831a7fdd83d_Guest_d1e2a309ce7591dff8Header6",
+      "duiTex_DSIOGJSDG",
+      "menu_bg",
+      "wm2",
+      "NeekerMan1",
+      "Blood-X",
+      "Dopameme",
+      "FalloutMenu",
+      "Lux meme",
+      "Absolut",
+      "kekhack",
+      "skidmenu",
+      "Category",
+      "brutan",
+      "fivesense",
+      "NeekerMan1",
+      "auttaja",
+      "bartowmenu",
+      "hoaxmenu",
+      "fendin",
+      "Ham",
+      "oblivious",
+      "malossimenu",
+      "Memeeee",
+      "Tiago",
+      "hydramenu",
+      "Swagamine",
+      "HydroMenuHeader",
+      "HydroMenuLogo",
+      "Terror Menu",
+      "lynxmenu",
+      "ALIEN MENU",
+      "HydroMenu",
+      "CopyCat",
+      "dickmenu",
+      "zykemboss",
+      "wudywchuj",
+      "x32tqaw",
+      "negus",
+      "KentasMenu",
+      "thefov",
+      "__REAPER5__",
+      "__REAPER6__",
+      "FixedLumia",
+      "FixedLumia1",
+      "FixedLumia2",
+      "FixedLumia3",
+      "FixedLumia4",
+      "VertissoTrapersksk",
+      "Vertissodafuq",
+      "Kysnnmen",
+      "negus",
+      "ligma",
+      "candice",
+      "idkfuckthismenutbh",
+      "wtfamidoinghere",
+      "nigerus",
+      "blacklisted",
+      "watermark",
+      "darkside",
+      "dopatest",
+      "Tapatio",
+      "vertissotraperdamnshit",
+      "All",
+      "Teleport",
+      "Crown",
+      "KEY",
+      "342",
+      "Object",
+      "CopyCatHeader",
+      "weapon_icons",
+      "watermalone",
+      "watermalone1",
+      "deadline"
+    ],
+    "UseOCRDetection": true,
+    "StringsOCRList": [
+      "dopameme",
+      "aimbot",
+      "give specific",
+      "Teleport",
+      "KEY",
+      "Fuckery",
+      "FiveEye",
+      "342",
+      "fiveeye",
+      "maxout",
+      "magic bullet",
+      "crash player",
+      "Category",
+      "event blocker",
+      "anticheat",
+      "superjump",
+      "freecam",
+      "hydromenu",
+      "absolute",
+      "spawn object",
+      "kill menu",
+      "magic carpet",
+      "trigger bot",
+      "godmode",
+      "fiveeye",
+      "chocohax",
+      "screenshot-basic",
+      "screenshotbasic",
+      "brutan",
+      "teleport to",
+      "no reload",
+      "does not support",
+      "displayeISelf",
+      "displayTself",
+      "drive to waypoint requires",
+      "infinite stamina",
+      "antiafk",
+      "resource build",
+      "weapon option",
+      "semi-godmode",
+      "no ragdoll",
+      "weapon list",
+      "triggerbot",
+      "aim bot",
+      "troll option",
+      "bullet option",
+      "explosive ammo",
+      "panic button",
+      "destroy option",
+      "modmenu",
+      "mod menu",
+      "fuck server",
+      "close menu",
+      "resourcelbuild",
+      "resourcebuild",
+      "give armor",
+      "clear blood"
+    ]
+  },
+  "Blacklist": {
+    "BlacklistedVehicles": [
+      "submersible",
+      "submersible2",
+      "titan",
+      "seasparrow3",
+      "policet",
+      "limo2",
+      "pounder2",
+      "riot2",
+      "seasparrow2",
+      "pounder",
+      "dinghy5",
+      "hauler",
+      "benson",
+      "hauler2",
+      "deluxo",
+      "kosatka",
+      "cerberus",
+      "cerberus2",
+      "patrolboat",
+      "cerberus3",
+      "phantom2",
+      "tampa3",
+      "tampa2",
+      "akula",
+      "buzzard2",
+      "buzzard",
+      "cargobob",
+      "cargobob2",
+      "brickade",
+      "dukes2",
+      "dominator4",
+      "terbyte",
+      "cargobob3",
+      "cargobob4",
+      "havok",
+      "hunter",
+      "savage",
+      "seasparrow",
+      "skylift",
+      "valkyrie",
+      "valkyrie2",
+      "annihilator2",
+      "bulldozer",
+      "cutter",
+      "dump",
+      "handler",
+      "mixer",
+      "mixer2",
+      "apc",
+      "barracks",
+      "barracks2",
+      "barrage",
+      "chernobog",
+      "crusader",
+      "barracks3",
+      "rrocket",
+      "halftrack",
+      "khanjali",
+      "shotaro",
+      "minitank",
+      "rhino",
+      "scarab",
+      "scarab2",
+      "scarab3",
+      "thruster",
+      "trailersmall2",
+      "vetir",
+      "oppressor2",
+      "oppressor",
+      "dune",
+      "dune2",
+      "dune3",
+      "dune4",
+      "dune5",
+      "insurgent",
+      "insurgent2",
+      "insurgent3",
+      "monster",
+      "monster3",
+      "monster4",
+      "monster5",
+      "menacer",
+      "nightshark",
+      "rcbandito",
+      "technical",
+      "technical2",
+      "technical3",
+      "vagrant",
+      "zhaba",
+      "alphaz1",
+      "avenger",
+      "avenger2",
+      "besra",
+      "blimp",
+      "blimp2",
+      "blimp3",
+      "bombushka",
+      "cargoplane",
+      "cargoplane2",
+      "cuban800",
+      "duster",
+      "howard",
+      "hydra",
+      "jet",
+      "lazer",
+      "luxor",
+      "mammatus",
+      "microlight",
+      "miljet",
+      "luxor2",
+      "mogul",
+      "molotok",
+      "nimbus",
+      "nokota",
+      "pyro",
+      "rogue",
+      "seabreeze",
+      "shamal",
+      "starling",
+      "strikeforce",
+      "stunt",
+      "tula",
+      "velum",
+      "velum2",
+      "vestra",
+      "volatol",
+      "alkonost",
+      "baller5",
+      "baller6",
+      "wastelander",
+      "kuruma2",
+      "scramjet",
+      "armytrailer",
+      "armytrailer2",
+      "armytanker",
+      "baletrailer",
+      "boattrailer",
+      "cablecar",
+      "docktrailer",
+      "freighttrailer",
+      "graintrailer",
+      "proptrailer",
+      "raketrailer",
+      "tr2",
+      "tr3",
+      "tr4",
+      "trflat",
+      "tvtrailer",
+      "tanker",
+      "tanker2",
+      "trailerlarge",
+      "trailerlogs",
+      "trailersmall",
+      "trailers",
+      "trailers2",
+      "trailers3",
+      "trailers4",
+      "freight",
+      "freightcar",
+      "freightcont1",
+      "freightcont2",
+      "freightgrain",
+      "metrotrain",
+      "tankercar"
+    ],
+    "BlacklistedWeapons": true,
+    "BlacklistedWeaponBan": true,
+    "BlacklistedWeaponsValue": 1,
+    "BlacklistedWeaponsList": [
+      "weapon_hazardcan",
+      "weapon_fertilizercan",
+      "weapon_petrolcan",
+      "weapon_acidpackage",
+      "weapon_flare",
+      "weapon_smokegrenade",
+      "weapon_ball",
+      "weapon_pipebomb",
+      "weapon_snowball",
+      "weapon_proxmine",
+      "weapon_stickybomb",
+      "weapon_molotov",
+      "weapon_bzgas",
+      "weapon_grenade",
+      "weapon_railgunxm3",
+      "weapon_emplauncher",
+      "weapon_rayminigun",
+      "weapon_compactlauncher",
+      "weapon_hominglauncher",
+      "weapon_railgun",
+      "weapon_firework",
+      "weapon_minigun",
+      "weapon_grenadelauncher_smoke",
+      "weapon_grenadelauncher",
+      "weapon_rpg",
+      "weapon_precisionrifle",
+      "weapon_marksmanrifle_mk2",
+      "weapon_marksmanrifle",
+      "weapon_heavysniper_mk2",
+      "weapon_heavysniper",
+      "weapon_combatmg_mk2",
+      "weapon_combatmg",
+      "weapon_mg",
+      "weapon_tacticalrifle",
+      "weapon_heavyrifle",
+      "weapon_militaryrifle",
+      "weapon_bullpuprifle_mk2",
+      "weapon_bullpuprifle",
+      "weapon_specialcarbine_mk2",
+      "weapon_specialcarbine",
+      "weapon_advancedrifle",
+      "weapon_assaultrifle_mk2",
+      "weapon_autoshotgun",
+      "weapon_sawnoffshotgun",
+      "weapon_dbshotgun",
+      "weapon_heavyshotgun",
+      "weapon_assaultsmg",
+      "weapon_bullpupshotgun",
+      "weapon_raycarbine",
+      "weapon_revolver_mk2",
+      "weapon_minismg",
+      "weapon_revolver",
+      "weapon_marksmanpistol",
+      "weapon_assaultshotgun",
+      "weapon_flaregun",
+      "weapon_doubleaction",
+      "weapon_tecpistol",
+      "weapon_gadgetpistol",
+      "weapon_navyrevolver",
+      "weapon_ceramicpistol",
+      "weapon_raypistol"
+    ],
+    "AntiModelChanger": true,
+    "AntiModelChangerList": [
+      "a_c_rhesus",
+      "a_c_deer",
+      "a_c_sharktiger",
+      "a_c_killerwhale",
+      "s_m_y_swat_01",
+      "a_m_y_mexthug_01",
+      "a_c_sharkhammer",
+      "a_c_coyote",
+      "a_c_boar",
+      "a_c_chimp",
+      "a_c_rabbit_01",
+      "u_m_y_zombie_01",
+      "a_c_humpback",
+      "a_c_dolphin",
+      "a_c_hen",
+      "a_c_fish",
+      "a_c_cow",
+      "a_c_mtlion"
+    ]
+  },
+  "Vehicle": {
+    "AntiVehicleFixAndGodMode": false,
+    "ProtectPlayerVehicle": true,
+    "ProtectPlayerVehicleMode": "relaxed",
+    "AntiVehicleNoclip": false,
+    "AntiVehicleInvisible": false,
+    "AntiVehicleGravityModify": false,
+    "AntiVehiclePlateChanger": false,
+    "AntiVehicleHashChanger": true,
+    "AntiVehicleHandlingEdit": false,
+    "AntiVehicleHandlingEditClasses": [
+      "fMass",
+      "fInitialDriveForce",
+      "fInitialDriveMaxFlatVel",
+      "fTractionCurveMax",
+      "fTractionCurveMin",
+      "fSuspensionRaise"
+    ],
+    "AntiVehicleModifier": false,
+    "AntiVehicleModifierMechanicCoords": {
+      "test": {
+        "x": 1,
+        "y": 1,
+        "z": 1,
+        "radius": 20
+      }
+    },
+    "AntiBulletproofTires": false,
+    "AntiBulletproofTiresDeleteVehicle": false,
+    "AntiBulletproofTiresIgnoreList": [
+      "tractor",
+      "bulldozer"
+    ]
+  },
+  "Weapon": {
+    "AmmunitionCheck": false,
+    "AmmunitionCheckBan": false,
+    "MaxAmmunition": 300,
+    "AntiDamageModifier": true,
+    "AntiDamageModifierValue": 2,
+    "AntiRapidFire": false,
+    "AntiNoRecoil": false,
+    "AntiSpoofedBulletShot": true,
+    "AntiFastReload": false,
+    "AntiNoReload": false,
+    "AntiExplosiveBullet": false,
+    "AntiExplosiveAmmo": false,
+    "AntiExplosiveAmmoIgnoreList": [],
+    "AntiInfinityAmmo": false
+  }
+}

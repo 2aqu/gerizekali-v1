@@ -8,6 +8,7 @@ Config = {
 	Consumables = {
 		["vodka"] = { 			emote = "vodkab", 		canRun = true, 	time = math.random(5000, 6000), stress = 0, heal = 0, armor = 0, type = "alcohol", stats = { effect = "stress", time = 5000, amount = 2, thirst = math.random(10,20), canOD = true }},
 		["beer"] = { 			emote = "beer", 		canRun = true, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
+		["wine"] = { 			emote = "wine", 		canRun = true, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["whiskey"] = { 		emote = "whiskey",  	canRun = true, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["tekila"] = { 		emote = "champagne",  	canRun = true, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
 		["sexon"] = { 		emote = "champagne",  	canRun = true, 	time = math.random(5000, 6000), stress = math.random(2, 4), heal = 0, armor = 0, type = "alcohol", stats = { thirst = math.random(10,20), canOD = true }},
@@ -99,6 +100,12 @@ Config = {
 		["kokteyl"] = { 			emote = "vodkab", 		canRun = true, 	time = math.random(5000, 6000), stress = 0, heal = 0, armor = 0, type = "alcohol", stats = { effect = "stress", time = 5000, amount = 2, thirst = math.random(10,20), canOD = true }},
 		["kokteyl2"] = { 			emote = "vodkab", 		canRun = true, 	time = math.random(5000, 6000), stress = 0, heal = 0, armor = 0, type = "alcohol", stats = { effect = "stress", time = 5000, amount = 2, thirst = math.random(10,20), canOD = true }},
 		["sarap"] = { 			emote = "vodkab", 		canRun = true, 	time = math.random(5000, 6000), stress = 0, heal = 0, armor = 0, type = "alcohol", stats = { effect = "stress", time = 5000, amount = 2, thirst = math.random(10,20), canOD = true }},
+		["soganhalkasi"] = { 		emote = "foodbowl", 	canRun = true, 	time = math.random(9000, 10000), stress = math.random(2, 4), heal = 0, armor = 0, type = "food", stats = { hunger = math.random(80,100), }},
+		["pattatotab"] = { 		emote = "foodbowl", 	canRun = true, 	time = math.random(9000, 10000), stress = math.random(2, 4), heal = 0, armor = 0, type = "food", stats = { hunger = math.random(80,100), }},
+		["pmisir"] = { 		emote = "foodbowl", 	canRun = true, 	time = math.random(9000, 10000), stress = math.random(2, 4), heal = 0, armor = 0, type = "food", stats = { hunger = math.random(80,100), }},
+		["nuggetk"] = { 		emote = "foodbowl", 	canRun = true, 	time = math.random(9000, 10000), stress = math.random(2, 4), heal = 0, armor = 0, type = "food", stats = { hunger = math.random(80,100), }},
+
+
 		----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		--Example item
 		--[[ ["heartstopper"] = {

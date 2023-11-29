@@ -7169,6 +7169,54 @@ return {
 		}
 	},
 
+	["soganhalkasi"] = {
+		label = "Soğan Halkası",
+		weight = 100,
+		stack = false,
+		close = true,
+		description = "",
+		degrade = 2880,
+		client = {
+			image = "soganhalkasi.png",
+		}
+	},
+
+	["pattatotab"] = {
+		label = "Patates Kovası",
+		weight = 100,
+		stack = false,
+		close = true,
+		description = "",
+		degrade = 2880,
+		client = {
+			image = "pattatotab.png",
+		}
+	},
+
+	["pmisir"] = {
+		label = "Patates Kovası",
+		weight = 100,
+		stack = false,
+		close = true,
+		description = "",
+		degrade = 2880,
+		client = {
+			image = "pmisir.png",
+		}
+	},
+
+	["nuggetk"] = {
+		label = "Patates Kovası",
+		weight = 100,
+		stack = false,
+		close = true,
+		description = "",
+		degrade = 2880,
+		client = {
+			image = "nuggetk.png",
+		}
+	},
+	 
 	["broken_handcuffs"] = {
 		label = "Kırık Kelepçe",
 		weight = 100,
