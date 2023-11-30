@@ -15,7 +15,7 @@ Config.Stashes = {
          gang = "",
          job = "mechanic1",
          cid = {""},  
-         stashSize = 1250000,
+         stashSize = 2250000,
          stashSlots = 125, 
      },
      ["stash2"] = {
@@ -28,7 +28,7 @@ Config.Stashes = {
         gang = "",
         job = "japanese",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["stash3"] = {
@@ -41,7 +41,7 @@ Config.Stashes = {
         gang = "",
         job = "records",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["stash4"] = {
@@ -54,7 +54,7 @@ Config.Stashes = {
         gang = "",
         job = "irishpub",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["stash5"] = {
@@ -80,7 +80,7 @@ Config.Stashes = {
         gang = "",
         job = "doj",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["stash7"] = {
@@ -93,7 +93,7 @@ Config.Stashes = {
         gang = "",
         job = "mechanicmc",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["stash8"] = {
@@ -106,7 +106,7 @@ Config.Stashes = {
         gang = "",
         job = "irishpub",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["stash9"] = {
@@ -119,7 +119,7 @@ Config.Stashes = {
         gang = "104",
         job = "",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["takashi"] = {
@@ -145,7 +145,7 @@ Config.Stashes = {
         gang = "",
         job = "japanese",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["calsierra"] = {
@@ -158,7 +158,7 @@ Config.Stashes = {
         gang = "calsierra",
         job = "",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["6block"] = {
@@ -171,7 +171,7 @@ Config.Stashes = {
         gang = "6block",
         job = "",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["watts"] = {
@@ -184,7 +184,7 @@ Config.Stashes = {
         gang = "watts",
         job = "",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["wutang"] = {
@@ -197,7 +197,7 @@ Config.Stashes = {
         gang = "",
         job = "wutang",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["uwu"] = {
@@ -210,7 +210,7 @@ Config.Stashes = {
         gang = "",
         job = "uwu",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["bahama"] = {
@@ -223,7 +223,7 @@ Config.Stashes = {
         gang = "",
         job = "bahama",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["unicord"] = {
@@ -236,7 +236,7 @@ Config.Stashes = {
         gang = "",
         job = "unicorn",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["burgershot"] = {
@@ -249,7 +249,7 @@ Config.Stashes = {
         gang = "",
         job = "burgershot",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["pearls"] = {
@@ -262,7 +262,7 @@ Config.Stashes = {
         gang = "",
         job = "pearls",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["irishpub"] = {
@@ -275,7 +275,7 @@ Config.Stashes = {
         gang = "",
         job = "irishpub",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["redline"] = {
@@ -288,7 +288,7 @@ Config.Stashes = {
         gang = "",
         job = "redline",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["ambulance"] = {
@@ -301,7 +301,7 @@ Config.Stashes = {
         gang = "",
         job = "ambulance",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["mob"] = {
@@ -314,7 +314,7 @@ Config.Stashes = {
         gang = "mob",
         job = "",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["lost"] = {
@@ -327,7 +327,7 @@ Config.Stashes = {
         gang = "",
         job = "lost",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["reddevil"] = {
@@ -340,7 +340,7 @@ Config.Stashes = {
         gang = "",
         job = "mechanic2",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["carwushtuner"] = {
@@ -353,7 +353,7 @@ Config.Stashes = {
         gang = "",
         job = "tuner",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["brofxmanis"] = {
@@ -366,7 +366,7 @@ Config.Stashes = {
         gang = "",
         job = "tuner",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["breze"] = {
@@ -379,7 +379,7 @@ Config.Stashes = {
         gang = "",
         job = "pdm2",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["breze1"] = {
@@ -392,7 +392,7 @@ Config.Stashes = {
         gang = "",
         job = "pdm2",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["mechanic15"] = {
@@ -405,7 +405,7 @@ Config.Stashes = {
         gang = "",
         job = "mechanic15",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     ["cockatoos"] = {
@@ -418,7 +418,7 @@ Config.Stashes = {
         gang = "",
         job = "cockatoos",
         cid = {""},  
-        stashSize = 1250000,
+        stashSize = 2250000,
         stashSlots = 125, 
     },
     

@@ -77,7 +77,7 @@ local isletmeblips = {
 	{title="Wutang E1 Music", colour=5, id=614, coords = vector3(-5.73, -1822.8, 29.55)},
 	{title="Irish Pub", colour=61, id=93, coords = vector3(835.61, -115.34, 87.13)},
 	{title="Tequila", colour=1, id=93, coords = vector3(-555.51, 285.39, 91.8)},
-    {title="Luxery Cafe", colour=23, id=354, coords = vector3(-846.76, -234.12, 61.02)},
+    {title="Rich Cafe", colour=23, id=354, coords = vector3(-846.76, -234.12, 61.02)},
     {title="Felss Bar", colour=22, id=93, coords = vector3(311.89, -890.54, 60.66)},
     {title="Burger Shot", colour=1, id=106, coords = vector3(-1183.37, -884.14, 13.86)},
     {title="Pizzeria", colour=1, id=106, coords = vector3(800.1940, -745.6356, 26.7767)},
