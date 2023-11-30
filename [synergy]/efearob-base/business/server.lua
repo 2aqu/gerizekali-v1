@@ -125,6 +125,10 @@ RegisterCommand('paketle', function(source)
             packet = "pearlspaket"
         elseif job == "tpc" then
             packet = "popularpaket"
+        elseif job == "cockatoos" then
+            packet = "popularpaket"
+        elseif job == "luxery" then
+            packet = "popularpaket"
         end
         if #info.items == 0 then
             TriggerClientEvent("QBCore:Notify", src, "Paketleyecek eşya yok", "error")

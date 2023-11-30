@@ -237,6 +237,27 @@ CreateThread(function () --vpd2
     })
 end)
 
+CreateThread(function () --cockatoos clup
+    exports['qb-target']:AddBoxZone("cockatoos", vector3(-441.03, -31.63, 41.43), 3, 3, 
+    {
+        name = "cockatoos",
+        heading = 5,
+        minZ = 39.57834,
+        maxZ = 44.57834,
+        debugPoly = false,
+     }, {
+         options = {
+             {
+                type = "Client",
+                event = "illenium-appearance:client:openClothingShopMenu",
+                icon = "fas fa-circle",
+                label = "Kıyafet Dolabı",
+                --gang = "mob",
+            },
+        },
+        distance = 2.5
+    })
+end)
 
 CreateThread(function () --borfixmali
     exports['qb-target']:AddBoxZone("borfxmanis", vector3(-1563.11, 137.31, 60.79), 3, 3, 

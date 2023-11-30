@@ -56,6 +56,7 @@ Config.PermittedJobs = {
     'redline',
     'galaxy',
     'psikolog',
+    'cockatoos',
 }
 
 -- Commands --

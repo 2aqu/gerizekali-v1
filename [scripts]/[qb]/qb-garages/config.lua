@@ -100,6 +100,30 @@ Garages = {
         debug = false,
     },
 
+    ['pdmgarage2'] = {
+        ['Zone'] = {
+            ['Shape'] = {
+                vector2(157.02444458008, -120.47184753418),
+                vector2(148.44407653809, -117.3542175293),
+                vector2(147.65748596191, -118.86954498291),
+                vector2(144.28753662109, -117.90305328369),
+                vector2(143.23867797852, -120.31707763672),
+                vector2(154.28117370605, -124.91548919678)
+            },
+            ['minZ'] = 52.2,  -- min height of the parking zone
+            ['maxZ'] = 57.30,  -- max height of the parking zone
+        },
+        label = 'Garaj',
+        showBlip = false,
+        blipcoords = vector3(852.51, -2101.76, 30.5),
+        blipName = 'Garaj',
+        blipNumber = 357,
+        type = 'public',
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
+        drawText = '[F3] Garaj',
+        debug = false,
+    },
+
     ['cockatoos'] = {
         ['Zone'] = {
             ['Shape'] = {
@@ -3202,24 +3226,6 @@ Garages = {
       --     vector4(425.68, -976.24, 25.21, 270.49),
       --     vector4(442.0, -981.58, 25.21, 90.19),
       -- },
-        debug = false
-    },
-    ['brezegarage'] = {
-        ['Zone'] = {
-            ['Shape'] = { --polygon that surrounds the parking area
-            vector2(149.96249389648, -117.66753387451),
-            vector2(147.78141784668, -122.84310913086),
-            vector2(155.17321777344, -125.85945892334),
-            vector2(157.02507019043, -120.46995544434)
-            },
-            ['minZ'] = 28.0,  -- min height of the parking zone
-            ['maxZ'] = 32.0,  -- max height of the parking zone
-        },
-        label = 'Breze Garage',
-        type = 'job',
-        job = 'pdm2',
-        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
-        drawText = '[F3] Garaj',
         debug = false
     },
 
