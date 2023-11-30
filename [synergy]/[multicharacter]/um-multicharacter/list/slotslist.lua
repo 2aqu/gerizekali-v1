@@ -16,5 +16,6 @@ Slots.List = {
      {license = "license:a9ff622e554059e8bca9157aacad12088f389fbf", totalSlot = 2}, -- Yılmaz 
      {license = "license:ba4c6b2aeaf4b8ab6985728002b116bf90555cfc", totalSlot = 2}, -- guffyismachine 
      {license = "license:1dfbda3646c51d181cd49ac81762ded73e66f245", totalSlot = 2}, -- mandalinora    
+     {license = "license:c8060f838a09763022c170f101369885e3f7012e", totalSlot = 2}, -- moneragrata
 }
 
