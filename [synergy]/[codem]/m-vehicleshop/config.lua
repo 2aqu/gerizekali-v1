@@ -139,8 +139,6 @@ Config = {
     end,
 
     OnTestDriveVehicleSpawned = function(vehicle)
-        --example events for qbcore
-        print("vehicle")
         local plate = GetVehicleNumberPlateText(vehicle)
         if Config.Vehiclekey then
             TriggerEvent("vehiclekeys:client:SetOwner", plate)
