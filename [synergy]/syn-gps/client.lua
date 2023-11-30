@@ -171,9 +171,10 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Wait(250)
+        Wait(600)
         if gps then
             local x, y, z = table.unpack(GetEntityCoords(PlayerPedId()))
+            print("send")
             SendNUIMessage({
                 action = "sendLocation",
                 location = json.encode({ x = x, y = y, z = z }),
