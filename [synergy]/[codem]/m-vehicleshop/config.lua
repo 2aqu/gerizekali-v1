@@ -90,7 +90,6 @@ Config = {
     },
     -- functions
     OnVehicleBought = function(shopId, vehicle)
-        --example events for qbcore
         local plate = GetVehicleNumberPlateText(vehicle)
         TaskWarpPedIntoVehicle(PlayerPedId(), vehicle, -1)
         if Config.Vehiclekey then
