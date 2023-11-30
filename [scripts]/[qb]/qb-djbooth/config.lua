@@ -93,4 +93,10 @@ Config.Locations = {
         ['coords'] = vector3(300.43, -925.45, 58.37), -- Where the booth is located vector3(-1603.87, -3012.62, -77.8)
         ['playing'] = false
     },
+    ['cockatoos'] = {
+        ['job'] = 'cockatoos', -- Required job to use booth
+        ['radius'] = 35, -- The radius of the sound from the booth
+        ['coords'] = vector3(-418.94, -27.6, 41.3), -- Where the booth is located vector3(-1603.87, -3012.62, -77.8)
+        ['playing'] = false
+    },
 }

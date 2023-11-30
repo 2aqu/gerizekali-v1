@@ -115,6 +115,21 @@ vanilla:onPlayerInOut(function(isPointInside)
     end
 end)
 
+local cockatoos = BoxZone:Create(Config.Locations['cockatoos'].coords, 1, 1, {
+    name="cockatoos",
+    heading=0,
+})
+
+cockatoos:onPlayerInOut(function(isPointInside)
+    if isPointInside and PlayerData.job.name == Config.Locations['cockatoos'].job then
+        currentZone = 'cockatoos'
+        exports['qb-menu']:showHeader(musicHeader)
+    else
+        currentZone = nil
+        exports['qb-menu']:closeMenu()
+    end
+end)
+
 local sonsofanarchy = BoxZone:Create(Config.Locations['sonsofanarchy'].coords, 1, 1, {
     name="sonsofanarchy",
     heading=0,

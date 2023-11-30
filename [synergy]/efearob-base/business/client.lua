@@ -24,6 +24,9 @@ busi.YemekTarget = {
     [6] = {
         {loc = vec3(-1845.15625,-1196.423828125,14.271260261536), genislik = 0.6, name = "pearls-yemek", job = "pearls"}
     },
+    [7] = {
+        {loc = vec3(-432.98, -36.75, 41.3), genislik = 0.6, name = "cockatoos-yemek", job = "cockatoos"}
+    },
 }
 
 busi.IcecekTarget = {
@@ -45,6 +48,9 @@ busi.IcecekTarget = {
     [6] = {
         {loc = vec3(-1844.4974365234,-1199.71875,14.483790397644), genislik = 0.6, name = "pearls-icecek", job = "pearls"}
     },
+    [7] = {
+        {loc = vec3(-436.28, -36.68, 41.24), genislik = 0.6, name = "cockatoos-icecek", job = "cockatoos"}
+    },
 }
 
 busi.Tezgah = {
@@ -65,6 +71,9 @@ busi.Tezgah = {
     },
     [6] = {
         {loc = vec3(-1834.2531738281,-1190.3922119141,14.324607849121), genislik = 0.6, tezgah = "pearls"}
+    },
+    [6] = {
+        {loc = vec3(-433.52, -31.05, 41.51), genislik = 0.6, tezgah = "cockatoos"}
     },
 }
 		
@@ -93,6 +102,36 @@ busi.YemekListesi = {
         ["kurabiye"] = {
             ["itemname"] = "kurabiye",
             ["label"] = "Kurabiye",
+        },
+    },
+    ["cockatoos"] = {
+        ["kizartma"] = {
+            ["itemname"] = "kizartma",
+            ["label"] = "Kızartma Tabağı",
+        },    
+        ["cooked_chicken"] = {
+            ["itemname"] = "cooked_chicken",
+            ["label"] = "Kızarmış Tavuk",
+        },
+        ["pvegpizza"] = {
+            ["itemname"] = "pvegpizza",
+            ["label"] = "Pizza",
+        },
+        ["soganhalkasi"] = {
+            ["itemname"] = "soganhalkasi",
+            ["label"] = "Soğan Halkası",
+        },
+        ["pattatotab"] = {
+            ["itemname"] = "pattatotab",
+            ["label"] = "Patates Kovası",
+        },
+        ["pmisir"] = {
+            ["itemname"] = "pmisir",
+            ["label"] = "Patlamış Mısır",
+        }, 
+        ["nuggetk"] = {
+            ["itemname"] = "nuggetk",
+            ["label"] = "Nugget Kovası",
         },
     },
     ["pizzeria"] = {
@@ -290,6 +329,52 @@ busi.IcecekListesi = {
         ["sprite"] = {
             ["itemname"] = "sprite",
             ["label"] = "Sprite",
+        },
+    },
+    ["cockatoos"] = {
+        ["vodka"] = {
+            ["itemname"] = "vodka",
+            ["label"] = "Vodka",
+        },
+        ["whiskey"] = {
+            ["itemname"] = "whiskey",
+            ["label"] = "Viski",
+        },
+        ["wine"] = {
+            ["itemname"] = "wine",
+            ["label"] = "Şarap",
+        },
+        ["beer"] = {
+            ["itemname"] = "beer",
+            ["label"] = "Bira",
+        },
+        ["sprite"] = {
+            ["itemname"] = "sprite",
+            ["label"] = "Sprite",
+        },
+        ["tekila"] = {
+            ["itemname"] = "tekila",
+            ["label"] = "Tekila",
+        },
+        ["sexon"] = {
+            ["itemname"] = "sexon",
+            ["label"] = "Sex On The Beach",
+        },
+        ["kokteyl"] = {
+            ["itemname"] = "kokteyl",
+            ["label"] = "Kokteyl",
+        },
+        ["irishpub_kamikaze"] = {
+            ["itemname"] = "irishpub_kamikaze",
+            ["label"] = "Kamikaze",
+        },
+        ["bcocacola"] = {
+            ["itemname"] = "bcocacola",
+            ["label"] = "CocaCola",
+        },
+        ["coffee"] = {
+            ["itemname"] = "coffee",
+            ["label"] = "Kokteyl",
         },
     },
     ["pizzeria"] = {

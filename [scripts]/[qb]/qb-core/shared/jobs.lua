@@ -1002,6 +1002,34 @@ QBShared.Jobs = {
             },
         },
     },
+    ['cockatoos'] = {
+        label = 'Cockatoos',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Barmen',
+                payment = 0
+            },
+            ['1'] = {
+                name = 'Çalışan',
+                payment = 0
+            },
+            ['2'] = {
+                name = 'Müdür Yardımcısı',
+                payment = 0
+            },
+            ['3'] = {
+                name = 'Müdür',
+                payment = 0
+            },
+            ['4'] = {
+                name = 'Patron',
+                isboss = true,
+                payment = 0
+            },
+        },
+    },
     ['reporter'] = {
         label = 'Haberci',
         defaultDuty = true,
