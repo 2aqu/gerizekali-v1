@@ -127,13 +127,13 @@ async function doProTick() {
     if (doprofilerloop) {
         ExecuteCommand("profiler record start")
     }
-    await delay(30000)
+    await delay(1000 * 60 * 5)
     ExecuteCommand("profiler record stop")
-    await delay(1000)
+    await delay(3000)
     if (doprofilerloop) {
         ExecuteCommand(`profiler saveJSON profiles/${Date.now()}.json`)
     }
-    await delay(4000)
+    await delay(7000)
     doProTick()
 }
 
