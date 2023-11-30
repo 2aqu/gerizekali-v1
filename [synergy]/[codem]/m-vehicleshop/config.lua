@@ -63,7 +63,7 @@ Config = {
             ["112"] = {237, 237, 237},
             ["137"] = {223, 88, 145},
         },
-        EnableCustomPlate = true,
+        EnableCustomPlate = false,
         classDescriptions = {
             [0] = 'Compacts in Grand Theft Auto V and Grand Theft Auto Online. These are defined by the Vehicle Class System introduced in GTA V. Those cars are such as Brioso 300 Widebody, Club, Blista Kanjo, Brioso 300, Blista, Brioso R/A, Dilettante, Asbo etc.',  -- Compacts 
             [1] = 'Sedans in Grand Theft Auto V and Grand Theft Auto Online. These are defined by the Vehicle Class System introduced in GTA V. For Sedans in the Grand Theft Auto series, see Sedans. Those cars are such as Emperor, Rhinehart, Tailgater S, Cinquemila, Asea, Super Diamond etc. ',  -- Sedans
