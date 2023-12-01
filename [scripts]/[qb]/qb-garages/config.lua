@@ -77,6 +77,30 @@ Garages = {
       --     vector4(269.97, -322.62, 44.5, 248.07),
       -- }
     },
+    
+
+
+    ['custom2garage'] = {
+        ['Zone'] = {
+            ['Shape'] = {
+                vector2(-776.43524169922, -197.67544555664),
+                vector2(-780.75524902344, -189.99462890625),
+                vector2(-774.88916015625, -186.50576782227),
+                vector2(-769.66027832031, -193.71199035645)
+            },
+            ['minZ'] = 35.2,  -- min height of the parking zone
+            ['maxZ'] = 42.30,  -- max height of the parking zone
+        },
+        label = 'Garaj',
+        showBlip = true,
+        blipcoords = vector3(-775.93, -194.1, 37.28),
+        blipName = 'Garaj',
+        blipNumber = 357,
+        type = 'public',
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
+        drawText = '[F3] Garaj',
+        debug = false,
+    },
 
     ['eastcustomsgarage'] = {
         ['Zone'] = {

@@ -130,7 +130,7 @@ return {
 			{ loc = vector3(618.26, 16.09, 82.59), length = 1.0, width = 1.0, heading = 161.0, minZ = 80.5, maxZ = 84.0, distance = 1.5 },
 			{ loc = vector3(-449.63, 6015.55, 36.95), length = 1.0, width = 1.0, heading = 161.0, minZ = 34.5, maxZ = 38.0, distance = 1.5 },
 			{ loc = vector3(2528.8, -340.58, 101.85), length = 1.0, width = 1.0, heading = 161.0, minZ = 99.5, maxZ = 103.0, distance = 1.5 }, --muh
-			{ loc = vector3(-1620.94, -1027.68, 13.16), length = 1.0, width = 1.0, heading = 161.0, minZ = 12.5, maxZ = 14.0, distance = 1.5 }, --muh
+			{ loc = vector3(-1617.54, -1030.85, 13.18), length = 1.0, width = 1.0, heading = 161.0, minZ = 12.5, maxZ = 14.0, distance = 1.5 }, --dppd
 		}
 	},
 
@@ -291,7 +291,75 @@ return {
 		}
 	},
 
-	
+	terascafenew = {
+		name = 'Bar',
+		groups = {
+			['custom2'] = 0
+		}, inventory = {
+			{ name = 'beer', price = 0 },
+			{ name = 'tekila', price = 0 },
+			{ name = 'sexon', price = 0 },
+			{ name = 'vodka', price = 0 },
+			{ name = 'whiskey', price = 0 },
+			{ name = 'bespresso', price = 0 },
+			{ name = 'bhotchoc', price = 0 },
+			{ name = 'bcoldbrewlatte', price = 0 },
+			{ name = 'kizartma', price = 0 },
+			{ name = 'cikolatapasta', price = 0 },
+			{ name = 'bberrymuffin', price = 0 },
+			{ name = 'bdonut', price = 0 },
+			{ name = 'mojito', price = 0 },
+			{ name = 'grape', price = 0 },
+			{ name = 'wine', price = 0 },
+			{ name = 'grapejuice', price = 0 },
+			{ name = 'tekila', price = 0 },
+			{ name = 'snikkel_candy', price = 0 },
+			{ name = 'bapple', price = 0 },
+			{ name = 'bmuffin', price = 0 },
+			{ name = 'bchocolatemuffin', price = 0 },
+			{ name = 'sandwich', price = 0 }
+			
+		}, locations = {
+			vector3(-747.89, -215.61, 48.5)
+		}, targets = {
+			{ loc = vector3(-747.89, -215.61, 48.5), length = 2.0, width = 4.0, heading = 161.0, minZ = 46.5, maxZ = 52.0, distance = 1.5 },
+		}
+	},
+
+	rivercafe = {
+		name = 'Bar',
+		groups = {
+			['rivercafe'] = 0
+		}, inventory = {
+			{ name = 'beer', price = 0 },
+			{ name = 'tekila', price = 0 },
+			{ name = 'sexon', price = 0 },
+			{ name = 'vodka', price = 0 },
+			{ name = 'whiskey', price = 0 },
+			{ name = 'bespresso', price = 0 },
+			{ name = 'bhotchoc', price = 0 },
+			{ name = 'bcoldbrewlatte', price = 0 },
+			{ name = 'kizartma', price = 0 },
+			{ name = 'cikolatapasta', price = 0 },
+			{ name = 'bberrymuffin', price = 0 },
+			{ name = 'bdonut', price = 0 },
+			{ name = 'mojito', price = 0 },
+			{ name = 'grape', price = 0 },
+			{ name = 'wine', price = 0 },
+			{ name = 'grapejuice', price = 0 },
+			{ name = 'tekila', price = 0 },
+			{ name = 'snikkel_candy', price = 0 },
+			{ name = 'bapple', price = 0 },
+			{ name = 'bmuffin', price = 0 },
+			{ name = 'bchocolatemuffin', price = 0 },
+			{ name = 'sandwich', price = 0 }
+			
+		}, locations = {
+			vector3(680.0, -1648.15, 12.69)
+		}, targets = {
+			{ loc = vector3(680.0, -1648.15, 12.69), length = 2.0, width = 4.0, heading = 161.0, minZ = 10.5, maxZ = 16.0, distance = 1.5 },
+		}
+	},
 
 	luxery = {
 		name = 'Bar',

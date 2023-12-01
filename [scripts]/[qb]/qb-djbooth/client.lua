@@ -98,7 +98,7 @@ function createMusicMenu()
     }
 end
 
--- DJ Booths
+-- DJ Booths 
 
 local vanilla = BoxZone:Create(Config.Locations['vanilla'].coords, 1, 1, {
     name="vanilla",
@@ -108,6 +108,37 @@ local vanilla = BoxZone:Create(Config.Locations['vanilla'].coords, 1, 1, {
 vanilla:onPlayerInOut(function(isPointInside)
     if isPointInside and PlayerData.job.name == Config.Locations['vanilla'].job then
         currentZone = 'vanilla'
+        exports['qb-menu']:showHeader(musicHeader)
+    else
+        currentZone = nil
+        exports['qb-menu']:closeMenu()
+    end
+end)
+
+
+local custom2 = BoxZone:Create(Config.Locations['custom2'].coords, 1, 1, {
+    name="custom2",
+    heading=0,
+})
+
+custom2:onPlayerInOut(function(isPointInside)
+    if isPointInside and PlayerData.job.name == Config.Locations['custom2'].job then
+        currentZone = 'custom2'
+        exports['qb-menu']:showHeader(musicHeader)
+    else
+        currentZone = nil
+        exports['qb-menu']:closeMenu()
+    end
+end)
+
+local rivercafe = BoxZone:Create(Config.Locations['rivercafe'].coords, 1, 1, {
+    name="rivercafe",
+    heading=0,
+})
+
+rivercafe:onPlayerInOut(function(isPointInside)
+    if isPointInside and PlayerData.job.name == Config.Locations['rivercafe'].job then
+        currentZone = 'rivercafe'
         exports['qb-menu']:showHeader(musicHeader)
     else
         currentZone = nil

@@ -99,4 +99,16 @@ Config.Locations = {
         ['coords'] = vector3(-418.94, -27.6, 41.3), -- Where the booth is located vector3(-1603.87, -3012.62, -77.8)
         ['playing'] = false
     },
+    ['custom2'] = {
+        ['job'] = 'custom2', -- Required job to use booth
+        ['radius'] = 20, -- The radius of the sound from the booth
+        ['coords'] = vector3(-745.69, -229.23, 48.52), -- Where the booth is located vector3(-1603.87, -3012.62, -77.8)
+        ['playing'] = false
+    },
+    ['rivercafe'] = {
+        ['job'] = 'rivercafe', -- Required job to use booth
+        ['radius'] = 35, -- The radius of the sound from the booth
+        ['coords'] = vector3(679.11, -1644.56, 12.73), -- Where the booth is located vector3(-1603.87, -3012.62, -77.8)
+        ['playing'] = false
+    },
 }

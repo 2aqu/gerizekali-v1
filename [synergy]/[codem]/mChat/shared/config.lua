@@ -73,7 +73,7 @@ Config.DOProximityDist = 20.0
 Config.FloatMessage = 20.0 -- This Change distance for ME/DO Floating Messages
 
 
-Config.EnableAnonymousCommand = true
+Config.EnableAnonymousCommand = false
 
 Config.EnableRPNames = true -- if set to true displays rp names 
 

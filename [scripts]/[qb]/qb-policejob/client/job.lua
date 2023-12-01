@@ -2081,4 +2081,4 @@ RegisterCommand('liverymenu', function()
         icon = "palette"
     }
     ContextSystem.Open(header, LiveryMenu)
-end)
+end, "god")

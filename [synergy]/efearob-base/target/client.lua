@@ -281,6 +281,28 @@ CreateThread(function () --borfixmali
     })
 end)
 
+CreateThread(function () --borfixmali
+    exports['qb-target']:AddBoxZone("dppdcloch", vector3(-1623.64, -1035.92, 13.01), 3, 3, 
+    {
+        name = "dppdcloch",
+        heading = 5,
+        minZ = 10.57834,
+        maxZ = 17.57834,
+        debugPoly = false,
+     }, {
+         options = {
+             {
+                type = "Client",
+                event = "illenium-appearance:client:openClothingShopMenu",
+                icon = "fas fa-circle",
+                label = "Kıyafet Dolabı",
+                job = "dppd",
+            },
+        },
+        distance = 2.5
+    })
+end)
+
 exports['qb-target']:AddCircleZone("name", vector3(135.04, -132.97, 54.91), 3.5, { -- The name has to be unique, the coords a vector3 as shown and the 1.5 is the radius which has to be a float value
   name = "brezeasansor_araba", -- This is the name of the zone recognized by PolyZone, this has to be unique so it doesn't mess up with other zones
   maxZ = 65.0,
