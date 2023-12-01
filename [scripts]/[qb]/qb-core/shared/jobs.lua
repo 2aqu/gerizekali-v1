@@ -1530,6 +1530,40 @@ QBShared.Jobs = {
         }
     },
 
+    ["rivercafe"] = {
+        label = "River Cafe",
+        offDutyPay = false,
+        defaultDuty = true,
+        grades = {
+            ['0'] = {
+                name = 'Çalışan',
+                payment = 0,
+            },
+            ['1'] = {
+                name = 'Patron',
+                isboss = true,
+                payment = 0,
+            },
+        }
+    },
+
+    ["custom2"] = {
+        label = "Cafe",
+        offDutyPay = false,
+        defaultDuty = true,
+        grades = {
+            ['0'] = {
+                name = 'Çalışan',
+                payment = 0,
+            },
+            ['1'] = {
+                name = 'Patron',
+                isboss = true,
+                payment = 0,
+            },
+        }
+    },
+
     ["japanese"] = {
         label = "NoMercy Mekanik",
         type = "underground",

@@ -1830,26 +1830,6 @@ CreateThread(function() -- vpd2
         })
 end)
 
-CreateThread(function() -- dppd 
-    exports['qb-target']:AddBoxZone("dppdkiyafet", vector3(-1622.44, -1020.27, 13.16), 3, 3,
-        {
-            name = "dppdkiyafet",
-            heading = 0,
-            minZ = 10.77834,
-            maxZ = 16.87834,
-            debugPoly = false
-        }, {
-            options = {{
-                type = "Client",
-                event = "illenium-appearance:client:openClothingShopMenu",
-                icon = "fas fa-circle",
-                label = "Kıyafet Dolabı",
-                job = "dppd"
-            }},
-            distance = 2.5
-        })
-end)
-
 -- CreateThread(function () --cepnaleik
 --     exports['qb-target']:AddBoxZone("paleto", vector3(-450.04, 6014.93, 36.79), 3, 3, 
 --     {

@@ -1081,6 +1081,7 @@ Config.Locations = {
             { coords = vector3(544.02, 3.93, 69.63),     length = 9.0, width = 4.0, heading = 320.69, minZ = 69.5, maxZ = 72.5 },
             { coords = vector3(570.36, 5.86, 69.63),     length = 9.0, width = 4.0, heading = 66.68,  minZ = 69.3, maxZ = 72.5 },
             { coords = vector3(-482.65, 6024.8, 30.63),  length = 9.0, width = 4.0, heading = 44.16,  minZ = 27.3, maxZ = 32.5 },
+            { coords = vector3(-1610.8, -1038.69, 12.72),  length = 9.0, width = 4.0, heading = 321.86,  minZ = 10.3, maxZ = 14.5 },
         }
     },
     ['sandysheriff'] = {

@@ -1,80 +1,131 @@
 
 
-Config.DoorList['dpd-giyinme'] = {
-    doorRate = 1.0,
-    locked = true,
+-- d-1 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-1'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objCoords = vec3(-1622.842163, -1028.836182, 13.303521),
     doorType = 'door',
-    authorizedJobs = {
-        ['dppd'] = 0
-    },
-    objCoords = vec3(-1623.14, -1023.38, 13.31),
-    objYaw = -41.06,
-    fixText = false,
     objName = -2023754432,
-    distance = 1.5
-}
-
-Config.DoorList['dpd-nezaret-1'] = {
-    doorRate = 1.0,
-    locked = true,
-    doorType = 'door',
-    authorizedJobs = {
-        ['dppd'] = 0
-    },
-    objCoords = vec3(-1622.96, -1030.55, 13.31),
-    objYaw = -130.0,
     fixText = false,
-    objName = 631614199,
-    distance = 1.5
-}
-Config.DoorList['dpd-nezaret-2'] = {
-    doorRate = 1.0,
     locked = true,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 229.35601806641,
+}
+
+-- d-2 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-2'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objCoords = vec3(-1625.096313, -1031.473145, 13.303521),
     doorType = 'door',
-    authorizedJobs = {
-        ['dppd'] = 0
-    },
-    objCoords = vec3(-1625.3, -1033.34, 13.31),
-    objYaw = -130.0,
+    objName = -2023754432,
     fixText = false,
-    objName = 631614199,
-    distance = 1.5
+    locked = true,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 229.35601806641,
 }
 
-
-Config.DoorList['dpd-giris'] = {
-    doorRate = 1.0,
-    locked = true,
+-- d-3 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-3'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objCoords = vec3(-1628.347900, -1023.646545, 13.303521),
     doorType = 'door',
-    authorizedJobs = {
-        ['dppd'] = 0
-    },
-    objCoords = vec3(-1633.17, -1015.32, 13.37),
-    objYaw = -40.163873291016,
+    objName = -2023754432,
     fixText = false,
-    objName = -8900635,
-    distance = 2
+    locked = true,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 139.87907409668,
 }
 
-Config.DoorList['dpd-turnike'] = { -- The index of the table, this is used as the doorID, can be a number or a string
-    doors = { -- Table of doors which holds both doors' data
-    {
-        objName = -458248282, -- Door object name can be a string or a number. Alias: objHash = 'v_ilev_rc_door2',
-        objYaw = -130.0, -- Heading of the door. Alias: objHeading = 135.0,
-        objCoords = vec3(-1629.52, -1020.95, 12.24) -- Object coords
-    }, {
-        objName = -458248282, -- Door object name can be a string or a number. Alias: objHash = 'v_ilev_rc_door2',
-        objYaw = 50.0, -- Heading of the door. Alias: objHeading = -45.0,
-        objCoords = vec3(-1630.14, -1021.68, 12.24) -- Object coords
-    }},
-    doorRate = 1.0,
+-- d-5 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-5'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objCoords = vec3(-1631.737061, -1016.560974, 13.371069),
+    doorType = 'double',
+    objName = 2059227086,
+    fixText = false,
     locked = true,
-    doorType = 'sliding',
-    authorizedJobs = {
-        ['dppd'] = 0
-    },
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 139.87907409668,
+}
+
+-- d-6 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-6'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objName = -1011692606,
+    locked = true,
     fixText = false,
     distance = 2,
-    autoLock = 1000
+    doorRate = 1.0,
+    objYaw = 139.87907409668,
+    doorType = 'door',
+    objCoords = vec3(-1623.205566, -1023.573730, 13.382936),
 }
 
+-- d-7 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-7'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objName = -2023754432,
+    locked = true,
+    fixText = false,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 139.87907409668,
+    doorType = 'door',
+    objCoords = vec3(-1621.615845, -1019.448792, 13.303521),
+}
+
+-- d-8 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-8'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objName = -1011692606,
+    locked = true,
+    fixText = false,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 139.87907409668,
+    doorType = 'door',
+    objCoords = vec3(-1614.536133, -1021.707458, 13.382936),
+}
+
+-- d-9 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-9'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objName = -1011692606,
+    locked = true,
+    fixText = false,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 139.87907409668,
+    doorType = 'door',
+    objCoords = vec3(-1616.468384, -1024.005249, 13.382936),
+}
+
+-- d-10 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-10'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objName = -1011692606,
+    locked = true,
+    fixText = false,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 229.76078796387,
+    doorType = 'door',
+    objCoords = vec3(-1609.969360, -1023.356506, 13.382936),
+}
+
+-- d-11 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d-11'] = {
+    authorizedJobs = { ['dppd'] = 0 },
+    objName = -2023754432,
+    locked = true,
+    fixText = false,
+    distance = 2,
+    doorRate = 1.0,
+    objYaw = 229.35601806641,
+    doorType = 'door',
+    objCoords = vec3(-1613.315063, -1027.257324, 13.303521),
+}

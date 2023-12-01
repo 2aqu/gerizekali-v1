@@ -223,55 +223,55 @@ StopNoClip = function()
 end
 
 ToggleNoClip = function(state)
---     IsNoClipping = state or not IsNoClipping
---     PlayerPed    = PlayerPedId()
---     PlayerIsInVehicle = IsPedInAnyVehicle(PlayerPed, false)
---     if PlayerIsInVehicle ~= 0 and IsPedDrivingVehicle(PlayerPed, GetVehiclePedIsIn(PlayerPed, false)) then
---         NoClipEntity = GetVehiclePedIsIn(PlayerPed, false)
---         SetVehicleEngineOn(NoClipEntity, not IsNoClipping, true, IsNoClipping)
---         NoClipAlpha = PedFirstPersonNoClip == true and 0 or 51
---     else
---         NoClipEntity = PlayerPed
---         NoClipAlpha = VehFirstPersonNoClip == true and 0 or 51
---     end
+    IsNoClipping = state or not IsNoClipping
+    PlayerPed    = PlayerPedId()
+    PlayerIsInVehicle = IsPedInAnyVehicle(PlayerPed, false)
+    if PlayerIsInVehicle ~= 0 and IsPedDrivingVehicle(PlayerPed, GetVehiclePedIsIn(PlayerPed, false)) then
+        NoClipEntity = GetVehiclePedIsIn(PlayerPed, false)
+        SetVehicleEngineOn(NoClipEntity, not IsNoClipping, true, IsNoClipping)
+        NoClipAlpha = PedFirstPersonNoClip == true and 0 or 51
+    else
+        NoClipEntity = PlayerPed
+        NoClipAlpha = VehFirstPersonNoClip == true and 0 or 51
+    end
 
---     if IsNoClipping then
---         TriggerServerEvent('qb-admin:server:SendLog', 'noclip', 'green', 'No-Clip açtı.')
---         FreezeEntityPosition(PlayerPed)
---         SetupCam()
---         PlaySoundFromEntity(-1, "SELECT", PlayerPed, "HUD_LIQUOR_STORE_SOUNDSET", 0, 0)
+    if IsNoClipping then
+        TriggerServerEvent('qb-admin:server:SendLog', 'noclip', 'green', 'No-Clip açtı.')
+        FreezeEntityPosition(PlayerPed)
+        SetupCam()
+        PlaySoundFromEntity(-1, "SELECT", PlayerPed, "HUD_LIQUOR_STORE_SOUNDSET", 0, 0)
 
---         if not PlayerIsInVehicle then
---             ClearPedTasksImmediately(PlayerPed)
---             if PedFirstPersonNoClip then
---                 Citizen.Wait(100) -- Wait for the cinematic effect of the camera transitioning into first person 
---             end
---         else
---             if VehFirstPersonNoClip then
---                 Citizen.Wait(100) -- Wait for the cinematic effect of the camera transitioning into first person 
---             end
---         end
+        if not PlayerIsInVehicle then
+            ClearPedTasksImmediately(PlayerPed)
+            if PedFirstPersonNoClip then
+                Citizen.Wait(100) -- Wait for the cinematic effect of the camera transitioning into first person 
+            end
+        else
+            if VehFirstPersonNoClip then
+                Citizen.Wait(100) -- Wait for the cinematic effect of the camera transitioning into first person 
+            end
+        end
 
---     else
---         TriggerServerEvent('qb-admin:server:SendLog', 'noclip', 'yellow', 'No-Clip kapattı.')
---         local groundCoords      = GetGroundCoords(GetEntityCoords(NoClipEntity))
---         --SetEntityCoords(NoClipEntity, groundCoords.x, groundCoords.y, groundCoords.z)
---         Citizen.Wait(50)
---         DestroyCamera()
---         PlaySoundFromEntity(-1, "CANCEL", PlayerPed, "HUD_LIQUOR_STORE_SOUNDSET", 0, 0)
---     end
+    else
+        TriggerServerEvent('qb-admin:server:SendLog', 'noclip', 'yellow', 'No-Clip kapattı.')
+        local groundCoords      = GetGroundCoords(GetEntityCoords(NoClipEntity))
+        --SetEntityCoords(NoClipEntity, groundCoords.x, groundCoords.y, groundCoords.z)
+        Citizen.Wait(50)
+        DestroyCamera()
+        PlaySoundFromEntity(-1, "CANCEL", PlayerPed, "HUD_LIQUOR_STORE_SOUNDSET", 0, 0)
+    end
     
---     QBCore.Functions.Notify(IsNoClipping and Lang:t("success.noclip_enabled") or Lang:t("success.noclip_disabled"))
---     SetUserRadioControlEnabled(not IsNoClipping)
+    QBCore.Functions.Notify(IsNoClipping and Lang:t("success.noclip_enabled") or Lang:t("success.noclip_disabled"))
+    SetUserRadioControlEnabled(not IsNoClipping)
    
---     if IsNoClipping then
---         RunNoClipThread()
---     end
+    if IsNoClipping then
+        RunNoClipThread()
+    end
 end
 
 RegisterNetEvent('qb-admin:client:ToggleNoClip', function()
-    QBCore.Functions.Notify("Noclip açamazsın yasak kankss -arob") -- opti
-    --ToggleNoClip(not IsNoClipping)
+    --QBCore.Functions.Notify("Noclip açamazsın yasak kankss -arob") -- opti
+    ToggleNoClip(not IsNoClipping)
 end)
 
 AddEventHandler('onResourceStop', function(resourceName)

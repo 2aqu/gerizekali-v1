@@ -331,19 +331,6 @@ Config.Stores = {
         }
     },
     {
-        type = "clothing", --dppd
-        coords = vec(-1616.85, -1023.95, 13.16),
-        size = vector3(4, 4, 4),
-        rotation = 45,
-        usePoly = false,
-        points = {
-            vector3(-1615.75, -1027.94, 13.16),
-            vector3(-1618.86, -1025.37, 13.16),
-            vector3(-1615.94, -1021.81, 13.16),
-            vector3(-1613.06, -1024.24, 13.16)
-        }
-    },
-    {
         type = "clothing",
         coords = vector4(1191.61, 2710.91, 38.22, 269.96),
         size = vector3(4, 4, 4),
