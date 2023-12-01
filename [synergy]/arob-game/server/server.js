@@ -39,7 +39,7 @@ on("playerJoining", (oldId) => {
     const member = z.bot.getMemberFromSource(source);
     if (z.config.EnableAutoAcePermissions) {
         for (const [group, role] of Object.entries(z.config.AutoAcePermissions)) {
-            if (z.bot.isRolePresent(member, role)) { 
+            if (z.bot.isRolePresent(member, role)) {
                 ExecuteCommand(`add_principal "player.${source}" "${group}"`);
             }
         }
@@ -74,19 +74,19 @@ if (z.config.EnableStaffChatForwarding) {
     RegisterCommand("stafftoggle", (source, args, raw) => {
         if (IsPlayerAceAllowed(source, "arobigdo.staffchat")) {
             ExecuteCommand(`remove_principal "player.${source}" group.arobigdostaff`);
-            z.utils.chatMessage(source, z.locale.staffchat, "Staff chat disabled.", { color: [ 255, 255, 0 ] });
+            z.utils.chatMessage(source, z.locale.staffchat, "Staff chat disabled.", { color: [255, 255, 0] });
         } else {
             const member = z.bot.getMemberFromSource(source);
             if (z.bot.isRolePresent(member, z.config.StaffChatRoleIds)) {
                 ExecuteCommand(`add_principal "player.${source}" group.arobigdostaff`);
-                z.utils.chatMessage(source, z.locale.staffchat, "Staff chat enabled.", { color: [ 255, 255, 0 ] });
+                z.utils.chatMessage(source, z.locale.staffchat, "Staff chat enabled.", { color: [255, 255, 0] });
             }
         }
     }, false);
 
     setImmediate(() => {
         emit("chat:addSuggestion", "/staff", "Send message to other staff (Staff only)", [
-            { name:"Message", help:"Message to send to other staff" },
+            { name: "Message", help: "Message to send to other staff" },
         ]);
         emit("chat:addSuggestion", "/stafftoggle", "Toggle staff chat messages", []);
     });
@@ -110,3 +110,4 @@ global.exports("getName", (identifier) => {
 global.exports("getDiscordId", (identifier) => {
     return z.utils.getPlayerDiscordId(identifier);
 });
+
