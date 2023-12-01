@@ -254,6 +254,32 @@ return {
 		}
 	},
 
+
+	wubar = {
+		name = 'Bar',
+		groups = {
+			['wutang'] = 0
+		}, inventory = {
+			{ name = 'beer', price = 100 },
+			{ name = 'tekila', price = 100 },
+			{ name = 'sexon', price = 100 },
+			{ name = 'vodka', price = 100 },
+			{ name = 'whiskey', price = 100 },
+			{ name = 'bespresso', price = 100 },
+			{ name = 'bhotchoc', price = 100 },
+			{ name = 'bcoldbrewlatte', price = 100 },
+			{ name = 'kizartma', price = 100 },
+			{ name = 'cikolatapasta', price = 100 },
+			{ name = 'bberrymuffin', price = 100 },
+			{ name = 'donut', price = 100 },
+
+			
+		}, locations = {
+			vector3(1.45, -1817.67, 30.96)
+		}, targets = {
+			{ loc = vector3(1.45, -1817.67, 30.96), length = 2.0, width = 4.0, heading = 161.0, minZ = 28.5, maxZ = 33.0, distance = 1.5 }
+		}
+	},
 	
 	customcafe = {
 		name = 'Bar',

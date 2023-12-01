@@ -167,29 +167,6 @@
         "ip": "176.33.247.38",
         "reason": "No Reason Specified"
     },
-    "176": {
-        "ip": "188.119.27.115",
-        "license": "license:947828d07cab11872ab201dc39a1c3946d776741",
-        "manual": false,
-        "tokens": [
-            "3:c0bb90e9a00bba44ac743cd13b477eaa8db8e458a032da8ad75d694a0bd2d155",
-            "4:42f5aad52f4a21ad4ad26647ba11688452009cdef8409e55867698a091b1fbc5",
-            "4:23d97d03dca811b4371c510f8fc3b4dc73b1eaa0ae29c31d3a9ce63b817e407d",
-            "4:8303496c3c25aa96fd475911277e5030383e2512c6cecd794fc84aaff01ee24f"
-        ],
-        "discord": "389401829009522711",
-        "steam": "steam:11000010e6dd312",
-        "live": "live:1688850641558636",
-        "name": "nimrod",
-        "fg_ts": {
-            "t4": "14213790161854498102",
-            "t2": "623423e7:091f0663:187d77e6:780e3c03",
-            "t1": "95bd7151a7535b72cc5afa65e09fd798f062625e5c093a353fb6160c7aedd263",
-            "t3": "Br1tMjjqdxmuOMC7tXsNyKZ0BBcpoKA0"
-        },
-        "reason": "ClearPedTasksImmediately detected, distance: 30.765441894531",
-        "xbl": "Invalid"
-    },
     "134": {
         "xbl": "Invalid",
         "license": "license:9952d07f40d07991d2f838be5d7bfcfc3c3f5d69",
