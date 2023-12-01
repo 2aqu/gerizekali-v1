@@ -374,7 +374,7 @@ busi.IcecekListesi = {
         },
         ["coffee"] = {
             ["itemname"] = "coffee",
-            ["label"] = "Kokteyl",
+            ["label"] = "Kahve",
         },
     },
     ["pizzeria"] = {
@@ -713,6 +713,8 @@ local activejobs = {
     ["pizeria"] = true,
     ["burgershot"] = true,
     ["pearls"] = true,
+    ["cockatoos"] = true,
+    ["luxery"] = true,
 }
 
 RegisterCommand('isletmemenu', function()

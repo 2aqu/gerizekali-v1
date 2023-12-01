@@ -527,17 +527,17 @@ AddEventHandler('onResourceStart', function(resourceName)
 end)
 
 RegisterNetEvent('police:server:policeAlert', function(text)
-    local src = source
-    local ped = GetPlayerPed(src)
-    local coords = GetEntityCoords(ped)
-    local players = QBCore.Functions.GetQBPlayers()
-    for _, v in pairs(players) do
-        if v and v.PlayerData.job.type == "leo" and v.PlayerData.job.onduty then
-            local alertData = {title = Lang:t('info.new_call'), coords = {x = coords.x, y = coords.y, z = coords.z}, description = text}
-            TriggerClientEvent("qb-phone:client:addPoliceAlert", v.PlayerData.source, alertData)
-            TriggerClientEvent('police:client:policeAlert', v.PlayerData.source, coords, text)
-        end
-    end
+   -- local src = source
+   -- local ped = GetPlayerPed(src)
+   -- local coords = GetEntityCoords(ped)
+   -- local players = QBCore.Functions.GetQBPlayers()
+   -- for _, v in pairs(players) do
+   --     if v and v.PlayerData.job.type == "leo" and v.PlayerData.job.onduty then
+   --         local alertData = {title = Lang:t('info.new_call'), coords = {x = coords.x, y = coords.y, z = coords.z}, description = text}
+   --         TriggerClientEvent("qb-phone:client:addPoliceAlert", v.PlayerData.source, alertData)
+   --         TriggerClientEvent('police:client:policeAlert', v.PlayerData.source, coords, text)
+   --     end
+   -- end
 end)
 
 RegisterNetEvent('police:server:TakeOutImpound', function(plate, garage)
