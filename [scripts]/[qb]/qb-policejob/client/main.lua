@@ -288,3 +288,31 @@ CreateThread(function()
         Wait(3000)
     end
 end)
+
+RegisterNetEvent('police:client:LockBroke', function ()
+    local vehicle = QBCore.Functions.GetClosestVehicle()
+    local vehCoords = GetEntityCoords(vehicle)
+    local pos = GetEntityCoords(PlayerPedId())
+    local nearby = #(pos - vehCoords) <= 3.5
+    if nearby then
+        print(vehicle)
+        QBCore.Functions.Progressbar("reful_boat", "Aracın Kilidini Açıyorsun...", 2000, false, true, {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, 
+        {
+            animDict = "veh@break_in@0h@p_m_one@",
+            anim = "low_force_entry_ds",
+            flags = 16,
+        }, {}, {}, function() -- Done
+            TriggerServerEvent('qb-vehiclekeys:server:setVehLockState', NetworkGetNetworkIdFromEntity(vehicle), 1)
+            QBCore.Functions.Notify('Aracın Kilidini Açtın!', 'succses')
+        end, function() -- Cancel
+            QBCore.Functions.Notify('İptal Edildi!', 'error')
+        end)
+    else
+        QBCore.Functions.Notify("Bir aracın yakınında değilsin", "error")
+    end
+end)

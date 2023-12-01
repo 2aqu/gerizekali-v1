@@ -1644,6 +1644,21 @@ if Config.UseTarget then
             }}
         })
 
+        AddTargetBone('seat_dside_f', {
+            Options = {{
+                icon = 'fa-solid fa-car-burst',
+                label = "Kiliti Kır",
+                canInteract = function()
+                    if PlayerJob.type == "leo" then
+                        return true
+                    end
+                end,
+                action = function()
+                    TriggerEvent("police:client:LockBroke")
+                end
+            }}
+        })
+
     end)
 
 else
@@ -1850,67 +1865,66 @@ else
         end
     end)
 
-    RegisterCommand('arobarac', function()
-        print("sa")
-        TriggerEvent('police:client:LockBroke')
-    end)
 
-    RegisterNetEvent('police:client:LockBroke', function()
-        print("Çalıştım")
-        local vehicle = QBCore.Functions.GetClosestVehicle()
-        if vehicle ~= 0 and vehicle then
-            print("Geldim")
-            local ped = PlayerPedId()
-            local pos = GetEntityCoords(ped)
-            local vehpos = GetEntityCoords(vehicle)
-            if #(pos - vehpos) < 5.0 and not IsPedInAnyVehicle(ped) then
-                QBCore.Functions.Progressbar('impound', "Araç kilidi kırılıyor...", 5000, false, true, {
-                    disableMovement = true,
-                    disableCarMovement = true,
-                    disableMouse = false,
-                    disableCombat = true
-                }, {
-                    animDict = 'missheistdockssetup1clipboard@base',
-                    anim = 'base',
-                    flags = 1
-                }, {
-                    model = 'prop_notepad_01',
-                    bone = 18905,
-                    coords = {
-                        x = 0.1,
-                        y = 0.02,
-                        z = 0.05
-                    },
-                    rotation = {
-                        x = 10.0,
-                        y = 0.0,
-                        z = 0.0
-                    }
-                }, {
-                    model = 'prop_pencil_01',
-                    bone = 58866,
-                    coords = {
-                        x = 0.11,
-                        y = -0.02,
-                        z = 0.001
-                    },
-                    rotation = {
-                        x = -120.0,
-                        y = 0.0,
-                        z = 0.0
-                    }
-                }, function() -- Play When Done
-                    TriggerServerEvent('qb-vehiclekeys:server:setVehLockState', NetworkGetNetworkIdFromEntity(vehicle),
-                        1)
-                    SetPedIntoVehicle(ped, vehicle, -1)
-                    TriggerEvent('QBCore:Notify', "Araç kilidi başarıyla kırıldı.", 'success')
-                end, function() -- Play When Cancel
-                    ClearPedTasks(ped)
-                    TriggerEvent('QBCore:Notify', Lang:t('error.canceled'), 'error')
-                end)
-            end
-        end
-    end)
+    
+   
+
+    -- RegisterNetEvent('police:client:LockBrokes', function()
+    --     print("Çalıştım")
+    --     local vehicle = QBCore.Functions.GetClosestVehicle()
+    --     if vehicle ~= 0 and vehicle then
+    --         print("Geldim")
+    --         local ped = PlayerPedId()
+    --         local pos = GetEntityCoords(ped)
+    --         local vehpos = GetEntityCoords(vehicle)
+    --         if #(pos - vehpos) < 5.0 and not IsPedInAnyVehicle(ped) then
+    --             QBCore.Functions.Progressbar('impound', "Araç kilidi kırılıyor...", 5000, false, true, {
+    --                 disableMovement = true,
+    --                 disableCarMovement = true,
+    --                 disableMouse = false,
+    --                 disableCombat = true
+    --             }, {
+    --                 animDict = 'missheistdockssetup1clipboard@base',
+    --                 anim = 'base',
+    --                 flags = 1
+    --             }, {
+    --                 model = 'prop_notepad_01',
+    --                 bone = 18905,
+    --                 coords = {
+    --                     x = 0.1,
+    --                     y = 0.02,
+    --                     z = 0.05
+    --                 },
+    --                 rotation = {
+    --                     x = 10.0,
+    --                     y = 0.0,
+    --                     z = 0.0
+    --                 }
+    --             }, {
+    --                 model = 'prop_pencil_01',
+    --                 bone = 58866,
+    --                 coords = {
+    --                     x = 0.11,
+    --                     y = -0.02,
+    --                     z = 0.001
+    --                 },
+    --                 rotation = {
+    --                     x = -120.0,
+    --                     y = 0.0,
+    --                     z = 0.0
+    --                 }
+    --             }, function() -- Play When Done
+    --                 TriggerServerEvent('qb-vehiclekeys:server:setVehLockState', NetworkGetNetworkIdFromEntity(vehicle),
+    --                     1)
+    --                 SetPedIntoVehicle(ped, vehicle, -1)
+    --                 TriggerEvent('QBCore:Notify', "Araç kilidi başarıyla kırıldı.", 'success')
+    --             end, function() -- Play When Cancel
+    --                 ClearPedTasks(ped)
+    --                 TriggerEvent('QBCore:Notify', Lang:t('error.canceled'), 'error')
+    --             end)
+    --         end
+    --     end
+    -- end)
 
     -- Police Garage
     local garageZones = {}
