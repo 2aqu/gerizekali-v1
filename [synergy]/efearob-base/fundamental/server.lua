@@ -34,23 +34,3 @@ RegisterNetEvent('arob:removeitem', function(name, amount, slot)
     xPlayer.Functions.RemoveItem(name, miktar, slot)
 end)
 
-
-Citizen.CreateThread(function()
-    while true do
-        Wait(0)
-        TriggerClientEvent("eeeeee", -1, "eeee")
-    end
-end)
-
-Citizen.CreateThread(function()
-    while true do
-        Wait(0)
-        TriggerClientEvent("eeeeee", -1, "eeee")
-    end
-end)
-Citizen.CreateThread(function()
-    while true do
-        Wait(0)
-        TriggerClientEvent("eeeeee", -1, "eeee")
-    end
-end)
