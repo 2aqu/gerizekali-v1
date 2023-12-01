@@ -71,30 +71,30 @@
         },
         "live": "Invalid"
     },
-    "162": {
-        "live": "live:844426045434720",
-        "discord": "1104752474985865356",
+    "171": {
+        "live": "Invalid",
+        "discord": "373774174310891521",
         "tokens": [
-            "5:6c1bf336e26a92896b740ff0e8b32cd826e6f83d2a6188ebb0d6dadf10a5fa47",
-            "2:458b8019b8b1b3d23af51a20f4fba52a15a08127967c3b98d3f8611d4f6070ec",
-            "3:c2cdcaddfeec69f402d8f3b122b08798f956d7361430d9ca49949d755c84d7c2",
-            "4:4ed266d90ef0ed95a5f1b30cbb315a31382a569b57deb038d82b3d1714c9dc7a",
-            "4:d746c69c4e0e69a53fe98d570856eb584e624e2f40211d4970622c91735eb789",
-            "4:c6295f147043750752f2ccab2697606f4a4fdc57d555c0c02b12599c582f05f1"
+            "3:6bbf1baf9500d340b78a946310e6068dd9452c53c6e56d058b2e51bb6c1976df",
+            "5:61012f90e16a673202ffe6991f79ac129b37a36a6415d75860d3f4acb5f4eb63",
+            "2:cd8800cefb49ecdc34474460f8f1c09ddad4fff0c278e9844ea5fdcfcb5e9d06",
+            "4:cbf5d345e6c60eccaf4e9d60784c6fc7f9d101185f1c2b7c00cf96ef218206b5",
+            "4:641cb0722b4873969efa76e4a5e0234c15184007a08ba7eafbc658368b5cc559",
+            "4:9f73ec6ca216f1f90a78ae07190ff546183205e6475774cfe423517bc363d0e5"
         ],
-        "steam": "steam:110000149cf2bd9",
-        "ip": "85.99.187.235",
-        "xbl": "xbl:2535451434755515",
-        "reason": "Spawned: 5 vehicles in 15 seconds",
-        "license": "license:db24b970756619b9eb77b6b74712e4ecc53669a0",
-        "name": "Ecel",
+        "steam": "steam:110000146583795",
+        "ip": "78.173.74.201",
+        "xbl": "Invalid",
+        "reason": "No Reason Specified",
+        "license": "license:adb1e9d5e878fe79e0916528cddb21ebc97859ff",
+        "name": "etemhuu",
         "fg_ts": {
-            "t4": "19269431941300185672",
-            "t1": "58f57df927df958d3c1f54bfdf2783d384ca4a9278b2e6db6c7c6e9339d7a49d",
-            "t3": "MNReTc4LbrcGOIoRzMQ8yzsJVbCdAxbE",
-            "t2": "bf2bbd5c:059da532:129ae326:439c213f:93f4ee6b:30295fba"
+            "t4": "11040374191157442231",
+            "t1": "d65df022311067f4f971ff6ab9c91db1c16e6ad455c79283076addb6b03a6467",
+            "t3": "XUEaQA4rtYUV2A4QSCt667nT0loE9vMg",
+            "t2": "7a59345d:c99419f0:56232fb5"
         },
-        "manual": false
+        "manual": true
     },
     "80": {
         "manual": false,
@@ -120,29 +120,28 @@
         },
         "live": "live:914798722184719"
     },
-    "97": {
-        "manual": true,
-        "discord": "320245308665888770",
+    "38": {
+        "manual": false,
+        "discord": "728230551181328595",
         "tokens": [
-            "2:0b95e94b50cc2b2c5d8bf1a5fd4eea2c1b6c9826ba4659c4ecfc96dc516de974",
-            "5:9282b4c7e0011fef151cd7961bcbc8386b3eb46d9bd4079ee2a1f8c76a7892d4",
-            "4:303bad5308f003ab4c6937507087c3987107544b112542a561a570e69f9e7a7d",
-            "4:6e535310367b2e0f17a68aec69f7a984d69808d14a0cbcbd63eba28696c4407f",
-            "4:882dffbb36da4903b40b91a5c7e133fdf5b99534366889cd53ab81069c572185"
+            "3:c7a592e6efd4dbd614d83f05d635a5735daa8acc9d8ad34b763082d0f25b6c73",
+            "2:3f4a085e45a9d7555d2791b7fe4c954b8bda316358378ee555d6ecbaa45de77b",
+            "4:7f5d3d8ad7b8cfec206010cf41bfd4cd768b372cd97a0069ab89d8a12006244a",
+            "4:2720d9bd87fd110b6ed0cc64a33dd14b1fb2a2d16f3ea6995fb7c43ec05bd14b",
+            "4:b95879041764fb46709e551abb76653080a6b8914988631d73329526d72f9f23"
         ],
-        "steam": "steam:11000011a214685",
-        "ip": "159.146.18.86",
-        "xbl": "xbl:2535434212331019",
-        "reason": "xd",
-        "license": "license:044de4eb2ec207b49b10f578ba4eb2623a99d899",
-        "name": "Bearnus",
+        "steam": "steam:110000148ca4426",
+        "ip": "85.104.70.81",
+        "xbl": "Invalid",
+        "reason": "Tried to Trigger Safe Event (1): utk_fh:rewardCash",
+        "license": "license:b9ccd50542d450e39ca324c84328288b6c789cbc",
+        "name": "Suiki",
         "fg_ts": {
-            "t1": "8d4442cd1a5aabcb52ddd491c09cb883d26bcdea89ef9ed9f294c21334b2f9a1",
-            "t4": "11206774111700609201",
-            "t3": "yHVmSZ162FUKOUxIy9HPjEA3JZDSSEme",
-            "t2": "603317f8:1af75e9d:82a8ace3:3b031609"
+            "t1": "4221f82ec5d9cfa9d59783166c961325c1dc1ece3edff95f6473232a6a12d380",
+            "t3": "wR08QFlKbOAEBdB2KKoJAhcTN9eLZrZh",
+            "t2": "a577f0c4:a04ed44e:1af75e9d:0398f103:1ef082e5"
         },
-        "live": "live:1899943482487686"
+        "live": "Invalid"
     },
     "95": {
         "manual": false,
@@ -169,52 +168,47 @@
         },
         "live": "live:1055518741113990"
     },
-    "105": {
+    "97": {
         "manual": true,
-        "discord": "978652128497262632",
+        "discord": "320245308665888770",
         "tokens": [
-            "2:2a51c7dcb93d056266b4969be5108a5022f3f7f63e18b761a6ced782c837de90",
-            "4:c56a0e95ab5e9ccbc03983cbb1d639a46d3d3efffa06e8e3ddd4a8b329b3bbbb",
-            "4:2903a919cdae6e0d71e9cb1e67e524ac8f5ab72b043ec52561866f99ca8af1d8",
-            "4:a8bb46930ad31d854326686ca4db1e882f5b88d538a6ce07d510bb20518615c8"
+            "2:0b95e94b50cc2b2c5d8bf1a5fd4eea2c1b6c9826ba4659c4ecfc96dc516de974",
+            "5:9282b4c7e0011fef151cd7961bcbc8386b3eb46d9bd4079ee2a1f8c76a7892d4",
+            "4:303bad5308f003ab4c6937507087c3987107544b112542a561a570e69f9e7a7d",
+            "4:6e535310367b2e0f17a68aec69f7a984d69808d14a0cbcbd63eba28696c4407f",
+            "4:882dffbb36da4903b40b91a5c7e133fdf5b99534366889cd53ab81069c572185"
         ],
-        "steam": "steam:11000013c6c5a3a",
-        "ip": "85.101.4.141",
-        "xbl": "Invalid",
+        "steam": "steam:11000011a214685",
+        "ip": "159.146.18.86",
+        "xbl": "xbl:2535434212331019",
         "reason": "xd",
-        "license": "license:407e1aa591425b275a1646bef5bf0cc187276a62",
-        "name": "Binbaşı",
+        "license": "license:044de4eb2ec207b49b10f578ba4eb2623a99d899",
+        "name": "Bearnus",
         "fg_ts": {
-            "t1": "4e3827691d8f8fea834284fa1987f88153ca4417863eaff78222d1e1d185c1bf",
-            "t4": "19074611671308942522",
-            "t3": "hbS2U1TvzqR8gGcVhZYTlpRVQaLEcNU2",
-            "t2": "0e81d39c:e995221c"
+            "t1": "8d4442cd1a5aabcb52ddd491c09cb883d26bcdea89ef9ed9f294c21334b2f9a1",
+            "t4": "11206774111700609201",
+            "t3": "yHVmSZ162FUKOUxIy9HPjEA3JZDSSEme",
+            "t2": "603317f8:1af75e9d:82a8ace3:3b031609"
         },
-        "live": "Invalid"
+        "live": "live:1899943482487686"
     },
-    "100": {
-        "manual": true,
-        "discord": "277541203166101508",
+    "117": {
+        "manual": false,
+        "discord": "1144641775357657229",
         "tokens": [
-            "5:56047e077cae1c6409bced3e41bcd4adc672bfde216e93ce4fe935ea7e36951e",
-            "2:d6fa8e4d203bf51231752f488e62a0284d696c13d8ff0f414887c6cd2ba58990",
-            "4:13303ba86ae30e88a65b51716edc382192171e4c3cb5e16e01eb4177d666bfaf",
-            "4:2b740c5f3f8c328b685099476d9b976deabac993fc9dc7ec316c1ce7c9edc2e9",
-            "4:4822cd38e1dd5487e4233325b677797a0a712d2e46924f1df73db6d9a8a97a6c"
+            "2:d8e010fb1e12dddb71bdabc3c741c98dd760a2d6dbfb49a773102966256a0616",
+            "3:09ee995efe018046823534a84895e954b87b9fbe8ca5754f57a6a9a6d7409059",
+            "4:d7846681d39cb266ff852663ff64bc7970557a81b38293266ccc53620305d5e2",
+            "4:d669fea869d3579603fcc14072054795a1aadf2b26bbf21ea88ab2d69c71b7d3",
+            "4:b39e10158785bf74fe614c67722ca4727d9fc54fa9f5bcf06b8dc62f9c938539"
         ],
-        "steam": "steam:1100001118c565d",
-        "ip": "46.1.110.16",
-        "xbl": "xbl:2535436964616549",
-        "reason": "xd",
-        "license": "license:1976236917050e7dafd84b5d0d595234c5d92a2f",
-        "name": "Zagabumbale banditcamp.com",
-        "fg_ts": {
-            "t1": "b1d1d66da194d012cf24e111388e7f7db354da4f42deb927a76edbacad31cf45",
-            "t4": "14843088091839986056",
-            "t3": "M2Ua6fQOiO8mKa8UUSia29FecJXi7zdB",
-            "t2": "f5f042a0:32b446cc:0da651dc:b898a84f:69a4a77c:4716cf24:ef3ac042:a0a97502:33549c6e"
-        },
-        "live": "live:914798404224825"
+        "steam": "Invalid",
+        "ip": "88.230.60.239",
+        "xbl": "xbl:2535438779664429",
+        "reason": "Citizen Give Weapons Detected: WEAPON_APPISTOL",
+        "license": "license:8ab27bddb31599d4e4c7774d89799b01f98648b5",
+        "name": "batuy",
+        "live": "live:985158117520218"
     },
     "156": {
         "live": "live:985155715411525",
@@ -311,29 +305,29 @@
         },
         "live": "Invalid"
     },
-    "134": {
+    "100": {
         "manual": true,
-        "discord": "832359008471744573",
+        "discord": "277541203166101508",
         "tokens": [
-            "3:5e499e41b004e610983bec4ba9b1fc46fe475e4dfc1a180e3645f59470969e31",
-            "2:9490c660450ca569abe1aaa7991e47943330fd40f329bb5d304a7de59ae5a813",
-            "4:3eeb34d6b9ecd92d6dc477df45ff3981e9e73cec3deac74a762069938047ac15",
-            "4:957640471e0ed4c1d5a115252c6b112a11b835f17f55363b5caf75ea03ebd0ea",
-            "4:ff3b588f27b99bb6ee5454166610b997670a5087790a67977d3b0ce3f728d401"
+            "5:56047e077cae1c6409bced3e41bcd4adc672bfde216e93ce4fe935ea7e36951e",
+            "2:d6fa8e4d203bf51231752f488e62a0284d696c13d8ff0f414887c6cd2ba58990",
+            "4:13303ba86ae30e88a65b51716edc382192171e4c3cb5e16e01eb4177d666bfaf",
+            "4:2b740c5f3f8c328b685099476d9b976deabac993fc9dc7ec316c1ce7c9edc2e9",
+            "4:4822cd38e1dd5487e4233325b677797a0a712d2e46924f1df73db6d9a8a97a6c"
         ],
-        "steam": "steam:110000144592dfc",
-        "ip": "78.175.255.247",
-        "xbl": "Invalid",
-        "reason": "No Reason Specified",
-        "license": "license:9952d07f40d07991d2f838be5d7bfcfc3c3f5d69",
-        "name": "hiç bir şey yapaman",
+        "steam": "steam:1100001118c565d",
+        "ip": "46.1.110.16",
+        "xbl": "xbl:2535436964616549",
+        "reason": "xd",
+        "license": "license:1976236917050e7dafd84b5d0d595234c5d92a2f",
+        "name": "Zagabumbale banditcamp.com",
         "fg_ts": {
-            "t1": "9ee6a3f31437683cba41ac8a4e9fbcdc3d65a8a7005be2d67073d79dd2ade95e",
-            "t4": "11256940201382784083",
-            "t3": "uIa3dy5O1Yz2TI2xfFpJoyd2KRq3AteA",
-            "t2": "90d37f23:04aae51a:286aa857:0cad9a11:1af75e9d:15ee8def:7dbccf2d"
+            "t1": "b1d1d66da194d012cf24e111388e7f7db354da4f42deb927a76edbacad31cf45",
+            "t4": "14843088091839986056",
+            "t3": "M2Ua6fQOiO8mKa8UUSia29FecJXi7zdB",
+            "t2": "f5f042a0:32b446cc:0da651dc:b898a84f:69a4a77c:4716cf24:ef3ac042:a0a97502:33549c6e"
         },
-        "live": "Invalid"
+        "live": "live:914798404224825"
     },
     "109": {
         "manual": true,
@@ -358,180 +352,6 @@
             "t2": "a6cb5c12:3a341d1b:1af75e9d:2ffc4bab:2671cf7c:abba92b9"
         },
         "live": "live:844426624504147"
-    },
-    "124": {
-        "manual": false,
-        "discord": "643860149471281185",
-        "tokens": [
-            "2:48083c5f2da7f7a364085ba0ca39a03e8555fc4d792c01c346482a5f56864acd",
-            "5:321f81ef2f7af8929098516849093d255e5b21e17e9afddbfa4464d4bb3c886a",
-            "3:4b8068481d7744a02213ab55483c52439637aaad94e65df1e7fde4bfa791ff9c",
-            "4:216a1da739807c4632b7ad37899f8d1ae6fe601349d188a59c0a77df7b983e1d",
-            "4:937e020596747b805ae76aaacc66a4f9c50dd9765bbd4a363bd64c543d287823",
-            "4:8e6c66d2d069307ce0407086561c4fae66cb4460d9776cfd440d1abc94619bf6"
-        ],
-        "steam": "Invalid",
-        "ip": "95.10.20.74",
-        "xbl": "Invalid",
-        "reason": "Citizen Give Weapons Detected: WEAPON_PISTOL_MK2",
-        "license": "license:69e1f879a7fe8a997c44dae2136e59247a819748",
-        "name": "weshiaa",
-        "live": "Invalid"
-    },
-    "145": {
-        "manual": true,
-        "discord": "1163819533203685418",
-        "tokens": [],
-        "steam": "Invalid",
-        "ip": "Invalid",
-        "xbl": "Invalid",
-        "reason": "No Reason Specified",
-        "license": "Invalid",
-        "name": "Invalid",
-        "live": "Invalid"
-    },
-    "54": {
-        "manual": true,
-        "discord": "461556608884015114",
-        "tokens": [
-            "5:044110ed83621af5b2557cb3a293f4db3885743d2b66813bd586da7360d39e98",
-            "2:9a0dfec390a81b467feb247347c813793de123b8aba7358899f5047ef65bb660",
-            "4:4df4d680acdefb99bc547182eb2fa97c47761903de7a10aa01e42db6c7db1742",
-            "4:32e0c9b106455c0efb8f5dedc4e11df44e9077ce634288719f20d696ec38906f",
-            "4:af715b33e69147a4cc5aa967029d265da4da938e6af50ad9d94c446425928b6e"
-        ],
-        "steam": "Invalid",
-        "ip": "185.206.71.85",
-        "xbl": "xbl:2535469174171505",
-        "reason": "No reason specified.",
-        "license": "license:0590da88b1e8a3ed0518618c6050185b5f7faf20",
-        "name": "berka",
-        "fg_ts": {
-            "t1": "21e166208303327512cdbdc454b4c99b67c4209b8172d0d6c1d26831810c7640",
-            "t4": "13966033431880400797",
-            "t3": "2dKA3Yvzz2FZXKEIqULMY5PeDQwazMxA",
-            "t2": "0a3f7d12:a68966cc:795c653a:4b7fcb6e"
-        },
-        "live": "live:914801455673073"
-    },
-    "128": {
-        "manual": false,
-        "discord": "335017935313829888",
-        "tokens": [
-            "2:e7ded29e4ded3529c6cb8b0ccb098cdc2104375146191840cf624d6c853d2c62",
-            "5:ec5fa04176b489603843a73d2ee8c5fc79b5bb5ec2e552b81e31f04ebe6d3aba",
-            "3:bd27ec2cfb7986eaedb5241fb390531c9e86fa9e6d759c69f63a31f3a82c4327",
-            "4:a780440a46bb07b7c97fe0117686182278d31916beb2a9c76a9c0e0e6016087d",
-            "4:6a0d99f0d09e153aa114c6eda0d81b5cf7b695216578dab986c61f0d90b7a0f8",
-            "4:06e8f316496b82c1c92fa00ee114ddf02ec5772df3aa4226a984ab6f7a4087a3"
-        ],
-        "steam": "Invalid",
-        "ip": "85.153.226.13",
-        "xbl": "xbl:2535413277073373",
-        "reason": "Cheat Detected (AI) (1)",
-        "license": "license:9835c93602fdc41a5a02150366b48c95f97f1f62",
-        "name": "batuh",
-        "fg_ts": {
-            "t1": "1bd3c5ae2f481ab845d709ff1d426bcd8a16ff6846dbb86a00a4bc6c0f5ece5a",
-            "t4": "19448822261466714344",
-            "t3": "pf0H6L7VVCiZ4U7Aw8gNT69cfDyabNPi",
-            "t2": "afdf6f5b:4a35b949:ea772f00:8319f7a4:d05bd1f6:3dd6777d:dd7b3db3:a68966cc"
-        },
-        "live": "live:1055518746011727"
-    },
-    "38": {
-        "manual": false,
-        "discord": "728230551181328595",
-        "tokens": [
-            "3:c7a592e6efd4dbd614d83f05d635a5735daa8acc9d8ad34b763082d0f25b6c73",
-            "2:3f4a085e45a9d7555d2791b7fe4c954b8bda316358378ee555d6ecbaa45de77b",
-            "4:7f5d3d8ad7b8cfec206010cf41bfd4cd768b372cd97a0069ab89d8a12006244a",
-            "4:2720d9bd87fd110b6ed0cc64a33dd14b1fb2a2d16f3ea6995fb7c43ec05bd14b",
-            "4:b95879041764fb46709e551abb76653080a6b8914988631d73329526d72f9f23"
-        ],
-        "steam": "steam:110000148ca4426",
-        "ip": "85.104.70.81",
-        "xbl": "Invalid",
-        "reason": "Tried to Trigger Safe Event (1): utk_fh:rewardCash",
-        "license": "license:b9ccd50542d450e39ca324c84328288b6c789cbc",
-        "name": "Suiki",
-        "fg_ts": {
-            "t1": "4221f82ec5d9cfa9d59783166c961325c1dc1ece3edff95f6473232a6a12d380",
-            "t3": "wR08QFlKbOAEBdB2KKoJAhcTN9eLZrZh",
-            "t2": "a577f0c4:a04ed44e:1af75e9d:0398f103:1ef082e5"
-        },
-        "live": "Invalid"
-    },
-    "111": {
-        "manual": false,
-        "discord": "1004348690024112208",
-        "tokens": [
-            "3:e540783580343825f517c2988a5fad9a468987f6b80beb0461d1e3adfb304172",
-            "2:11feb913e0f9e7b24988d7c67aceb61e0e77efcc73cf6d97536a4ddefd13bc97",
-            "4:c7c575c10377914acd1b3902f45e476014ea3cd557df1e00236570d4d0c70842",
-            "4:12f1a307016324ddb7a8cd84d6dd63105ebf3ff382d7352d81027097fb998dc4",
-            "4:5f4bb8e7965d9c156706b3230d935adb17779935d4c40604a7105a260d95a618"
-        ],
-        "steam": "steam:11000011b50746a",
-        "ip": "78.172.208.236",
-        "xbl": "Invalid",
-        "reason": "Tried to Trigger Safe Event (6): miki-ShopSystem:BuyItemCash",
-        "license": "license:36d78b91782da312e8215641cd61e8612b6643bf",
-        "name": "BABALARSÖZÜTUTAR",
-        "fg_ts": {
-            "t1": "9ee6a3f31437683cba41ac8a4e9fbcdc3d65a8a7005be2d67073d79dd2ade95e",
-            "t4": "17405550371252541156",
-            "t3": "jX2nNxOEyrU09QVnaiW56iNJzmcL3ZjQ",
-            "t2": "ea772f00:50cee3cd:fc069c60:c4070aa4:9bfa0866:4cef7201:3dd6777d:d05bd1f6:ab796223"
-        },
-        "live": "Invalid"
-    },
-    "101": {
-        "manual": false,
-        "discord": "1031839852829868042",
-        "tokens": [
-            "3:30ee886d846f328f3a23df409a48489d3289a97979791a94f5457cbf5032b804",
-            "4:e0fa925b5abae8b926cac010d262b742b4b14763ca83197e15c7ba6c1541c3c9",
-            "4:d0fe5eb0cb846c5b38e434d63909cf85b14bba18b0586e0cd2e9d64ebf55f3e6",
-            "4:54cd546cb530c1ea6cc4914820482c5355f22ef3869867c9c7f4d041bec3e49c"
-        ],
-        "steam": "steam:1100001376a37b1",
-        "ip": "78.176.116.169",
-        "xbl": "Invalid",
-        "reason": "Spawned: 5 vehicles in 15 seconds",
-        "license": "license:07bd24f73a65ae2522b959ba2ba5ca74df7d1c70",
-        "name": "Fado",
-        "fg_ts": {
-            "t1": "2ab8098b34084f4e16d701f4193224bd2cd7d7bed50318a0fe87bf003ad01064",
-            "t4": "13448474191563972827",
-            "t3": "iPBLZLQCTtfLwD3FXfjhUXcS3etkrSVF",
-            "t2": "8b9ed8b9:ea772f00:41da107f:e9b0dede:1af75e9d:2ee59181:d05bd1f6:3dd6777d:b3c18271"
-        },
-        "live": "Invalid"
-    },
-    "78": {
-        "manual": false,
-        "discord": "686162436243587143",
-        "tokens": [
-            "3:1964242315e615939d469da70e707846f40d9ccbf5b53f6bc19a1828a8771703",
-            "5:d90d714a22bf55d881ca670b2dc5972c726df10e9f785116d40c112719c2017d",
-            "4:a6edbe5aa5eca8917bcb31be32d34217c481211332d10d171d2b9430e109dff9",
-            "4:c6869ab19a772b52fd74600a9295adab99ea268663c715e4e5d12c1b0ccef718",
-            "4:d3fe7100d4ae84a9559659dff4d315908addb6885f26be3a71029cecfd8923b5"
-        ],
-        "steam": "steam:110000113bf7bd0",
-        "ip": "176.233.65.196",
-        "xbl": "Invalid",
-        "reason": "Noclip Detected (1), flags: 3",
-        "license": "license:a21d7c7e0ba9ccedc6cb807b85f1f0913c9c91b5",
-        "name": "DeMarcius",
-        "fg_ts": {
-            "t1": "1b1611d766f16e3ebf1b8b786cd6eea9d5e83788cba1c2c88baef2336905da50",
-            "t4": "15385391802022890204",
-            "t3": "gVnzpizNEAzuhxHoVToDXEkZSyEXlLED",
-            "t2": "d3bd4db2:1af75e9d:2ffc4bab:99b806d7:c523c1c0"
-        },
-        "live": "Invalid"
     },
     "120": {
         "manual": false,
@@ -558,22 +378,202 @@
         },
         "live": "live:1899945908815040"
     },
-    "117": {
+    "124": {
         "manual": false,
-        "discord": "1144641775357657229",
+        "discord": "643860149471281185",
         "tokens": [
-            "2:d8e010fb1e12dddb71bdabc3c741c98dd760a2d6dbfb49a773102966256a0616",
-            "3:09ee995efe018046823534a84895e954b87b9fbe8ca5754f57a6a9a6d7409059",
-            "4:d7846681d39cb266ff852663ff64bc7970557a81b38293266ccc53620305d5e2",
-            "4:d669fea869d3579603fcc14072054795a1aadf2b26bbf21ea88ab2d69c71b7d3",
-            "4:b39e10158785bf74fe614c67722ca4727d9fc54fa9f5bcf06b8dc62f9c938539"
+            "2:48083c5f2da7f7a364085ba0ca39a03e8555fc4d792c01c346482a5f56864acd",
+            "5:321f81ef2f7af8929098516849093d255e5b21e17e9afddbfa4464d4bb3c886a",
+            "3:4b8068481d7744a02213ab55483c52439637aaad94e65df1e7fde4bfa791ff9c",
+            "4:216a1da739807c4632b7ad37899f8d1ae6fe601349d188a59c0a77df7b983e1d",
+            "4:937e020596747b805ae76aaacc66a4f9c50dd9765bbd4a363bd64c543d287823",
+            "4:8e6c66d2d069307ce0407086561c4fae66cb4460d9776cfd440d1abc94619bf6"
         ],
         "steam": "Invalid",
-        "ip": "88.230.60.239",
-        "xbl": "xbl:2535438779664429",
-        "reason": "Citizen Give Weapons Detected: WEAPON_APPISTOL",
-        "license": "license:8ab27bddb31599d4e4c7774d89799b01f98648b5",
-        "name": "batuy",
-        "live": "live:985158117520218"
+        "ip": "95.10.20.74",
+        "xbl": "Invalid",
+        "reason": "Citizen Give Weapons Detected: WEAPON_PISTOL_MK2",
+        "license": "license:69e1f879a7fe8a997c44dae2136e59247a819748",
+        "name": "weshiaa",
+        "live": "Invalid"
+    },
+    "111": {
+        "manual": false,
+        "discord": "1004348690024112208",
+        "tokens": [
+            "3:e540783580343825f517c2988a5fad9a468987f6b80beb0461d1e3adfb304172",
+            "2:11feb913e0f9e7b24988d7c67aceb61e0e77efcc73cf6d97536a4ddefd13bc97",
+            "4:c7c575c10377914acd1b3902f45e476014ea3cd557df1e00236570d4d0c70842",
+            "4:12f1a307016324ddb7a8cd84d6dd63105ebf3ff382d7352d81027097fb998dc4",
+            "4:5f4bb8e7965d9c156706b3230d935adb17779935d4c40604a7105a260d95a618"
+        ],
+        "steam": "steam:11000011b50746a",
+        "ip": "78.172.208.236",
+        "xbl": "Invalid",
+        "reason": "Tried to Trigger Safe Event (6): miki-ShopSystem:BuyItemCash",
+        "license": "license:36d78b91782da312e8215641cd61e8612b6643bf",
+        "name": "BABALARSÖZÜTUTAR",
+        "fg_ts": {
+            "t1": "9ee6a3f31437683cba41ac8a4e9fbcdc3d65a8a7005be2d67073d79dd2ade95e",
+            "t4": "17405550371252541156",
+            "t3": "jX2nNxOEyrU09QVnaiW56iNJzmcL3ZjQ",
+            "t2": "ea772f00:50cee3cd:fc069c60:c4070aa4:9bfa0866:4cef7201:3dd6777d:d05bd1f6:ab796223"
+        },
+        "live": "Invalid"
+    },
+    "128": {
+        "manual": false,
+        "discord": "335017935313829888",
+        "tokens": [
+            "2:e7ded29e4ded3529c6cb8b0ccb098cdc2104375146191840cf624d6c853d2c62",
+            "5:ec5fa04176b489603843a73d2ee8c5fc79b5bb5ec2e552b81e31f04ebe6d3aba",
+            "3:bd27ec2cfb7986eaedb5241fb390531c9e86fa9e6d759c69f63a31f3a82c4327",
+            "4:a780440a46bb07b7c97fe0117686182278d31916beb2a9c76a9c0e0e6016087d",
+            "4:6a0d99f0d09e153aa114c6eda0d81b5cf7b695216578dab986c61f0d90b7a0f8",
+            "4:06e8f316496b82c1c92fa00ee114ddf02ec5772df3aa4226a984ab6f7a4087a3"
+        ],
+        "steam": "steam:110000117f3f009",
+        "ip": "85.153.226.13",
+        "xbl": "xbl:2535413277073373",
+        "reason": "Cheat Detected (AI) (1)",
+        "license": "license:9835c93602fdc41a5a02150366b48c95f97f1f62",
+        "name": "batuh",
+        "fg_ts": {
+            "t1": "1bd3c5ae2f481ab845d709ff1d426bcd8a16ff6846dbb86a00a4bc6c0f5ece5a",
+            "t4": "19448822261466714344",
+            "t3": "pf0H6L7VVCiZ4U7Aw8gNT69cfDyabNPi",
+            "t2": "afdf6f5b:4a35b949:ea772f00:8319f7a4:d05bd1f6:3dd6777d:dd7b3db3:a68966cc"
+        },
+        "live": "live:1055518746011727"
+    },
+    "105": {
+        "manual": true,
+        "discord": "978652128497262632",
+        "tokens": [
+            "2:2a51c7dcb93d056266b4969be5108a5022f3f7f63e18b761a6ced782c837de90",
+            "4:c56a0e95ab5e9ccbc03983cbb1d639a46d3d3efffa06e8e3ddd4a8b329b3bbbb",
+            "4:2903a919cdae6e0d71e9cb1e67e524ac8f5ab72b043ec52561866f99ca8af1d8",
+            "4:a8bb46930ad31d854326686ca4db1e882f5b88d538a6ce07d510bb20518615c8"
+        ],
+        "steam": "steam:11000013c6c5a3a",
+        "ip": "85.101.4.141",
+        "xbl": "Invalid",
+        "reason": "xd",
+        "license": "license:407e1aa591425b275a1646bef5bf0cc187276a62",
+        "name": "Binbaşı",
+        "fg_ts": {
+            "t1": "4e3827691d8f8fea834284fa1987f88153ca4417863eaff78222d1e1d185c1bf",
+            "t4": "19074611671308942522",
+            "t3": "hbS2U1TvzqR8gGcVhZYTlpRVQaLEcNU2",
+            "t2": "0e81d39c:e995221c"
+        },
+        "live": "Invalid"
+    },
+    "145": {
+        "manual": true,
+        "discord": "1163819533203685418",
+        "tokens": [],
+        "steam": "Invalid",
+        "ip": "Invalid",
+        "xbl": "Invalid",
+        "reason": "No Reason Specified",
+        "license": "Invalid",
+        "name": "Invalid",
+        "live": "Invalid"
+    },
+    "101": {
+        "manual": false,
+        "discord": "1031839852829868042",
+        "tokens": [
+            "3:30ee886d846f328f3a23df409a48489d3289a97979791a94f5457cbf5032b804",
+            "4:e0fa925b5abae8b926cac010d262b742b4b14763ca83197e15c7ba6c1541c3c9",
+            "4:d0fe5eb0cb846c5b38e434d63909cf85b14bba18b0586e0cd2e9d64ebf55f3e6",
+            "4:54cd546cb530c1ea6cc4914820482c5355f22ef3869867c9c7f4d041bec3e49c"
+        ],
+        "steam": "steam:1100001376a37b1",
+        "ip": "78.176.116.169",
+        "xbl": "Invalid",
+        "reason": "Spawned: 5 vehicles in 15 seconds",
+        "license": "license:07bd24f73a65ae2522b959ba2ba5ca74df7d1c70",
+        "name": "Fado",
+        "fg_ts": {
+            "t1": "2ab8098b34084f4e16d701f4193224bd2cd7d7bed50318a0fe87bf003ad01064",
+            "t4": "13448474191563972827",
+            "t3": "iPBLZLQCTtfLwD3FXfjhUXcS3etkrSVF",
+            "t2": "8b9ed8b9:ea772f00:41da107f:e9b0dede:1af75e9d:2ee59181:d05bd1f6:3dd6777d:b3c18271"
+        },
+        "live": "Invalid"
+    },
+    "54": {
+        "manual": true,
+        "discord": "461556608884015114",
+        "tokens": [
+            "5:044110ed83621af5b2557cb3a293f4db3885743d2b66813bd586da7360d39e98",
+            "2:9a0dfec390a81b467feb247347c813793de123b8aba7358899f5047ef65bb660",
+            "4:4df4d680acdefb99bc547182eb2fa97c47761903de7a10aa01e42db6c7db1742",
+            "4:32e0c9b106455c0efb8f5dedc4e11df44e9077ce634288719f20d696ec38906f",
+            "4:af715b33e69147a4cc5aa967029d265da4da938e6af50ad9d94c446425928b6e"
+        ],
+        "steam": "Invalid",
+        "ip": "185.206.71.85",
+        "xbl": "xbl:2535469174171505",
+        "reason": "No reason specified.",
+        "license": "license:0590da88b1e8a3ed0518618c6050185b5f7faf20",
+        "name": "berka",
+        "fg_ts": {
+            "t1": "21e166208303327512cdbdc454b4c99b67c4209b8172d0d6c1d26831810c7640",
+            "t4": "13966033431880400797",
+            "t3": "2dKA3Yvzz2FZXKEIqULMY5PeDQwazMxA",
+            "t2": "0a3f7d12:a68966cc:795c653a:4b7fcb6e"
+        },
+        "live": "live:914801455673073"
+    },
+    "78": {
+        "manual": false,
+        "discord": "686162436243587143",
+        "tokens": [
+            "3:1964242315e615939d469da70e707846f40d9ccbf5b53f6bc19a1828a8771703",
+            "5:d90d714a22bf55d881ca670b2dc5972c726df10e9f785116d40c112719c2017d",
+            "4:a6edbe5aa5eca8917bcb31be32d34217c481211332d10d171d2b9430e109dff9",
+            "4:c6869ab19a772b52fd74600a9295adab99ea268663c715e4e5d12c1b0ccef718",
+            "4:d3fe7100d4ae84a9559659dff4d315908addb6885f26be3a71029cecfd8923b5"
+        ],
+        "steam": "steam:110000113bf7bd0",
+        "ip": "176.233.65.196",
+        "xbl": "Invalid",
+        "reason": "Noclip Detected (1), flags: 3",
+        "license": "license:a21d7c7e0ba9ccedc6cb807b85f1f0913c9c91b5",
+        "name": "DeMarcius",
+        "fg_ts": {
+            "t1": "1b1611d766f16e3ebf1b8b786cd6eea9d5e83788cba1c2c88baef2336905da50",
+            "t4": "15385391802022890204",
+            "t3": "gVnzpizNEAzuhxHoVToDXEkZSyEXlLED",
+            "t2": "d3bd4db2:1af75e9d:2ffc4bab:99b806d7:c523c1c0"
+        },
+        "live": "Invalid"
+    },
+    "134": {
+        "manual": true,
+        "discord": "832359008471744573",
+        "tokens": [
+            "3:5e499e41b004e610983bec4ba9b1fc46fe475e4dfc1a180e3645f59470969e31",
+            "2:9490c660450ca569abe1aaa7991e47943330fd40f329bb5d304a7de59ae5a813",
+            "4:3eeb34d6b9ecd92d6dc477df45ff3981e9e73cec3deac74a762069938047ac15",
+            "4:957640471e0ed4c1d5a115252c6b112a11b835f17f55363b5caf75ea03ebd0ea",
+            "4:ff3b588f27b99bb6ee5454166610b997670a5087790a67977d3b0ce3f728d401"
+        ],
+        "steam": "steam:110000144592dfc",
+        "ip": "78.175.255.247",
+        "xbl": "Invalid",
+        "reason": "No Reason Specified",
+        "license": "license:9952d07f40d07991d2f838be5d7bfcfc3c3f5d69",
+        "name": "hiç bir şey yapaman",
+        "fg_ts": {
+            "t1": "9ee6a3f31437683cba41ac8a4e9fbcdc3d65a8a7005be2d67073d79dd2ade95e",
+            "t4": "11256940201382784083",
+            "t3": "uIa3dy5O1Yz2TI2xfFpJoyd2KRq3AteA",
+            "t2": "90d37f23:04aae51a:286aa857:0cad9a11:1af75e9d:15ee8def:7dbccf2d"
+        },
+        "live": "Invalid"
     }
 }
