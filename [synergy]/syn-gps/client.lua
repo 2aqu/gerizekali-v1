@@ -85,7 +85,7 @@ AddEventHandler('qb:gps:client:getPlayerInfo', function(bliptable)
             SetBlipColour(blips[bliptable.src], 49)
         elseif bliptable.job == 'doj' then
             SetBlipColour(blips[bliptable.src], 5)
-        elseif bliptable.job == 'vpd' then
+        elseif (bliptable.job == 'vpd') or (bliptable.job == 'dppd') then
             SetBlipColour(blips[bliptable.src], 2)
         end
         SetBlipScale(blips[bliptable.src], 0.85)

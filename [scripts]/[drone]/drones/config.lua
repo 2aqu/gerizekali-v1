@@ -202,7 +202,7 @@ Config = {
          infared     = true,
          nightvision = true,
          boost       = true,
-         tazer       = true,
+         tazer       = false,
          explosive   = false,
        },
        restrictions = {

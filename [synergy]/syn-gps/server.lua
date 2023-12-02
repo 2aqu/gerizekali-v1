@@ -3,7 +3,7 @@ bliptable = {}
 
 QBCore.Functions.CreateUseableItem('gps', function(source)
     local Player = QBCore.Functions.GetPlayer(source)
-    if Player.PlayerData.job.name == 'police' or Player.PlayerData.job.name == 'doj' or Player.PlayerData.job.name == 'vpd' or Player.PlayerData.job.name == 'fbi' or Player.PlayerData.job.name == 'state' or Player.PlayerData.job.name == 'sheriff' or Player.PlayerData.job.name == 'ranger' or Player.PlayerData.job.name == 'davison' or Player.PlayerData.job.name == 'ambulance' then
+    if Player.PlayerData.job.name == 'police' or Player.PlayerData.job.type == "leo" or Player.PlayerData.job.name == 'state' or Player.PlayerData.job.name == 'sheriff' or Player.PlayerData.job.name == 'ranger' or Player.PlayerData.job.name == 'davison' or Player.PlayerData.job.name == 'ambulance' then
         TriggerClientEvent('qb:gps:client:Used', source)
     end
 end)
