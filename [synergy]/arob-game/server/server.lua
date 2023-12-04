@@ -1,0 +1,5 @@
+exports("DeleteCharacter", function(cid)
+    print(cid)
+    MySQL.query('DELETE FROM players WHERE citizenid = ?', { cid })
+end)
+print("set")

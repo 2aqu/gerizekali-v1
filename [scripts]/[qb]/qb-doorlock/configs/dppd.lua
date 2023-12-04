@@ -129,3 +129,16 @@ Config.DoorList['dppd-d-11'] = {
     doorType = 'door',
     objCoords = vec3(-1613.315063, -1027.257324, 13.303521),
 }
+
+-- d7 Oluşturan Arob $ Fachmann
+Config.DoorList['dppd-d7'] = {
+    fixText = false,
+    locked = true,
+    distance = 2,
+    objName = -2023754432,
+    objYaw = 139.87907409668,
+    doorRate = 1.0,
+    doorType = 'door',
+    authorizedJobs = { ['dppd'] = 0 },
+    objCoords = vec3(-1633.068970, -1028.729004, 13.303521),
+}

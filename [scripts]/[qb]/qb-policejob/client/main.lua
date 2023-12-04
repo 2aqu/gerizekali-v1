@@ -68,7 +68,8 @@ AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     isHandcuffed = false
     TriggerServerEvent("police:server:SetHandcuffStatus", false)
     TriggerServerEvent("police:server:UpdateCurrentCops")
-
+    ExecuteCommand("combatlog")
+    
     if player.metadata.tracker then
         local trackerClothingData = {
             outfitData = {

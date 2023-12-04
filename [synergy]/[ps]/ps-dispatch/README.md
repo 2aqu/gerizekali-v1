@@ -1,42 +1,38 @@
-# PS Dispatch
+# ps-dispatch
+QBCore Dispatch (Nopixel Inspired) 
 
-Integrated with [ps-mdt](https://github.com/Project-Sloth/ps-mdt)
+# Dependencies
+- chat: https://github.com/djjackYT/chat [if Config.ChatMessage = true]
 
-For all support questions, ask in our [Discord](https://www.discord.gg/projectsloth) support chat. 
-Do not create issues on GitHub if you need help. Issues are for bug reporting and new features only.
-
-# Depedency
-1. [qb-core](https://github.com/qbcore-framework/qb-core)
-2. [ox_lib](https://github.com/overextended/ox_lib)
-3. [ps-mdt](https://github.com/Project-Sloth/ps-mdt) - Optional but highly recommended.
+- ps-mdt: https://github.com/Project-Sloth/ps-mdt [Optional]
 
 # Installation
-* Download ZIP
-* Drag and drop resource into your server files
-* Start resource through server.cfg
-* Drag and drop sounds folder into interact-sound\client\html\sounds
-* Restart your server.
+```Step 1``` Download ZIP
 
-# Preview
-<img src="https://github.com/Project-Sloth/ps-dispatch/assets/82112471/4a3d44b9-1629-457b-ba0e-a77c617aa993" width="600">
-<img src="https://github.com/Project-Sloth/ps-dispatch/assets/82112471/7f4a7c76-f92d-4067-9fcb-7c78ee1b067c" width="600">
-<img src="https://github.com/Project-Sloth/ps-dispatch/assets/82112471/01569df8-d5f6-417b-bcd4-422551eaa840" width="600">
-<img src="https://github.com/Project-Sloth/ps-dispatch/assets/82112471/f2b111b2-60c3-428e-b12a-1bfed617f09e" width="800">
+```Step 2``` Drag and drop resource into your server files
 
-# Change Language.
+```Step 3``` Start resource through server.cfg
 
-- Place this `setr ox:locale en` inside your `server.cfg`
-- Change the `en` to your desired language!
-  
-**Supported Languages:**
-| **Alias**     | **Language Names** |
-|--------------|---------------|
-|en      |English    |
-|de      |German     |
-|nl      |Dutch      |
-|cs      |Czech      |
+```Step 4``` Drag and drop sounds folder into interact-sound\client\html\sounds
 
-# Preset Alert Exports.
+```Step 5``` Restart your server.
+
+# Credits
+
+https://github.com/Project-Sloth/ps-dispatch
+
+# Showcase
+https://streamable.com/3v5d5h
+
+![Screenshot 2022-12-29 004908](https://user-images.githubusercontent.com/108560629/209908766-45044d7d-f651-42a7-9de4-26e339d035fe.png)
+
+# To-do
+
+* Delete 311 alerts
+
+* Add 311/911 to chat messages
+
+# Alert Exports.
 
 ```lua
 - exports['ps-dispatch']:VehicleShooting(vehicle)
@@ -45,13 +41,21 @@ Do not create issues on GitHub if you need help. Issues are for bug reporting an
 
 - exports['ps-dispatch']:OfficerDown()
 
+- exports['ps-dispatch']:OfficerDown2()
+
+- exports['ps-dispatch']:pdpanic()
+
+- exports['ps-dispatch']:EmsDown()
+
+- exports['ps-dispatch']:EmsDown2()
+
+- exports['ps-dispatch']:emspanic()
+
 - exports['ps-dispatch']:SpeedingVehicle(vehicle)
 
 - exports['ps-dispatch']:Fight()
 
 - exports['ps-dispatch']:InjuriedPerson()
-
-- exports['ps-dispatch']:DeceasedPerson()
 
 - exports['ps-dispatch']:StoreRobbery(camId)
 
@@ -66,6 +70,8 @@ Do not create issues on GitHub if you need help. Issues are for bug reporting an
 - exports['ps-dispatch']:VangelicoRobbery(camId)
 
 - exports['ps-dispatch']:HouseRobbery()
+
+- exports['ps-dispatch']:PrisonBreak()
 
 - exports['ps-dispatch']:DrugSale()
 
@@ -94,11 +100,5 @@ Do not create issues on GitHub if you need help. Issues are for bug reporting an
 - exports['ps-dispatch']:SuspiciousActivity()
 
 - exports['ps-dispatch']:SignRobbery()
-```
 
-# Credits
-* [OK1ez](https://github.com/OK1ez)
-* [Candrex](https://github.com/CandrexDev)
-* [Lenzh](https://github.com/Lenzh)
-* [LeSiiN](https://github.com/LeSiiN)
-* Project Sloth Team
+```

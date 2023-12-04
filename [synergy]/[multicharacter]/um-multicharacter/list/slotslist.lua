@@ -19,5 +19,7 @@ Slots.List = {
      {license = "license:c8060f838a09763022c170f101369885e3f7012e", totalSlot = 2}, -- moneragrata
      {license = "license:07cf1c557a44907326c25599862891e454431afd", totalSlot = 2}, -- berlin/jarvis
      {license = "license:2cc6f4a746e7a901e727b05b75299f4ceb8698ec", totalSlot = 2}, -- oggydavis
+     {license = "license:ba9d5503399baa3a8fe5a88d3983b17b8e4f0fd7", totalSlot = 2}, -- aqu
+     
 }
 

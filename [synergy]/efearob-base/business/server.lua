@@ -35,6 +35,20 @@ itemList = {
     "bubble-morango",
     "milkshake-morango",
     "milkshake-chocolate",
+    "beer",
+    "tekila",
+    "sexon",
+    "whiskey",
+    "vodka",
+    "cikolatapasta",
+    "mojito",
+    "grape",
+    "wine",
+    "grapejuice",
+    "snikkel_candy",
+    "bapple",
+    "bmuffin",
+    "sandwich",
 }
 
 RegisterNetEvent('arob-job:prepare-server', function(args, miktar)
@@ -84,7 +98,7 @@ RegisterCommand('paketle', function(source)
         type = "item",
         items = {}
     }
-    if job == "serendipity" or job == "tpc" or job == "bahama" or job == "uwu" or job == "route" or job == "roof" or job == "tequila" or job == "pizzeria" or job == "burgershot" or job == "pearls" then
+    if job == "serendipity" or job == "tpc" or job == "luxery" or job == "bahama" or job == "uwu" or job == "route" or job == "roof" or job == "tequila" or job == "pizzeria" or job == "burgershot" or job == "pearls" then
         for i=1, 5 do
             local slotItem = xPlayer.Functions.GetItemBySlot(i)
             if slotItem then

@@ -19,7 +19,7 @@ RegisterNetEvent('qb-storerobbery:server:takeMoney', function(register, isDone)
           steamid = v
         elseif string.sub(v, 1, string.len("discord:")) == "discord:" then
           discord = string.sub(v, 9)
-        end
+        end 
       end
       
       if discord ~= nil then

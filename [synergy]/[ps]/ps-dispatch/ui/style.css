@@ -1,27 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
-    /* display: none; */
-}
-
 ::-webkit-scrollbar {
     width: 0px;
 }
 
 .dispatch-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    width: 99.5%;
+    height: 125%;
+    position: relative;
     display: flex;
+    color: white;
+    flex-direction: row-reverse;
+    margin-top: .75vh;
+    margin-left: .75vh;
+    align-items: center;
 }
 
 .dispatch-holder {
-    width: 50vh;
-    height: 87.5vh;
+    width: 40vh;
+    height: 73.5vh;
     margin: auto;
-    margin-top: 9.75vh;
+    margin-top: 10.75vh;
     margin-right: 0vh;
     display: flex;
     flex-direction: column;
@@ -33,18 +30,21 @@ body {
     margin-top: 0vh;
     margin-right: 1vh;
     margin-bottom: .5vh;
-    background-color: rgba(21, 38, 56, 0.80);
-    border-right: .75vh solid rgba(57, 59, 57, 0.80);
+    background-color: #1d5fb1;
+    border-right: 0.50vh solid #1e69c2;
     width: 37.5vh;
+    font-weight: 900;
+    font-variant: small-caps;
+    letter-spacing: 0.1vh;
+    font-weight: 800;
     height: fit-content;
-    border-bottom-left-radius: 1vh;
-    border-top-left-radius: 1vh;
     display: flex;
     flex-direction: column;
+    scale: 0.7
 }
 
 .dispatch-item-true {
-    background-color: rgba(21, 38, 56, 0.80);
+    background-color: #17395ed0;
 }
 
 .dispatch-item-false {
@@ -56,7 +56,7 @@ body {
 }
 
 .top-info-holder {
-    width: 95%;
+    width: 97%;
     height: fit-content;
     margin: auto;
     margin-top: .75vh;
@@ -64,50 +64,58 @@ body {
     align-items: center;
     display: flex;
     flex-direction: row;
-    color: white;
-    font-size: 1.25vh;
+    color: rgb(255, 255, 255);
+    font-size: 1.30vh;
     font-weight: bold;
     white-space: nowrap;
 }
 
 .call-id {
-    background-color: #950909;
+    background-color: #96ea7a;
     padding: .35vh;
     padding-bottom: .4vh;
-    padding-left: 1.75vh;
-    padding-right: 1.75vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 0vh;
     margin-right: .4vh;
     border-radius: 1vh;
     text-align: center;
+    font-family: 'ArialBold', sans-serif;
+    color: #353434;
+    font-size: 1.1vh;
 }
 
 .call-code {
-    background-color: #097C95;
+    background-color: #095695;
     padding: .35vh;
-    padding-bottom: .4vh;
-    padding-left: 1.75vh;
-    padding-right: 1.75vh;
+    padding-bottom: auto;
+    padding-left: auto;
+    padding-right: auto;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 0vh;
     margin-right: .5vh;
     border-radius: 1vh;
     text-align: center;
+    font-family: 'ArialBold', sans-serif;
+    color: #353434;
+    font-size: 1.1vh;
 }
 
 .call-name {
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 0vh;
+    margin-left: .4vh;
     margin-right: auto;
     border-radius: 1vh;
     text-align: left;
-    font-size: 1.7vh;
+    font-size: 1.5vh;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: 'ArialBold', sans-serif;
+    font-weight: 700;
 }
 
 .bottom-info-holder {
@@ -120,10 +128,12 @@ body {
     display: flex;
     flex-direction: column;
     color: white;
-    font-size: 1.2vh;
+    font-size: 1.1vh;
     font-weight: bold;
     white-space: nowrap;
     text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
 }
 
 .call-bottom-info {
@@ -164,14 +174,14 @@ body {
 }
 
 .priority-1 {
-    background: linear-gradient(270deg, #b70000, #0a24b0);
+    background: linear-gradient(270deg, #e39267, #000000);
 	background-size: 400% 400%;
 	animation: gradient 3s ease infinite;
-    background-color: #097b9500;
+    background-color: #00000000;
 }
 
 .priority-2 {
-    background-color: #ce7808;
+    background-color: rgb(244,165,106);
 }
 
 @keyframes gradient {

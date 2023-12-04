@@ -7,6 +7,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     if not QBConfig.Server.PVP then return end
     SetCanAttackFriendly(PlayerPedId(), true, false)
     NetworkSetFriendlyFireOption(true)
+    ExecuteCommand("combatlog")
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
