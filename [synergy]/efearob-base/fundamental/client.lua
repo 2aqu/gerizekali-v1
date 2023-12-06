@@ -248,7 +248,10 @@ Citizen.CreateThread(function()
 end)
 
 RegisterCommand("lastt", function()
-
     local vehicle = GetVehiclePedIsIn(PlayerPedId())
     print(BreakOffVehicleWheel(vehicle, 2, true, false, true, false))
 end)
+
+-- RegisterCommand("yenikıyafetmenu", function()
+--     TriggerEvent("illenium-appearance:client:openClothingShopMenu", true)
+-- end)

@@ -20,6 +20,8 @@ Slots.List = {
      {license = "license:07cf1c557a44907326c25599862891e454431afd", totalSlot = 2}, -- berlin/jarvis
      {license = "license:2cc6f4a746e7a901e727b05b75299f4ceb8698ec", totalSlot = 2}, -- oggydavis
      {license = "license:ba9d5503399baa3a8fe5a88d3983b17b8e4f0fd7", totalSlot = 2}, -- aqu
+     {license = "license:36c22bb9eda77dd036ba4d5f6354647ae62653c9", totalSlots = 5}, --efe
+     {license = "license:c999a92c4c4cf2fd821b589121ddfcf50a37c674", totalSlots = 5} --şizo
      
 }
 

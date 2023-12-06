@@ -4998,7 +4998,25 @@ QBShared.Vehicles = {
         ['shop'] = 'ems',
     },
 	
-	-- DONATE ARAÇLARI
+	-- DONATE ARAÇLARI   
+	['b63s'] = {
+        ['name'] = 'b63s',
+        ['brand'] = 'b63s',
+        ['model'] = 'b63s',
+        ['price'] = 0,
+        ['category'] = 'donate',
+        ['hash'] = `b63s`,
+        ['shop'] = 'donate',
+    },
+	['66fastback'] = {
+        ['name'] = '66fastback',
+        ['brand'] = '66fastback',
+        ['model'] = '66fastback',
+        ['price'] = 0,
+        ['category'] = 'donate',
+        ['hash'] = `66fastback`,
+        ['shop'] = 'donate',
+    },
 	['10ram'] = {
         ['name'] = '10ram',
         ['brand'] = '10ram',
@@ -7092,6 +7110,15 @@ QBShared.Vehicles = {
 		['price'] = 0,
 		['category'] = 'donate',
 		['hash'] = `r8h`,
+		['shop'] = 'donate',
+	},
+	['nissanr33tbk'] = {
+		['name'] = 'nissanr33tbk',
+		['brand'] = 'nissanr33tbk',
+		['model'] = 'nissanr33tbk',
+		['price'] = 0,
+		['category'] = 'donate',
+		['hash'] = `nissanr33tbk`,
 		['shop'] = 'donate',
 	},
 	['rmodbugatti'] = {
