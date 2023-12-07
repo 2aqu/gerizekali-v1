@@ -492,7 +492,7 @@ export default {
         }),
         blurredVaultMoney() {
             // comma numbers anad replace numbers with *'s
-            return this.vaultMoney.toString().replace(/\d(?=(\d{3})+$)/g, '$&,').replace(/\d/g, '*');
+            return this.vaultMoney.toString()
         },
         filteredLogs() {
             return this.logs.filter(log => {

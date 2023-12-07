@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Debug = false -- If you want to see the debug messages in the console, you can make it true.
+Config.Debug = true -- If you want to see the debug messages in the console, you can make it true.
 
 -----------------------------------------------------------------------------------------------------------------
  -- UM - Multi Character | UM Settings

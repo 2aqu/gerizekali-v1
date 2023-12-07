@@ -13,7 +13,6 @@ QBCore.Functions.CreateCallback('eph:drift:vehicleHasDriftChip', function(source
     else
         MySQL.Async.fetchAll('SELECT driftchip, plate FROM player_vehicles WHERE plate = ?', { plate }, function(result)
             if result[1] then
-                print(json.encode(result[1]))
                 if result[1].driftchip > 0 then
                     vehiclesWithDriftCache[result[1].plate] = result[1].driftchip
                     cb(result[1].driftchip)

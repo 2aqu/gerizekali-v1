@@ -22,6 +22,7 @@ files {
     'html/assets/video/*.mp4',
     'html/assets/video/*.webm',
     'html/assets/background/*.mp4',
+    'html/assets/background/video1.mp4',
     'html/assets/background/*.webm',
     'html/assets/background/*.ogg',
     'html/assets/background/*.png',

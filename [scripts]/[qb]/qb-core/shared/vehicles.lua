@@ -7183,5 +7183,32 @@ QBShared.Vehicles = {
 		['category'] = 'donate',
 		['hash'] = `urus`,
 		['shop'] = 'donate',
+	},
+	['f430'] = {
+		['name'] = 'f430',
+		['brand'] = 'f430',
+		['model'] = 'f430',
+		['price'] = 0,
+		['category'] = 'donate',
+		['hash'] = `f430`,
+		['shop'] = 'donate',
+	},
+	['urus'] = {
+		['name'] = '458speciale',
+		['brand'] = '458speciale',
+		['model'] = '458speciale',
+		['price'] = 0,
+		['category'] = 'donate',
+		['hash'] = `458speciale`,
+		['shop'] = 'donate',
+	},
+	['rainpriskdivo'] = {
+		['name'] = 'rainpriskdivo',
+		['brand'] = 'rainpriskdivo',
+		['model'] = 'rainpriskdivo',
+		['price'] = 0,
+		['category'] = 'donate',
+		['hash'] = `rainpriskdivo`,
+		['shop'] = 'donate',
 	}
 }

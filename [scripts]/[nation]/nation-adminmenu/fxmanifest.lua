@@ -14,11 +14,13 @@ client_scripts {
     'client/events.lua',
     'client/showid.lua',
     'entityhashes/entity.lua',
+    'client/blipsnames.js'
 }
 server_scripts {
     '@oxmysql/lib/MySQL.lua',
     'server/server.lua',
-    'server/showid.lua'
+    'server/showid.lua',
+    'server/blipsnames.js'
 }
 files { -- Credits to https://github.com/LVRP-BEN/bl_coords for clipboard copy method
     'html/index.html',
