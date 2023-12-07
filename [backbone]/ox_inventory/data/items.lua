@@ -972,6 +972,17 @@ return {
 			image = "iphone.png",
 		}
 	},
+	
+	["cutter"] = {
+		label = "Kesici",
+		weight = 25000,
+		stack = true,
+		close = true,
+		description = "For pain you can't stand anymore, take this pill that'd make you feel great again",
+		client = {
+			image = "cutter.png",
+		}
+	},
 
 	["painkillers"] = {
 		label = "Ağrı Kesici",
@@ -2962,13 +2973,35 @@ return {
 			image = "chair3.png",
 		}
 	},
-
+	
 	["bag"] = {
 		label = "Çanta",
-		weight = 30000,
+		weight = 3000,
 		stack = false,
 		close = true,
 		description = "",
+	},
+	
+	["universal_cure"] = {
+		label = "Evrensel Tedavi Hapı",
+		weight = 250,
+		stack = false,
+		close = true,
+		description = "Bazı bağımlılıkları giderir aşk hariç",
+		client = {
+			image = "aspirin.png",
+		}
+	},
+
+	["marijuana_cure"] = {
+		label = "Marijuana Tedavi Hapı",
+		weight = 250,
+		stack = false,
+		close = true,
+		description = "Marijuana bağımlılıkları giderir aşk hariç",
+		client = {
+			image = "aspirin.png",
+		}
 	},
 
 	["chair7"] = {

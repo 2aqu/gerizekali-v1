@@ -46,7 +46,7 @@ local function onPlayerConnecting(name, _, deferrals)
     -- Mandatory wait
     Wait(2500)
 
-    deferrals.update(string.format(Lang:t('info.checking_whitelisted'), name))
+    --deferrals.update(string.format(Lang:t('info.checking_whitelisted'), name))
 
     local isLicenseAlreadyInUse = QBCore.Functions.IsLicenseInUse(license)
     local isWhitelisted, wlReason = QBCore.Functions.IsPlayerWhitelist(src)

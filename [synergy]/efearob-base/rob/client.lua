@@ -50,13 +50,13 @@ AddEventHandler('arob-thieffv2:SteelMoney', function(targetId)
 								disableMouse = false,
 								disableCombat = true,
 							}, {
-							animDict = "missexile3",
-							anim = "ex03_dingy_search_case_base_michael",
-							flags = 49,
-						}, {}, {}, function() -- Done
-							TriggerServerEvent("arob-thieffv2:server:stellMoney", targetId, QBCore.Key)
-						end, function() -- Cancel
-						end)
+								animDict = "missexile3",
+								anim = "ex03_dingy_search_case_base_michael",
+								flags = 49,
+							}, {}, {}, function() -- Done
+								TriggerServerEvent("arob-thieffv2:server:stellMoney", targetId, QBCore.Key)
+							end, function() -- Cancel
+							end)
 					else
 						QBCore.Functions.Notify("Oyuncunun Elleri Havada Değil")
 					end
@@ -93,11 +93,8 @@ RegisterCommand('+searchPlayer', function()
 						print("4\n")
 						QBCore.Functions.TriggerCallback('efearob:robFetch', function(data)
 							PlayerData = QBCore.Functions.GetPlayerData() --temporary
-							print(PlayerData.job ~= nil )
-							print(PlayerData.job.name ~= 'unemployed')
-							print(QBCore.Functions.GetPlayerData().job.type == "leo")
 							if PlayerData.job ~= nil and PlayerData.job.name ~= 'unemployed' and QBCore.Functions.GetPlayerData().job.type == "leo" then
-								print("4a\n")
+				
 								if data.is_dead == true then
 									print("5\n")
 									QBCore.Functions.Progressbar("yarali_ust_arama", "Yaralının Üstünü Arıyorsun", 12000,
@@ -108,19 +105,19 @@ RegisterCommand('+searchPlayer', function()
 											disableMouse = false,
 											disableCombat = true,
 										}, {
-										animDict = "missexile3",
-										anim = "ex03_dingy_search_case_base_michael",
-										flags = 49,
-									}, {}, {}, function() -- Done
-										TriggerServerEvent("arob:ust-ara-bildirim-polis", target_id)
-										QBCore.Functions.Notify("Kişinin üzerinde " .. data.nakit .. "$ var.")
-										QBCore.Functions.Notify('Birisinin Üstünü Arıyorsun!')
-										TriggerServerEvent("inventory:server:OpenInventory", "otherplayer", target_id)
+											animDict = "missexile3",
+											anim = "ex03_dingy_search_case_base_michael",
+											flags = 49,
+										}, {}, {}, function() -- Done
+											TriggerServerEvent("arob:ust-ara-bildirim-polis", target_id)
+											QBCore.Functions.Notify("Kişinin üzerinde " .. data.nakit .. "$ var.")
+											QBCore.Functions.Notify('Birisinin Üstünü Arıyorsun!')
+											TriggerServerEvent("inventory:server:OpenInventory", "otherplayer", target_id)
 
-										TriggerServerEvent("arob-thiefuser-soygun:discord-log-polis", target_id,
-											GetPlayerServerId(PlayerId()))
-									end, function() -- Cancel
-									end)
+											TriggerServerEvent("arob-thiefuser-soygun:discord-log-polis", target_id,
+												GetPlayerServerId(PlayerId()))
+										end, function() -- Cancel
+										end)
 								else
 									print("4b\n")
 									print(1)
@@ -166,31 +163,31 @@ RegisterCommand('+searchPlayer', function()
 
 								-- Ölü Adamın Üstünü Arama
 							elseif data.is_dead == true then
-								print("4e\n")
-								TriggerServerEvent("arob:ust-ara-bildirim", target_id)
-								TriggerServerEvent("arob-thiefuser-soygun:discord-log", target_id,
-									GetPlayerServerId(PlayerId()))
-								local playerPed = PlayerPedId()
-								local playerCoords = GetEntityCoords(playerPed)
-
-								local searchTime = 20000
-
-								QBCore.Functions.Progressbar("yarali_ust_arama", "Yaralının Üstünü Arıyorsun", 12000,
-									false, true, { -- p1: menu name, p2: yazı, p3: ölü iken kullan, p4:iptal edilebilir
-									disableMovement = true,
-									disableCarMovement = true,
-									disableMouse = false,
-									disableCombat = true,
-								}, {
-									animDict = "missexile3",
-									anim = "ex03_dingy_search_case_base_michael",
-									flags = 49,
-								}, {}, {}, function() -- Done
-									TriggerServerEvent("inventory:server:OpenInventory", "otherplayer", target_id)
-									-- TriggerServerEvent("gener4l:envanterkapat", target_id)
-									-- Soygun Bildirim
-								end, function() -- Cancel
-								end)
+								--print("4e\n")
+								--TriggerServerEvent("arob:ust-ara-bildirim", target_id)
+								--TriggerServerEvent("arob-thiefuser-soygun:discord-log", target_id,
+								--	GetPlayerServerId(PlayerId()))
+								--local playerPed = PlayerPedId()
+								--local playerCoords = GetEntityCoords(playerPed)
+--
+								--local searchTime = 20000
+--
+								--QBCore.Functions.Progressbar("yarali_ust_arama", "Yaralının Üstünü Arıyorsun", 12000,
+								--	false, true, { -- p1: menu name, p2: yazı, p3: ölü iken kullan, p4:iptal edilebilir
+								--		disableMovement = true,
+								--		disableCarMovement = true,
+								--		disableMouse = false,
+								--		disableCombat = true,
+								--	}, {
+								--		animDict = "missexile3",
+								--		anim = "ex03_dingy_search_case_base_michael",
+								--		flags = 49,
+								--	}, {}, {}, function() -- Done
+								--		TriggerServerEvent("inventory:server:OpenInventory", "otherplayer", target_id)
+								--		-- TriggerServerEvent("gener4l:envanterkapat", target_id)
+								--		-- Soygun Bildirim
+								--	end, function() -- Cancel
+								--end)
 							end
 						end, target_id)
 					elseif distance < 20 and distance > 2.0 then
@@ -203,7 +200,7 @@ RegisterCommand('+searchPlayer', function()
 				end
 			end
 		else
-			-- QBCore.Functions.Notify('Bukadar Seri Bu Komutu Kullanamazsın!', 'error')
+			QBCore.Functions.Notify('Bukadar Seri Bu Komutu Kullanamazsın!', 'error')
 		end
 	end
 end, false)

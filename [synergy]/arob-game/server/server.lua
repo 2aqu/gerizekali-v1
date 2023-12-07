@@ -1,5 +1,5 @@
-exports("DeleteCharacter", function(cid)
+onNet("syn:discord:deleteChar", function(inc, cid)
     print(cid)
-    MySQL.query('DELETE FROM players WHERE citizenid = ?', { cid })
+    --MySQL.query('DELETE FROM players WHERE citizenid = ?', { cid })
 end)
 print("set")

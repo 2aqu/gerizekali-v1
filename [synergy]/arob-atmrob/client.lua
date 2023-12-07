@@ -114,6 +114,7 @@ function HackSuccess()
     ClearPedTasksImmediately(PlayerPedId())
 	RobbingTheMoney()
 	TriggerServerEvent("arob-atmrob:success")	
+    TriggerServerEvent('ak4y-blackmarket:taskCountAdd', 9, 1)
     TriggerServerEvent('arob-atmrob:Server:BeginCooldown')
 end
 

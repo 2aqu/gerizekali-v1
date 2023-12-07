@@ -102,4 +102,6 @@ AK4Y.Tasks = {
     {taskId = 6, requiredcount = 2, rewardXP = 280, taskTitle = "Vezne Soy", taskDescription = "1 Adet Vezne Soy."},
     {taskId = 7, requiredcount = 4, rewardXP = 280, taskTitle = "Market Ön Kasa Soy", taskDescription = "2 Adet Market ön kasaı soy."},
     {taskId = 8, requiredcount = 1, rewardXP = 350, taskTitle = "Sanat Eseri Soygunu", taskDescription = "1 Adet Sanat Eseri Soy."},
+    {taskId = 9, requiredcount = 15, rewardXP = 350, taskTitle = "ATM Soy", taskDescription = "15 Adet ATM Soy."},
+
 }

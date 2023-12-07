@@ -109,6 +109,8 @@ local function lockpickFinish(success)
         TriggerServerEvent('qb-houserobbery:server:enterHouse', closestHouse)
         TriggerServerEvent('ak4y-blackmarket:taskCountAdd', 3, 1)
         QBCore.Functions.Notify(Lang:t("success.worked"), "success", 2500)
+        PoliceCall()
+        
     else
         if usingAdvanced then
             if math.random(1, 100) < 20 then
@@ -121,7 +123,7 @@ local function lockpickFinish(success)
                 TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["lockpick"], "remove")
             end
         end
-
+        PoliceCall()
         QBCore.Functions.Notify(Lang:t("error.didnt_work"), "error", 2500)
     end
 end
@@ -236,7 +238,6 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
             if closestHouse ~= nil then
                 if CurrentCops >= Config.MinimumHouseRobberyPolice then
                     if not Config.Houses[closestHouse]["opened"] then
-                        PoliceCall()
                         TriggerEvent('qb-lockpick:client:openLockpick', lockpickFinish)
                         if math.random(1, 100) <= 85 and not IsWearingHandshoes() then
                             local pos = GetEntityCoords(PlayerPedId())
@@ -255,7 +256,6 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                 if hasItem then
                     if CurrentCops >= Config.MinimumHouseRobberyPolice then
                         if not Config.Houses[closestHouse]["opened"] then
-                            PoliceCall()
                             TriggerEvent('qb-lockpick:client:openLockpick', lockpickFinish)
                             if math.random(1, 100) <= 85 and not IsWearingHandshoes() then
                                 local pos = GetEntityCoords(PlayerPedId())

@@ -39,7 +39,7 @@ Citizen.CreateThread(function()
 end)
 
 function StartFleecaHeist(index)
-        QBCore.Functions.TriggerCallback('qb-jewellery:server:getCops', function(cops)
+    QBCore.Functions.TriggerCallback('qb-jewellery:server:getCops', function(cops)
         if cops >= Config['FleecaMain'].requiredPoliceCount then
                 QBCore.Functions.TriggerCallback('fleecaheist:server:checkTime', function(time)
                     if time then
@@ -84,7 +84,7 @@ function StartFleecaHeist(index)
 end
 
 function polisbildirim()
-    exports['ps-dispatch']:FleecaBankRobbery(camId)
+    exports['ps-dispatch']:FleecaBankRobbery()
 end
 
 function SetupVault(index)
@@ -264,7 +264,7 @@ AddEventHandler('fleecaheist:client:resetHeist', function(index)
     Config['FleecaHeist'][index]['grab']['loot'] = false
     mainLoop = false
 end)
- 
+
 function Grab(index)
     QBCore.Functions.TriggerCallback('fleecaheist:server:hasItem', function()
         --if hasItem then
@@ -552,8 +552,7 @@ end
 
 RegisterNetEvent('fleecaheist:client:showNotification')
 AddEventHandler('fleecaheist:client:showNotification', function(str)
-   QBCore.Functions.Notify(str , 'error')
-    --ShowNotification(str)
+    ShowNotification(str)
 end)
 
 
