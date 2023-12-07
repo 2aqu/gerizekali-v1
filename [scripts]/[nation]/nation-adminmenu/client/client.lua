@@ -10,9 +10,9 @@ local menuLocation = 'topright' -- e.g. topright (default), topleft, bottomright
 local menu1 = MenuV:CreateMenu(false, Lang:t("menu.admin_menu"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test1')
 local menu2 = MenuV:CreateMenu(false, Lang:t("menu.admin_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test2')
 local menu3 = MenuV:CreateMenu(false, Lang:t("menu.manage_server"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test3')
-local menu4 = MenuV:CreateMenu(false, Lang:t("menu.online_players"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test4')
+--local menu4 = MenuV:CreateMenu(false, Lang:t("menu.online_players"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test4')
 local menu5 = MenuV:CreateMenu(false, Lang:t("menu.vehicle_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test5')
-local menu6 = MenuV:CreateMenu(false, Lang:t("menu.dealer_list"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test6')
+local menu6 = MenuV:CreateMenu(false, "Polis Listesi", menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test6')
 local menu7 = MenuV:CreateMenu(false, Lang:t("menu.developer_options"), menuLocation, 220, 20, 60, 'size-125', 'none', 'menuv', 'test7')
 
 --Sub Menus
@@ -42,12 +42,12 @@ menu1:AddButton({
 })
 
 --player management
-local player_management = menu1:AddButton({
-    icon = '🙍‍♂️',
-    label = Lang:t("menu.player_management"),
-    value = menu4,
-    description = Lang:t("desc.player_management_desc")
-})
+--local player_management = menu1:AddButton({
+--    icon = '🙍‍♂️',
+--    label = Lang:t("menu.player_management"),
+--    value = menu4,
+--    description = Lang:t("desc.player_management_desc")
+--})
 
 --server management
 menu1:AddButton({
@@ -67,11 +67,11 @@ menu1:AddButton({
 
 --dealer list
 local menu1_dealer_list = menu1:AddButton({
-    icon = '💊',
-    label = Lang:t("menu.dealer_list"),
+    icon = '👮',
+    label ="Polis Listesi",
     value = menu6,
-    description = Lang:t("desc.dealer_desc")
-})
+    description = "Polisleri Listeler"
+}) 
 
 --developer options
 menu1:AddButton({
@@ -86,12 +86,12 @@ menu1:AddButton({
 --]]
 
 -- Admin Options Menu Buttons
-local menu2_admin_noclip = menu2:AddCheckbox({
-    icon = '🎥',
-    label = Lang:t("menu.noclip"),
-    value = nil,
-    description = Lang:t("desc.noclip_desc")
-})
+--local menu2_admin_noclip = menu2:AddCheckbox({
+--    icon = '🎥',
+--    label = Lang:t("menu.noclip"),
+--    value = nil,
+--    description = Lang:t("desc.noclip_desc")
+--})
 
 local menu2_admin_revive = menu2:AddButton({
     icon = '🏥',
@@ -114,12 +114,12 @@ local menu2_admin_god_mode = menu2:AddCheckbox({
     description = Lang:t("desc.god_desc")
 })
 
-local menu2_admin_display_names = menu2:AddCheckbox({
-    icon = '📋',
-    label = Lang:t("menu.names"),
-    value = nil,
-    description = Lang:t("desc.names_desc")
-})
+--local menu2_admin_display_names = menu2:AddCheckbox({
+--    icon = '📋',
+--    label = Lang:t("menu.names"),
+--    value = nil,
+--    description = Lang:t("desc.names_desc")
+--})
 
 local menu2_admin_display_blips = menu2:AddCheckbox({
     icon = '📍',
@@ -333,12 +333,12 @@ local menu7_dev_info_mode = menu7:AddCheckbox({
     description = Lang:t("desc.hud_dev_mode_desc")
 })
 
-local menu7_dev_noclip = menu7:AddCheckbox({
-    icon = '🎥',
-    label = Lang:t("menu.noclip"),
-    value = nil,
-    description = Lang:t("desc.noclip_desc")
-})
+--local menu7_dev_noclip = menu7:AddCheckbox({
+--    icon = '🎥',
+--    label = Lang:t("menu.noclip"),
+--    value = nil,
+--    description = Lang:t("desc.noclip_desc")
+--})
 
 --create dev entity view
 menu7:AddButton({
@@ -386,9 +386,9 @@ end
     Admin Options functions
 --]]
 -- Toggle player name display
-menu2_admin_display_names:On('change', function()
-    TriggerEvent('qb-admin:client:toggleNames')
-end)
+--menu2_admin_display_names:On('change', function()
+--    TriggerEvent('qb-admin:client:toggleNames')
+--end)
 
 -- Toggle player blip display
 menu2_admin_display_blips:On('change', function()
@@ -396,9 +396,9 @@ menu2_admin_display_blips:On('change', function()
 end)
 
 -- Toggle NoClip
-menu2_admin_noclip:On('change', function(_, _, _)
-    ToggleNoClip()
-end)
+--menu2_admin_noclip:On('change', function(_, _, _)
+--    ToggleNoClip()
+--end)
 
 -- Revive Self
 menu2_admin_revive:On('select', function(_)
@@ -420,22 +420,21 @@ menu2_admin_invisible:On('change', function(_, _, _)
     end
 end)
 
--- Godmode
--- local godmode = false
--- menu2_admin_god_mode:On('change', function(_, _, _)
---     godmode = not godmode
-
---     if godmode then
---         TriggerServerEvent('qb-admin:server:SendLog', 'godmode', 'red', 'God mode açtı.')
---         while godmode do
---             Wait(0)
---             SetPlayerInvincible(PlayerId(), true)
---         end
---         SetPlayerInvincible(PlayerId(), false)
---     else
---         TriggerServerEvent('qb-admin:server:SendLog', 'godmode', 'green', 'God mode kapattı.')
---     end
--- end)
+--Godmode
+local godmode = false
+menu2_admin_god_mode:On('change', function(_, _, _)
+    godmode = not godmode
+    if godmode then
+        TriggerServerEvent('qb-admin:server:SendLog', 'godmode', 'red', 'God mode açtı.')
+        while godmode do
+            Wait(0)
+            SetPlayerInvincible(PlayerId(), true)
+        end
+        SetPlayerInvincible(PlayerId(), false)
+    else
+        TriggerServerEvent('qb-admin:server:SendLog', 'godmode', 'green', 'God mode kapattı.')
+    end
+end)
 
 -- Weapons list
 for _,v in pairs(QBCore.Shared.Weapons) do
@@ -757,22 +756,22 @@ local function OpenPlayerMenus(player)
     end
 end
 
-player_management:On('select', function(_)
-    menu4:ClearItems()
-    QBCore.Functions.TriggerCallback('test:getplayers', function(players)
-        for _, v in pairs(players) do
-            menu4:AddButton({
-                label = Lang:t("info.id") .. v["id"] .. ' | ' .. v["name"],
-                value = v,
-                description = Lang:t("info.player_name"),
-                select = function(btn)
-                    local select = btn.Value -- get all the values from v!
-                    OpenPlayerMenus(select) -- only pass what i select nothing else
-                end
-            }) -- WORKS
-        end
-    end)
-end)
+--player_management:On('select', function(_)
+--    menu4:ClearItems()
+--    QBCore.Functions.TriggerCallback('test:getplayers', function(players)
+--        for _, v in pairs(players) do
+--            menu4:AddButton({
+--                label = Lang:t("info.id") .. v["id"] .. ' | ' .. v["name"],
+--                value = v,
+--                description = Lang:t("info.player_name"),
+--                select = function(btn)
+--                    local select = btn.Value -- get all the values from v!
+--                    OpenPlayerMenus(select) -- only pass what i select nothing else
+--                end
+--            }) -- WORKS
+--        end
+--    end)
+--end)
 
 
 --[[
@@ -1212,9 +1211,9 @@ menu7_dev_vehicle_mode:On('change', function()
     ToggleVehicleDeveloperMode()
 end)
 
-menu7_dev_noclip:On('change', function(_, _, _)
-    ToggleNoClip()
-end)
+--menu7_dev_noclip:On('change', function(_, _, _)
+--    ToggleNoClip()
+--end)
 
 menu7_dev_toggle_coords:On('change', function()
     ToggleShowCoordinates()
@@ -1280,12 +1279,12 @@ end
 
 menu1_dealer_list:On('Select', function(_)
     menu6:ClearItems()
-    QBCore.Functions.TriggerCallback('test:getdealers', function(dealers)
-        for _, v in pairs(dealers) do
+    QBCore.Functions.TriggerCallback('police:GetAllCops', function(cops)
+        for _, v in pairs(cops) do
             menu6:AddButton({
-                label = v["name"],
+                label = v["fullname"],
                 value = v,
-                description = Lang:t("menu.dealer_name"),
+                --description = Lang:t("menu.dealer_name"),
                 select = function(btn)
                     local select = btn.Value
                     OpenDealerMenu(select)
@@ -1313,4 +1312,4 @@ RegisterCommand('hiddennoclip', function()
 end)
 
 RegisterKeyMapping('hiddenadmin', 'Admin Menüsünü Aç', 'KEYBOARD', 'pageup')
-RegisterKeyMapping('hiddennoclip', 'No-Clip Aç', 'KEYBOARD', 'pagedown')
+--RegisterKeyMapping('hiddennoclip', 'No-Clip Aç', 'KEYBOARD', 'pagedown')

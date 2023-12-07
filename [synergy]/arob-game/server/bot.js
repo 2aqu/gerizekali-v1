@@ -196,4 +196,18 @@ class Bot extends Client {
 
 }
 
+RegisterNetEvent('arob-gamev2:SendEmbed')
+on('arob-gamev2:SendEmbed', embed => {
+    try {
+        const channel = client.channels.cache.get(embed.channel);
+        if (channel && channel.type === 'text') {
+            channel.send(SendEmbed(embed));
+        } else if (channel && channel.type === 'dm') {
+            return;
+        }
+    } catch (error) {
+        console.error(`${translate.consoleError}`, error);
+    }
+});
+
 module.exports = Bot;

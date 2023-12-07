@@ -9,11 +9,11 @@ Config.UsableDrugs = {
         drugStrength = 30, -- this amount is being removed from immunity of player for effect duration time
         healthEffects = {
             armour = 10,
-            health = -10
+            health = 5
         },
         addiction = {
-            chance = 100, -- 0-100%
-            time = 60 -- time until drug wears out and you need other dose (in minutes)
+            chance = 90, -- 0-100%
+            time = 120 -- time until drug wears out and you need other dose (in minutes)
         },
         effect = {
             duration = 30, -- in seconds

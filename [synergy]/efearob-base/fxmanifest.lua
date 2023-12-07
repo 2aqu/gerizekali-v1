@@ -27,6 +27,7 @@ client_scripts {
     'stance/client.lua',
 }
 server_scripts {
+	"@oxmysql/lib/MySQL.lua",
     'fundamental/server.lua',
     'inv/server.lua',
     'cuff/server.lua',
@@ -37,6 +38,7 @@ server_scripts {
     'run/server.lua',
     'guard/sv_guard.lua',
     'guard/guard.lua',
+    'target/server.lua',
     'xprofiler.js',
 }
 lua54 'yes'

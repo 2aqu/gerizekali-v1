@@ -1,3 +1,4 @@
+
 -- Variables
 local QBCore = exports['qb-core']:GetCoreObject()
 local frozen = false
@@ -10,10 +11,6 @@ local permissions = {
 }
 local players = {}
 
--- Get Dealers
-QBCore.Functions.CreateCallback('test:getdealers', function(_, cb)
-    cb(exports['qb-drugs']:GetDealers())
-end)
 
 -- Get Players
 QBCore.Functions.CreateCallback('test:getplayers', function(_, cb) -- WORKS
@@ -504,28 +501,27 @@ QBCore.Commands.Add('heading', 'Copy heading to clipboard (Admin only)', {}, fal
     TriggerClientEvent('qb-admin:client:copyToClipboard', src, 'heading')
 end, 'support')
 
--- CreateThread(function()
---     while true do
---         local tempPlayers = {}
---         for _, v in pairs(QBCore.Functions.GetPlayers()) do
---             local targetped = GetPlayerPed(v)
---             local ped = QBCore.Functions.GetPlayer(v)
---             tempPlayers[#tempPlayers + 1] = {
---                 name = (ped.PlayerData.charinfo.firstname or '') .. ' ' .. (ped.PlayerData.charinfo.lastname or '') .. ' | (' .. (GetPlayerName(v) or '') .. ')',
---                 id = v,
---                 coords = GetEntityCoords(targetped),
---                 cid = ped.PlayerData.charinfo.firstname .. ' ' .. ped.PlayerData.charinfo.lastname,
---                 citizenid = ped.PlayerData.citizenid,
---                 sources = GetPlayerPed(ped.PlayerData.source),
---                 sourceplayer = ped.PlayerData.source
-
---             }
---         end
---         -- Sort players list by source ID (1,2,3,4,5, etc) --
---         table.sort(tempPlayers, function(a, b)
---             return a.id < b.id
---         end)
---         players = tempPlayers
---         Wait(1500)
---     end
--- end)
+--CreateThread(function()
+--    while true do
+--        local tempPlayers = {}
+--        for _, v in pairs(QBCore.Functions.GetPlayers()) do
+--            local targetped = GetPlayerPed(v)
+--            local ped = QBCore.Functions.GetPlayer(v)
+--            tempPlayers[#tempPlayers + 1] = {
+--                name = (ped.PlayerData.charinfo.firstname or '') .. ' ' .. (ped.PlayerData.charinfo.lastname or '') .. ' | (' .. (GetPlayerName(v) or '') .. ')',
+--                id = v,
+--                coords = GetEntityCoords(targetped),
+--                cid = ped.PlayerData.charinfo.firstname .. ' ' .. ped.PlayerData.charinfo.lastname,
+--                citizenid = ped.PlayerData.citizenid,
+--                sources = GetPlayerPed(ped.PlayerData.source),
+--                sourceplayer = ped.PlayerData.source
+--            }
+--        end
+--        -- Sort players list by source ID (1,2,3,4,5, etc) --
+--        table.sort(tempPlayers, function(a, b)
+--            return a.id < b.id
+--        end)
+--        players = tempPlayers
+--        Wait(1500)
+--    end
+--end)

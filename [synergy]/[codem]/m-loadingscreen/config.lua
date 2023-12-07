@@ -3,16 +3,14 @@ Config = {}
 
 Config.Theme = 'mango' --  sky, blvck, cherry, kush, mango, proxima
 Config.Logo = 'https://cdn.discordapp.com/attachments/1173713369920979024/1175822851077586995/coastpng.png?ex=656ca15d&is=655a2c5d&hm=e16c13f4ad609abe60d134caa311534fe39be41d78ab3c1a790bed98a4fa52b0&' -- Default or URL link
-Config.BackgroundImage = 'https://wallpapercave.com/wp/wp5334264.jpg' -- default or custom image/video
+Config.BackgroundImage = 'motel1.png' -- default or custom image/video
 -- Backgrounds can be found in html/assets/background/
 -- Config.BackgroundImage = 'background.png'
-Config.PlayMusicByDefault = false -- if true plays the music when loading screen is active
+Config.PlayMusicByDefault = true -- if true plays the music when loading screen is active
 
---html\assets\music
+--html\assets\music 
 Config.Musics = {
-    "music.mp3",
-    "music-2.mp3",
-    "music-3.mp3",
+    "deig.mp3",
 
 }
 
@@ -32,7 +30,7 @@ Config.Albums = {
         source = 'https://cdn.discordapp.com/attachments/1176191630936657920/1176209958719725628/pd.png?ex=656e09e3&is=655b94e3&hm=7cba2dfb26bdddc33da1f4cbaac82769ad63dcc4f9d11dccb8700d4ed9fa09ba&', -- Must be a link
     },
     {
-        source = 'EjaorVlUcn0'  -- Must be a link
+        source = 'https://cdn.discordapp.com/attachments/1176191630936657920/1181843095785066506/Ekran_goruntusu_2023-11-29_184216.png?ex=65828827&is=65701327&hm=354f946327cf40c9bf8ad84fb0859a22157bf438f5b1881bc909a0cbb1ebce88&'  -- Must be a link
     }
 }
 
@@ -40,16 +38,16 @@ Config.Albums = {
 Config.EnableHintMessages = true
 Config.HintMessages = {
     {
-        text= ' Yeni arayüzlü ve altyapılı v1.75 güncellemesine hoşgeldiniz.',
+        text= 'Diğer eksikliklerin de giderildiği v.1.7.9 güncellemesine hoşgeldin!',
         time= 8000,
     },
     {
-        text= 'Şehirde sosyalleşmek için motele gidip eğlenebilirsiniz.',
+        text= 'Sosyalleşmek ve arkadaşlar edinmek için motel ve kamu parkını tercih edebilirsin.',
         time= 3000,
     },
     {
 
-        text= ' İllegal ve legal mesleklerden kazanç sağlayabilirsiniz. ',
+        text= 'Kazanç sağlayabileceğin mesleklerin sayısı çok!',
         time= 1000,
     }
 }
@@ -69,8 +67,8 @@ Config.Language = {
     ["INSIDE_CITY"] = 'Coast V',
     ["FOOTAGES"] = 'Şehirden Son Görüntüler',
     ["PATCH_NOTES"] = 'Yama Notları',
-    ["PATCH_NOTES_VERSION"] = 'Yama Notu v1.75',
-    ["LATEST_UPDATES"] = 'Son Güncellme...',
+    ["PATCH_NOTES_VERSION"] = 'Yama Notu v1.7.9',
+    ["LATEST_UPDATES"] = 'Son Güncelelme',
     ["FOLLOW_CITY"] = 'Sosyal Medyalar!',
 
 
@@ -83,7 +81,7 @@ Config.Language = {
 
 
 
-    ["KEYBINDS_INFO"] = 'Sap Paneldeki Atamaları Görmek İçin Parlayan Tuşlara Tıklayınız.',
+    ["KEYBINDS_INFO"] = 'Sağ Paneldeki Atamaları Görmek İçin Parlayan Tuşlara Tıklayınız.',
     ["KEYBINDS_INFO_2"] = 'Bazı tuş atamaları oyun ayarlarından değiştirilebilir. Bunları değiştirmek için',
     ["GO_TO"] = 'Gidin',
     ["FIVEM_SETTINGS"] = 'ESC>Settings>Keybindings>FiveM',
@@ -103,10 +101,10 @@ Config.Language = {
 }
 
 Config.PatchNotes = {
-    "Tüm arayüzler değiştirildi.",
     "Veritabanı altyapısında optimizasyona gidildi.",
-    "Mekanik sistemleri değiştirildi.",
-    "Araç handlingleri düzenlendi.",
+    "Timeout sorununu yaratan scriptler kaldırıldı.",
+    "Araç handlingleri tekrar düzenlendi.",
+    "Araç paketine değişiklikler yapıldı.",
 }
 
 Config.Keybinds = {
