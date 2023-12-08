@@ -1,5 +1,5 @@
 local dopolydebug = false
---[[anansk = PolyZone:Create({
+local anansk = PolyZone:Create({
     vector2(950.72631835938, -2275.8828125),
     vector2(948.52960205078, -2275.3474121094),
     vector2(942.54821777344, -2274.140625),
@@ -616,12 +616,12 @@ local dopolydebug = false
     vector2(956.60542480469, -2276.3864746094),
   }, {
     name="anansk",
-    minZ = 40.596252441406,
-    maxZ = 50.696754455566,
+    --minZ = 40.596252441406,
+    --maxZ = 50.696754455566,
     debugPoly = false
   })
   
---]]
+
 
 
 --Name: vpdrampa | 2023-11-22T12:15:23Z
@@ -2771,10 +2771,15 @@ local innocenceblvd = PolyZone:Create({
   }
 })
 
-driftComboZone = ComboZone:Create({vpdrampa, olumyolu, marlowdrive, marlowdrive2, galileo, innocenceblvd}, {name="driftComboZone", debugPoly=dopolydebug})
+driftComboZone = ComboZone:Create({vpdrampa, olumyolu, marlowdrive ,marlowdrive2, galileo, innocenceblvd}, {name="driftComboZone", debugPoly=dopolydebug})
 driftComboZone:onPlayerInOut(function(isPointInside, point, zone)
   print("drift: isPointInside is", isPointInside, " for point", point)
   if zone then
     TriggerEvent("eph:drift:isInDriftZone", isPointInside)
   end
+end)
+anansk:onPlayerInOut(function(isPointInside, point, zone)
+  print("drift: isPointInside is", isPointInside, " for point", point)
+    TriggerEvent("eph:drift:isInDriftZone", isPointInside or false)
+  
 end)

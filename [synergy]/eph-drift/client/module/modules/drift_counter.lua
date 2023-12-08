@@ -1,7 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 Modules.DriftCounter = {}
-Modules.DriftCounter.IsEnabled = false
+Modules.DriftCounter.IsEnabled = true
 Modules.DriftCounter.IsDrifting = false
 Modules.DriftCounter.CurrentPoints = 0
 Modules.DriftCounter.CurrentAngle = 0 -- Only refreshed when the player is drifting
@@ -63,6 +63,7 @@ end
 isInDriftZone = false
 RegisterNetEvent("eph:drift:isInDriftZone")
 AddEventHandler("eph:drift:isInDriftZone", function(state) 
+    print(state)
     isInDriftZone = state
     print(state)
 end)
@@ -101,6 +102,7 @@ function Modules.DriftCounter.IsPlayerDrifting()
 end
 
 function Modules.DriftCounter.StartChainBreakLoop()
+    print("cbl")
     if not Modules.DriftCounter.ChainLoopStarted then
         Modules.DriftCounter.ChainLoopStarted = true
         if ConfigShared.UseDefaultUI then
@@ -123,7 +125,8 @@ function Modules.DriftCounter.StartChainBreakLoop()
             for k, v in pairs(Modules.DriftCounter.speeds) do
                 csc = csc + v
             end
-            QBCore.Functions.Notify("Driftin bitti. Ortalama hızın : " .. csc / #Modules.DriftCounter.speeds)
+            --QBCore.Functions.Notify("Driftin bitti. Ortalama hızın : " .. csc / #Modules.DriftCounter.speeds)
+            QBCore.Functions.Notify("Driftin bitti. Puanın : " .. Modules.DriftCounter.CurrentPoints)
             Modules.DriftCounter.speeds = {}
 
             Modules.DriftCounter.ChainCooldown = ConfigShared.DriftChainTime

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-onNet("syn:discord:deleteChar", function(inc, cid)
-    print(cid)
-    --MySQL.query('DELETE FROM players WHERE citizenid = ?', { cid })
-=======
-print("delam")
+
 
 exports('DeleteCar', function (id, car, plate, ChannelID)
     if GetPlayerName(id) then
@@ -106,5 +101,4 @@ exports('DeleteCar', function (id, car, plate, ChannelID)
             TriggerEvent('arob-gamev2:SendEmbed', embed)
         end
     end
->>>>>>> 9b811a154317fd6c063f3eb5c259addbf88db50c
 end)

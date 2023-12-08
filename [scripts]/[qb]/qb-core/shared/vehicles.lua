@@ -7193,7 +7193,7 @@ QBShared.Vehicles = {
 		['hash'] = `f430`,
 		['shop'] = 'donate',
 	},
-	['urus'] = {
+	['458speciale'] = {
 		['name'] = '458speciale',
 		['brand'] = '458speciale',
 		['model'] = '458speciale',
@@ -7209,6 +7209,24 @@ QBShared.Vehicles = {
 		['price'] = 0,
 		['category'] = 'donate',
 		['hash'] = `rainpriskdivo`,
+		['shop'] = 'donate',
+	},
+	['b63s'] = {
+		['name'] = 'b63s',
+		['brand'] = 'b63s',
+		['model'] = 'b63s',
+		['price'] = 0,
+		['category'] = 'donate',
+		['hash'] = `b63s`,
+		['shop'] = 'donate',
+	},
+	['cbr1000rrr'] = {
+		['name'] = 'cbr1000rrr',
+		['brand'] = 'cbr1000rrr',
+		['model'] = 'cbr1000rrr',
+		['price'] = 0,
+		['category'] = 'donate',
+		['hash'] = `cbr1000rrr`,
 		['shop'] = 'donate',
 	}
 }

@@ -576,7 +576,7 @@ return {
 
 	["goldbar"] = {
 		label = "Gold Bar",
-		weight = 1000,
+		weight = 200,
 		stack = true,
 		close = true,
 		description = "Looks pretty expensive to me",
@@ -975,8 +975,8 @@ return {
 	
 	["cutter"] = {
 		label = "Kesici",
-		weight = 25000,
-		stack = true,
+		weight = 15000,
+		stack = false,
 		close = true,
 		description = "For pain you can't stand anymore, take this pill that'd make you feel great again",
 		client = {

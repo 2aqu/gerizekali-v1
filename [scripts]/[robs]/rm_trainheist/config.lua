@@ -1,7 +1,7 @@
 Config = {}
 
 Config['TrainHeist'] = {
-    ['requiredPoliceCount'] = 0, -- required police count for start heist
+    ['requiredPoliceCount'] = 12, -- required police count for start heist
     ['nextRob'] = 7200, -- seconds for next heist
     ['requiredItems'] = { -- add those to database or shared
         'cutter',
@@ -10,7 +10,7 @@ Config['TrainHeist'] = {
     ['reward'] = {
         itemName = 'goldbar', -- gold item name
         grabCount = 5, -- gold grab count
-        sellPrice = 1500 -- buyer sell price
+        sellPrice = 35000 -- buyer sell price
     },
     ['startHeist'] ={ -- heist start coords
         pos = vector3(-687.82, -2417.1, 13.9445),

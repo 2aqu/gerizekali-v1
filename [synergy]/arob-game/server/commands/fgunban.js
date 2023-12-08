@@ -1,12 +1,24 @@
 
 module.exports = {
-    name: "ck",
+    name: "fg",
     description: "Oyuncunun anasını siker CK atar.",
     role: "admin",
 
     options: [
         {
-            name: "citizenid",
+            name: "unban",
+            description: "Oyuncunun Citizen ID'si",
+            required: true,
+            type: "STRING",
+        },
+        {
+            name: "ban",
+            description: "Oyuncunun Citizen ID'si",
+            required: true,
+            type: "STRING",
+        },
+        {
+            name: "screenshot",
             description: "Oyuncunun Citizen ID'si",
             required: true,
             type: "STRING",

@@ -3,7 +3,7 @@ Config = {}
 
 --Add gold, diamond item to database or change item names in bottom. (dont need add cash item)
 Config['FleecaMain'] = {
-    requiredPoliceCount = 0,
+    requiredPoliceCount = 8,
     requiredItems = {
         --'handdrill', -- Add item to database
         'bag' -- Add item to database

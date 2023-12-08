@@ -19,6 +19,8 @@ Citizen.CreateThread(function()
     end
 end)
 
+local incooldown = false
+
 Citizen.CreateThread(function()
     while true do
         local ped = PlayerPedId()
@@ -30,7 +32,8 @@ Citizen.CreateThread(function()
                 sleep = 1
                 --(Strings['start_heist'])
                 exports['qb-core']:DrawText("[E] Soyguna Başla")
-                if IsControlJustPressed(0, 38) then
+                if IsControlJustPressed(0, 38) and not incooldown then
+                    incooldown = true
                     --TriggerEvent('cd_drawtextui:HideUI')
                     exports['qb-core']:HideText()
                     QBCore.Functions.Notify('Pusu Noktası Haritada Bulacaksın, oraya git ve kapıları kes.', 'success')
@@ -43,7 +46,12 @@ Citizen.CreateThread(function()
         Citizen.Wait(sleep)
     end
 end)
-
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(3000)
+        incooldown = false
+    end
+end)
 function StartTrainHeist()
         QBCore.Functions.TriggerCallback('trainheist:server:checkPoliceCount', function(status)
             if status then

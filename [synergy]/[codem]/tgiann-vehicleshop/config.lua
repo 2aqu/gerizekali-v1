@@ -162,8 +162,8 @@ config.cars = {
         coord = vector4(-47.13, -1093.72, 25.15, 134.49),
         model = `tenf2`,
         spawnId = 0
-	},
-    {
+	}, 
+    { 
         coord = vector4(-41.44, -1095.95, 25.15, 134.49),
         model = `corsita`,
         spawnId = 0
@@ -179,37 +179,37 @@ config.carList = {
 	["Motorcycle"] = {
 		[`manchez2`] = {
 			["model"] = "manchez2",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 50000,
 		},
 		[`enduro`] = {
 			["model"] = "enduro",
-			["count"] = 2,
-			["price"] = 40000,
+			["count"] = 30,
+			["price"] = 50000,
 		},
 		[`gargoyle`] = {
 			["model"] = "gargoyle",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 35000,
 		},
 		[`sanctus`] = {
 			["model"] = "sanctus",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 90000,
 		},
 		[`nightblade`] = {
 			["model"] = "nightblade",
-			["count"] = 5,
-			["price"] = 50000,
+			["count"] = 30,
+			["price"] = 90000,
 		},
 		[`avarus`] = {
 			["model"] = "avarus",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 40000,
 		},
 		[`chimera`] = {
 			["model"] = "chimera",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 40000,
 		},
 		[`wolfsbane`] = {
@@ -219,37 +219,37 @@ config.carList = {
 		},
 		[`zombieb`] = {
 			["model"] = "zombieb",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 43500,
 		},
 		[`akuma`] = {
 			["model"] = "akuma",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 60000,
 		},
 		[`bagger`] = {
 			["model"] = "bagger",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 30000,
 		},
 		[`bati`] = {
 			["model"] = "bati",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 60000,
 		},
 		[`carbonrs`] = {
 			["model"] = "carbonrs",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 70000,
 		},
 		[`daemon`] = {
 			["model"] = "daemon",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 150000,
 		},
 		[`double`] = {
 			["model"] = "double",
-			["count"] = 5,
+			["count"] = 30,
 			["price"] = 70000,
 		},
 		[`faggio`] = {
@@ -259,42 +259,42 @@ config.carList = {
 		},
 		[`hakuchou`] = {
 			["model"] = "hakuchou",
-			["count"] = 3,
+			["count"] = 30,
 			["price"] = 80000,
 		},
 		[`hexer`] = {
 			["model"] = "hexer",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 45000,
 		},
 		[`innovation`] = {
 			["model"] = "innovation",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 70000,
 		},
 		[`nemesis`] = {
 			["model"] = "nemesis",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 30000,
 		},
 		[`ruffian`] = {
 			["model"] = "ruffian",
-			["count"] = 10,
-			["price"] = 40000,
+			["count"] = 30,
+			["price"] = 45000,
 		},
 		[`sanchez2`] = {
 			["model"] = "sanchez2",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 30000,
 		},
 		[`sovereign`] = {
 			["model"] = "sovereign",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 45000,
 		},
 		[`vader`] = {
 			["model"] = "vader",
-			["count"] = 10,
+			["count"] = 30,
 			["price"] = 45000,
 		},
 	},
@@ -338,172 +338,172 @@ config.carList = {
 	 ["S Class"] = { 
 	 	[`deveste`] = {
 	 		["model"] = "deveste",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1200000,
 	 	},
 	 	[`zorrusso`] = {
 	 		["model"] = "zorrusso",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 900000,
 	 	},
 	 	[`visione`] = {
 	 		["model"] = "visione",
 	 		["count"] = 5,
-	 		["price"] = 1400000,
+	 		["price"] = 1550000,
 	 	},
 	 	[`imperator`] = {
 	 		["model"] = "zentorno",
-	 		["count"] = 5,
-	 		["price"] = 1700000,
+	 		["count"] = 10,
+	 		["price"] = 750000,
 	 	},
 	 	[`xa21 `] = {
 	 		["model"] = "xa21",
-	 		["count"] = 5,
-	 		["price"] = 1350000,
+	 		["count"] = 10,
+	 		["price"] = 1300000,
 	 	},
 	 	[`vacca`] = {
 	 		["model"] = "vacca",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1100000,
 	 	},
 	 	[`vagner `] = {
 	 		["model"] = "vagner",
-	 		["count"] = 5,
-	 		["price"] = 1480000,
+	 		["count"] = 10,
+	 		["price"] = 1660000,
 	 	},
 	 	[`tyrant`] = {
 	 		["model"] = "tyrant",
-	 		["count"] = 5,
-	 		["price"] = 2000000,
+	 		["count"] = 10,
+	 		["price"] = 2100000,
 	 	},
 	 	[`turismor`] = {
 	 		["model"] = "turismor",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 2100000,
 	 	},
 	 	[`thrax`] = {
 	 		["model"] = "thrax",
-	 		["count"] = 5,
-	 		["price"] = 3000000,
+	 		["count"] = 10,
+	 		["price"] = 2800000,
 	 	},
 	 	[`tempesta`] = {
 	 		["model"] = "tempesta",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1500000,
 	 	},
 	 	[`t20`] = {
 	 		["model"] = "t20",
-	 		["count"] = 5,
-	 		["price"] = 1480000,
+	 		["count"] = 10,
+	 		["price"] = 1650000,
 	 	},
 	 	[`reaper`] = {
 	 		["model"] = "reaper",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 800000,
 	 	},
 	 	[`penetrator `] = {
 	 		["model"] = "penetrator",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1000000,
 	 	},
 	 	[`pfister811 `] = {
 	 		["model"] = "pfister811",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 800000,
 	 	},
 	 	[`osiris`] = {
 	 		["model"] = "osiris",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1250000,
 	 	},
 	 	[`nero`] = {
 	 		["model"] = "nero",
-	 		["count"] = 5,
-	 		["price"] = 1750000,
+	 		["count"] = 10,
+	 		["price"] = 1700000,
 	 	},
 	 	[`nero2`] = {
 	 		["model"] = "nero2",
-	 		["count"] = 5,
-	 		["price"] = 1850000,
+	 		["count"] = 10,
+	 		["price"] = 1800000,
 	 	},
 	 	[`krieger`] = {
 	 		["model"] = "krieger",
-	 		["count"] = 5,
-	 		["price"] = 950000,
+	 		["count"] = 10,
+	 		["price"] = 2500000,
 	 	},
 	 	[`italigtb2`] = {
 	 		["model"] = "italigtb2",
-	 		["count"] = 5,
-	 		["price"] = 1320000,
+	 		["count"] = 10,
+	 		["price"] = 1250000,
 	 	},
 	 	[`infernus`] = {
 	 		["model"] = "infernus",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1000000,
 	 	},
 	 	[`previon`] = {
 	 		["model"] = "previon",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 700000,
 	 	},
 	 	[`vectre`] = {
 	 		["model"] = "vectre",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 700000,
 	 	},
 	 	[`dominator7`] = {
 	 		["model"] = "dominator7",
-	 		["count"] = 2,
-	 		["price"] = 1200000,
+	 		["count"] = 10,
+	 		["price"] = 1300000,
 	 	},
 	 	[`comet6`] = {
 	 		["model"] = "comet6",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 950000,
 	 	},
 	 	[`remus`] = {
 	 		["model"] = "remus",
-	 		["count"] = 5,
-	 		["price"] = 700000,
+	 		["count"] = 10,
+	 		["price"] = 800000,
 	 	},
 	 	[`tailgater2`] = {
 	 		["model"] = "tailgater2",
-	 		["count"] = 5,
-	 		["price"] = 750000,
+	 		["count"] = 10,
+	 		["price"] = 760000,
 	 	},
 	 	[`rt3000`] = {
 	 		["model"] = "rt3000",
-	 		["count"] = 5,
-	 		["price"] = 1800000,
+	 		["count"] = 10,
+	 		["price"] = 1500000,
 	 	},
 	 	[`dominator8`] = {
 	 		["model"] = "dominator8",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1000000,
 	 	},
 	 	[`futo2`] = {
 	 		["model"] = "futo2",
-	 		["count"] = 5,
-	 		["price"] = 400000,
+	 		["count"] = 10,
+	 		["price"] = 40000,
 	 	},
 	 	[`italirsx`] = {
 	 		["model"] = "italirsx",
-	 		["count"] = 5,
-	 		["price"] = 2400000,
+	 		["count"] = 10,
+	 		["price"] = 2600000,
 	 	},
 	 	[`coquette4`] = {
 	 		["model"] = "coquette4",
-	 		["count"] = 5,
+	 		["count"] = 1,
 	 		["price"] = 3400000,
 	 	},
 	 	[`tigon`] = {
 	 		["model"] = "tigon",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1350000,
 	 	},
 	 	[`elegy`] = {
 	 		["model"] = "elegy",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 600000,
 	 	},
 	 	[`banshee2`] = {
@@ -518,18 +518,18 @@ config.carList = {
 	 	},
 	 	[`gauntlet4`] = {
 	 		["model"] = "gauntlet4",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 530000,
 	 	},
 	 	[`cheetah2`] = {
 	 		["model"] = "cheetah2",
-	 		["count"] = 5,
-	 		["price"] = 600000,
+	 		["count"] = 10,
+	 		["price"] = 650000,
 	 	},
 	 	[`furia`] = {
 	 		["model"] = "furia",
-	 		["count"] = 5,
-	 		["price"] = 980000,
+	 		["count"] = 10,
+	 		["price"] = 1930000,
 	 	},
 	 	[`turismo2`] = {
 	 		["model"] = "turismo2",
@@ -548,28 +548,28 @@ config.carList = {
 	 	},
 	 	[`zr350`] = {
 	 		["model"] = "zr350",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 1200000,
 	 	},
 	 	[`growler`] = {
 	 		["model"] = "growler",
-	 		["count"] = 5,
+	 		["count"] = 10,
 	 		["price"] = 900000,
 	 	},
 	 	[`infernus2`] = {
 	 		["model"] = "infernus2",
 	 		["count"] = 5,
-	 		["price"] = 850000,
+	 		["price"] = 1000000,
 	 	},
 	 	[`deviant`] = {
 	 		["model"] = "deviant",
-	 		["count"] = 5,
-	 		["price"] = 600000,
+	 		["count"] = 10,
+	 		["price"] = 700000,
 	 	},
 	 	[`sultanrs`] = {
 	 		["model"] = "sultanrs",
-	 		["count"] = 5,
-	 		["price"] = 1000000,
+	 		["count"] = 10,
+	 		["price"] = 100000,
 	 	},
 	 	[`peyote2`] = {
 	 		["model"] = "peyote2",
@@ -584,7 +584,7 @@ config.carList = {
 	 	[`zeno`] = {
 	 		["model"] = "zeno",
 	 		["count"] = 5,
-	 		["price"] = 1200000,
+	 		["price"] = 1350000,
 	 	},
 	 	[`ignus`] = {
 	 		["model"] = "ignus",
@@ -601,12 +601,12 @@ config.carList = {
 	["A Class"] = {
 		[`freecrawler`] = {
 			["model"] = "freecrawler",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 175000,
 		},
 		[`hellion`] = {
 			["model"] = "hellion",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 95000,
 		},
 		[`blazer`] = {
@@ -631,12 +631,12 @@ config.carList = {
 		},
 		[`seminole2`] = {
 			["model"] = "seminole2",
-			["count"] = 2,
-			["price"] = 80000,
+			["count"] = 30,
+			["price"] = 30000,
 		},
 		[`winky`] = {
 			["model"] = "winky",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 75000,
 		},
 		[`imperator`] = {
@@ -646,57 +646,57 @@ config.carList = {
 		},
 		[`toros`] = {
 			["model"] = "toros",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 180000,
 		},
 		[`penumbra2`] = {
 			["model"] = "penumbra2",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 150000,
 		},
 		[`italigto`] = {
 			["model"] = "italigto",
-			["count"] = 2,
-			["price"] = 215000,
+			["count"] = 30,
+			["price"] = 1250000,
 		},
 		[`neon`] = {
 			["model"] = "neon",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 220000,
 		},
 		[`banshee`] = {
 			["model"] = "banshee",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 200000,
 		},
 		[`coquette`] = {
 			["model"] = "coquette",
-			["count"] = 2,
-			["price"] = 190000,
+			["count"] = 10,
+			["price"] = 145000,
 		},
 		[`ninef2`] = {
 			["model"] = "ninef2",
-			["count"] = 2,
-			["price"] = 210000,
+			["count"] = 10,
+			["price"] = 215000,
 		},
 		[`drafter`] = {
 			["model"] = "drafter",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 215000,
 		},
 		[`bestiagts`] = {
 			["model"] = "bestiagts",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 190000,
 		},
 		[`carbonizzare`] = {
 			["model"] = "carbonizzare",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 200000,
 		},
 		[`comet2`] = {
 			["model"] = "comet2",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 190000,
 		},
 		[`comet3`] = {
@@ -716,53 +716,53 @@ config.carList = {
 		},
 		[`kanjo`] = {
 			["model"] = "kanjo",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 35000,
 		},
 		[`elegy2`] = {
 			["model"] = "elegy2",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 200000,
 		},
 		[`feltzer2`] = {
 			["model"] = "feltzer2",
-			["count"] = 2,
+			["count"] = 30,
 			["price"] = 150000,
 		},
 		[`furoregt`] = {
 			["model"] = "furoregt",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 160000,
 		},
 		[`jester`] = {
 			["model"] = "jester",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 200000,
 		},
 		[`jugular`] = {
 			["model"] = "jugular",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 190000,
 		},
 		[`lynx`] = {
 			["model"] = "lynx",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 180000,
 		},
 		[`locust`] = {
 			["model"] = "locust",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 180000,
 		},
 		[`massacro`] = {
 			["model"] = "massacro",
-			["count"] = 2,
-			["price"] = 170000,
+			["count"] = 10,
+			["price"] = 80000,
 		},
 		[`pariah`] = {
 			["model"] = "pariah",
-			["count"] = 2,
-			["price"] = 185000,
+			["count"] = 10,
+			["price"] = 190000,
 		},
 		[`rapidgt`] = {
 			["model"] = "rapidgt",
@@ -772,26 +772,26 @@ config.carList = {
 		[`rapidgt2`] = {
 			["model"] = "rapidgt2",
 			["count"] = 2,
-			["price"] = 85000,
+			["price"] = 82000,
 		},
 		[`ruston`] = {
 			["model"] = "ruston",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 220000,
 		},
 		[`schwarzer`] = {
 			["model"] = "schwarzer",
-			["count"] = 2,
-			["price"] = 140000,
+			["count"] = 10,
+			["price"] = 147000,
 		},
 		[`seven70`] = {
 			["model"] = "seven70",
-			["count"] = 2,
-			["price"] = 212000,
+			["count"] = 10,
+			["price"] = 210000,
 		},
 		[`specter`] = {
 			["model"] = "specter",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 185000,
 		},
 		[`specter2`] = {
@@ -801,122 +801,122 @@ config.carList = {
 		},
 		[`surano`] = {
 			["model"] = "surano",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 180000,
 		},
 		[`z190`] = {
 			["model"] = "z190",
-			["count"] = 2,
-			["price"] = 140000,
+			["count"] = 10,
+			["price"] = 148000,
 		},
 		[`cogcabrio`] = {
 			["model"] = "cogcabrio",
-			["count"] = 2,
-			["price"] = 130000,
+			["count"] = 10,
+			["price"] = 100000,
 		},
 		[`f620`] = {
 			["model"] = "f620",
-			["count"] = 2,
-			["price"] = 150000,
+			["count"] = 10,
+			["price"] = 155000,
 		},
 		[`felon2`] = {
 			["model"] = "felon2",
-			["count"] = 2,
-			["price"] = 150000,
+			["count"] = 10,
+			["price"] = 170000,
 		},
 		[`zion`] = {
 			["model"] = "zion",
-			["count"] = 2,
-			["price"] = 160000,
+			["count"] = 10,
+			["price"] = 22000,
 		},
 		[`zion2`] = {
 			["model"] = "zion2",
-			["count"] = 2,
-			["price"] = 170000,
+			["count"] = 10,
+			["price"] = 180000,
 		},
 		[`paragon`] = {
 			["model"] = "paragon",
-			["count"] = 2,
-			["price"] = 170000,
+			["count"] = 10,
+			["price"] = 180000,
 		},
 		[`windsor`] = {
 			["model"] = "windsor",
-			["count"] = 2,
-			["price"] = 170000,
+			["count"] = 10,
+			["price"] = 100000,
 		},
 		[`brioso`] = {
 			["model"] = "brioso",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 25000,
 		},
 		[`voltic`] = {
 			["model"] = "voltic",
-			["count"] = 2,
-			["price"] = 135000,
+			["count"] = 10,
+			["price"] = 520000,
 		},
 		[`dominator`] = {
 			["model"] = "dominator",
-			["count"] = 2,
-			["price"] = 160000,
+			["count"] = 10,
+			["price"] = 62000,
 		},
 		[`dominator3`] = {
 			["model"] = "dominator3",
-			["count"] = 2,
-			["price"] = 180000,
+			["count"] = 10,
+			["price"] = 170000,
 		},
 		[`gauntlet`] = {
 			["model"] = "gauntlet",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 110000,
 		},
 		[`stafford`] = {
 			["model"] = "stafford",
-			["count"] = 2,
-			["price"] = 80000,
+			["count"] = 10,
+			["price"] = 76000,
 		},
 		[`blade`] = {
 			["model"] = "blade",
-			["count"] = 2,
-			["price"] = 75000,
+			["count"] = 10,
+			["price"] = 23000,
 		},
 		[`dukes`] = {
 			["model"] = "dukes",
-			["count"] = 2,
-			["price"] = 90000,
+			["count"] = 10,
+			["price"] = 23000,
 		},
 		[`vamos`] = {
 			["model"] = "vamos",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 82500,
 		},
 		[`ellie`] = {
 			["model"] = "ellie",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 85000,
 		},
 		[`ruiner`] = {
 			["model"] = "ruiner",
-			["count"] = 2,
-			["price"] = 60000,
+			["count"] = 10,
+			["price"] = 29000,
 		},
 		[`sabregt`] = {
 			["model"] = "sabregt",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 45000,
 		},
 		[`slamvan`] = {
 			["model"] = "slamvan",
 			["count"] = 2,
-			["price"] = 70000,
+			["price"] = 30000,
 		},
 		[`slamvan3`] = {
 			["model"] = "slamvan3",
-			["count"] = 2,
-			["price"] = 75000,
+			["count"] = 10,
+			["price"] = 70000,
 		},
 		[`tampa`] = {
 			["model"] = "tampa",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 85000,
 		},
 		[`yosemite`] = {
@@ -931,17 +931,17 @@ config.carList = {
 		},
 		[`iwagen`] = {
 			["model"] = "iwagen",
-			["count"] = 2,
-			["price"] = 100000,
+			["count"] = 10,
+			["price"] = 115000,
 		},
 		[`baller7`] = {
 			["model"] = "baller7",
 			["count"] = 2,
-			["price"] = 125000,
+			["price"] = 550000,
 		},
 		[`astron`] = {
 			["model"] = "astron",
-			["count"] = 2,
+			["count"] = 10,
 			["price"] = 140000,
 		},
 	},
@@ -963,28 +963,28 @@ config.carList = {
 		},
 		[`asbo`] = {
 			["model"] = "asbo",
-			["count"] = 3,
-			["price"] = 9000,
+			["count"] = 13,
+			["price"] = 4000,
 		},
 		[`komoda`] = {
 			["model"] = "komoda",
 			["count"] = 3,
-			["price"] = 80000,
+			["price"] = 85000,
 		},
 		[`vstr`] = {
 			["model"] = "vstr",
-			["count"] = 3,
+			["count"] = 30,
 			["price"] = 90000,
 		},
 		[`blista`] = {
 			["model"] = "blista",
 			["count"] = 3,
-			["price"] = 10000,
+			["price"] = 30000,
 		},
 		[`sugoi`] = {
 			["model"] = "sugoi",
 			["count"] = 3,
-			["price"] = 60000,
+			["price"] = 65000,
 		},
 		[`prairie`] = {
 			["model"] = "prairie",
@@ -1004,7 +1004,7 @@ config.carList = {
 		[`sentinel2`] = {
 			["model"] = "sentinel2",
 			["count"] = 3,
-			["price"] = 60000,
+			["price"] = 55000,
 		},
 		[`zion3`] = {
 			["model"] = "zion3",
@@ -1013,8 +1013,8 @@ config.carList = {
 		},
 		[`buffalo`] = {
 			["model"] = "buffalo",
-			["count"] = 3,
-			["price"] = 85000,
+			["count"] = 10,
+			["price"] = 18000,
 		},
 		[`buffalo2`] = {
 			["model"] = "buffalo2",
@@ -1038,8 +1038,8 @@ config.carList = {
 		},
 		[`sultan`] = {
 			["model"] = "sultan",
-			["count"] = 3,
-			["price"] = 80000,
+			["count"] = 10,
+			["price"] = 50000,
 		},
 		[`sultan2`] = {
 			["model"] = "sultan2",
@@ -1074,7 +1074,7 @@ config.carList = {
 		[`cognoscenti`] = {
 			["model"] = "cognoscenti",
 			["count"] = 3,
-			["price"] = 100000,
+			["price"] = 22500,
 		},
 		[`cog55`] = {
 			["model"] = "cog55",
@@ -1099,7 +1099,7 @@ config.carList = {
 		[`stratum`] = {
 			["model"] = "stratum",
 			["count"] = 3,
-			["price"] = 30000,
+			["price"] = 35000,
 		},
 		[`superd`] = {
 			["model"] = "superd",
@@ -1109,7 +1109,7 @@ config.carList = {
 		[`tailgater`] = {
 			["model"] = "tailgater",
 			["count"] = 3,
-			["price"] = 60000,
+			["price"] = 62000,
 		},
 		[`exemplar`] = {
 			["model"] = "exemplar",
@@ -1119,7 +1119,7 @@ config.carList = {
 		[`jackal`] = {
 			["model"] = "jackal",
 			["count"] = 3,
-			["price"] = 55000,
+			["price"] = 59000,
 		},
 		[`oracle`] = {
 			["model"] = "oracle",
@@ -1129,7 +1129,7 @@ config.carList = {
 		[`oracle2`] = {
 			["model"] = "oracle2",
 			["count"] = 3,
-			["price"] = 60000,
+			["price"] = 68000,
 		},
 		[`raiden`] = {
 			["model"] = "raiden",
@@ -1154,12 +1154,12 @@ config.carList = {
 		[`baller3`] = {
 			["model"] = "baller3",
 			["count"] = 3,
-			["price"] = 110000,
+			["price"] = 150000,
 		},
 		[`dubsta2`] = {
 			["model"] = "dubsta2",
 			["count"] = 3,
-			["price"] = 105000,
+			["price"] = 195000,
 		},
 		[`dubsta`] = {
 			["model"] = "dubsta",
@@ -1184,7 +1184,7 @@ config.carList = {
 		[`serrano`] = {
 			["model"] = "serrano",
 			["count"] = 3,
-			["price"] = 50000,
+			["price"] = 58000,
 		},
 		[`xls`] = {
 			["model"] = "xls",
@@ -1204,7 +1204,7 @@ config.carList = {
 		[`flashgt`] = {
 			["model"] = "flashgt",
 			["count"] = 3,
-			["price"] = 60000,
+			["price"] = 68000,
 		},
 		[`omnis`] = {
 			["model"] = "omnis",
@@ -1229,17 +1229,17 @@ config.carList = {
 		[`retinue`] = {
 			["model"] = "retinue",
 			["count"] = 3,
-			["price"] = 32500,
+			["price"] = 58500,
 		},
 		--[[[`retinue2`] = {
 			["model"] = "retinue2",
 			["count"] = 3,
-			["price"] = 55000,
+			["price"] = 58000,
 		}, ]]
 		[`outlaw`] = {
 			["model"] = "outlaw",
 			["count"] = 2,
-			["price"] = 80000,
+			["price"] = 85000,
 		},
 		[`everon`] = {
 			["model"] = "everon",
@@ -1274,7 +1274,7 @@ config.carList = {
 		[`faction`] = {
 			["model"] = "faction",
 			["count"] = 3,
-			["price"] = 40000,
+			["price"] = 50000,
 		},
 		[`faction2`] = {
 			["model"] = "faction2",
@@ -1284,17 +1284,17 @@ config.carList = {
 		[`impaler`] = {
 			["model"] = "impaler",
 			["count"] = 3,
-			["price"] = 60000,
+			["price"] = 95000,
 		},
 		[`nightshade`] = {
 			["model"] = "nightshade",
 			["count"] = 3,
-			["price"] = 65000,
+			["price"] = 70000,
 		},
 		[`phoenix`] = {
 			["model"] = "phoenix",
 			["count"] = 3,
-			["price"] = 70000,
+			["price"] = 65000,
 		},
 		[`picador`] = {
 			["model"] = "picador",
@@ -1304,7 +1304,7 @@ config.carList = {
 		[`ratloader2`] = {
 			["model"] = "ratloader2",
 			["count"] = 3,
-			["price"] = 80000,
+			["price"] = 1500,
 		},
 		[`sabregt2`] = {
 			["model"] = "sabregt2",
@@ -1364,7 +1364,7 @@ config.carList = {
 		[`stinger`] = {
 			["model"] = "stinger",
 			["count"] = 3,
-			["price"] = 100000,
+			["price"] = 80000,
 		},
 		[`stingergt`] = {
 			["model"] = "stingergt",
@@ -1379,7 +1379,7 @@ config.carList = {
 		[`viseris`] = {
 			["model"] = "viseris",
 			["count"] = 3,
-			["price"] = 100000,
+			["price"] = 110000,
 		},
 		[`rapidgt3`] = {
 			["model"] = "rapidgt3",
@@ -1436,7 +1436,7 @@ config.carList = {
 		[`issi2`] = {
 			["model"] = "issi2",
 			["count"] = 15,
-			["price"] = 12000,
+			["price"] = 17000,
 		},
 		[`panto`] = {
 			["model"] = "panto",
@@ -1451,7 +1451,7 @@ config.carList = {
 		[`baller`] = {
 			["model"] = "baller",
 			["count"] = 15,
-			["price"] = 52500,
+			["price"] = 22500,
 		},
 		[`baller2`] = {
 			["model"] = "baller2",
@@ -1466,17 +1466,17 @@ config.carList = {
 		[`fq2`] = {
 			["model"] = "fq2",
 			["count"] = 15,
-			["price"] = 52500,
+			["price"] = 58500,
 		},
 		[`granger`] = {
 			["model"] = "granger",
 			["count"] = 15,
-			["price"] = 60000,
+			["price"] = 22000,
 		},
 		[`habanero`] = {
 			["model"] = "habanero",
 			["count"] = 15,
-			["price"] = 28000,
+			["price"] = 5000,
 		},
 		[`landstalker`] = {
 			["model"] = "landstalker",
@@ -1527,7 +1527,7 @@ config.carList = {
 		[`mesa`] = {
 			["model"] = "mesa",
 			["count"] = 15,
-			["price"] = 60000,
+			["price"] = 120000,
 		},
 		[`mesa3`] = {
 			["model"] = "mesa3",
@@ -1542,7 +1542,7 @@ config.carList = {
 		[`brawler`] = {
 			["model"] = "brawler",
 			["count"] = 2,
-			["price"] = 95000,
+			["price"] = 340000,
 		},
 		[`dubsta3`] = {
 			["model"] = "dubsta3",
@@ -1567,7 +1567,7 @@ config.carList = {
 		[`rebel2`] = {
 			["model"] = "rebel2",
 			["count"] = 15,
-			["price"] = 32500,
+			["price"] = 27500,
 		},
 		[`guardian`] = {
 			["model"] = "guardian",
@@ -1602,7 +1602,7 @@ config.carList = {
 		[`issi3`] = {
 			["model"] = "issi3",
 			["count"] = 15,
-			["price"] = 2500,
+			["price"] = 5500,
 		},
 		[`chino`] = {
 			["model"] = "chino",
@@ -1612,7 +1612,7 @@ config.carList = {
 		[`chino2`] = {
 			["model"] = "chino2",
 			["count"] = 15,
-			["price"] = 40000,
+			["price"] = 38000,
 		},
 		[`hotknife`] = {
 			["model"] = "hotknife",
@@ -1627,7 +1627,7 @@ config.carList = {
 		[`btype3`] = {
 			["model"] = "btype3",
 			["count"] = 15,
-			["price"] = 55000,
+			["price"] = 65000,
 		},
 		[`ztype`] = {
 			["model"] = "ztype",
@@ -1637,12 +1637,12 @@ config.carList = {
 		[`moonbeam`] = {
 			["model"] = "moonbeam",
 			["count"] = 15,
-			["price"] = 20000,
+			["price"] = 30000,
 		},
 		[`moonbeam2`] = {
 			["model"] = "moonbeam2",
 			["count"] = 15,
-			["price"] = 25000,
+			["price"] = 35000,
 		},
 		[`ratloader`] = {
 			["model"] = "ratloader",
@@ -1653,7 +1653,7 @@ config.carList = {
 	["D Class"] = {
 		[`youga2`] = {
 			["model"] = "youga2",
-			["count"] = 90000000000000,
+			["count"] = 90,
 			["price"] = 10000,
 		},
 		[`asea`] = {
@@ -1669,7 +1669,7 @@ config.carList = {
 		[`regina`] = {
 			["model"] = "regina",
 			["count"] = 30,
-			["price"] = 5000,
+			["price"] = 7000,
 		},
 		[`minivan`] = {
 			["model"] = "minivan",
@@ -1679,12 +1679,12 @@ config.carList = {
 		[`paradise`] = {
 			["model"] = "paradise",
 			["count"] = 30,
-			["price"] = 12500,
+			["price"] = 19500,
 		},
 		[`pony`] = {
 			["model"] = "pony",
 			["count"] = 30,
-			["price"] = 20000,
+			["price"] = 40000,
 		},
 		[`speedo`] = {
 			["model"] = "speedo",
@@ -1694,7 +1694,7 @@ config.carList = {
 		[`burrito3`] = {
 			["model"] = "burrito3",
 			["count"] = 30,
-			["price"] = 20000,
+			["price"] = 2000,
 		},
 		[`kalahari`] = {
 			["model"] = "kalahari",
