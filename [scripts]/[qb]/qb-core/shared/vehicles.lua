@@ -1717,15 +1717,6 @@ QBShared.Vehicles = {
 		['hash'] = `blazer4`,
 		['shop'] = 'pdm',
 	},
-	['blazer5'] = {
-		['name'] = 'Blazer Aqua',
-		['brand'] = 'Nagasaki',
-		['model'] = 'blazer5',
-		['price'] = 9000,
-		['category'] = 'offroad',
-		['hash'] = `blazer5`,
-		['shop'] = 'pdm',
-	},
 	['brawler'] = {
 		['name'] = 'Brawler',
 		['brand'] = 'Annis',
@@ -4999,6 +4990,15 @@ QBShared.Vehicles = {
     },
 	
 	-- DONATE ARAÇLARI   
+	['A1Hellcat'] = {
+        ['name'] = 'Charger Custom',
+        ['brand'] = 'Dodge',
+        ['model'] = 'A1Hellcat',
+        ['price'] = 9999999999999,
+        ['category'] = 'donate',
+        ['hash'] = `A1Hellcat`,
+        ['shop'] = 'donate',
+    },
 	['b63s'] = {
         ['name'] = 'b63s',
         ['brand'] = 'b63s',
@@ -7227,6 +7227,15 @@ QBShared.Vehicles = {
 		['price'] = 0,
 		['category'] = 'donate',
 		['hash'] = `cbr1000rrr`,
+		['shop'] = 'donate',
+	},
+	['rc599xx'] = {
+		['name'] = 'rc599xx',
+		['brand'] = 'rc599xx',
+		['model'] = 'rc599xx',
+		['price'] = 0,
+		['category'] = 'donate',
+		['hash'] = `rc599xx`,
 		['shop'] = 'donate',
 	}
 }

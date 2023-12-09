@@ -275,7 +275,7 @@ return {
     metrotec = {
         name = 'Ağır Silah Deposu',
         groups = {
-            ['ranger'] = 0
+            ['fbi'] = 0
         },
         inventory = {{
             name = 'weapon_mpx',

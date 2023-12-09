@@ -68,13 +68,29 @@ Slots.List = {{
     totalSlot = 2
 }, -- aqu
 {
-    license = "license:c999a92c4c4cf2fd821b589121ddfcf50a37c674",
-    totalSlots = 4
-}, -- şizo
+    license = "license:880f82cd0de758b84c99990ed17b91f1a90f5cde",
+    totalSlot = 2
+}, --momovie
+{
+    license = "license:e9e82f1da7121a96fbf3042d75795f7ec1feb995",
+    totalSlot = 3
+}, --viccollins
+{
+    license = "license:563052d4b1513b67aef27e79c95fb69f38e5c220",
+    totalSlot = 3
+}, --adal
+{
+    license = "license:ea5344a7acb18a7c3ad2ed5239e948bca1083c8c",
+    totalSlot = 3
+} , --deniz
 {
     license = "license:36c22bb9eda77dd036ba4d5f6354647ae62653c9",
-    totalSlots = 4
-}--efe
+    totalSlot = 3
+},--efe
+{
+    license = "license:c999a92c4c4cf2fd821b589121ddfcf50a37c674",
+    totalSlot = 4
+}, -- şizo
 }
 
 --print(json.encode(Slots))

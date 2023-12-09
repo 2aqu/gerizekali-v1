@@ -55,7 +55,7 @@ local isblips = {
 	{title="Hermanos Mekanik", colour=0, id=446, coords = vector3(480.58, -1317.12, 29.2)}, 
     {title="Lons Mekanik", colour=0, id=446, coords = vector3(-1616.65, -822.15, 16.56)},
     {title="NoMercy Mekanik", colour=0, id=446, coords = vector3(703.53, -751.87, 24.48)},
-	{title="Mekanik 4", colour=0, id=446, coords = vector3(-207.12, -1322.34, 18.6)},
+	{title="Zetas Mekanik", colour=0, id=446, coords = vector3(-207.12, -1322.34, 18.6)},
 	{title="Unitas Mekanik", colour=0, id=446, coords = vector3(732.64, -1080.43, 22.17)},
 	{title="Fk Mekanik", colour=0, id=446, coords = vector3(-1418.96, -446.66, 35.91)},
     --{title="Cortez Mekanik", colour=0, id=446, coords = vector3(872.78, -2113.2, 30.46)},

@@ -176,15 +176,15 @@ Garages = {
     ['wutanggarag'] = {
         ['Zone'] = {
             ['Shape'] = {
-                vector2(13.875377655029, -1835.7635498047),
-                vector2(7.8818602561951, -1842.7453613281),
-                vector2(2.852534532547, -1838.3762207031),
-                vector2(8.7904090881348, -1831.3481445312)
+                vector2(-145.65979003906, -2318.4323730469),
+                vector2(-145.8879699707, -2307.7565917969),
+                vector2(-140.57046508789, -2307.8039550781),
+                vector2(-140.46003723145, -2318.3818359375)
             },
-            ['minZ'] = 22.2,  -- min height of the parking zone
-            ['maxZ'] = 27.30,  -- max height of the parking zone
+            ['minZ'] = 3.2,  -- min height of the parking zone
+            ['maxZ'] = 12.30,  -- max height of the parking zone
         },
-        label = 'Wutang Garaj',
+        label = '92 Garaj',
         showBlip = false,
         blipcoords = vector3(852.51, -2101.76, 30.5),
         blipName = 'Garaj',
@@ -199,16 +199,16 @@ Garages = {
     ['wutangimpodun'] = {
         ['Zone'] = {
             ['Shape'] = { --polygon that surrounds the parking area
-                vector2(13.956372261047, -1814.3887939453),
-                vector2(20.398448944092, -1820.80859375),
-                vector2(16.192142486572, -1825.4455566406),
-                vector2(9.0277538299561, -1819.7592773438)
+                vector2(-129.56088256836, -2317.7895507812),
+                vector2(-124.28704071045, -2317.6472167969),
+                vector2(-124.64585876465, -2309.9670410156),
+                vector2(-129.55731201172, -2310.1142578125)
             },
-            ['minZ'] = 22.00,  -- min height of the parking zone
-            ['maxZ'] = 27.00,  -- max height of the parking zone
+            ['minZ'] = 3.00,  -- min height of the parking zone
+            ['maxZ'] = 12.00,  -- max height of the parking zone
             debug = false,
         },
-        label = "Wutang Çekilmiş",
+        label = "92 Çekilmiş",
         showBlip = false,
         blipcoords = vector3(1705.43, 3749.38, 34.0),
         blipName = "Çekilmiş Araçlar",

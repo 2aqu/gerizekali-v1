@@ -624,11 +624,6 @@ config.carList = {
 			["count"] = 2,
 			["price"] = 40000,
 		},
-		[`blazer5`] = {
-			["model"] = "blazer",
-			["count"] = 2,
-			["price"] = 75000,
-		},
 		[`seminole2`] = {
 			["model"] = "seminole2",
 			["count"] = 30,

@@ -197,13 +197,13 @@ Config.Companies.Services = {
     },
    {
        job = "mechanic4",
-       name = "Mekanik 4",
+       name = "Zetas Mekanik",
        icon = "https://cdn-icons-png.flaticon.com/128/10281/10281554.png",
        canCall = true, -- if true, players can call the company
        canMessage = true, -- if true, players can message the company
        bossRanks = {"boss", "worker"}, -- ranks that can manage the company
        location = {
-           name = "Mekanik 4",
+           name = "Zetas Mekanik",
            coords = {
                x = -213.99, 
                y = -1329.78

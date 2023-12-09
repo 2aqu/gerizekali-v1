@@ -29,7 +29,9 @@ Config.Access = { -- occupations of the people who can access the mdt
     ['doj'] = true,
     ['ranger'] = true,
     ['vpd'] = true,
-    ['dppd'] = true
+    ['dppd'] = true,
+    ['fbi'] = true
+
 }
 
 Config.Headers = {
@@ -41,6 +43,8 @@ Config.Headers = {
     ['dppd'] = 'DEL PIERRO POLICE DEPARTMENT',
     ['ranger'] = 'SAN ANDREAS PARK RANGER',
     ['doj'] = 'DEPARTMENT OF JUSTICE',
+    ['fbi'] = 'Federal Bureau of Investigation'
+
 }
 
 Config.SocietyNameJob = {

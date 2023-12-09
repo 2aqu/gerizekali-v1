@@ -737,24 +737,6 @@ end)
 
 -- irishpub
 
-CreateThread(function() -- vpd2
-    exports['qb-target']:AddBoxZone("wutang", vector3(-2.5, -1815.81, 20.7), 3, 3, {
-        name = "wutang",
-        heading = 0,
-        minZ = 19.57834,
-        maxZ = 21.87834,
-        debugPoly = false
-    }, {
-        options = {{
-            type = "Client",
-            event = "illenium-appearance:client:openClothingShopMenu",
-            icon = "fas fa-circle",
-            label = "Kıyafet Dolabı"
-        }},
-        distance = 2.5
-    })
-end)
-
 CreateThread(function() -- kask takma engelleme
     while true do
         Wait(100)

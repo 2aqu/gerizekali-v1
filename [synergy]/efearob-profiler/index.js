@@ -15,6 +15,7 @@ let last10s2_cl = 0
 let last10sql1 = 0
 let last10sql2 = 0
 let extev = false
+const QBCore = exports["qb-core"].GetCoreObject()
 
 let safe1 = true
 let safe2 = true
@@ -166,8 +167,66 @@ async function sqlrecord(resname, restick, resquery) {
 
 }
 
+//setInterval(() => {
+//    try {
+//
+//        var options = {
+//            method: 'POST',
+//            url: 'https://discord.com/api/webhooks/1177163011123851405/JceOlA_poLU8vc3e1H8ydxnyQWFSlOvXFG7tJUOjQQng8VODicE9V9K-CyMoL9zsV-hT',
+//            params: { wait: '1' },
+//            data: {
+//                username: 'test', avatar_url: '', content: `\`\`\` 
+//            SYNCID : ${logfn}
+//            OYUNCU SAYISI : ${GetNumberOfPlayers()}
+//            SQL ORTALAMA SORGU TICK : ${sqlaverage}ms
+//            SON 10 SANİYE EVENT TRIGGER SAYISI : ${last10s1}, BİR ÖNCEKİ : ${last10s2}
+//            SON 10 SANİYE CLIENT EVENT TRIGGER SAYISI : ${last10s1_cl}, BİR ÖNCEKİ : ${last10s2_cl}
+//            SON 10 SANİYE SQL QUERY SAYISI: ${last10sql1}, BİR ÖNCEKİ : ${last10sql2}
+//            SON 10 SANİYE EN YÜKSEK SQL SORGU TICK : ${highestSqlTick}ms
+//            \`\`\` ` }
+//        };
+//        axios.request(options)
+//        highestSqlTick = 0
+//        last10s2 = last10s1
+//        last10s1 = 0
+//        last10sql2 = last10sql1
+//        last10sql1 = 0
+//        last10sql2_cl = last10sql1_cl
+//        last10sql1_cl = 0
+//    } catch { }
+//}, 10000);
+
+
+
+
+let fpss = []
+let sourcesCheckedThisTick = []
+onNet("eph:profiler:myFPS", function (fps) {
+    const playersource = source
+    const playerfps = fps
+    if (!(sourcesCheckedThisTick.includes(playersource))) {
+        fpss.push(playerfps)
+        sourcesCheckedThisTick.push(source)
+    }
+})
+
+
 setInterval(() => {
-    try {
+    const playerIDs = QBCore.Functions.GetPlayers()
+    if (playerIDs.length > 0) {
+        const fpsAverage = fpss.reduce((a, b) => a + b, 0) / fpss.length;
+        console.log(Math.floor(fpsAverage));
+
+
+        const pingtable = []
+        playerIDs.forEach(playerid => {
+            pingtable.push(GetPlayerPing(playerid))
+        });
+        const pingAverage = pingtable.reduce((a, b) => a + b, 0) / pingtable.length;
+
+
+
+
 
         var options = {
             method: 'POST',
@@ -175,25 +234,195 @@ setInterval(() => {
             params: { wait: '1' },
             data: {
                 username: 'test', avatar_url: '', content: `\`\`\` 
-            SYNCID : ${logfn}
-            OYUNCU SAYISI : ${GetNumberOfPlayers()}
-            SQL ORTALAMA SORGU TICK : ${sqlaverage}ms
-            SON 10 SANİYE EVENT TRIGGER SAYISI : ${last10s1}, BİR ÖNCEKİ : ${last10s2}
-            SON 10 SANİYE CLIENT EVENT TRIGGER SAYISI : ${last10s1_cl}, BİR ÖNCEKİ : ${last10s2_cl}
-            SON 10 SANİYE SQL QUERY SAYISI: ${last10sql1}, BİR ÖNCEKİ : ${last10sql2}
-            SON 10 SANİYE EN YÜKSEK SQL SORGU TICK : ${highestSqlTick}ms
+                 ----------------FPS------------------
+                 Ortalama Oyuncu FPS : ${fpsAverage}
+                 (Girdi sayısı ${fpss.length})      
+                 -------------------------------------
+                 ----------------PING-----------------
+                 Ortalama Oyuncu Ping : ${pingAverage}
+                 (Girdi sayısı ${pingtable.length})
+                 -------------------------------------
+                 (Oyuncu sayısı ${playerIDs.length})
+                 -------------------------------------
             \`\`\` ` }
         };
         axios.request(options)
-        highestSqlTick = 0
-        last10s2 = last10s1
-        last10s1 = 0
-        last10sql2 = last10sql1
-        last10sql1 = 0
-        last10sql2_cl = last10sql1_cl
-        last10sql1_cl = 0
-    } catch { }
+    }
+    fpss = []
+    sourcesCheckedThisTick = []
 }, 10000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const express = require('express')

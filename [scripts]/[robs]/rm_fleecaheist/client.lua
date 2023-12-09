@@ -37,6 +37,7 @@ Citizen.CreateThread(function()
         Citizen.Wait(sleep)
     end
 end)
+    
 
 function StartFleecaHeist(index)
     QBCore.Functions.TriggerCallback('qb-jewellery:server:getCops', function(cops)
@@ -69,6 +70,7 @@ function StartFleecaHeist(index)
                         SetupVault(index)
                         TriggerServerEvent('fleecaheist:server:doorSync', index)
                         TriggerServerEvent('fleecaheist:server:policeAlert')
+                        TriggerServerEvent('ak4y-blackmarket:taskCountAdd', 7, 1) 
                         Wait(GetAnimDuration(animDict, 'heist_ruralbank_male') * 1000 - 2000)
                         loadAnimDict('missminuteman_1ig_2')
                         TaskPlayAnim(x, 'missminuteman_1ig_2', 'handsup_enter', 8.0, 8.0, -1, 50, 0, 0, 0, 0)

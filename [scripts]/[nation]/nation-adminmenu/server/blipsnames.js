@@ -25,6 +25,7 @@ setInterval(() => {
 function doBlipsLoop() {
     allplayers.forEach(playerid => {
         const playerDataRaw = datacache[playerid] || QBCore.Functions.GetPlayer(playerid)
+        if (!playerDataRaw) {return}
         if (!(datacache[playerid])) {
             datacache[playerid] = playerDataRaw
         }

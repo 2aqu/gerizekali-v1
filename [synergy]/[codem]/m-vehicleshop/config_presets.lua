@@ -3193,15 +3193,6 @@ DefaultVehiclesPresets = {
             vehImage = "./vehicle_images/trophytruck.png",
             brandImage = "./brand_images/vapid.png"
         }, {
-            brand = "Nagasaki",
-            name = "Blazer Aqua",
-            hash = "blazer5",
-            price = 75000,
-            stock = 30,
-            id = 1,
-            vehImage = "./vehicle_images/blazer5.png",
-            brandImage = "./brand_images/nagasaki.png"
-        }, {
             brand = "Annis",
             name = "Dubsta 6x6",
             hash = "dubsta3",

@@ -10,7 +10,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [2] = {
         police = true,
@@ -21,7 +22,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [3] = {
         police = true,
@@ -32,7 +34,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [4] = {
         police = true,
@@ -43,7 +46,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [5] = {
         police = true,
@@ -54,7 +58,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [6] = {
         police = true,
@@ -65,7 +70,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [7] = {
         police = true,
@@ -76,7 +82,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [8] = {
         police = true,
@@ -87,7 +94,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [9] = {
         police = true,
@@ -98,7 +106,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [10] = {
         police = true,
@@ -109,7 +118,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [11] = {
         police = true,
@@ -120,7 +130,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [12] = {
         police = true,
@@ -131,7 +142,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [13] = {
         police = true,
@@ -142,7 +154,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [14] = {
         police = true,
@@ -153,7 +166,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [15] = {
         police = true,
@@ -164,7 +178,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [16] = {
         police = true,
@@ -175,7 +190,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [17] = {
         police = true,
@@ -186,7 +202,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [18] = {
         police = true,
@@ -197,7 +214,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [19] = {
         police = true,
@@ -208,7 +226,8 @@ Config.RestrictedChannels = {
         sheriff = true,
         ambulance = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     },
     [20] = {
         police = true,
@@ -220,7 +239,8 @@ Config.RestrictedChannels = {
         ambulance = true,
         dppd = true,
         dppd = true,
-        ranger = true
+        ranger = true,
+        fbi = true
     }
 }
 
@@ -237,6 +257,6 @@ Config.messages = {
     ['volume_radio'] = 'Yeni ses düzeyi ',
     ['decrease_radio_volume'] = 'Radyo zaten maksimum ses düzeyine ayarlı',
     ['increase_radio_volume'] = 'Radyo zaten en düşük ses düzeyine ayarlı',
-    ['increase_decrease_radio_channel'] = 'Yeni kanal ',
+    ['increase_decrease_radio_channel'] = 'Yeni kanal '
 }
 

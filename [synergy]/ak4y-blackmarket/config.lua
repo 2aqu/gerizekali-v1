@@ -141,7 +141,7 @@ AK4Y.CategoryItems = {{
     label = "Fnx 45",
     price = 35000,
     count = 1,
-    level = 7,
+    level = 2,
     image = "./images/weapon_fnx45.png"
 }, {
     id = 9,
@@ -171,7 +171,7 @@ AK4Y.CategoryItems = {{
     label = "Ağır Zırh",
     price = 7500,
     count = 1,
-    level = 18,
+    level = 4,
     image = "./images/heavyarmor.png"
 }, {
     id = 12,
@@ -181,7 +181,7 @@ AK4Y.CategoryItems = {{
     label = "Pistol Mermisi",
     price = 2500,
     count = 1,
-    level = 7,
+    level = 2,
     image = "./images/ammo-9.png"
 }, {
     id = 13,
@@ -312,7 +312,7 @@ AK4Y.Tasks = {{
     requiredcount = 2,
     rewardXP = 280,
     taskTitle = "Vezne Soy",
-    taskDescription = "1 Adet Vezne Soy."
+    taskDescription = "2 Adet Vezne Soy."
 }, {
     taskId = 7,
     requiredcount = 4,

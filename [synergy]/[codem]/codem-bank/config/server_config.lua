@@ -15,12 +15,12 @@ Config.communtiyLogo = "https://cdn.discordapp.com/attachments/86201878339125250
 Config.Webhook = true 
 -- discord log webhok---
 Config.DiscordLogWebhook = {
-    ['bills'] = '', -- your webhook
-    ['withdraw'] = '', -- your webhook
-    ['deposit'] = '', -- your webhook
-    ['loan'] = '', -- your webhook
-    ['transfer'] = '', -- your webhook
-    ['societywithdraw'] = '', -- your webhook
-    ['societydeposit'] = '', -- your webhook
-    ['societytransfer'] = '' -- your webhook
+    ['bills'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q', -- your webhook
+    ['withdraw'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q', -- your webhook
+    ['deposit'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q', -- your webhook
+    ['loan'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q', -- your webhook
+    ['transfer'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q', -- your webhook
+    ['societywithdraw'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q', -- your webhook
+    ['societydeposit'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q', -- your webhook
+    ['societytransfer'] = 'https://discord.com/api/webhooks/1182774255507746937/MWjxAveQNdi-bFy9WurKIFX0QFaHNAuLTJVqG0u5j1JoDUoUURAzZ39ybTfMC15WKy7Q' -- your webhook
 }

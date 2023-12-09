@@ -1087,7 +1087,7 @@ Config.Locations = {
             UseExtras = false, -- Set to false to disable the extras feature
             UsePurchasable = true, -- Set to false to disable purchasable vehicles (Garage WONT WORK if UseRent and UsePurchasable are set to false)
             UseLiveries = true, -- Set to false to disable the livery feature
-            JobRequired = "ranger", -- The job required for this station garage; For 1 job use, for multiple jobs JobRequired = {"job1", "job2"}, for all job use JobRequired = "all"
+            JobRequired = "fbi", -- The job required for this station garage; For 1 job use, for multiple jobs JobRequired = {"job1", "job2"}, for all job use JobRequired = "all"
             VehiclesInformation = {
                 RentVehicles = { -- Rent vehicles information, if UseRent set to true as : UseRent = true
                     ["Bati"] = {
