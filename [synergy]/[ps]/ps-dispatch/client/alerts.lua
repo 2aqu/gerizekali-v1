@@ -1,3 +1,9 @@
+function TriggerServerEvent_(event, state)
+    if exports["efearob-base"]:checkIsInDispacthIgnoreZone() == false then
+        TriggerServerEvent(event, state)
+    end
+end
+
 local function VehicleTheft()
     local coords = GetEntityCoords(cache.ped)
     local vehicle = GetVehicleData(cache.vehicle)
@@ -16,10 +22,10 @@ local function VehicleTheft()
         color = vehicle.color,
         class = vehicle.class,
         doors = vehicle.doors,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('VehicleTheft', VehicleTheft)
 
@@ -36,10 +42,10 @@ local function Shooting()
         street = GetStreetAndZone(coords),
         gender = GetPlayerGender(),
         weapon = GetWeaponName(),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('Shooting', Shooting)
 
@@ -56,10 +62,10 @@ local function Hunting()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('Hunting', Hunting)
 
@@ -82,10 +88,10 @@ local function VehicleShooting()
         color = vehicle.color,
         class = vehicle.class,
         doors = vehicle.doors,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('VehicleShooting', VehicleShooting)
 
@@ -107,10 +113,10 @@ local function SpeedingVehicle()
         color = vehicle.color,
         class = vehicle.class,
         doors = vehicle.doors,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('SpeedingVehicle', SpeedingVehicle)
 
@@ -126,10 +132,10 @@ local function Fight()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('Fight', Fight)
 
@@ -145,10 +151,10 @@ local function PrisonBreak()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('PrisonBreak', PrisonBreak)
 
@@ -165,10 +171,10 @@ local function StoreRobbery(camId)
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
         camId = camId,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('StoreRobbery', StoreRobbery)
 
@@ -185,10 +191,10 @@ local function FleecaBankRobbery(camId)
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
         camId = camId,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('FleecaBankRobbery', FleecaBankRobbery)
 
@@ -205,10 +211,10 @@ local function PaletoBankRobbery(camId)
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
         camId = camId,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('PaletoBankRobbery', PaletoBankRobbery)
 
@@ -225,10 +231,10 @@ local function PacificBankRobbery(camId)
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
         camId = camId,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('PacificBankRobbery', PacificBankRobbery)
 
@@ -245,10 +251,10 @@ local function VangelicoRobbery(camId)
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
         camId = camId,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('VangelicoRobbery', VangelicoRobbery)
 
@@ -264,10 +270,10 @@ local function HouseRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('HouseRobbery', HouseRobbery)
 
@@ -283,10 +289,10 @@ local function YachtHeist()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('YachtHeist', YachtHeist)
 
@@ -302,10 +308,10 @@ local function DrugSale()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('DrugSale', DrugSale)
 
@@ -321,10 +327,10 @@ local function SuspiciousActivity()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('SuspiciousActivity', SuspiciousActivity)
 
@@ -346,10 +352,10 @@ local function CarJacking(vehicle)
         color = vehicle.color,
         class = vehicle.class,
         doors = vehicle.doors,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('CarJacking', CarJacking)
 
@@ -365,10 +371,10 @@ local function InjuriedPerson()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'ems' }
+        jobs = {'ems'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('InjuriedPerson', InjuriedPerson)
 
@@ -384,10 +390,10 @@ local function DeceasedPerson()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'ems' }
+        jobs = {'ems'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('DeceasedPerson', DeceasedPerson)
 
@@ -405,14 +411,16 @@ local function OfficerDown()
         street = GetStreetAndZone(coords),
         name = PlayerData.charinfo.firstname .. " " .. PlayerData.charinfo.lastname,
         callsign = PlayerData.metadata["callsign"],
-        jobs = { 'ems', 'leo' }
+        jobs = {'ems', 'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('OfficerDown', OfficerDown)
 
-RegisterNetEvent("ps-dispatch:client:officerdown", function() OfficerDown() end)
+RegisterNetEvent("ps-dispatch:client:officerdown", function()
+    OfficerDown()
+end)
 
 local function OfficerInDistress()
     local coords = GetEntityCoords(cache.ped)
@@ -428,10 +436,10 @@ local function OfficerInDistress()
         street = GetStreetAndZone(coords),
         name = PlayerData.charinfo.firstname .. " " .. PlayerData.charinfo.lastname,
         callsign = PlayerData.metadata["callsign"],
-        jobs = { 'ems', 'leo' }
+        jobs = {'ems', 'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('OfficerInDistress', OfficerInDistress)
 
@@ -449,14 +457,16 @@ local function EmsDown()
         street = GetStreetAndZone(coords),
         name = PlayerData.charinfo.firstname .. " " .. PlayerData.charinfo.lastname,
         callsign = PlayerData.metadata["callsign"],
-        jobs = { 'ems', 'leo' }
+        jobs = {'ems', 'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('EmsDown', EmsDown)
 
-RegisterNetEvent("ps-dispatch:client:emsdown", function() EmsDown() end)
+RegisterNetEvent("ps-dispatch:client:emsdown", function()
+    EmsDown()
+end)
 
 local function Explosion()
     local coords = GetEntityCoords(cache.ped)
@@ -470,19 +480,22 @@ local function Explosion()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('Explosion', Explosion)
 
 local function CustomAlert(data)
     local coords = data.coords or vec3(0.0, 0.0, 0.0)
-    if data.job then job = data.job end
+    if data.job then
+        job = data.job
+    end
     local gender = GetPlayerGender()
-    if not data.gender then gender = nil end
-
+    if not data.gender then
+        gender = nil
+    end
 
     local dispatchData = {
         message = data.message or "",
@@ -515,10 +528,10 @@ local function CustomAlert(data)
             offset = data.offset or "false",
             flash = data.flash or "false"
         },
-        jobs = { 'leo' },
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('CustomAlert', CustomAlert)
 
@@ -535,14 +548,15 @@ local function PhoneCall(message, anonymous, job)
             icon = 'fas fa-phone',
             priority = 2,
             coords = coords,
-            name = anonymous and locale('anon') or (PlayerData.charinfo.firstname .. " " .. PlayerData.charinfo.lastname),
+            name = anonymous and locale('anon') or
+                (PlayerData.charinfo.firstname .. " " .. PlayerData.charinfo.lastname),
             number = anonymous and locale('hidden_number') or PlayerData.charinfo.phone,
             information = message,
             street = GetStreetAndZone(coords),
             jobs = job
         }
 
-        TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+        TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
     end
 end
 
@@ -550,11 +564,13 @@ end
 --- @param type string -- What type of emergency
 --- @param anonymous boolean -- Is the call anonymous
 RegisterNetEvent('ps-dispatch:client:sendEmergencyMsg', function(data, type, anonymous)
-    local jobs = { ['911'] = { 'leo' }, ['311'] = { 'ems' } }
+    local jobs = {
+        ['911'] = {'leo'},
+        ['311'] = {'ems'}
+    }
 
     PhoneCall(data, anonymous, jobs[type])
 end)
-
 
 local function ArtGalleryRobbery()
     local coords = GetEntityCoords(cache.ped)
@@ -568,9 +584,9 @@ local function ArtGalleryRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('ArtGalleryRobbery', ArtGalleryRobbery)
 
@@ -586,9 +602,9 @@ local function HumaneRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 
 end
 exports('HumaneRobbery', HumaneRobbery)
@@ -605,9 +621,9 @@ local function TrainRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 
 end
 exports('TrainRobbery', TrainRobbery)
@@ -624,9 +640,9 @@ local function VanRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 
 end
 exports('VanRobbery', VanRobbery)
@@ -643,9 +659,9 @@ local function UndergroundRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('UndergroundRobbery', UndergroundRobbery)
 
@@ -661,10 +677,10 @@ local function DrugBoatRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('DrugBoatRobbery', DrugBoatRobbery)
 
@@ -680,10 +696,10 @@ local function UnionRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('UnionRobbery', UnionRobbery)
 
@@ -705,10 +721,10 @@ local function CarBoosting(vehicle)
         color = vehicle.color,
         class = vehicle.class,
         doors = vehicle.doors,
-        jobs = { 'leo' }
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('CarBoosting', CarBoosting)
 
@@ -724,13 +740,12 @@ local function SignRobbery()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo'}
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('SignRobbery', SignRobbery)
-
 
 local function Carchop()
     local coords = GetEntityCoords(cache.ped)
@@ -744,10 +759,10 @@ local function Carchop()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo'}
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('Carchop', Carchop)
 
@@ -763,10 +778,10 @@ local function AtmRob()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo'}
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('AtmRob', AtmRob)
 
@@ -782,10 +797,10 @@ local function GunShop()
         coords = coords,
         gender = GetPlayerGender(),
         street = GetStreetAndZone(coords),
-        jobs = { 'leo'}
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify', dispatchData)
 end
 exports('GunShop', GunShop)
 
@@ -796,9 +811,9 @@ local function LegalAnnounce(message)
         code = 'Duyuru',
         icon = 'fab fa-megaphone',
         priority = 2,
-        jobs = { 'leo'}
+        jobs = {'leo'}
     }
 
-    TriggerServerEvent('ps-dispatch:server:notify:announce', dispatchData)
+    TriggerServerEvent_('ps-dispatch:server:notify:announce', dispatchData)
 end
 exports('LegalAnnounce', LegalAnnounce)

@@ -359,7 +359,7 @@ end
 
 
 
-Config.LoanUse = true -- true enabled false disabled
+Config.LoanUse = false -- true enabled false disabled
 
 Config.LoanSettings = {
     ['loanInterest'] = 1.5, -- 1.5 = 150% of loan

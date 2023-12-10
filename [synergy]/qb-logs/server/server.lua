@@ -14,10 +14,10 @@ AddEventHandler('qb-log:server:CreateLog', function(name, title, color, message,
             ["description"] = message,
         }
     }
-    PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = "arob-log",embeds = embedData}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = "neys-log",embeds = embedData}), { ['Content-Type'] = 'application/json' })
     Citizen.Wait(2000)
     if tag then
-        PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = "arob-log", content = "@everyone"}), { ['Content-Type'] = 'application/json' })
+        PerformHttpRequest(webHook, function(err, text, headers) end, 'POST', json.encode({ username = "neys-log", content = "@everyone"}), { ['Content-Type'] = 'application/json' })
     end
 end)
 

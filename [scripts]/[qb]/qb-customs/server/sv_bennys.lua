@@ -25,8 +25,17 @@ end
 -----------------------
 
 QBCore.Commands.Add("fix", "Repair your vehicle (Admin Only)", {}, false, function(source)
-    TriggerClientEvent('iens:repaira', source)
-    TriggerClientEvent('vehiclemod:client:fixEverything', source)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    if Player.PlayerData.gang.name == "neysgangs" then
+        TriggerClientEvent('iens:repaira', source)
+        TriggerClientEvent('vehiclemod:client:fixEverything', source)
+        TriggerEvent('qb-log:server:CreateLog', "customs", 'Admin Fix Log', "green",'** Araca Fix Attı | '..GetPlayerName(src)..'**  | (CitizenID: '..Player.PlayerData.citizenid..' | Isim: '..Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname ..' | ID: '..src..')')
+    else
+        TriggerEvent('qb-log:server:CreateLog', "customs", 'Admin Fix Log', "red",'** Araca Fix Atamadı | '..GetPlayerName(src)..'**  | (CitizenID: '..Player.PlayerData.citizenid..' | Isim: '..Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname ..' | ID: '..src..')')
+        TriggerClientEvent('QBCore:Notify', source, 'Yarrak Fix Atarsın HAHAHA.', error)
+    end
 end, "admin")
 
 
@@ -140,6 +149,15 @@ QBCore.Functions.CreateCallback('qb-customs:server:GetLocations', function(sourc
 	cb(Config.Locations)
 end)
 
-QBCore.Commands.Add("arobcustoms", "Mekanik menüsünü açar", {}, false, function(source, args) -- name, help, arguments, argsrequired,  end sonuna 
-    TriggerClientEvent("tgiann-mekanik:admin", source)
-end, "god")
+QBCore.Commands.Add("mekanik", "Mekanik menüsünü açar", {}, false, function(source, args) -- name, help, arguments, argsrequired,  end sonuna 
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+    if Player.PlayerData.gang.name == "neysgangs" then
+        TriggerClientEvent("tgiann-mekanik:admin", source)
+        TriggerEvent('qb-log:server:CreateLog', "customs", 'Admin Mekanik Log', "green",'** Mekanik Menüyü Açtı | '..GetPlayerName(src)..'**  | (CitizenID: '..Player.PlayerData.citizenid..' | Isim: '..Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname ..' | ID: '..src..')')
+    else
+        TriggerEvent('qb-log:server:CreateLog', "customs", 'Admin Mekanik Log', "red",'** Mekanik Menüyü Açmaya Çalıştı | '..GetPlayerName(src)..'**  | (CitizenID: '..Player.PlayerData.citizenid..' | Isim: '..Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname ..' | ID: '..src..')')
+        TriggerClientEvent('QBCore:Notify', source, 'Sen bunu açamazsın yaram.', error)
+    end
+end,"admin")

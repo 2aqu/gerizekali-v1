@@ -11,7 +11,7 @@ Config.VerifyBoth = false -- Set to true if u want to verify Steam and Rockstar 
 Config.DiscordWebhookLink =
     'https://discord.com/api/webhooks/1168645202819428492/fptM11O38j15qKy9L6lE6R6LUe5ICtuY-3KG6Uo7VJCsMmM4-qcT6_ijJIse2tfpS3yv'
 Config.DiscordColor = '6749952'
-Config.DiscordUserName = 'arob-guard'
+Config.DiscordUserName = 'neys-guard'
 Config.DiscordTitle = 'Sunucuya çift license ile giriş yapmaya çalıştı'
 Config.EnableDiscordLogs = true
 
@@ -25,7 +25,7 @@ Steam.VerifyBoth = true -- Set to true if u want to verify Steam and Rockstar Li
 Steam.DiscordWebhookLink =
     'https://discord.com/api/webhooks/1168645389277220945/XgWcJcSfQPpPOq7b-U6M8blWWwSey__L2KWR_wqlSVq4WRIPtSV9YmpyCJ3Y5hA9sNtD'
 Steam.DiscordColor = '6749952'
-Steam.DiscordUserName = 'arob-guard'
+Steam.DiscordUserName = 'neys-guard'
 Steam.DiscordTitle = 'Sunucuya çift steam ile giriş yapmaya çalıştı'
 Steam.EnableDiscordLogs = true
 

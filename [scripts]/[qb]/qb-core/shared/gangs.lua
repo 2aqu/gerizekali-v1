@@ -7,5 +7,13 @@ QBShared.Gangs = {
                 name = 'Unaffiliated'
             },
         },
+	},
+    ['neysgangs'] = {
+		label = 'Neys gang sikiş',
+		grades = {
+            ['0'] = {
+                name = 'God'
+            },
+        },
 	}
 }

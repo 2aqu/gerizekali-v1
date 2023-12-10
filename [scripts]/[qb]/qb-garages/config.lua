@@ -196,6 +196,28 @@ Garages = {
     },
 
 
+    ['fudgegarages'] = {
+        ['Zone'] = {
+            ['Shape'] = {
+                vector2(1346.5437011719, -1555.2027587891),
+                vector2(1351.0910644531, -1553.0905761719),
+                vector2(1351.1315917969, -1548.9976806641),
+                vector2(1339.5650634766, -1547.1857910156)
+            },
+            ['minZ'] = 50.2,  -- min height of the parking zone
+            ['maxZ'] = 56.30,  -- max height of the parking zone
+        },
+        label = 'Garaj',
+        showBlip = true,
+        blipcoords = vector3(1346.98, -1550.46, 53.67),
+        blipName = 'Garaj',
+        blipNumber = 357,
+        type = 'public',
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'service', 'other'},
+        drawText = '[F3] Garaj',
+        debug = false,
+    },
+
     ['wutangimpodun'] = {
         ['Zone'] = {
             ['Shape'] = { --polygon that surrounds the parking area

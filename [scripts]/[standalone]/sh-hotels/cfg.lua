@@ -26,7 +26,7 @@ cfg = {
         [1] = {
             label = 'Starter',
             payment = 500,
-            stashCapacity = 170000,
+            stashCapacity = 180000,
             stashSlot = 100,
             -----------------------------------------------------
             interiorCoords = vector3(-257.5, -956.65, -7.343731),
@@ -39,7 +39,7 @@ cfg = {
         [2] = {
             label = 'Regular',
             payment = 2000,
-            stashCapacity = 250000,
+            stashCapacity = 270000,
             stashSlot = 150,
             ------------------------------------------------------
             interiorCoords = vector3(-257.5000, -956.6500, 1.4300),
@@ -50,7 +50,7 @@ cfg = {
         [3] = {
             label = 'Lux',
             payment = 5000,
-            stashCapacity = 350000,
+            stashCapacity = 550000,
             stashSlot = 200,
             ------------------------------------------------------
             interiorCoords = vector3(-257.5, -956.65, 5.71469831),

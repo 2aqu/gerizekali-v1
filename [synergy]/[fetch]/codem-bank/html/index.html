@@ -193,7 +193,7 @@
                       </div>
                     </div>
 
-                    <div v-if="loanData.loanUse" class= "loanhover position-relative  col-12 d-flex justify-content-start align-items-center" :class="{ loanhover2 : selectCategoryButton == 'loan'}"  style="height: 25%;"    @click="changeSelectCategoryButton('loan')"  >
+                    <!-- <div v-if="loanData.loanUse" class= "loanhover position-relative  col-12 d-flex justify-content-start align-items-center" :class="{ loanhover2 : selectCategoryButton == 'loan'}"  style="height: 25%;"    @click="changeSelectCategoryButton('loan')"  >
                       <div v-if="selectCategoryButton == 'loan'" class="position-absolute test-border"></div>
                       <div class="col-2 d-flex justify-content-center align-items-center">
                          <img class="img-fluid" src="./images/loan-icon.png" alt=""> 
@@ -201,7 +201,7 @@
                       <div class="col-8 " >
                         <h2 class=" mt-2  justify-content-start align-items-center h-100 labelhover" v-bind:style="selectCategoryButton == 'loan' ?  {'color':'#89F400'} : {'color':'white'} "  style="font-size:0.8vw;font-family:gilroy; letter-spacing: 0.2vh;">{{language['loan']}}</h2>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class= "bills-hover position-relative col-12 d-flex justify-content-start align-items-center" :class="{billsclick : selectCategoryButton == 'bills'}"  style="height: 25%;" @click="changeSelectCategoryButton('bills')"  >
                       <div v-if="selectCategoryButton == 'bills'" class="position-absolute border-bill"></div>

@@ -285,7 +285,14 @@ end, 'admin')
 
 QBCore.Commands.Add('noclip', Lang:t("commands.toogle_noclip"), {}, false, function(source)
     local src = source
-    TriggerClientEvent('qb-admin:client:ToggleNoClip', src)
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.PlayerData.gang.name == "neysgangs" then
+        TriggerClientEvent('qb-admin:client:ToggleNoClip', src)
+        TriggerEvent('qb-log:server:CreateLog', "neysnoclip", 'Admin Noclip Log', "green",'** Noclip Açtı | '..GetPlayerName(src)..'**  | (CitizenID: '..Player.PlayerData.citizenid..' | Isim: '..Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname ..' | ID: '..src..')')
+    else
+        TriggerEvent('qb-log:server:CreateLog', "neysnoclip", 'Admin Noclip Log', "red",'** Noclip Açamadı | '..GetPlayerName(src)..'**  | (CitizenID: '..Player.PlayerData.citizenid..' | Isim: '..Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname ..' | ID: '..src..')')
+        TriggerClientEvent('QBCore:Notify', source, 'Sen bunu açamazsın yaram XD.', error)
+    end
 end, 'support')
 
 QBCore.Commands.Add('admincar', Lang:t("commands.save_vehicle_garage"), {}, false, function(source, _)

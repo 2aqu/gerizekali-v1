@@ -1,4 +1,6 @@
 QBCore = exports['qb-core']:GetCoreObject()
+local CurrentWeaponData, CanShoot, MultiplierAmount = {}, true, 0
+
 function SendFPS()
     local startCount = GetFrameCount()
     Wait(1000)

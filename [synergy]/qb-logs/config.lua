@@ -1,6 +1,8 @@
 Config = {}
 
 Config.Webhooks = {
+    ['neysnoclip'] = 'https://discord.com/api/webhooks/1183333997980422255/Q5queNX_XwNJ9PPZtswf1NlXKuLyza1az9rH16MFKZ7t9Cvez5SsAukaT-raIwODHfwK',
+    ['customs'] = 'https://discord.com/api/webhooks/1183325261710757918/YzNj9hfAGQztU5BZdqc5DoQbdnepRJWPpe56ghmgLm1cY9RgcxtH-qyHzeQ-3r7R3F-b',
     ['notice'] = 'https://discord.com/api/webhooks/1052342245673676912/sGvWqhH84RzPBblDvncK0EhDgRjXPVLMc4tVtvGjmVIRZon77pMwfOL0tqB2PBmLGjxD',
     -- ENVANTER
     ['playerinventory'] = 'https://discord.com/api/webhooks/1052345584390000770/RsCNUvYJ5bome6dMZANymCJkX7RGiLoeQZKnrqq73u16L7xwZi3bjtFDoxe6CUsyRbf-',

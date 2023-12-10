@@ -1,7 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local Cooldown = false
-local cashA = 5000
-local cashB = 7500
+local cashA = 7000
+local cashB = 12500
 
 
 -- hack

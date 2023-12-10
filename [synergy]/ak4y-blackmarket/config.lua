@@ -259,9 +259,9 @@ AK4Y.CategoryItems = {{
     itemName = "trojan_usb",
     type = "ITEM",
     label = "Trojan USB",
-    price = 15000,
+    price = 7500,
     count = 1,
-    level = 18,
+    level = 5,
     image = "./images/usb_device.png"
 }, {
     id = 21,
@@ -327,8 +327,8 @@ AK4Y.Tasks = {{
     taskDescription = "1 Adet Sanat Eseri Soy."
 }, {
     taskId = 9,
-    requiredcount = 15,
-    rewardXP = 350,
+    requiredcount = 10,
+    rewardXP = 300,
     taskTitle = "ATM Soy",
     taskDescription = "15 Adet ATM Soy."
 }}

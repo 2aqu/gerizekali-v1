@@ -33,4 +33,3 @@ RegisterNetEvent('arob:removeitem', function(name, amount, slot)
     local xPlayer = QBCore.Functions.GetPlayer(src)
     xPlayer.Functions.RemoveItem(name, miktar, slot)
 end)
-

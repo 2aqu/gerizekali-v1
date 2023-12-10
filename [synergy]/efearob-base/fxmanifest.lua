@@ -24,6 +24,7 @@ client_scripts {
     'dance/client.lua',
     'vehicles/client.lua',
     'target/client.lua',
+    'target/dispatchignorezones.lua',
     'stance/client.lua',
 }
 server_scripts {

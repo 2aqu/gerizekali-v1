@@ -322,3 +322,5 @@ exports['qb-target']:AddCircleZone("brezeasansor_araba", vector3(135.04, -132.97
         distance = 2.5 -- This is the distance for you to be at for the target to turn blue, this is in GTA units and has to be a float value
     })
 
+
+
