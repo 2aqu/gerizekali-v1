@@ -49,6 +49,7 @@ itemList = {
     "bapple",
     "bmuffin",
     "sandwich",
+    "coffee",
 }
 
 RegisterNetEvent('arob-job:prepare-server', function(args, miktar)

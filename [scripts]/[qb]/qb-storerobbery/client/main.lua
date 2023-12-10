@@ -263,15 +263,21 @@ RegisterNetEvent('qb-storerobbery:client:checkmoney', function()
 end)
 
 RegisterNetEvent('qb-storerobbery:client:hacksafe', function()
+    print("Client Geldi")
     local pos = GetEntityCoords(PlayerPedId())
     for safe,_ in pairs(Config.Safes) do
+        print("Döngüye Girdi")
         local dist = #(pos - Config.Safes[safe][1].xyz)
         if dist < 1.0 then
+            print("Geçti Dis: ",dist)
             if Config.Safes[safe].robbed then
+                print("1")
                 QBCore.Functions.Notify("Kasa Boş!", "error")
             elseif Cracked then
+                print("2")
                 QBCore.Functions.Notify("Güvenlik sistemi devreye girdi!", "error")
             elseif not Config.Safes[safe].robbed then
+                print("3")
                 ----TriggerServerEvent("QBCore:Server:RemoveItem", "safecracker", 1)
                 --TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["safecracker"], "remove", 1)
                 MemoryGame()
@@ -516,12 +522,14 @@ function MemoryGame()
 
         local dist = #(pos - Config.Safes[safe][1].xyz)
 
-        if dist < 3 then
-            if dist < 1.0 then
-
+        if dist < 4 then
+            print("dis 1")
+            if dist < 2.0 then
+                print("dis 2")
                 if not Config.Safes[safe].robbed and not SafeCracked then
-                    QBCore.Functions.TriggerCallback('artheist:server:policecheck', function(cops)
-                        if cops >= Config.MinimumStoreRobberyPolice then
+                    print("config")
+                        if CurrentCops >= Config.MinimumStoreRobberyPolice then
+                            print("police kotnrol")
 
                             currentSafe = safe
 
@@ -601,7 +609,6 @@ function MemoryGame()
                         else
                             QBCore.Functions.Notify("Yeterli Polis Yok ".. Config.MinimumStoreRobberyPolice .." ", "error")
                         end
-                    end)
                 else
                     QBCore.Functions.Notify("Zaten Açıldı", "error")
                 end

@@ -359,11 +359,11 @@ Config.Locations = {
             deniedClasses = { 18 }
         },
         zones = {
-            { coords = vector3(-211.59, -1325.08, 30.89), length = 6.0, width = 4.0, heading = 177.2, minZ = 30.0, maxZ = 34.0 },
-            { coords = vector3(-224.51, -1326.42, 30.89), length = 6.0, width = 4.0, heading = 177.2, minZ = 30.0, maxZ = 34.0 },
-            { coords = vector3(-236.84, -1337.31, 30.9),  length = 6.0, width = 4.0, heading = 177.2, minZ = 30.0, maxZ = 34.0 },
-            { coords = vector3(-233.75, -1316.61, 30.9),  length = 6.0, width = 4.0, heading = 0.9,   minZ = 30.0, maxZ = 34.0 },
-
+            { coords = vector3(-214.24, -1335.91, 30.89), length = 6.0, width = 4.0, heading = 359.87, minZ = 29.0, maxZ = 34.0 },
+            { coords = vector3(-208.74, -1335.95, 30.88), length = 6.0, width = 4.0, heading = 358.42, minZ = 29.0, maxZ = 34.0 },
+            { coords = vector3(-221.0, -1318.58, 31.0),  length = 6.0, width = 4.0, heading = 198.14, minZ = 29.0, maxZ = 35.0 },
+            { coords = vector3(-201.8, -1318.64, 31.0),  length = 6.0, width = 4.0, heading = 170.29,   minZ = 29.0, maxZ = 35.0 },
+            { coords = vector3(-222.17, -1336.03, 30.88),  length = 6.0, width = 4.0, heading = 358.23,   minZ = 29.0, maxZ = 34.0 },
         }
     },
     ['mechanic5'] = {

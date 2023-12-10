@@ -115,10 +115,13 @@ QBCore.Functions.CreateCallback('qb-storerobbery:server:getSafeStatus', function
 end)
 
 RegisterNetEvent('qb-storerobbery:server:CheckItem', function()
+    print("Server Geldi")
     local Player = QBCore.Functions.GetPlayer(source)
     local ItemData = Player.Functions.GetItemByName("drill")
     if ItemData ~= nil then
+        print("İF Geçti")
         TriggerClientEvent('qb-storerobbery:client:hacksafe', source)
+        print("Client Gitti")
     else
         TriggerClientEvent('QBCore:Notify', source, "Üstünde birşeyler eksik gibi?")
     end

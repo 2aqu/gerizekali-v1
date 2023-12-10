@@ -314,6 +314,49 @@ return {
         }}
     },
 
+    VendingMachineDrinks = {
+		name = 'İçecek Otomatını',
+		inventory = {
+			{ name = 'fanta', price = 5 },
+			{ name = 'kurkakola', price = 5 },
+            { name = 'sprite', price = 5 },
+		},
+		model = {
+			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_soda_01`
+		}
+	},
+
+    VendingMachineWater = {
+		name = 'Su Otomatını',
+		inventory = {
+			{ name = 'water_bottle', price = 2 },
+		},
+		model = {
+			`prop_vend_water_01`
+		}
+	},
+
+    VendingMachineEat = {
+		name = 'Yemek Otomatını',
+		inventory = {
+			{ name = 'sandwich', price = 10 },
+            { name = 'tosti', price = 10 },
+		},
+		model = {
+			`prop_vend_snak_01`, `prop_vend_snak_01_tu` 
+		}
+	},
+
+    VendingMachineCoffe = {
+		name = 'Kahve Otomatını',
+		inventory = {
+			{ name = 'coffee', price = 5 },
+		},
+		model = {
+			`prop_vend_coffe_01`
+		}
+	},
+
     Medicine = {
         name = 'EMS Marketi',
         groups = {
@@ -1636,7 +1679,6 @@ return {
             distance = 1.5
         }}
     }
-
     -- MadenShop = {
     --     name = 'Maden Marketi',
     --     inventory = {

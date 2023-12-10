@@ -416,10 +416,27 @@ busi.IcecekListesi = {
         ["fanta"] = {
             ["itemname"] = "fanta",
             ["label"] = "Fanta",
-            ["sugar-cubes"] = 1,
-            ["carbonated-water"] = 1,
         },
-       
+        ["tekila"] = {
+            ["itemname"] = "tekila",
+            ["label"] = "Tekila",
+        },
+        ["vodka"] = {
+            ["itemname"] = "vodka",
+            ["label"] = "Vodka",
+        },
+        ["whiskey"] = {
+            ["itemname"] = "whiskey",
+            ["label"] = "Viski",
+        },
+        ["beer"] = {
+            ["itemname"] = "beer",
+            ["label"] = "Bira",
+        },
+        ["coffee"] = {
+            ["itemname"] = "coffee",
+            ["label"] = "Kahve",
+        },
     },
     ["tpc"] = {
         ["burgershot_colab"] = {

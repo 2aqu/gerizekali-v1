@@ -146,6 +146,21 @@ rivercafe:onPlayerInOut(function(isPointInside)
     end
 end)
 
+local mechanic4 = BoxZone:Create(Config.Locations['mechanic4'].coords, 1, 1, {
+    name="mechanic4",
+    heading=0,
+})
+
+mechanic4:onPlayerInOut(function(isPointInside)
+    if isPointInside and PlayerData.job.name == Config.Locations['mechanic4'].job then
+        currentZone = 'mechanic4'
+        exports['qb-menu']:showHeader(musicHeader)
+    else
+        currentZone = nil
+        exports['qb-menu']:closeMenu()
+    end
+end)
+
 local cockatoos = BoxZone:Create(Config.Locations['cockatoos'].coords, 1, 1, {
     name="cockatoos",
     heading=0,
