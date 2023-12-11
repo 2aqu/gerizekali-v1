@@ -56,18 +56,19 @@ CreateThread(function() -- mp
 end)
 
 CreateThread(function() -- vpd2
-    exports['qb-target']:AddBoxZone("wutang", vector3(-2.5, -1815.81, 20.7), 3, 3, {
+    exports['qb-target']:AddBoxZone("wutang", vector3(178.84, -1722.06, 29.28), 3, 3, {
         name = "wutang",
         heading = 0,
-        minZ = 19.57834,
-        maxZ = 21.87834,
+        minZ = 27.57834,
+        maxZ = 31.87834,
         debugPoly = false
     }, {
         options = {{
             type = "Client",
             event = "illenium-appearance:client:openClothingShopMenu",
             icon = "fas fa-circle",
-            label = "Kıyafet Dolabı"
+            label = "Kıyafet Dolabı",
+            job = "wutang"
         }},
         distance = 2.5
     })

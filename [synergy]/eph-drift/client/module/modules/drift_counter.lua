@@ -16,7 +16,7 @@ Modules.DriftCounter.InAnimation = false
 Modules.DriftCounter.CachedAllowedVeh = {}
 
 function Modules.DriftCounter.GetCurrentAngle()
-    if Modules.Player.IsPedInAnyVehicle() and isInDriftPositions() then
+    if Modules.Player.IsPedInAnyVehicle() then
         local veh = Modules.Player.GetCurrentVehicle()
         local vx, vy, _ = table.unpack(GetEntityVelocity(veh))
         local modV = math.sqrt(vx * vx + vy * vy)
@@ -63,7 +63,6 @@ end
 isInDriftZone = false
 RegisterNetEvent("eph:drift:isInDriftZone")
 AddEventHandler("eph:drift:isInDriftZone", function(state) 
-    print(state)
     isInDriftZone = state
     print(state)
 end)
@@ -77,8 +76,7 @@ end
 
 
 function Modules.DriftCounter.IsPlayerDrifting()
-    -- print(isInDriftPositions())
-    if Modules.Player.IsPedInAnyVehicle() and isInDriftPositions() then
+    if Modules.Player.IsPedInAnyVehicle() then
         local pVeh = Modules.Player.GetCurrentVehicle()
         if Modules.DriftCounter.IsVehiculeAllowedToDrift(pVeh) then
             if GetEntityHeightAboveGround(pVeh) <= 1.5 then
@@ -102,7 +100,6 @@ function Modules.DriftCounter.IsPlayerDrifting()
 end
 
 function Modules.DriftCounter.StartChainBreakLoop()
-    print("cbl")
     if not Modules.DriftCounter.ChainLoopStarted then
         Modules.DriftCounter.ChainLoopStarted = true
         if ConfigShared.UseDefaultUI then
@@ -113,7 +110,7 @@ function Modules.DriftCounter.StartChainBreakLoop()
         Citizen.CreateThread(function()
             Modules.Utils.RealWait(Modules.DriftCounter.ChainCooldown, function(cb, timeLeft)
                 Modules.DriftCounter.ChainTimeLeft = timeLeft - (timeLeft * 2) -- Duh
-                if Modules.DriftCounter.IsDrifting  and isInDriftPositions()  then
+                if Modules.DriftCounter.IsDrifting   then
                     cb(false, ConfigShared.DriftChainTime)
                 end
             end)
@@ -167,10 +164,10 @@ Modules.DriftCounter.speeds = {}
 Citizen.CreateThread(function()
     while true do
         if Modules.DriftCounter.IsEnabled then -- Check we're enabled
-            if Modules.DriftCounter.IsPlayerDrifting() and isInDriftPositions() then
+            if Modules.DriftCounter.IsPlayerDrifting() then
                 Modules.DriftCounter.IsDrifting = true
                 Modules.DriftCounter.StartChainBreakLoop()
-                if Modules.DriftCounter.CurrentAngle > 10 and isInDriftPositions()  then
+                if Modules.DriftCounter.CurrentAngle > 10 then
                     if ConfigShared.AddPointBasedOnAngle then
                         Modules.DriftCounter.CurrentPoints = math.floor(Modules.DriftCounter.CurrentPoints + (Modules.DriftCounter.CurrentAngle / 100) * Modules.Utils.TimeFrame) -- This fix the issue where player with low fps would get less point then player with high fps count.
                         local currentSpeed = math.ceil(GetEntitySpeed(Modules.Player.GetCurrentVehicle()) * 3.6)

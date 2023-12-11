@@ -1,6 +1,9 @@
 Config = {}
 
 Config.Webhooks = {
+    ['neyscardel'] = 'https://discord.com/api/webhooks/1183690230679736362/z--_Bs1-Jhj3remFH30nsAexZsT-8BSzKNHaVb7u7aV7LtryeF9U5CWhm7byAUkOgXzq',
+    ['neysevck'] = 'https://discord.com/api/webhooks/1183690007123337308/pZksMnAllfoYBSdjjzygussLMaoGq5YTdbTocJof0GUzv_KxqIqvHrW-KkhwvPHrxIMD',
+    ['neysck'] = 'https://discord.com/api/webhooks/1183689481035984916/KQTGAgOulPTjap_NtNlQcWnlDshg_zb9QKlklNNjdCzbK_ttu11spY_7HBLvxOiFutMV',
     ['neysnoclip'] = 'https://discord.com/api/webhooks/1183333997980422255/Q5queNX_XwNJ9PPZtswf1NlXKuLyza1az9rH16MFKZ7t9Cvez5SsAukaT-raIwODHfwK',
     ['customs'] = 'https://discord.com/api/webhooks/1183325261710757918/YzNj9hfAGQztU5BZdqc5DoQbdnepRJWPpe56ghmgLm1cY9RgcxtH-qyHzeQ-3r7R3F-b',
     ['notice'] = 'https://discord.com/api/webhooks/1052342245673676912/sGvWqhH84RzPBblDvncK0EhDgRjXPVLMc4tVtvGjmVIRZon77pMwfOL0tqB2PBmLGjxD',
