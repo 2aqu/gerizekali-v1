@@ -3,7 +3,7 @@ Config = {}
 
 --Add gold, diamond item to database or change item names in bottom. (dont need add cash item)
 Config['FleecaMain'] = {
-    requiredPoliceCount = 8,
+    requiredPoliceCount = 2,
     requiredItems = {
         --'handdrill', -- Add item to database
         'bag' -- Add item to database
@@ -69,7 +69,7 @@ Config['FleecaHeist'] = {
             {coords = vector3(-2957.3, 485.690, 14.6753), heading = 178.0, loot = false},
             {coords = vector3(-2958.4, 484.099, 14.6753), heading = 268.0, loot = false},
         },
-        nextRob = 1800, -- seconds
+        nextRob = 7200, -- seconds
     },
     [2] = {
         scenePed = { model = 'csb_tomcasino', coords = vector3(-1211.4, -331.84, 36.78), heading = 27.56},
@@ -91,7 +91,7 @@ Config['FleecaHeist'] = {
             {coords = vector3(-1207.6, -333.89, 36.7592), heading = 118.0, loot = false},
             {coords = vector3(-1209.4, -333.79, 36.7592), heading = 208.0, loot = false},
         },
-        nextRob = 1800,
+        nextRob = 7200,
     },
     [3] = {
         scenePed = { model = 'csb_tomcasino', coords = vector3(-351.34, -51.356, 48.05), heading = 340.04},
@@ -113,7 +113,7 @@ Config['FleecaHeist'] = {
             {coords = vector3(-349.86, -55.756, 48.0148), heading = 70.0, loot = false},
             {coords = vector3(-351.02, -54.136, 48.0148), heading = 162.0, loot = false},
         },
-        nextRob = 1800,
+        nextRob = 7200,
     },
     [4] = {
         scenePed = { model = 'csb_tomcasino', coords = vector3(313.973, -280.63, 53.16), heading = 340.04},
@@ -135,7 +135,7 @@ Config['FleecaHeist'] = {
             {coords = vector3(315.230, -284.93, 53.1430), heading = 70.0, loot = false},
             {coords = vector3(314.184, -283.42, 53.1430), heading = 160.0, loot = false},
         },
-        nextRob = 1800,
+        nextRob = 7200,
     },
     [5] = {
         scenePed = { model = 'csb_tomcasino', coords = vector3(1174.88, 2708.24, 37.09), heading = 175.0},
@@ -157,7 +157,7 @@ Config['FleecaHeist'] = {
             {coords = vector3(1172.02, 2712.01, 37.0662), heading = 270.0, loot = false},
             {coords = vector3(1173.69, 2710.93, 37.0662), heading = 0.0, loot = false},
         },
-        nextRob = 1800,
+        nextRob = 7200,
     },
     [6] = {
         scenePed = { model = 'csb_tomcasino', coords = vector3(149.663, -1042.3, 28.37), heading = 345.0},
@@ -179,7 +179,7 @@ Config['FleecaHeist'] = {
             {coords = vector3(151.036, -1046.6, 28.3462), heading = 70.0, loot = false},
             {coords = vector3(149.887, -1045.1, 28.3462), heading = 160.0, loot = false},
         },
-        nextRob = 1800,
+        nextRob = 7200,
     }
 }
 

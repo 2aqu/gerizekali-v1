@@ -1,7 +1,7 @@
 Config = {}
 Config.RequiredPolice = 5
 Config['ArtHeist'] = {
-    ['nextRob'] = 43200, -- seconds for next heist
+    ['nextRob'] = 3600, -- seconds for next heist
     ['startHeist'] ={ -- heist start coords
         pos = vector3(244.346, 374.012, 105.738),
         peds = {

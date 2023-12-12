@@ -1,8 +1,8 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local cashA = 5000 				--<<how much minimum you can get from a robbery
 local cashB = 5100				--<< how much maximum you can get from a robbery
-local ScashA = 10000 			--<<how much minimum you can get from a robbery
-local ScashB = 11000				--<< how much maximum you can get from a robbery
+local ScashA = 29000 			--<<how much minimum you can get from a robbery
+local ScashB = 30000				--<< how much maximum you can get from a robbery
 
 RegisterNetEvent('qb-storerobbery:server:takeMoney', function(register, isDone)
     local src = source

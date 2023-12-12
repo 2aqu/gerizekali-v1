@@ -18,8 +18,8 @@ Config.VangelicoHours = { -- Store Hours
 Config.OneStore = true -- Set to true if using just the main Vangelico's Jewellers
 Config.PSDispatch = true -- Set to false for base qb-policejob alerts or true to use ps-dispatch alerts
 
-Config.Cooldown = 12 * 60 * 60 * 1000 -- where x is minutes ie. x * (60 * 2000) \\ For door auto lock function
-Config.Timeout = 12 * 60 * 60 * 1000 -- where x is minutes ie. x * (60 * 2000) \\ For case smashing cooldown
+Config.Cooldown = 2 * 60 * 60 * 1000 -- where x is minutes ie. x * (60 * 2000) \\ For door auto lock function
+Config.Timeout = 2 * 60 * 60 * 1000 -- where x is minutes ie. x * (60 * 2000) \\ For case smashing cooldown
 Config.RequiredCops = 6 --10
 
 Config.Doors = {
@@ -146,29 +146,29 @@ Config.VitrineRewards = {
   [1] = {
     ["item"] = "goldbar",
     ["amount"] = {
-      ["min"] = 2,
-      ["max"] = 5
+      ["min"] = 1,
+      ["max"] = 3
     }
   },
   [2] = {
     ["item"] = "diamond_ring",
     ["amount"] = {
-      ["min"] = 2,
-      ["max"] = 5
+      ["min"] = 1,
+      ["max"] = 3
     }
   },
   [3] = {
     ["item"] = "10kgoldchain",
     ["amount"] = {
-      ["min"] = 2,
-      ["max"] = 5
+      ["min"] = 1,
+      ["max"] = 3
     }
   },
   [4] = {
     ["item"] = "rolex",
     ["amount"] = {
-      ["min"] = 2,
-      ["max"] = 4
+      ["min"] = 1,
+      ["max"] = 3
     }
   }
 }
