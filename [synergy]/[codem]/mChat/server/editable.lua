@@ -330,9 +330,9 @@ end)
 --     })
 -- end)
 
-RegisterCommand('say', function(source, args, rawCommand)
-    routeMessage(source, (source == 0) and 'console' or GetPlayerRoleplayName(source), rawCommand:sub(5), false, {"server"}, 'server')
-end)
+--RegisterCommand('say', function(source, args, rawCommand)
+--    routeMessage(source, (source == 0) and 'console' or GetPlayerRoleplayName(source), rawCommand:sub(5), false, {"server"}, 'server')
+--end)
 
 
 

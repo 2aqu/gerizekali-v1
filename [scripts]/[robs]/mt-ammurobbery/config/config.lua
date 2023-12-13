@@ -6,7 +6,7 @@ Config.policeCall = true -- set to false if you don't want to notify police
 Config.boxDistance = 1.5 -- distance from box
 Config.requiredCopsCount = 5 -- required cops count to start stealing
 Config.searchTime = 30000 -- searchTime before getting items
-Config.cooldownTimer = 12 * 60 * 60 * 1000 -- 1000 = 1s // box cooldown
+Config.cooldownTimer = 1 * 60 * 60 * 1000 -- 1000 = 1s // box cooldown
 
 Config.ammuVitrines = { -- vitrines conf every stealable vitrine is an object
     vitrine1 = { -- preferable to set vitrinekey as name

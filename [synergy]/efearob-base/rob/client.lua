@@ -163,31 +163,31 @@ RegisterCommand('+searchPlayer', function()
 
 								-- Ölü Adamın Üstünü Arama
 							elseif data.is_dead == true then
-								--print("4e\n")
-								--TriggerServerEvent("arob:ust-ara-bildirim", target_id)
-								--TriggerServerEvent("arob-thiefuser-soygun:discord-log", target_id,
-								--	GetPlayerServerId(PlayerId()))
-								--local playerPed = PlayerPedId()
-								--local playerCoords = GetEntityCoords(playerPed)
+								print("4e\n")
+								TriggerServerEvent("arob:ust-ara-bildirim", target_id)
+								TriggerServerEvent("arob-thiefuser-soygun:discord-log", target_id,
+									GetPlayerServerId(PlayerId()))
+								local playerPed = PlayerPedId()
+								local playerCoords = GetEntityCoords(playerPed)
 --
-								--local searchTime = 20000
+								local searchTime = 20000
 --
-								--QBCore.Functions.Progressbar("yarali_ust_arama", "Yaralının Üstünü Arıyorsun", 12000,
-								--	false, true, { -- p1: menu name, p2: yazı, p3: ölü iken kullan, p4:iptal edilebilir
-								--		disableMovement = true,
-								--		disableCarMovement = true,
-								--		disableMouse = false,
-								--		disableCombat = true,
-								--	}, {
-								--		animDict = "missexile3",
-								--		anim = "ex03_dingy_search_case_base_michael",
-								--		flags = 49,
-								--	}, {}, {}, function() -- Done
-								--		TriggerServerEvent("inventory:server:OpenInventory", "otherplayer", target_id)
-								--		-- TriggerServerEvent("gener4l:envanterkapat", target_id)
-								--		-- Soygun Bildirim
-								--	end, function() -- Cancel
-								--end)
+								QBCore.Functions.Progressbar("yarali_ust_arama", "Yaralının Üstünü Arıyorsun", 12000,
+									false, true, { -- p1: menu name, p2: yazı, p3: ölü iken kullan, p4:iptal edilebilir
+										disableMovement = true,
+										disableCarMovement = true,
+										disableMouse = false,
+										disableCombat = true,
+									}, {
+										animDict = "missexile3",
+										anim = "ex03_dingy_search_case_base_michael",
+										flags = 49,
+									}, {}, {}, function() -- Done
+										TriggerServerEvent("inventory:server:OpenInventory", "otherplayer", target_id)
+										-- TriggerServerEvent("gener4l:envanterkapat", target_id)
+										-- Soygun Bildirim
+									end, function() -- Cancel
+								end)
 							end
 						end, target_id)
 					elseif distance < 20 and distance > 2.0 then

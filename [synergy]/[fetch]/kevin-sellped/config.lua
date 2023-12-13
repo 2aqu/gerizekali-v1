@@ -67,22 +67,22 @@ Config.Items = {
         price = 50
     },
     ['paintingi'] = {
-        price = 10000
+        price = 16666
     },
     ['paintinge'] = {
-        price = 10000
+        price = 16666
     },
     ['paintingh'] = {
-        price = 10000
+        price = 16666
     },
     ['paintingj'] = {
-        price = 10000
+        price = 16666
     },
     ['paintingf'] = {
-        price = 10000
+        price = 16666
     },
     ['paintingg'] = {
-        price = 10000
+        price = 16666
     },
 }
 

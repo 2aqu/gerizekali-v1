@@ -78,7 +78,7 @@ Config.Locations = {
     ['wutang'] = {
         ['job'] = 'wutang', -- Required job to use booth
         ['radius'] = 30, -- The radius of the sound from the booth
-        ['coords'] = vector3(-9.89, -1805.85, 20.7), -- Where the booth is located vector3(-1603.87, -3012.62, -77.8)
+        ['coords'] = vector3(156.91, -1729.43, 29.29), -- Where the booth is located vector3(-1603.87, -3012.62, -77.8)
         ['playing'] = false
     },
     ['luxery'] = {

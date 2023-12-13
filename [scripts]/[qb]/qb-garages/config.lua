@@ -176,13 +176,15 @@ Garages = {
     ['wutanggarag'] = {
         ['Zone'] = {
             ['Shape'] = {
-                vector2(-145.65979003906, -2318.4323730469),
-                vector2(-145.8879699707, -2307.7565917969),
-                vector2(-140.57046508789, -2307.8039550781),
-                vector2(-140.46003723145, -2318.3818359375)
+                vector2(189.20783996582, -1716.7459716797),
+                vector2(190.51670837402, -1720.1235351563),
+                vector2(190.65866088867, -1724.4440917969),
+                vector2(192.46237182617, -1727.9779052734),
+                vector2(189.19747924805, -1730.1270751953),
+                vector2(184.43836975098, -1719.1473388672)
             },
-            ['minZ'] = 3.2,  -- min height of the parking zone
-            ['maxZ'] = 12.30,  -- max height of the parking zone
+            ['minZ'] = 27.2,  -- min height of the parking zone
+            ['maxZ'] = 32.30,  -- max height of the parking zone
         },
         label = '92 Garaj',
         showBlip = false,
@@ -221,13 +223,13 @@ Garages = {
     ['wutangimpodun'] = {
         ['Zone'] = {
             ['Shape'] = { --polygon that surrounds the parking area
-                vector2(-129.56088256836, -2317.7895507812),
-                vector2(-124.28704071045, -2317.6472167969),
-                vector2(-124.64585876465, -2309.9670410156),
-                vector2(-129.55731201172, -2310.1142578125)
+                vector2(172.92819213867, -1701.4451904297),
+                vector2(169.7859954834, -1704.9362792969),
+                vector2(177.34425354004, -1711.9100341797),
+                vector2(182.74580383301, -1709.7387695313)
             },
-            ['minZ'] = 3.00,  -- min height of the parking zone
-            ['maxZ'] = 12.00,  -- max height of the parking zone
+            ['minZ'] = 27.00,  -- min height of the parking zone
+            ['maxZ'] = 32.00,  -- max height of the parking zone
             debug = false,
         },
         label = "92 Çekilmiş",
