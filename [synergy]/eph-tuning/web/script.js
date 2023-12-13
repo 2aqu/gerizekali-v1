@@ -25,9 +25,9 @@ function GetIndexFromRpm(rpm) {
     return indexrpm
 }
 
-const BG_COLOR = '#394b52';
+const BG_COLOR = '#394b520a';
 
-const TEXT_COLOR = '#e7eaeb';
+const TEXT_COLOR = '#ffffff';
 
 const LINE_COLORS = [
   '#52BE80',
@@ -37,7 +37,7 @@ const LINE_COLORS = [
   '#d64561'
 ];
 
-const GRID_COLOR = 'green';
+const GRID_COLOR = 'white';
 
 let recorded = false
 let chartrecord = {}
@@ -96,7 +96,7 @@ DynoChart = new Chart(document.getElementById("line-chart"), {
       datasets: [
       {
         data: [],
-        label: "Horsepower",
+        label: "Beygir Gücü",
         borderColor: LINE_COLORS[0],
         backgroundColor: LINE_COLORS[0],
         pointRadius : 0,
@@ -105,7 +105,7 @@ DynoChart = new Chart(document.getElementById("line-chart"), {
   
       {
         data: [],
-        label: "Torque",
+        label: "Tork",
         borderColor: LINE_COLORS[1],
         backgroundColor: LINE_COLORS[1],
         pointRadius : 0,
@@ -114,7 +114,7 @@ DynoChart = new Chart(document.getElementById("line-chart"), {
   
       {
         data: [],
-        label: "Speed",
+        label: "Hız",
         borderColor: LINE_COLORS[2],
         backgroundColor: LINE_COLORS[2],
         pointRadius : 0,
@@ -137,7 +137,6 @@ DynoChart = new Chart(document.getElementById("line-chart"), {
         text: "Dyno Chart",
         position: "top",
         fontSize: 25,
-        fontFamily: "Dosis",
         fontColor: "white",
         fontStyle: "bold",
         padding: 10,
@@ -152,7 +151,6 @@ DynoChart = new Chart(document.getElementById("line-chart"), {
           fontSize: 13,
           fontColor: TEXT_COLOR,
           fontStyle: "normal",
-          fontFamily: "Dosis",
           padding: 5 } },
   
   

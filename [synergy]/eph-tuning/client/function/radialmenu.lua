@@ -3,7 +3,7 @@ CreateRadialMenu = function()
 	lib.addRadialItem({
 		id = 'tuners_menu',
 		icon = 'chart-bar',
-		label = 'Tuners',
+		label = 'Underground',
 		menu = 'tuners_menus',
 	})
 	lib.registerRadial({

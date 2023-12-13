@@ -4,9 +4,9 @@ Config.Debug = false
 Config.UseCustomUi = true
 Config.UseResetTimer = true
 Config.RaceResetTimer = 300000
-Config.ShowMechToolOption = true -- set to false if you dont use cw-mechtool
+Config.ShowMechToolOption = false -- set to false if you dont use cw-mechtool
 Config.DoOffsetGps = true -- Set to true if you want the gps to slighlty offset the point (helps with route)
-Config.Inventory = 'qb' -- set to 'ox' if you want ox inventory support. Only 'ox' or 'qb' works. 
+Config.Inventory = 'ox' -- set to 'ox' if you want ox inventory support. Only 'ox' or 'qb' works. 
 Config.UseRenewedCrypto = false -- set to true if you use Renewed crypto
 Config.UseRenewedBanking = false -- set this to true if you use Renewed Banking
 Config.UseNameValidation = true -- set to true if you use the name validation - HAVING THIS ON MEANS UNIQUE RACERNAMES
@@ -19,7 +19,7 @@ Config.CustomAmounts = { -- custom max amout of racer names
 }
 
 Config.LimitTracks = false -- set to true to limit tracks per citizenid. Below two fields are irrelevent if this is false
-Config.MaxCharacterTracks = 999 -- Amount of tracks allowed per citizenid
+Config.MaxCharacterTracks = 10 -- Amount of tracks allowed per citizenid
 Config.CustomAmountsOfTracks = { -- custom max amout of tracks per citizenid
     ['QBQ16539'] = 100,
     ['FMN22732'] = 100,
@@ -31,7 +31,7 @@ Config.Permissions = {
     ['fob_racing_basic'] = {
         ['join'] = true,
         ['records'] = true,
-        ['setup'] = true,
+        ['setup'] = false,
         ['create'] = false,
     },
     ['fob_racing_master'] = {
@@ -77,8 +77,8 @@ Config.Blips = {
 
 
 Config.AllowedJobs = {  -- Wont matter unless you activate "jobRequirement in Config.Trader/Config.Laptop"
-    ['tuner'] = { basic = 2, master = 4},
-    ['spongebob'] = { basic = 1 },
+    ['mechanic15'] = { basic = 2, master = 4},
+    ['mechanic8'] = { basic = 1, master = 1 },
 }
 
 Config.Options = {
@@ -105,7 +105,7 @@ Config.Options = {
         { value = 500, text = 500 },
         { value = 1000, text = 1000 }
     },
-    MoneyType = 'bank', --Determines buyins and payouts. cash/bank/crypto
+    MoneyType = 'cash', --Determines buyins and payouts. cash/bank/crypto
     cryptoType = 'cdc' -- rname of your crypto
 }
 
@@ -115,17 +115,17 @@ Config.Trader = {
     requireToken = false,
     model = 'csb_paige',
     animation = 'WORLD_HUMAN_STAND_MOBILE',
-    location = vector4(195.5, -3167.44, 4.79, 96.91),
+    location = vector4(818.6, -2365.15, 29.14, 262.83), 
     moneyType = 'cash', -- cash/bank/crypto
     -- cryptoType = 'cdc', -- name of your crypto
-    racingFobCost = 1000,
-    racingFobMasterCost = 10000,
+    racingFobCost = 10000,
+    racingFobMasterCost = 100000,
     profiteer = { job = 'tuner', cut = 0.9 }, -- if you use Renewed Banking you can set this to allow money to go to businesses, wont work with crypto (yet), UseRenewedBanking in top of this file NEEDS TO BE TRUE
     useSlimmed = true -- set to true if you want menu to cut out cid input
 }
 
 Config.Laptop = {
-    active = true,
+    active = false,
     jobRequirement = { basic = true, master = true},
     requireToken = false,
     model = 'xm_prop_x17_laptop_mrsr',

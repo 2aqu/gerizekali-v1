@@ -740,7 +740,13 @@ return {
             image = "newscam.png"
         }
     },
-
+    ['enginegago'] = {
+        label = 'MOTOR',
+        weight = 50000,
+        stack = false,
+        close = true,
+        description = ''
+    },
     ["nitrous"] = {
         label = "Nitro",
         weight = 1000,
@@ -758,6 +764,17 @@ return {
         stack = true,
         close = true,
         description = "Expensive tablet",
+        client = {
+            image = "tablet.png"
+        }
+    },
+
+    ["chiptuningtablet"] = {
+        label = "Chiptuning Tableti",
+        weight = 450,
+        stack = true,
+        close = true,
+        description = "Araç yazılımını düzenleyebilen tablet.",
         client = {
             image = "tablet.png"
         }
@@ -6146,7 +6163,7 @@ return {
         weight = 500,
         stack = false,
         close = true,
-        description = "This master GPS allows someone to create custom races.",
+        description = "Yarış oluşturmayı sağlayan tablet.",
         client = {
             image = "fob_racing_master.png"
         }
@@ -8471,7 +8488,7 @@ return {
         weight = 500,
         stack = false,
         close = true,
-        description = "This basic GPS allows someone to join custom races.",
+        description = "Yarışlara katılmanı sağlayan tablet.",
         client = {
             image = "fob_racing_basic.png"
         }

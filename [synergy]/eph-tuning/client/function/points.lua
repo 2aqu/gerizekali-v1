@@ -55,9 +55,9 @@ SetupDynoPoints = function(data,index)
 	
 	function point:onEnter()
 		lib.showTextUI('[E] - '..data.label)
-		dyno_markers[index] = CreateCheckpoint(5, data.coord.x, data.coord.y, data.coord.z-1.0, 0, 0, 0, 2.0, 255, 2, 21, 244, 0)
-		SetCheckpointScale(dyno_markers[index], 0.4)
-		SetCheckpointCylinderHeight(dyno_markers[index], 0.0, 0.0, 4.0)
+		--dyno_markers[index] = CreateCheckpoint(5, data.coord.x, data.coord.y, data.coord.z-1.0, 0, 0, 0, 2.0, 255, 2, 21, 244, 0)
+		--SetCheckpointScale(dyno_markers[index], 0.4)
+		--SetCheckpointCylinderHeight(dyno_markers[index], 0.0, 0.0, 4.0)
 		local rampmodel = `prop_spray_jackframe`
 		lib.requestModel(rampmodel)
 	end
@@ -71,7 +71,6 @@ SetupDynoPoints = function(data,index)
 		local access = HasAccess() or config.sandboxmode
 		if self.currentDistance < 4 and IsControlJustReleased(0, 38) and access then
 			Dyno(data,index)
-			print("dodyno")
 		end
 	end
 end

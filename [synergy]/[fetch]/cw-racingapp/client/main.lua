@@ -2641,7 +2641,7 @@ if Config.Trader.active then
                 type = "client",
                 event = "cw-racingapp:client:OpenFobInput",
                 icon = "fas fa-flag-checkered",
-                label = 'Buy a racing GPS for '..trader.racingFobCost..' '..currency,
+                label = 'Yarış tableti satın al: '..trader.racingFobCost..' '..currency,
                 purchaseType = trader,
                 fobType = 'basic',
                 canInteract = function()
@@ -2652,7 +2652,7 @@ if Config.Trader.active then
                 type = "client",
                 event = "cw-racingapp:client:OpenFobInput",
                 icon = "fas fa-flag-checkered",
-                label = 'Buy a Master racing GPS for '..trader.racingFobMasterCost..' '..currency,
+                label = 'Master yarış tableti satın al: '..trader.racingFobMasterCost..' '..currency,
                 purchaseType = trader,
                 fobType = 'master',
                 canInteract = function()
@@ -2945,7 +2945,7 @@ RegisterNetEvent("cw-racingapp:client:openUi", function(data)
         currentType = data.type
         QBCore.Functions.Notify("Press ESC to close")
         SetNuiFocus(true,true)
-        SendNUIMessage({nui = 'cwracingapp', open = true})
+        SendNUIMessage({nui = 'cwracingapp', type=data.type == "fob_racing_basic" and "race" or "creator", open = true})
         uiIsOpen = true
     end
 end)

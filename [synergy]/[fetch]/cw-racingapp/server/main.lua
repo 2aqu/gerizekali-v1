@@ -1378,7 +1378,6 @@ end)
 QBCore.Commands.Add('createracingfob', Lang:t("commands.create_racing_fob_description"), { {name='type', help='Basic/Master'}, {name='identifier', help='CitizenID or ID'}, {name='Racer Name', help='Racer Name to associate with Fob'} }, true, function(source, args)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    if Config.ItemYetki[Player.PlayerData.citizenid] then
         local type = args[1]
         local citizenid = args[2]
 
@@ -1425,7 +1424,6 @@ QBCore.Commands.Add('createracingfob', Lang:t("commands.create_racing_fob_descri
         }
 
         createRacingFob(source, citizenid, name, type:lower(), tradeType)
-    end
 end)
 
 QBCore.Commands.Add('remracename', 'Remove Racing Name From Database', { {name='name', help='Racer name. Put in quotations if multiple words'} }, true, function(source, args)

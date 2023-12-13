@@ -25,9 +25,22 @@ SpawnDyno = function(index)
 		dyno_net[k] = NetworkGetNetworkIdFromEntity(object)
 		ramp[k] = object
 		Wait(100)
+		print("spawning object!")
 		Entity(object).state:set('ramp', {ts = os.time(), heading = v.platform.w}, true)
 	end
 end
+--Model Name:	Unknown
+--Model Hash:	-1172970836
+--
+--Heading:	250.0
+--Coords:		vector3(-337.26, -133.67, 40.44)
+--Rotation:	vector3(0.0, 0.0, -110.0)
+--local dx,dy,dz = table.unpack(vector3(-325.68, -125.29, 39.01))
+--print(dx)
+--print(dy)
+--print(dz)
+--CreateObjectNoOffset(`-1172970836`, dx, dy, dz, true, true)
+ 
 
 lib.callback.register('renzu_tuners:CheckDyno', function(src,dynamometer,index)
 	local dyno = not config.useMlo and NetworkGetEntityFromNetworkId(dyno_net[index])

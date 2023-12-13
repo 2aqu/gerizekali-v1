@@ -142,22 +142,22 @@ end
 -- end
 
 local function SetupVehicleMenu()
-    local Player = PlayerPedId()
-    if IsPedInAnyVehicle(Player) then
-        vehoption1 = exports['qb-radialmenu']:AddOption({
-            id = 'openmenu',
-            title = 'Araç Kontrol Menüsü',
-            icon = 'car',
-            type = 'client',
-            event = 'bit-vehControl:open',
-            shouldClose = true
-        }, vehoption1)
-    else
-        if vehoption1 ~= nil then
-            exports['qb-radialmenu']:RemoveOption(vehoption1)
-            vehoption1 = nil
-        end
-    end
+    --local Player = PlayerPedId()
+    --if IsPedInAnyVehicle(Player) then
+    --    vehoption1 = exports['qb-radialmenu']:AddOption({
+    --        id = 'openmenu',
+    --        title = 'Araç Kontrol Menüsü',
+    --        icon = 'car',
+    --        type = 'client',
+    --        event = 'bit-vehControl:open',
+    --        shouldClose = true
+    --    }, vehoption1)
+    --else
+    --    if vehoption1 ~= nil then
+    --        exports['qb-radialmenu']:RemoveOption(vehoption1)
+    --        vehoption1 = nil
+    --    end
+    --end
 end
 
 local function SetupSubItems()

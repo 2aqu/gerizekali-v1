@@ -4,7 +4,6 @@ var RaceActive = false;
 $(document).ready(function(){
     window.addEventListener('message', function(event){
         var data = event.data;
-
         if (data.action == "Update") {
             UpdateUI(data.type, data);
         } else if (data.action == "Countdown") {
@@ -71,6 +70,7 @@ function updatePositions(positions) {
 }
 
 function UpdateUI(type, data) {
+    console.log(type)
     if (type == "creator") {
         if (data.active) {
             if (!CreatorActive) {

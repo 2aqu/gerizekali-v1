@@ -2,12 +2,12 @@ GetWheelHandling = function(vehicle)
 	local handling = {}
 	local ent = Entity(vehicle).state
 	local label = {
-		[1] = 'Front Left',
-		[2] = 'Rear Left',
-		[3] = 'Front Right',
-		[4] = 'Rear Right',
-		[5] = 'Rear',
-		[6] = 'Rear',
+		[1] = 'Ön Sol',
+		[2] = 'Arka Sol',
+		[3] = 'Ön Sağ',
+		[4] = 'Arka Sağ',
+		[5] = 'Arka',
+		[6] = 'Arka',
 
 	}
 	for i = 1 , GetVehicleNumberOfWheels(vehicle) do

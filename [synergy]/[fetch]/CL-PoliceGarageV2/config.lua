@@ -822,14 +822,6 @@ Config.Locations = {
                             -- Example of how it should look like if you dont want to use any of those features
                         }
                     },
-                    ["Police Bear Cat"] = {
-                        Vehicle = "bcat", -- The vehicle to spawn
-                        TotalPrice = 0, -- The total price it costs to buy this vehicle
-                        Rank = 0, -- The rank required to purchase this vehicle. Set to 0 to enable all ranks
-                        VehicleSettings = { -- Everthing inside those brackets is totally optional
-                            -- Example of how it should look like if you dont want to use any of those features
-                        }
-                    },
                     ["Police Bicycle"] = {
                         Vehicle = "pbike", -- The vehicle to spawn
                         TotalPrice = 0, -- The total price it costs to buy this vehicle
@@ -870,8 +862,24 @@ Config.Locations = {
                             -- Example of how it should look like if you dont want to use any of those features
                         }
                     },
-                    ["Police Africa Twin"] = {
-                        Vehicle = "ypafricat", -- The vehicle to spawn
+                    ["Unmarked Oracle"] = {
+                        Vehicle = "apoliceu9", -- The vehicle to spawn
+                        TotalPrice = 0, -- The total price it costs to buy this vehicle
+                        Rank = 0, -- The rank required to purchase this vehicle. Set to 0 to enable all ranks
+                        VehicleSettings = { -- Everthing inside those brackets is totally optional
+                            -- Example of how it should look like if you dont want to use any of those features
+                        }
+                    },
+                    ["Unmarked Explorer"] = {
+                        Vehicle = "apoliceu6", -- The vehicle to spawn
+                        TotalPrice = 0, -- The total price it costs to buy this vehicle
+                        Rank = 0, -- The rank required to purchase this vehicle. Set to 0 to enable all ranks
+                        VehicleSettings = { -- Everthing inside those brackets is totally optional
+                            -- Example of how it should look like if you dont want to use any of those features
+                        }
+                    },
+                    ["Unmarked Buffalo S"] = {
+                        Vehicle = "apoliceu14", -- The vehicle to spawn
                         TotalPrice = 0, -- The total price it costs to buy this vehicle
                         Rank = 0, -- The rank required to purchase this vehicle. Set to 0 to enable all ranks
                         VehicleSettings = { -- Everthing inside those brackets is totally optional

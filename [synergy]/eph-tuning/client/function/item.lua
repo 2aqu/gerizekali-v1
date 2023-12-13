@@ -91,7 +91,7 @@ ItemFunction = function(vehicle,data,menu) -- item use handler
 		plate = string.gsub(GetVehicleNumberPlateText(vehicle), '^%s*(.-)%s*$', '%1'):upper()
 		HandleEngineDegration(vehicle,ent,plate)
 	end
-	lib.notify({description = 'You Install '..data.label})
+	lib.notify({description = 'Taktın: '..data.label})
 end
 
 GetItemState = function(name)

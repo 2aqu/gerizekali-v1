@@ -6,7 +6,7 @@ Targets = function()
 		{
 			name = 'renzu_tuners:checkengine',
 			icon = 'fa-solid fa-oil-can',
-			label = 'Check Engine Status',
+			label = 'Motor Durumunu Kontrol Et',
 			canInteract = function(entity, distance, coords, name, boneId)
 				if GetVehicleDoorLockStatus(entity) > 1 then return end
 				return type(coords) ~= 'table' and #(coords - GetEntityCoords(entity)) < 1.9 or true
@@ -29,7 +29,7 @@ Targets = function()
 		{
 			name = 'renzu_tuners:checkperf',
 			icon = 'fa-solid fa-car',
-			label = 'Check Engine Performance',
+			label = 'Motor Performansını Kontrol Et',
 			canInteract = function(entity, distance, coords, name, boneId)
 				if GetVehicleDoorLockStatus(entity) > 1 then return end
 				return type(coords) ~= 'table' and #(coords - GetEntityCoords(entity)) < 1.9 or true
@@ -52,7 +52,7 @@ Targets = function()
 		{
 			name = 'renzu_tuners:checkwheels',
 			icon = 'fa-solid fa-car',
-			label = 'Check Tires Status',
+			label = 'Lastik Durumunu Kontrol Et',
 			canInteract = function(entity, distance, coords, name, boneId)
 				if GetVehicleDoorLockStatus(entity) > 1 then return end
 				return type(coords) ~= 'table' and #(coords - GetEntityCoords(entity)) < 1.9 or true
@@ -75,7 +75,7 @@ Targets = function()
 		{
 			name = 'renzu_tuners:upgrade',
 			icon = 'fa-solid fa-car',
-			label = 'Upgrade Vehicle',
+			label = 'Aracı Yükselt',
 			canInteract = function(entity, distance, coords, name, boneId)
 				if GetVehicleDoorLockStatus(entity) > 1 then return end
 				return type(coords) ~= 'table' and #(coords - GetEntityCoords(entity)) < 1.9 and HasAccess() or HasAccess()
@@ -185,11 +185,11 @@ Targets = function()
 					onSelect = function()
 						lib.registerContext({
 							id = 'engine_swapper',
-							title = 'Engine Swap',
+							title = 'Motor Swapla',
 							options = {
 								{
-									title = 'Select and Install Engine',
-									description = 'Choose a engine from storage',
+									title = 'Motor Seç ve Tak',
+									description = 'Depodan Motor Seç',
 									arrow = true,
 									onSelect = function(data)
 										local vehicle = GetClosestVehicle(GetEntityCoords(engineswapper), 4.0)
@@ -197,8 +197,8 @@ Targets = function()
 									end
 								},
 								{
-									title = 'Engine Storage',
-									description = 'Store a engine',
+									title = 'Motoru Depola',
+									description = 'Motoru depoya koy',
 									arrow = true,
 									onSelect = function()
 										TriggerEvent('ox_inventory:openInventory', 'stash', {id = 'engine_storage:'..k, name = 'Engine Storage', slots = 70, weight = 1000000, coords = GetEntityCoords(cache.ped)})
@@ -209,7 +209,7 @@ Targets = function()
 						lib.showContext('engine_swapper')
 					end,
 					icon = 'fa-solid fa-car',
-					label = 'Engine Stand',
+					label = 'Motor Vinci',
 					canInteract = function(entity, distance, coords, name)
 						return distance < 2 and HasAccess() or HasAccess()
 					end

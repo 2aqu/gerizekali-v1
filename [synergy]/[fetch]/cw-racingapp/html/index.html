@@ -26,7 +26,7 @@
                     <div class="sidebar">
                         <button class="pagelink" onclick="openPage('RacingPage', this)" id="defaultOpenPage"><span id="racing-stab">Yarış</span></button>
                         <button class="pagelink" onclick="openPage('ResultsPage', this)"><span id="results-stab">Sonuçlar</span></button>
-                        <button class="pagelink" onclick="openPage('MyTracksPage', this)"><span id="tracks-stab">Pistlerim</span></button>
+                        <button class="pagelink honr" onclick="openPage('MyTracksPage', this)"><span id="tracks-stab">Pistlerim</span></button>
                     </div>
                     <div class="confirmation-box">
                         <div class="confirmation-card">
@@ -43,18 +43,18 @@
                             <div class="inline tablinks">
                                 <button class="tablink" onclick="openTabs('Current', this)" id="defaultOpenTab-RacingPage"><span id="available-tab"><span id="current-tab">Şuanki Yarış</span></button>
                                 <button class="tablink" onclick="openTabs('Available', this)">Aktif Yarışlar</span></button>
-                                <button class="tablink" onclick="openTabs('SetupRace', this)"><span id="create-tab">Yarış Oluştur</span></button>
+                                <button class="tablink honr" onclick="openTabs('SetupRace', this)"><span id="create-tab">Yarış Oluştur</span></button>
                             </div>
                             <div id="SetupRace" class="tabcontent">
                                 <div class="tracks-container">
                                     <div class="subheader">
                                         <h3>Pist Seç</h3>
-                                        <span class="inline standardGap">
-                                            Ticki kapatın:
-                                            <label class="checkbox-container">
-                                                <input type="checkbox" onclick="PopulateAvailableTracks()" id="race-setup-curated-checkbox" checked>
-                                                <span class="checkmark"></span>
-                                              </label>
+                                        <!-- <span class="inline standardGap"> -->
+                                            <!-- Ticki kapatın: -->
+                                            <!-- <label class="checkbox-container"> -->
+                                                <!-- <input type="checkbox" onclick="PopulateAvailableTracks()" id="race-setup-curated-checkbox" checked> -->
+                                                <!-- <span class="checkmark"></span> -->
+                                              <!-- </label> -->
                                         </span>
                                     </div>
                                     <div class="loading-container " id="track-items-loader"><span class="loader"></span></div>

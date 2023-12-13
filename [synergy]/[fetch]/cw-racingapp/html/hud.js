@@ -153,6 +153,12 @@ function UpdateUI(type, data) {
 $(document).ready(function(){
     window.addEventListener('message', function(event){
         var data = event.data;
+        console.log(data)
+        if (data.type === "race") {
+            $(".honr").hide()
+        } else {
+            $(".honr").show()
+        }
         if (data.action == "Update") {
             UpdateUI(data.type, data);
         } else if (data.action == "Countdown") {

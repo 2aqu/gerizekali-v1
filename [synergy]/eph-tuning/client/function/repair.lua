@@ -20,7 +20,7 @@ function Repair()
 				},
 			})
 			lib.notify({
-				title = 'Vehicle has been Repair',
+				title = 'Araç Tamir Edildi!',
 				type = 'success'
 			})
 			repairing = false
@@ -28,7 +28,7 @@ function Repair()
 			return
 		end
 		lib.notify({
-			title = 'Fix all the 4 sides of vehicle',
+			title = 'Aracın 4 Tarafını Onar',
 			type = 'success',
 			position = 'bottom',
 		})
@@ -52,7 +52,7 @@ function Repair()
 				end
 				if distance < 1.3 then
 					if not v.done then 
-						lib.showTextUI('[E] - Repair this part')
+						lib.showTextUI('[E] - Bu Parçayı Onar')
 						uitext = true
 						while distance < 1.3 and not v.done do
 							distance = #(GetEntityCoords(cache.ped) - vector3(v.pos.x, v.pos.y, v.pos.z))
@@ -83,8 +83,8 @@ function Repair()
 					end
 				elseif distance > 50 then
 					lib.notify({
-						title = 'Repair has been canceled',
-						description = 'you are too far away',   
+						title = 'Onarım iptal edildi!',
+						description = 'Çok uzaktasın...',   
 						type = 'error'
 					})
 					canceled = true
@@ -108,13 +108,13 @@ function Repair()
 		end
 		if not canceled then
 		lib.notify({
-			title = 'Vehicle has been Repair',
+			title = 'Araç onarıldı!',
 			type = 'success'
 		})
 	    end
 	else
 		lib.notify({
-			title = 'no vehicle to repair',
+			title = 'Tamir edilecek araç yok.',
 			type = 'error'
 		})
 	end

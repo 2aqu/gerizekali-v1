@@ -47,7 +47,7 @@ exports('useItem', function(data, slot)
             end
         end)
     else
-        lib.notify({type = 'error', description = 'There is no vehicle nearby'})
+        lib.notify({type = 'error', description = 'Yakında araç yok!'})
     end
 end)
 
