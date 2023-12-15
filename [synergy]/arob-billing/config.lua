@@ -57,6 +57,7 @@ Config.PermittedJobs = {
     'galaxy',
     'psikolog',
     'cockatoos',
+    'custom',
 }
 
 -- Commands --

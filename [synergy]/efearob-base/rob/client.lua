@@ -1,9 +1,8 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 local clientcooldown = GetGameTimer()
 isdead = false
 PlayerData = {}
 soyabilir = true
-
-QBCore = exports['qb-core']:GetCoreObject()
 
 AddEventHandler('arob:playerdead', function(dead)
 	isdead = dead

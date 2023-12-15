@@ -1,3 +1,4 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 local dragStatus, playerData = {}, {}
 dragStatus.isDragged = false
 local tirman = 0
@@ -7,8 +8,6 @@ local benkelepceledim = false
 local isDead = false
 local sistemAktif = true
 local minigameaq = 0
-
-QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()

@@ -13453,5 +13453,745 @@ return {
         stack = true,
         close = true,
         description = nil
-    }
+    },
+
+	['carpaintspray19'] = {
+		label = "Cyan-Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray2"] = {
+		label = "Şarap Kırmızı Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray41"] = {
+		label = "A. İnci Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray65"] = {
+		label = "Özel - Lime Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray26"] = {
+		label = "Burgonya-Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray68"] = {
+		label = "Özel - 4S Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray10"] = {
+		label = "Altın Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray62"] = {
+		label = "Özel - Chrome Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray17"] = {
+		label = "Turkuaz-Kırmızı Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray78"] = {
+		label = "Özel - HSW Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray81"] = {
+		label = "Özel - Fubuki Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray12"] = {
+		label = "Yeşil-Kırmızı Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray49"] = {
+		label = "İnci Krem Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray14"] = {
+		label = "Yeşil-Turkuaz Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray32"] = {
+		label = "Turuncu-Mavi Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray30"] = {
+		label = "Kırmızı-Turuncu Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray31"] = {
+		label = "Turuncu-Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray21"] = {
+		label = "Mavi-Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray13"] = {
+		label = "Yeşil-Kahve Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray4"] = {
+		label = "Mavi Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray71"] = {
+		label = "Özel - Rainbow Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray18"] = {
+		label = "Turkuaz-Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray67"] = {
+		label = "Özel - Wave Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray69"] = {
+		label = "Özel - 9M Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray70"] = {
+		label = "Özel - Bubblegum Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray24"] = {
+		label = "Magenta-Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray35"] = {
+		label = "Mavi Rainbow Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray44"] = {
+		label = "A. İnci Pembe Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray79"] = {
+		label = "Özel - Electro Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray7"] = {
+		label = "Bakır Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray1"] = {
+		label = "Kırmızı Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray60"] = {
+		label = "Siyah Hologram Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray23"] = {
+		label = "Mor-Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray52"] = {
+		label = "K. Mavi Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray56"] = {
+		label = "Yeşil Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray46"] = {
+		label = "İnci Sarı Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray45"] = {
+		label = "İnci Pembe Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray25"] = {
+		label = "Magenta-Sarı Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray47"] = {
+		label = "İnci Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray22"] = {
+		label = "Mor-Kırmızı Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray34"] = {
+		label = "Kırmızı Rainbow Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray5"] = {
+		label = "Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray6"] = {
+		label = "Lime Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray11"] = {
+		label = "Yeşil-Mavi Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["darkpurplepearl"] = {
+		label = "K. İnci Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray29"] = {
+		label = "Magenta-Turuncu Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray77"] = {
+		label = "Özel - Temperatur Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray80"] = {
+		label = "Özel - Monica Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray63"] = {
+		label = "Özel - İyigün Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray36"] = {
+		label = "K. İnci Yeşil Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray53"] = {
+		label = "K. Mor Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray37"] = {
+		label = "K. İnci Turkuaz Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray33"] = {
+		label = "Beyaz-Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray61"] = {
+		label = "Beyaz Hologram Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray57"] = {
+		label = "Siyah Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray66"] = {
+		label = "Özel - VC Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray15"] = {
+		label = "Yeşil-Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray48"] = {
+		label = "İnci Mavi Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray76"] = {
+		label = "Özel - Christmas Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray16"] = {
+		label = "Turkuaz-Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray50"] = {
+		label = "Beyaz Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray43"] = {
+		label = "A. İnci Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray9"] = {
+		label = "Şampanya Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray54"] = {
+		label = "Pembe Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray28"] = {
+		label = "Bakır-Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray27"] = {
+		label = "Magenta-Cyan Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray55"] = {
+		label = "Kırmızı Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray64"] = {
+		label = "Özel - MMKP Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray58"] = {
+		label = "Petrol Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray40"] = {
+		label = "İnci Petrol Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray38"] = {
+		label = "K. İnci Mavi Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray42"] = {
+		label = "A. İnci Mavi Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray59"] = {
+		label = "Rainbow Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray75"] = {
+		label = "Özel - Chromebera Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray20"] = {
+		label = "Mavi-Pembe Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray8"] = {
+		label = "Bronz Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray51"] = {
+		label = "Grafit Prizma Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray73"] = {
+		label = "Özel - The Seven Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray3"] = {
+		label = "Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray74"] = {
+		label = "Özel - Kamenrider Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray72"] = {
+		label = "Özel - Sunset Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		 description = nil
+ 
+	},
+
+	["carpaintspray39"] = {
+		label = "K. İnci Mor Spray",
+		weight = 200,
+		stack = false,
+		close = true,
+		description = "",
+		client = {
+			image = "carpaintspray.png",
+		}
+	},
 }

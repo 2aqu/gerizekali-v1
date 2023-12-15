@@ -1,4 +1,4 @@
-QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 local CurrentWeaponData, CanShoot, MultiplierAmount = {}, true, 0
 
 function SendFPS()
@@ -263,10 +263,25 @@ Citizen.CreateThread(function()
 end)
 
 RegisterCommand("lastt", function()
-    local vehicle = GetVehiclePedIsIn(PlayerPedId())
-    print(BreakOffVehicleWheel(vehicle, 2, true, false, true, false))
+    SetFollowPedCamViewMode(4)
+    SetFollowPedCamViewMode(0)
 end)
 
 -- RegisterCommand("yenikıyafetmenu", function()
 --     TriggerEvent("illenium-appearance:client:openClothingShopMenu", true)
 -- end)
+
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    print("hey")
+    Wait(1000)
+    local playerchar = QBCore.Functions.GetPlayerData().charinfo
+    local time = GetClockHours()
+    local hitext = "Hoşgeldin"
+    SetFollowPedCamViewMode(4)
+    SetFollowPedCamViewMode(0)
+    Citizen.CreateThread(function()
+        TriggerEvent("cS.Credits", "Karakter:", playerchar.firstname .. " " .. playerchar.lastname, 0.4, 0.5, 8, true)
+    end)
+end)
+

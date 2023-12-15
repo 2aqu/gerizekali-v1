@@ -974,6 +974,34 @@ QBShared.Jobs = {
             },
         },
     },
+    ['illegal_mechanic'] = {
+        label = 'İllegal Mekanik',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Çırak',
+                payment = 10
+            },
+            ['1'] = {
+                name = 'Usta',
+                payment = 20
+            },
+            ['2'] = {
+                name = 'Ustabaşı',
+                payment = 30
+            },
+            ['3'] = {
+                name = 'Müdür',
+                payment = 40
+            },
+            ['4'] = {
+                name = 'Patron',
+                isboss = true,
+                payment = 50
+            },
+        },
+    },
     ['uwu'] = {
         label = 'UwU Cat Cafe',
         defaultDuty = true,

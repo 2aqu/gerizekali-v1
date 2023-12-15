@@ -52,6 +52,14 @@ Config.MenuItems = {
     },
 
     [2] = {
+        id = 'shooting',
+        title = 'Silah Stili',
+        icon = 'gun',
+        type = 'command',
+        event = 'shootingstyle',
+        shouldClose = true
+    },
+    [3] = {
         id = 'animation0',
         title = 'Animasyonlar',
         icon = 'person-walking',
@@ -59,7 +67,7 @@ Config.MenuItems = {
         event = 'busra_animmenu:client:openMenu',
         shouldClose = true
     },
-    [3] = {
+    [4] = {
         id = 'clothe',
         title = 'Aksesuarlar',
         icon = 'hat-cowboy',
@@ -67,7 +75,7 @@ Config.MenuItems = {
         event = 'dpc:ToggleMenu',
         shouldClose = true
     },
-    [4] = {
+    [5] = {
         id = 'cross',
         title = 'Crosshair',
         icon = 'crosshairs',
@@ -75,7 +83,7 @@ Config.MenuItems = {
         event = 'crosshair:open',
         shouldClose = true
     },
-    [5] = {
+    [6] = {
         id = 'blipackapas',
         title = 'Blip Aç/Kapat',
         icon = 'map-location-dot',
@@ -151,7 +159,7 @@ Config.MenuItems = {
             shouldClose = true
         }}
     },
-    [6] = {
+    [7] = {
         id = 'biils',
         title = 'Fatura Menüsü',
         icon = 'money-bill',

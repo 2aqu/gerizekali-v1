@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+ body {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     margin: 0;
+     font-family: Arial, sans-serif;
+     overflow: hidden;
+     user-select: none;
+}
+ .minGame, .bullScoreBoard {
+     visibility: hidden;
+}
+ .key {
+     display: inline-block;
+     position: absolute;
+     padding: 10px 20px;
+     background: #ffa252;
+     font-size: 3.2rem;
+     border-radius: 19px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s;
+     overflow: hidden;
+     width: 58px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     height: 66px;
+     text-align: center;
+     font-weight: 600;
+     text-shadow: 0 0.5px 1px #000, 0 2px 2px #000000;
+}
+ .loading-bar {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0;
+     height: 100%;
+     background-color: rgba(0, 123, 255, 0.3);
+     transition: none;
+}
+ .card{
+     min-height: 419px;
+     width: 361px;
+     margin: 2rem;
+     color: #000 !important;
+     border-radius: 9px;
+     border: 5px dashed #9f7659;
+     background: #462216;
+     font-family: 'Rye', cursive;
+}
+ .card .header{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 2rem;
+     color: #ffd577;
+}
+ .card .header .title{
+     font-weight: 300;
+}
+ .one .sort{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #fff;
+     font-size: 14.1px;
+}
+ .one .sort .day{
+     padding: 0.4rem 1.2rem;
+     margin: 0 0.1rem;
+     cursor: pointer;
+}
+ .one .sort .day.active, .one .sort .day:active{
+     background: rgba(210, 255, 213, 0.3);
+     border-radius: 25px;
+}
+ ::selection{
+     background: rgba(210, 255, 213, 0.3);
+}
+ .photo{
+     width: 75px;
+     background: #b1873b;
+     border-radius: 50%;
+     border: 5px solid #b1873b;
+     box-shadow: 0 0 20px black;
+     margin: 1rem 0;
+     font-size: 3.5rem;
+     text-transform: uppercase;
+     height: 70px;
+     text-align: center;
+}
+ .main{
+     width: 86px;
+     height: 84px;
+}
+ .profile{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 0rem;
+}
+ .profile .person{
+     display: flex;
+     margin: 1rem 0;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+ .profile .person.first{
+     z-index: 10;
+     transform: translateY(-10%);
+}
+ .first .fa-hat-cowboy{
+     color: gold;
+     filter: drop-shadow(0px 0px 5px gold);
+}
+ .num{
+     color: #f9d173;
+}
+ .fa-caret-up{
+     color: black;
+     font-size: 21px;
+}
+ .link{
+     margin: 0.2rem 0;
+     color: #fbd576;
+     margin-top: -0.3rem;
+     font-size: 13px;
+     width: 100px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+}
+ .points{
+     color: #ffffff;
+     font-size: 17px;
+}
+ .second{
+     margin-right: -0.7rem !important;
+}
+ .third{
+     margin-left: -0.7rem !important;
+}
+ .p_img{
+     width: 50px;
+     background: #fff;
+     border-radius: 50%;
+}
+ .flex{
+     display: flex;
+     align-items: center;
+}
+ .others{
+     display: flex;
+     width: 100%;
+     margin-top: 1rem;
+     align-items: center;
+     justify-content: center;
+}
+ .info{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-radius: 30px;
+     background: rgba(210, 255, 213, 0.3);
+}
+ .info .points{
+     margin-left: 0.2rem;
+     margin-right: 1.2rem;
+}
+ .info .link{
+     margin: 0 1rem;
+}
+ .rank{
+     display: flex;
+     align-items: center;
+     margin: 0 1rem;
+     flex-direction: column-reverse;
+}
+ .rank i{
+     margin-top: -5px !important;
+}
+ .rank .num{
+     margin: 0 !important;
+}

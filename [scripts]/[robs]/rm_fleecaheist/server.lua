@@ -81,19 +81,6 @@ AddEventHandler('fleecaheist:server:rewardItem', function(reward, count)
 
     if player then
         player.Functions.AddMoney("cash", 5000)
-        -- if reward.item ~= nil then
-        --     if count ~= nil then
-        --         player.Functions.AddMoney("cash", 500)
-        --     else
-        --         player.Functions.AddMoney("cash", 500)
-        --     end
-        -- else
-        --     if count ~= nil then
-        --         player.Functions.AddMoney("cash", 1000)
-        --     else  
-        --         player.Functions.AddMoney("cash", 1000)
-        --     end
-        -- end
     end
 end)
 
