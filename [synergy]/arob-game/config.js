@@ -10,7 +10,7 @@ const DebugLogs = false;
 
 const EnableDiscordBot = true;
 
-const DiscordBotToken = "MTE3NzAwOTE2NTIwMjM2MjQ5OA.GH6mfl.mGcoqigGAMlMXMKM8SUNPgoSUo9_TdJuqAeGwY";
+const DiscordBotToken = "tokenı mı calacan cakkkallll xd";
 const DiscordGuildId = "933014209376182313";
 
 const EnableStaffChatForwarding = false;
